@@ -1,0 +1,18 @@
+[
+  {
+    "Path": "D:\\pettranslator\\app\\src\\main\\java\\com\\example\\pettranslator\\data\\PetPreferencesRepository.kt",
+    "Hash": "D29039B02883D196ACFBBF5BA58359529F30A4CDFF8F03A519516543B036DCB5"
+  },
+  {
+    "Path": "D:\\pettranslator\\app\\src\\main\\java\\com\\example\\pettranslator\\domain\\HomeModels.kt",
+    "Hash": "6C96350A1A9977AEF5C1B9A71FB7D76A716E6224710FF465AF6850D2C253CC30"
+  },
+  {
+    "Path": "D:\\pettranslator\\app\\src\\main\\java\\com\\example\\pettranslator\\ui\\home\\HomeViewModel.kt",
+    "Hash": "055E5264448266FC835BC18C822FE4EF5A9D6E41EAEC2979A41D44436B81E4DF"
+  },
+  {
+    "Path": "D:\\pettranslator\\app\\src\\main\\java\\com\\example\\pettranslator\\ui\\navigation\\PetTranslatorApp.kt",
+    "Hash": "1D3AC64FB595FD3D5F1BD2066CA87C73F328635F116567138453F3117736EC79"
+  }
+]

@@ -1,0 +1,3 @@
+pet_cat_main.png: 620x426, Format32bppArgb; transparent=81921, partial=182183, opaque=16; alpha bbox=(0,0)-(619,425); nonzero edge pixels T/B/L/R=613/35/3/45
+pet_dog_main.png: 697x426, Format32bppArgb; transparent=76579, partial=220337, opaque=6; alpha bbox=(0,0)-(696,425); nonzero edge pixels T/B/L/R=644/147/12/1
+pet_home_hero.png: 1419x515, Format32bppArgb; transparent=215363, partial=515329, opaque=93; alpha bbox=(0,0)-(1418,514); nonzero edge pixels T/B/L/R=275/1308/1/1

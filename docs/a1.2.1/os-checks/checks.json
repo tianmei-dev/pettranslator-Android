@@ -1,0 +1,9 @@
+{
+  "first_denial_explained": true,
+  "permanent_denial_settings_entry": true,
+  "lock_cancelled_and_deleted": true,
+  "process_kill_left_orphan": true,
+  "next_process_removed_orphans": true,
+  "permission_revocation_killed_process": true,
+  "revocation_restart_clean": true
+}

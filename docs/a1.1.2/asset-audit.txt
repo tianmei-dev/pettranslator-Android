@@ -1,0 +1,10 @@
+pet_cat_main.png: 620x426, Format32bppArgb; transparent=81921, partial=182183, opaque=16; alpha bbox=(0,0)-(619,425); nonzero edge pixels T/B/L/R=613/35/3/45
+pet_dog_main.png: 697x426, Format32bppArgb; transparent=76579, partial=220337, opaque=6; alpha bbox=(0,0)-(696,425); nonzero edge pixels T/B/L/R=644/147/12/1
+pet_home_hero.png: 1419x515, Format32bppArgb; transparent=215363, partial=515329, opaque=93; alpha bbox=(0,0)-(1418,514); nonzero edge pixels T/B/L/R=275/1308/1/1
+pet_home_room_bg.png: 1536x433, Format32bppArgb; transparent=55445, partial=609643, opaque=0; alpha bbox=(0,0)-(1534,432); nonzero edge pixels T/B/L/R=1184/1327/21/0
+scene_alone.png: 530x282, Format32bppArgb; transparent=67069, partial=82391, opaque=0; alpha bbox=(0,0)-(527,281); nonzero edge pixels T/B/L/R=120/8/10/0
+scene_door_window.png: 530x295, Format32bppArgb; transparent=52107, partial=104243, opaque=0; alpha bbox=(0,0)-(529,294); nonzero edge pixels T/B/L/R=33/121/3/118
+scene_food.png: 490x295, Format32bppArgb; transparent=78463, partial=66087, opaque=0; alpha bbox=(0,0)-(489,294); nonzero edge pixels T/B/L/R=38/89/88/47
+scene_held.png: 490x282, Format32bppArgb; transparent=66001, partial=72179, opaque=0; alpha bbox=(3,0)-(485,281); nonzero edge pixels T/B/L/R=87/34/0/0
+scene_play.png: 516x295, Format32bppArgb; transparent=71609, partial=80611, opaque=0; alpha bbox=(0,0)-(512,294); nonzero edge pixels T/B/L/R=74/16/23/0
+scene_unknown.png: 516x282, Format32bppArgb; transparent=87084, partial=58428, opaque=0; alpha bbox=(1,0)-(473,281); nonzero edge pixels T/B/L/R=15/36/0/0

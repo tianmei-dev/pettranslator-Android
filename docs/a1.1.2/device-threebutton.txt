@@ -1,0 +1,11 @@
+
+com.example.pettranslator.AdaptiveHomeTest:.....
+com.example.pettranslator.HomeFlowTest:.
+com.example.pettranslator.HomeVisualEvidenceTest:.
+com.example.pettranslator.PetPreferencesTest:.
+
+Time: 21.506
+
+OK (8 tests)
+
+

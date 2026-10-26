@@ -1,0 +1,10 @@
+
+com.example.pettranslator.AudioRecordDeviceTest:..
+com.example.pettranslator.RecordingFlowTest:..
+com.example.pettranslator.RecordingLayoutTest:..
+
+Time: 56.262
+
+OK (6 tests)
+
+

@@ -1,0 +1,116 @@
+package com.example.pettranslator.ui.home
+
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.foundation.*
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.selection.selectableGroup
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.semantics.*
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.example.pettranslator.domain.*
+import com.example.pettranslator.ui.theme.*
+
+@Composable fun HomeScreen(state: HomeUiState, onPet: (PetType) -> Unit, onScene: (PetScene) -> Unit, onRecord: () -> Unit, onHumanVoice: () -> Unit) {
+    Box(Modifier.fillMaxSize().background(Brush.verticalGradient(listOf(Blush, Mist, Blush)))) {
+        Column(Modifier.widthIn(max = 600.dp).fillMaxWidth().align(Alignment.TopCenter).verticalScroll(rememberScrollState()).padding(horizontal = AppSpace.page).padding(bottom = 24.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+            Row(Modifier.fillMaxWidth().padding(top = 12.dp), verticalAlignment = Alignment.CenterVertically) {
+                Text("✿", color = Pink, fontSize = 32.sp, modifier = Modifier.clearAndSetSemantics {})
+                Text(" 宠物翻译器", style = MaterialTheme.typography.titleLarge, modifier = Modifier.weight(1f))
+                Surface(color = Color(0xFFFFEFBE), shape = RoundedCornerShape(30.dp), modifier = Modifier.semantics { contentDescription = "VIP 入口，暂不可用"; disabled() }) {
+                    Text("♛ VIP", color = Color(0xFF99641C), fontWeight = FontWeight.Bold, modifier = Modifier.padding(horizontal = 15.dp, vertical = 10.dp))
+                }
+            }
+            Column(Modifier.fillMaxWidth().clip(RoundedCornerShape(28.dp)).background(Brush.linearGradient(listOf(Color(0xFFFFE0EE), Color(0xFFE0EFFF)))).padding(20.dp)) {
+                Text("今天想听懂谁？", style = MaterialTheme.typography.headlineLarge, color = Ink)
+                Text("选择它和场景，\n听听毛孩子的小心思～", color = Muted, style = MaterialTheme.typography.bodyMedium, modifier = Modifier.padding(top = 6.dp))
+                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End, verticalAlignment = Alignment.Bottom) {
+                    PetIllustration(PetType.Dog, Modifier.size(112.dp).clearAndSetSemantics {})
+                    PetIllustration(PetType.Cat, Modifier.size(96.dp).clearAndSetSemantics {})
+                }
+            }
+            Section("1", "选择宠物", "选择你想翻译的毛孩子") {
+                Row(Modifier.selectableGroup(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                    listOf(PetType.Dog, PetType.Cat).forEach { pet ->
+                        SelectionCard(state.pet == pet, { onPet(pet) }, Modifier.weight(1f), state.ready) {
+                            PetIllustration(pet, Modifier.size(66.dp).clearAndSetSemantics {})
+                            Text(pet.title, style = MaterialTheme.typography.titleMedium)
+                            Text(pet.subtitle, color = Muted, style = MaterialTheme.typography.labelSmall)
+                            Text(if (state.pet == pet) "✓ 已选择" else "选择", color = if (state.pet == pet) Color(0xFFB52670) else Muted, style = MaterialTheme.typography.labelSmall)
+                        }
+                    }
+                }
+            }
+            Section("2", "它现在在哪里？", "不同场景下，TA 的含义可能不同哦") {
+                Column(Modifier.selectableGroup(), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                    PetScene.entries.chunked(2).forEach { pair ->
+                        Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                            pair.forEach { scene ->
+                                SelectionCard(state.scene == scene, { onScene(scene) }, Modifier.weight(1f)) {
+                                    Text(scene.symbol, fontSize = 32.sp, color = if (state.scene == scene) Pink else Color(0xFF857AC5), modifier = Modifier.clearAndSetSemantics {})
+                                    Text(scene.title, style = MaterialTheme.typography.titleMedium)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            Button(onClick = onRecord, enabled = state.ready, contentPadding = PaddingValues(0.dp), colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent, disabledContainerColor = Color.Transparent), shape = RoundedCornerShape(40.dp), modifier = Modifier.fillMaxWidth()) {
+                Row(Modifier.fillMaxWidth().background(Brush.horizontalGradient(listOf(Pink, Color(0xFFAD85EE), Blue))).padding(horizontal = 22.dp, vertical = 22.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.Center) {
+                    Microphone(Modifier.size(30.dp))
+                    Spacer(Modifier.width(10.dp))
+                    Text("开始录音翻译", fontSize = 21.sp, fontWeight = FontWeight.Bold, color = Color.White, textAlign = androidx.compose.ui.text.style.TextAlign.Center, modifier = Modifier.weight(1f))
+                }
+            }
+            Surface(onClick = onHumanVoice, shape = RoundedCornerShape(24.dp), color = Color.White, shadowElevation = 1.dp) {
+                Row(Modifier.fillMaxWidth().padding(18.dp), verticalAlignment = Alignment.CenterVertically) {
+                    Text("≋", color = Pink, fontSize = 32.sp, modifier = Modifier.padding(end = 12.dp).clearAndSetSemantics {})
+                    Column(Modifier.weight(1f)) {
+                        Text("人声变宠物语", style = MaterialTheme.typography.titleMedium)
+                        Text("把我的话说给它听", color = Muted, style = MaterialTheme.typography.bodyMedium)
+                    }
+                    Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, contentDescription = null, tint = Muted)
+                }
+            }
+            Text("趣味声音模拟，不代表宠物真实语言翻译", style = MaterialTheme.typography.labelSmall, color = Muted, modifier = Modifier.fillMaxWidth().padding(horizontal = 6.dp))
+        }
+    }
+}
+@Composable private fun Section(number: String, title: String, subtitle: String, content: @Composable () -> Unit) {
+    Surface(shape = RoundedCornerShape(AppSpace.cardRadius), color = Color.White.copy(alpha = .88f)) {
+        Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Box(Modifier.size(32.dp).background(Pink, CircleShape), contentAlignment = Alignment.Center) { Text(number, color = Color.White, fontWeight = FontWeight.Bold) }
+                Text(title, style = MaterialTheme.typography.titleLarge, modifier = Modifier.weight(1f).padding(start = 9.dp))
+            }
+            Text(subtitle, color = Muted, style = MaterialTheme.typography.labelSmall)
+            content()
+        }
+    }
+}
+@Composable private fun SelectionCard(selected: Boolean, onClick: () -> Unit, modifier: Modifier, enabled: Boolean = true, content: @Composable ColumnScope.() -> Unit) {
+    val color by animateColorAsState(if (selected) Color(0xFFFFE7F2) else Mist, label = "selection")
+    Column(modifier.clip(RoundedCornerShape(20.dp)).background(color).border(if (selected) 2.dp else 1.dp, if (selected) Pink else Color(0xFFE8E9F5), RoundedCornerShape(20.dp)).selectable(selected = selected, enabled = enabled, role = Role.RadioButton, onClick = onClick).padding(horizontal = 8.dp, vertical = 12.dp), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(4.dp), content = content)
+}
+@Composable private fun Microphone(modifier: Modifier) {
+    Canvas(modifier.clearAndSetSemantics {}) {
+        val w = size.width; val h = size.height
+        val stroke = androidx.compose.ui.graphics.drawscope.Stroke(width = w * .07f)
+        drawRoundRect(Color.White, androidx.compose.ui.geometry.Offset(w*.35f, 0f), androidx.compose.ui.geometry.Size(w*.3f,h*.62f), androidx.compose.ui.geometry.CornerRadius(w*.15f), style = stroke)
+        drawArc(Color.White, 0f, 180f, false, androidx.compose.ui.geometry.Offset(w*.18f,h*.25f), androidx.compose.ui.geometry.Size(w*.64f,h*.55f), style = stroke)
+        drawLine(Color.White, androidx.compose.ui.geometry.Offset(w*.5f,h*.8f), androidx.compose.ui.geometry.Offset(w*.5f,h), w*.07f)
+        drawLine(Color.White, androidx.compose.ui.geometry.Offset(w*.3f,h*.97f), androidx.compose.ui.geometry.Offset(w*.7f,h*.97f), w*.07f)
+    }
+}

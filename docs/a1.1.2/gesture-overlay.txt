@@ -1,0 +1,8 @@
+
+[ ] com.samsung.internal.systemui.navbar.sec_gestural
+[ ] com.android.internal.systemui.navbar.threebutton
+[ ] com.samsung.internal.systemui.navbar.sec_gestural_no_hint
+[ ] com.samsung.internal.systemui.navbar.gestural_no_hint
+[ ] com.android.internal.systemui.navbar.transparent
+[x] com.android.internal.systemui.navbar.gestural
+

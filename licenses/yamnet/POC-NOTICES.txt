@@ -1,0 +1,34 @@
+PetTranslatorPOC 0.2.0 — P0.2 technical integration demo
+
+Model: Google YAMNet classification-tflite/1 (NOT the dynamic full YAMNet variant).
+Official model page: https://www.kaggle.com/models/google/yamnet/tfLite/classification-tflite/1
+Official model metadata: yamnet-official-metadata.json (Google model instance 633, version 1).
+License declared by model publisher: Apache License 2.0.
+Model SHA-256: 10c95ea3eb9a7bb4cb8bddf6feb023250381008177ac162ce169694d05c317de
+The downloaded upstream tar.gz contains only 1.tflite. It has no separate LICENSE
+or NOTICE file. The TFLite associated-file ZIP contains yamnet_label_list.txt only.
+The 521 labels were extracted unmodified from the model and checked against the
+official TensorFlow Models yamnet_class_map.csv. Labels/model were not retrained.
+Model-card provenance is retained; no NOTICE file has been invented.
+
+Runtime: com.google.ai.edge.litert:litert:1.4.2
+API: com.google.ai.edge.litert:litert-api:1.4.2
+Both declare Apache License 2.0 in the publisher's Google Maven POM.
+Original AAR LICENSE files are separately bundled, including their Caffe-derived
+copyright, redistribution terms and disclaimers. Do not remove those sections.
+
+Additional JVM runtime components are listed in the actual Gradle dependency
+inventory. Kotlin stdlib and JetBrains annotations use their upstream licenses.
+This product is not endorsed by Google, TensorFlow, or the upstream contributors.
+
+OPEN LICENSE AUDIT ITEMS:
+The complete static/native third-party component list and exact source revisions
+inside the prebuilt LiteRT JNI library have NOT been fully traced. XNNPACK,
+FlatBuffers, ruy, Eigen and backend helper dependencies must be checked against
+the actual release build. MPL-covered sources, if present, require separate review
+of their source-availability obligations. POC build success is not commercial
+license audit completion or authorization to market scientific pet translation.
+
+No Google Play Services, server, analytics, advertising, account or payment SDK
+is required by this POC. The app requests only RECORD_AUDIO, not INTERNET.
+Raw audio and file names/URIs are not included in diagnostic logs.

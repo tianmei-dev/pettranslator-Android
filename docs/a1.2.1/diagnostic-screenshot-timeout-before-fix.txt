@@ -1,0 +1,35 @@
+
+com.example.pettranslator.AudioRecordDeviceTest:..
+com.example.pettranslator.RecordingFlowTest:
+Error in catManualDogAutoAndScreenshots(com.example.pettranslator.RecordingFlowTest):
+java.lang.AssertionError: Failed to inject touch input.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains '停止录音' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performTouchInput(Actions.kt:389)
+	at androidx.compose.ui.test.AndroidActions.performClickImpl(Actions.android.kt:23)
+	at androidx.compose.ui.test.ActionsKt.performClick(Actions.kt:60)
+	at com.example.pettranslator.RecordingFlowTest.catManualDogAutoAndScreenshots(RecordingFlowTest.kt:49)
+.
+com.example.pettranslator.RecordingLayoutTest:..
+
+Time: 36.25
+There was 1 failure:
+1) catManualDogAutoAndScreenshots(com.example.pettranslator.RecordingFlowTest)
+java.lang.AssertionError: Failed to inject touch input.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains '停止录音' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performTouchInput(Actions.kt:389)
+	at androidx.compose.ui.test.AndroidActions.performClickImpl(Actions.android.kt:23)
+	at androidx.compose.ui.test.ActionsKt.performClick(Actions.kt:60)
+	at com.example.pettranslator.RecordingFlowTest.catManualDogAutoAndScreenshots(RecordingFlowTest.kt:49)
+
+FAILURES!!!
+Tests run: 6,  Failures: 1
+
+

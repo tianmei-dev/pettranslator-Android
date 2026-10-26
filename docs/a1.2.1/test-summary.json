@@ -1,0 +1,102 @@
+{
+  "unit": [
+    {
+      "suite": "com.example.pettranslator.HomeViewModelTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "suite": "com.example.pettranslator.RecordingViewModelTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0
+    }
+  ],
+  "connected": [
+    {
+      "class": "com.example.pettranslator.AdaptiveHomeTest",
+      "name": "smallPhoneLargeFont",
+      "passed": true
+    },
+    {
+      "class": "com.example.pettranslator.AdaptiveHomeTest",
+      "name": "largeContent",
+      "passed": true
+    },
+    {
+      "class": "com.example.pettranslator.AdaptiveHomeTest",
+      "name": "regularPhone360",
+      "passed": true
+    },
+    {
+      "class": "com.example.pettranslator.AdaptiveHomeTest",
+      "name": "regularPhone411",
+      "passed": true
+    },
+    {
+      "class": "com.example.pettranslator.AdaptiveHomeTest",
+      "name": "smallPhone",
+      "passed": true
+    },
+    {
+      "class": "com.example.pettranslator.AudioRecordDeviceTest",
+      "name": "realAutomaticLimitAndCancellation",
+      "passed": true
+    },
+    {
+      "class": "com.example.pettranslator.AudioRecordDeviceTest",
+      "name": "realManualStopFileAndDiscard",
+      "passed": true
+    },
+    {
+      "class": "com.example.pettranslator.HomeFlowTest",
+      "name": "selectionTabsAndComingSoon",
+      "passed": true
+    },
+    {
+      "class": "com.example.pettranslator.HomeVisualEvidenceTest",
+      "name": "captureHomeRegions",
+      "passed": true
+    },
+    {
+      "class": "com.example.pettranslator.PetPreferencesTest",
+      "name": "lastChoiceCanBeReadFromNewRepository",
+      "passed": true
+    },
+    {
+      "class": "com.example.pettranslator.RecordingFlowTest",
+      "name": "catManualDogAutoAndScreenshots",
+      "passed": true
+    },
+    {
+      "class": "com.example.pettranslator.RecordingFlowTest",
+      "name": "recreationAndBackCancelActiveCapture",
+      "passed": true
+    },
+    {
+      "class": "com.example.pettranslator.RecordingLayoutTest",
+      "name": "regularPhone",
+      "passed": true
+    },
+    {
+      "class": "com.example.pettranslator.RecordingLayoutTest",
+      "name": "smallLargeFont",
+      "passed": true
+    }
+  ],
+  "device": "API 35 emulator; 1080x2160, density 440",
+  "navigation": "final connected run: threebutton; prior gesture run also 14/14",
+  "physical": {
+    "device": "Samsung SM-S9010 / Android 15",
+    "screen": "1080x2340, density 480 (360dp)",
+    "navigation": "original threebutton",
+    "tests": 14,
+    "failures": 0,
+    "errors": 0,
+    "ui_regression": 2,
+    "lint_errors": 0,
+    "lint_warnings": 2,
+    "remaining": "real calls, Bluetooth/headsets, physical lockscreen/revocation, long-duration observations"
+  }
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "Path": "D:\\pettranslator\\app\\src\\main\\res\\drawable-nodpi\\pet_cat_main.png",
+    "Hash": "56E4C336DFE80995E9A69E83018055545A0A9BD7E230C1B0E6E6FBBDCF6FB2AF"
+  },
+  {
+    "Path": "D:\\pettranslator\\app\\src\\main\\res\\drawable-nodpi\\pet_dog_main.png",
+    "Hash": "0CE83BCCD241D2F0C141070A1D57C10644AA24B3C807E96B6414631E7C14FB51"
+  },
+  {
+    "Path": "D:\\pettranslator\\app\\src\\main\\res\\drawable-nodpi\\pet_home_hero.png",
+    "Hash": "9B749142137CCB4CB0007BCE1466EF90D120AB12EFB0F8A076EC454E6DA6FEE0"
+  },
+  {
+    "Path": "D:\\pettranslator\\app\\src\\main\\res\\drawable-nodpi\\pet_home_room_bg.png",
+    "Hash": "9613D286A876761D509FCB01E3D132BAD63C17B545214964CD2826760B56413B"
+  },
+  {
+    "Path": "D:\\pettranslator\\app\\src\\main\\res\\drawable-nodpi\\scene_alone.png",
+    "Hash": "A997D4A062211F294BBEFD4152EAA1733171EFD7E52FF331F8A00DA491E800AA"
+  },
+  {
+    "Path": "D:\\pettranslator\\app\\src\\main\\res\\drawable-nodpi\\scene_door_window.png",
+    "Hash": "FD71FB20062FB0F7F14FFF7F1F6FB3FA80121B9C8BC824BBB9E310B682B7A5BC"
+  },
+  {
+    "Path": "D:\\pettranslator\\app\\src\\main\\res\\drawable-nodpi\\scene_food.png",
+    "Hash": "F33C3469AF0D1AF9D47F3D2764962E672362E99843331D198E25A2C3AA1E23E7"
+  },
+  {
+    "Path": "D:\\pettranslator\\app\\src\\main\\res\\drawable-nodpi\\scene_held.png",
+    "Hash": "6D6F32E34B0015E2698C79612C5D3E04278E649A647815792220BE4327A245F8"
+  },
+  {
+    "Path": "D:\\pettranslator\\app\\src\\main\\res\\drawable-nodpi\\scene_play.png",
+    "Hash": "0A116BA18E1521F94BF411B0D22799112ADA686FFF984D79DCA6306FC194D422"
+  },
+  {
+    "Path": "D:\\pettranslator\\app\\src\\main\\res\\drawable-nodpi\\scene_unknown.png",
+    "Hash": "EA1F5A55F180FE537611B00461F9980AA4892FA780D6273BB453DC2417DB514D"
+  },
+  {
+    "Path": "D:\\pettranslator\\app\\src\\main\\java\\com\\example\\pettranslator\\ui\\home\\HomeViewModel.kt",
+    "Hash": "055E5264448266FC835BC18C822FE4EF5A9D6E41EAEC2979A41D44436B81E4DF"
+  },
+  {
+    "Path": "D:\\pettranslator\\app\\src\\main\\java\\com\\example\\pettranslator\\domain\\HomeModels.kt",
+    "Hash": "6C96350A1A9977AEF5C1B9A71FB7D76A716E6224710FF465AF6850D2C253CC30"
+  },
+  {
+    "Path": "D:\\pettranslator\\app\\src\\main\\java\\com\\example\\pettranslator\\data\\PetPreferencesRepository.kt",
+    "Hash": "D29039B02883D196ACFBBF5BA58359529F30A4CDFF8F03A519516543B036DCB5"
+  }
+]

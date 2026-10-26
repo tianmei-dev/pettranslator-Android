@@ -1,0 +1,4 @@
+home_hero: top=27.0dp height=253.33334dp width=360.0dp
+home_section_1: top=290.33334dp height=113.0dp width=320.0dp
+home_section_2: top=413.33334dp height=236.33334dp width=320.0dp
+home_record: top=659.6667dp height=63.333313dp width=320.0dp
