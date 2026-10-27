@@ -16,6 +16,14 @@ data class AudioQuality(
     val usable: Boolean,
 )
 
+/** One actual YAMNet analysis window; index is ordinal, not a precise call timestamp. */
+data class PetWindowEvidence(
+    val windowIndex: Int,
+    val catScore: Float,
+    val dogScore: Float,
+    val dominantPetEvent: SoundEvent?,
+)
+
 /** Stable A1.3 input; model scores and product decision are kept separate. */
 data class PetRecognitionResult(
     val selectedPet: PetType,
@@ -30,6 +38,7 @@ data class PetRecognitionResult(
     val quality: AudioQuality,
     val modelVersion: String,
     val ruleVersion: String,
+    val windowEvidence: List<PetWindowEvidence> = emptyList(),
 )
 
 /** Raw, choice-independent YAMNet data, cached so switching a pet never reruns inference. */

@@ -53,10 +53,12 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.pettranslator.R
 import com.example.pettranslator.domain.*
 import com.example.pettranslator.ui.theme.*
+import com.example.pettranslator.ui.analysis.AnalysisScreen
+import com.example.pettranslator.ui.result.InterpretationResultScreen
 import java.util.Locale
 
 @Composable
-fun RecordingRoute(model: RecordingViewModel, onBack: () -> Unit) {
+fun RecordingRoute(model: RecordingViewModel, onBack: () -> Unit, onHome: () -> Unit = onBack) {
     val context = LocalContext.current
     val activity = context as Activity
     val owner = LocalLifecycleOwner.current
@@ -102,7 +104,19 @@ fun RecordingRoute(model: RecordingViewModel, onBack: () -> Unit) {
         if (!exiting) { exiting = true; pendingStart = false; model.leave(); onBack() }
     }
     BackHandler(onBack = leave)
-    RecordingScreen(model.pet, model.scene, state, onBack = leave, onStart = {
+    when {
+        state.phase == RecordingPhase.ANALYZING -> AnalysisScreen(model.pet, state.analysisStep, onBack = leave)
+        state.phase == RecordingPhase.SUCCESS && state.interpretation != null -> InterpretationResultScreen(
+            result = state.interpretation!!, onBack = leave, onHome = { if (!exiting) { exiting = true; model.leave(); onHome() } },
+            onAgain = { if (model.prepareAnotherRecording()) Unit else scopeSnackbar(context, "当前暂不可使用") },
+        )
+        state.phase in setOf(RecordingPhase.UNCERTAIN, RecordingPhase.PET_MISMATCH, RecordingPhase.ANALYSIS_ERROR) -> AnalysisOutcomeScreen(
+            pet = model.pet, phase = state.phase, message = state.message,
+            onBack = leave, onHome = { if (!exiting) { exiting = true; model.leave(); onHome() } },
+            onAgain = { if (model.prepareAnotherRecording()) Unit else scopeSnackbar(context, "当前暂不可使用") },
+            onSwitch = model::switchPetAndRejudge, onRetry = model::retryAnalysis,
+        )
+        else -> RecordingScreen(model.pet, model.scene, state, onBack = leave, onStart = {
         if (!requestingPermission && !exiting) {
             if (granted()) {
                 pendingStart = true
@@ -116,6 +130,11 @@ fun RecordingRoute(model: RecordingViewModel, onBack: () -> Unit) {
         pendingStart = false
         context.startActivity(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, "package:${context.packageName}".toUri()))
     }, onSwitchPet = model::switchPetAndRejudge, onRetryAnalysis = model::retryAnalysis)
+    }
+}
+
+private fun scopeSnackbar(context: android.content.Context, message: String) {
+    android.widget.Toast.makeText(context, message, android.widget.Toast.LENGTH_SHORT).show()
 }
 
 @Composable

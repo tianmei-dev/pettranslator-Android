@@ -1,6 +1,6 @@
 # 宠物翻译器
 
-当前实现：A1.2.2（首页、三个 Tab、独立全屏录音页、真实 AudioRecord 采集、本地 YAMNet 声音识别）。尚未实现趣味解读、登录、VIP 购买、支付或服务端。包名暂用开发者此前同意的 `com.example.pettranslator`，发布前需确认。
+当前实现：A1.4（首页、三个 Tab、独立全屏录音页、真实 AudioRecord 采集、本地 YAMNet 声音识别、正式趣味文案库/规则引擎，以及分析页和解读结果页）。尚未实现登录、VIP 购买、支付或服务端。包名暂用开发者此前同意的 `com.example.pettranslator`，发布前需确认。
 
 ## 构建
 
@@ -21,6 +21,7 @@
 - `ui/play` / `ui/profile`：基础占位页。
 - `domain`：宠物/场景与偏好接口；`domain/recording`：音频采集接口和结果数据。
 - `data`：DataStore；`data/recording`：AndroidPcmRecorder 后台采集。
+- `domain/interpretation`：仅接受识别 SUCCESS 的结构化趣味解读、保守声音特征归纳、本地模板和版本化结果编解码。
 - `core`：FeatureAccessManager，当前默认放行。
 - `PetTranslatorApplication`：每个新进程首次启动时清理本模块遗留 PCM 缓存。
 

@@ -72,7 +72,9 @@ private enum class Tab(val route: String, val title: String, val icon: ImageVect
                     factory = viewModelFactory { initializer {
                         RecordingViewModel(pet, scene, AndroidPcmRecorder(appContext), YamnetRuntime.get(appContext))
                     } })
-                RecordingRoute(recordingModel) { controller.popBackStack() }
+                RecordingRoute(recordingModel, onBack = { controller.popBackStack() }, onHome = {
+                    controller.popBackStack(Tab.Home.route, inclusive = false)
+                })
             }
             composable(Tab.Play.route) { PlayScreen { controller.popBackStack() } }
             composable(Tab.Profile.route) { ProfileScreen { controller.popBackStack() } }

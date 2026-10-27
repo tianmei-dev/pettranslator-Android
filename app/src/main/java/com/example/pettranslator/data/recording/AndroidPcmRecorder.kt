@@ -13,6 +13,7 @@ import androidx.annotation.RequiresPermission
 import com.example.pettranslator.domain.recording.*
 import java.io.File
 import java.io.FileOutputStream
+import java.security.MessageDigest
 import java.util.concurrent.atomic.AtomicBoolean
 import java.util.concurrent.atomic.AtomicReference
 import kotlinx.coroutines.*
@@ -62,6 +63,7 @@ class AndroidPcmRecorder(context: Context) : AudioCapture {
             var peak = 0f
             val samples = ShortArray(800)
             val bytes = ByteArray(samples.size * 2)
+            val audioDigest = MessageDigest.getInstance("SHA-256")
             FileOutputStream(file).use { stream ->
                 while (command.get() == Command.RUN && count < MAX_SAMPLES && SystemClock.elapsedRealtime() - started < MAX_MS) {
                     ensureActive()
@@ -90,6 +92,7 @@ class AndroidPcmRecorder(context: Context) : AudioCapture {
                         framePeak = maxOf(framePeak, magnitude)
                     }
                     stream.write(bytes, 0, read * 2)
+                    audioDigest.update(bytes, 0, read * 2)
                     totalSquares += squares
                     count += read
                     onFrame(CaptureFrame(count, count * 1000 / RATE,
@@ -102,7 +105,8 @@ class AndroidPcmRecorder(context: Context) : AudioCapture {
             if (count == 0L) throw CaptureException("没有采集到音频数据，请重试")
             completed = true
             RecordedAudio(file.absolutePath, recorder.sampleRate, count, count * 1000 / RATE,
-                rms = (sqrt(totalSquares / count) / 32768).toFloat(), peak = peak)
+                rms = (sqrt(totalSquares / count) / 32768).toFloat(), peak = peak,
+                audioFingerprint = audioDigest.digest().joinToString("") { "%02x".format(it.toInt() and 0xff) })
         } catch (error: CancellationException) {
             throw error
         } catch (error: SecurityException) {

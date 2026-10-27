@@ -35,7 +35,8 @@ class RecordingViewModelTest {
     }
     private fun model(capture: AudioCapture, recognizer: FakeRecognizer = FakeRecognizer(rawDog())) =
         RecordingViewModel(PetType.Dog, PetScene.Play, capture, recognizer)
-    private fun audio() = RecordedAudio("/private/test.pcm", 16000, 16000, 1000, rms = .02f, peak = .1f)
+    private fun audio() = RecordedAudio("/private/test.pcm", 16000, 16000, 1000, rms = .02f, peak = .1f,
+        audioFingerprint = "a".repeat(64))
 
     @Test fun singleStartAndStopAndCompletedHandoff() = runTest {
         Dispatchers.setMain(StandardTestDispatcher(testScheduler))
@@ -51,8 +52,9 @@ class RecordingViewModelTest {
             assertEquals(.02f, model.uiState.value.peakLevels.first())
             assertEquals(.41f, model.uiState.value.peakLevels.last())
             model.stop(); model.stop(); assertEquals(1, capture.stops)
-            capture.result.complete(audio()); runCurrent()
+            capture.result.complete(audio()); advanceUntilIdle()
             assertEquals(RecordingPhase.SUCCESS, model.uiState.value.phase)
+            assertNotNull(model.uiState.value.interpretation)
             assertEquals(audio(), model.uiState.value.audio)
             assertEquals(RecordingInput(audio(), PetType.Dog, PetScene.Play), model.completedInput())
             assertEquals(PetType.Dog, model.pet); assertEquals(PetScene.Play, model.scene)
@@ -68,10 +70,12 @@ class RecordingViewModelTest {
             model.foreground(true); model.start(); runCurrent(); model.stop()
             capture.result.complete(audio()); runCurrent()
             assertEquals(RecordingPhase.PET_MISMATCH, model.uiState.value.phase)
+            assertNull(model.uiState.value.interpretation)
             assertEquals(1, recognizer.calls)
             val rawBefore = model.uiState.value.rawRecognition
-            model.switchPetAndRejudge()
+            model.switchPetAndRejudge(); advanceUntilIdle()
             assertEquals(RecordingPhase.SUCCESS, model.uiState.value.phase)
+            assertNotNull(model.uiState.value.interpretation)
             assertEquals(PetType.Dog, model.pet)
             assertEquals(1, recognizer.calls)
             assertSame(rawBefore, model.uiState.value.rawRecognition)

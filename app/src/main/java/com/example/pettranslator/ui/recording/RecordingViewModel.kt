@@ -8,6 +8,11 @@ import com.example.pettranslator.domain.PetScene
 import com.example.pettranslator.domain.recording.*
 import com.example.pettranslator.domain.recognition.*
 import com.example.pettranslator.data.recognition.PetSoundRecognizer
+import com.example.pettranslator.core.DefaultFeatureAccessManager
+import com.example.pettranslator.core.Feature
+import com.example.pettranslator.core.FeatureAccessManager
+import com.example.pettranslator.domain.interpretation.PetInterpretationEngine
+import com.example.pettranslator.domain.interpretation.PetInterpretationResult
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
 
@@ -22,11 +27,16 @@ data class RecordingUiState(
     val audio: RecordedAudio? = null,
     val recognition: PetRecognitionResult? = null,
     val rawRecognition: YamnetRawResult? = null,
+    val interpretation: PetInterpretationResult? = null,
+    /** Number of genuinely completed analysis stages (0..4); UI progress remains illustrative. */
+    val analysisStep: Int = 0,
 )
 /** Capture closes/releases the microphone before local inference begins. */
 class RecordingViewModel(
     initialPet: PetType, val scene: PetScene, private val capture: AudioCapture,
     private val recognizer: PetSoundRecognizer,
+    private val interpretationEngine: PetInterpretationEngine = PetInterpretationEngine(),
+    private val featureAccessManager: FeatureAccessManager = DefaultFeatureAccessManager(),
 ) : ViewModel() {
     var pet: PetType = initialPet
         private set
@@ -36,6 +46,7 @@ class RecordingViewModel(
     private var analysisTask: Job? = null
     @Volatile private var foreground = false
     @Volatile private var generation = 0
+    private var analysisStartedAtNanos = 0L
 
     fun foreground(active: Boolean) {
         foreground = active
@@ -108,14 +119,31 @@ class RecordingViewModel(
         if (state.value.phase != RecordingPhase.PET_MISMATCH) return
         val raw = state.value.rawRecognition ?: return
         pet = if (pet == PetType.Cat) PetType.Dog else PetType.Cat
-        applyDecision(raw, pet, generation)
+        val token = generation
+        analysisStartedAtNanos = System.nanoTime()
+        state.update { it.copy(phase = RecordingPhase.ANALYZING, analysisStep = 2,
+            recognition = null, interpretation = null, message = null) }
+        analysisTask = viewModelScope.launch { applyDecision(raw, pet, token) }
+    }
+
+    /** Starts a fresh capture only after the shared feature gate allows it. */
+    fun prepareAnotherRecording(): Boolean {
+        if (!featureAccessManager.canAccess(Feature.RecordingTranslation)) return false
+        generation++
+        analysisTask?.cancel()
+        task?.cancel()
+        capture.discard()
+        state.value = RecordingUiState()
+        return true
     }
 
     fun retryAnalysis() {
         if (state.value.phase != RecordingPhase.ANALYSIS_ERROR || analysisTask?.isActive == true) return
         val audio = state.value.audio ?: return
         val token = generation
-        state.value = state.value.copy(phase = RecordingPhase.ANALYZING, message = null, recognition = null)
+        analysisStartedAtNanos = System.nanoTime()
+        state.value = state.value.copy(phase = RecordingPhase.ANALYZING, analysisStep = 0,
+            message = null, recognition = null, interpretation = null)
         analyze(audio, token)
     }
 
@@ -134,11 +162,14 @@ class RecordingViewModel(
 
     private fun analyze(audio: RecordedAudio, token: Int) {
         analysisTask?.cancel()
+        analysisStartedAtNanos = System.nanoTime()
+        state.update { it.copy(phase = RecordingPhase.ANALYZING, analysisStep = 0) }
         analysisTask = viewModelScope.launch {
             try {
                 val raw = recognizer.infer(audio)
                 if (token == generation) {
-                    state.update { it.copy(rawRecognition = raw) }
+                    // Audio preparation and model inference have now both returned successfully.
+                    state.update { it.copy(rawRecognition = raw, analysisStep = 2) }
                     applyDecision(raw, pet, token)
                 }
             } catch (error: CancellationException) {
@@ -152,7 +183,7 @@ class RecordingViewModel(
         }
     }
 
-    private fun applyDecision(raw: YamnetRawResult, selectedPet: PetType, token: Int) {
+    private suspend fun applyDecision(raw: YamnetRawResult, selectedPet: PetType, token: Int) {
         if (token != generation) return
         val result = PetRecognitionPolicy.decide(raw, selectedPet, scene)
         val phase = when (result.status) {
@@ -160,6 +191,31 @@ class RecordingViewModel(
             RecognitionStatus.UNCERTAIN -> RecordingPhase.UNCERTAIN
             RecognitionStatus.PET_MISMATCH -> RecordingPhase.PET_MISMATCH
         }
-        state.update { it.copy(phase = phase, recognition = result, rawRecognition = raw, message = null) }
+        if (result.status != RecognitionStatus.SUCCESS) {
+            if (token == generation) state.update { it.copy(phase = phase, recognition = result,
+                rawRecognition = raw, interpretation = null, analysisStep = 2, message = null) }
+            return
+        }
+
+        state.update { it.copy(phase = RecordingPhase.ANALYZING, analysisStep = 3,
+            recognition = result, rawRecognition = raw, interpretation = null) }
+        val interpretation = try {
+            interpretationEngine.interpret(result, state.value.audio?.audioFingerprint)
+        } catch (error: Exception) {
+            Log.e("PetInterpretation", "Approved template generation failed (${error.javaClass.simpleName})", error)
+            null
+        }
+        val finalPhase = if (interpretation == null) RecordingPhase.ANALYSIS_ERROR else RecordingPhase.SUCCESS
+        if (interpretation != null) state.update { it.copy(analysisStep = 4) }
+        if (interpretation != null) {
+            val elapsedMs = (System.nanoTime() - analysisStartedAtNanos).coerceAtLeast(0L) / 1_000_000L
+            val minimumShowMs = 1_500L
+            val remaining = (minimumShowMs - elapsedMs).coerceAtLeast(0L)
+            if (remaining > 0) delay(remaining)
+        }
+        if (token != generation) return
+        val message = if (finalPhase == RecordingPhase.ANALYSIS_ERROR) "趣味解读暂时无法生成，请重试" else null
+        state.update { it.copy(phase = finalPhase, recognition = result, rawRecognition = raw,
+            interpretation = interpretation, analysisStep = if (interpretation != null) 4 else 3, message = message) }
     }
 }

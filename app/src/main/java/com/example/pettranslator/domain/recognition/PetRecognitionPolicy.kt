@@ -44,11 +44,21 @@ object PetRecognitionPolicy {
             .sortedByDescending { raw.meanScores[it] }
             .take(8)
             .map { SoundEvent(it, raw.labels.getOrElse(it) { "Unknown" }, raw.meanScores[it]) }
+        val windows = raw.windowScores.mapIndexed { index, scores ->
+            val catIndex = (76..80).maxBy { scores.getOrElse(it) { 0f } }
+            val dogIndex = (69..75).maxBy { scores.getOrElse(it) { 0f } }
+            val cat = scores.getOrElse(catIndex) { 0f }
+            val dog = scores.getOrElse(dogIndex) { 0f }
+            val eventIndex = (69..80).maxBy { scores.getOrElse(it) { 0f } }
+            val eventScore = scores.getOrElse(eventIndex) { 0f }
+            PetWindowEvidence(index, cat, dog,
+                if (eventScore >= t.eventScore) SoundEvent(eventIndex, raw.labels.getOrElse(eventIndex) { "Unknown" }, eventScore) else null)
+        }
         return PetRecognitionResult(
             selectedPet = selected, scene = scene,
             detectedPet = best.takeIf { status != RecognitionStatus.UNCERTAIN }, status = status,
             catScore = raw.catScore, dogScore = raw.dogScore, otherScore = raw.otherScore,
-            primarySound = raw.primary, soundEvents = events, quality = quality,
+            primarySound = raw.primary, soundEvents = events, windowEvidence = windows, quality = quality,
             modelVersion = "google/yamnet/tflite/classification-tflite/1",
             ruleVersion = RULE_VERSION,
         )

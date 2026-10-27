@@ -45,4 +45,16 @@ class PetRecognitionPolicyTest {
             aggregate[76], aggregate[70], .02f, SoundEvent(70, "Bark", aggregate[70]), goodQuality())
         assertEquals(RecognitionStatus.UNCERTAIN, PetRecognitionPolicy.decide(mixed, PetType.Dog, PetScene.Play).status)
     }
+
+    @Test fun decisionKeepsOrdinalWindowEvidenceFromRawYamnetScores() {
+        val catWindow = FloatArray(521).apply { this[78] = .8f; this[70] = .03f }
+        val secondCatWindow = FloatArray(521).apply { this[78] = .65f; this[70] = .02f }
+        val mean = FloatArray(521) { (catWindow[it] + secondCatWindow[it]) / 2f }
+        val raw = YamnetRawResult(mean, listOf(catWindow, secondCatWindow), labels,
+            .8f, .03f, .01f, SoundEvent(78, "Meow", .8f), goodQuality())
+        val result = PetRecognitionPolicy.decide(raw, PetType.Cat, PetScene.Unknown)
+        assertEquals(RecognitionStatus.SUCCESS, result.status)
+        assertEquals(listOf(0, 1), result.windowEvidence.map { it.windowIndex })
+        assertEquals(listOf("Meow", "Meow"), result.windowEvidence.map { it.dominantPetEvent?.label })
+    }
 }

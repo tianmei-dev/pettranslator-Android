@@ -10,6 +10,8 @@ data class RecordedAudio(
     val channels: Int = 1,
     val rms: Float,
     val peak: Float,
+    /** SHA-256 of the original PCM bytes, computed while writing the private cache file. */
+    val audioFingerprint: String? = null,
 )
 /** Read while the recording destination still owns the cache file; exit/rerecord invalidates it. */
 data class RecordingInput(
