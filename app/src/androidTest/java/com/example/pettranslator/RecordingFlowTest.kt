@@ -2,6 +2,9 @@ package com.example.pettranslator
 
 import android.Manifest
 import android.graphics.Bitmap
+import android.content.ContentValues
+import android.provider.MediaStore
+import android.os.Environment
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.test.platform.app.InstrumentationRegistry
@@ -42,15 +45,31 @@ class RecordingFlowTest {
             android.os.SystemClock.sleep(50)
         }
         capture("diagnostic-missing-control.png", active = true)
-        error("Missing live recording control: $text")
+        fun dump(node: android.view.accessibility.AccessibilityNodeInfo?): String {
+            if (node == null) return ""
+            val own = listOfNotNull(node.text?.toString(), node.contentDescription?.toString()).joinToString("/")
+            return listOf(own, (0 until node.childCount).joinToString("|") { dump(node.getChild(it)) })
+                .filter { it.isNotBlank() }.joinToString(" ")
+        }
+        error("Missing live recording control: $text; current semantics=${dump(InstrumentationRegistry.getInstrumentation().uiAutomation.rootInActiveWindow)}")
     }
     private fun waitRecognitionFinal(timeout: Long = 20000) {
-        val results = listOf("听到毛孩子的声音啦！", "没有听清毛孩子的声音", "好像听到了", "声音分析失败")
+        val results = listOf("毛孩子的心声来啦！", "没有听清毛孩子的声音", "好像听到了", "声音分析失败", "哎呀，这次没听清")
         val deadline = android.os.SystemClock.elapsedRealtime() + timeout
+        var analysisCaptured = false
         while (android.os.SystemClock.elapsedRealtime() < deadline) {
             rule.mainClock.advanceTimeBy(32)
+            if (!analysisCaptured && liveNode("正在认真听它说话") != null) {
+                repeat(32) {
+                    rule.mainClock.advanceTimeBy(32)
+                    android.os.SystemClock.sleep(25)
+                }
+                capture("analysis.png", active = true)
+                analysisCaptured = true
+            }
             results.firstOrNull { liveNode(it) != null }?.let {
                 android.util.Log.i("RecognitionTest", "real microphone reached final UI status: $it")
+                if (it == "毛孩子的心声来啦！") capture("result.png", active = true)
                 return
             }
             android.os.SystemClock.sleep(50)
@@ -93,8 +112,19 @@ class RecordingFlowTest {
         val instrumentation = InstrumentationRegistry.getInstrumentation()
         val folder = File(rule.activity.getExternalFilesDir(null), "a121-evidence").apply { mkdirs() }
         val bitmap = checkNotNull(instrumentation.uiAutomation.takeScreenshot())
-        File(folder, name).outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }
+        val screenshot = File(folder, name)
+        screenshot.outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }
         bitmap.recycle()
+        // Keep device evidence in MediaStore so Gradle's test APK cleanup does
+        // not remove the captures before the developer can pull them.
+        val values = ContentValues().apply {
+            put(MediaStore.Images.Media.DISPLAY_NAME, name)
+            put(MediaStore.Images.Media.MIME_TYPE, "image/png")
+            put(MediaStore.Images.Media.RELATIVE_PATH, "${Environment.DIRECTORY_PICTURES}/A141-evidence")
+        }
+        val uri = checkNotNull(rule.activity.contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values))
+        val output = checkNotNull(rule.activity.contentResolver.openOutputStream(uri))
+        output.use { sink -> screenshot.inputStream().use { it.copyTo(sink) } }
     }
     @Test fun catManualDogAutoAndScreenshots() {
         grant()
@@ -105,7 +135,8 @@ class RecordingFlowTest {
         waitRecognitionFinal()
         assertRecognitionVisible()
         capture("completed.png")
-        start("重新录音")
+        startAgainAfterAnalysis()
+        start()
         repeat(30) {
             rule.mainClock.advanceTimeBy(32)
             android.os.SystemClock.sleep(35)
@@ -131,8 +162,16 @@ class RecordingFlowTest {
     }
 
     private fun assertRecognitionVisible() {
-        val possible = listOf("听到毛孩子的声音啦！", "没有听清毛孩子的声音", "好像听到了", "声音分析失败")
+        val possible = listOf("毛孩子的心声来啦！", "没有听清毛孩子的声音", "好像听到了", "声音分析失败", "哎呀，这次没听清")
         check(possible.any { liveNode(it) != null }) { "No recognition result is visible" }
+    }
+    private fun startAgainAfterAnalysis() {
+        when {
+            liveNode("再翻译一次") != null -> liveClick("再翻译一次")
+            liveNode("重新录音") != null -> liveClick("重新录音")
+            else -> error("Analysis screen did not offer a fresh recording action")
+        }
+        waitLiveText("开始录音")
     }
     @Test fun recreationAndBackCancelActiveCapture() {
         grant(); enter("猫咪", "不确定")

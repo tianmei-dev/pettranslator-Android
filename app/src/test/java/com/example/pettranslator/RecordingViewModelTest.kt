@@ -113,4 +113,31 @@ class RecordingViewModelTest {
             assertEquals("麦克风被占用", model.uiState.value.message)
         } finally { Dispatchers.resetMain() }
     }
+
+    @Test fun tenAnalysisSessionsKeepOneThreeToFiveSecondTargetUntilSuccess() = runTest {
+        Dispatchers.setMain(StandardTestDispatcher(testScheduler))
+        try {
+            val capture = ControlledCapture()
+            val model = model(capture)
+            model.foreground(true)
+            repeat(10) { index ->
+                if (index > 0) assertTrue(model.prepareAnotherRecording())
+                capture.result = CompletableDeferred()
+                model.start(); runCurrent(); model.stop()
+                capture.result.complete(audio()); runCurrent()
+                val pending = model.uiState.value
+                assertEquals(RecordingPhase.ANALYZING, pending.phase)
+                assertTrue(pending.analysisTargetDurationMs in 3_000L..5_000L)
+                val start = pending.analysisStartedAtNanos
+                val target = pending.analysisTargetDurationMs
+                assertEquals(4, pending.analysisStep)
+                assertEquals(start, model.uiState.value.analysisStartedAtNanos)
+                assertEquals(target, model.uiState.value.analysisTargetDurationMs)
+                advanceUntilIdle()
+                assertEquals(RecordingPhase.SUCCESS, model.uiState.value.phase)
+                assertNotNull(model.uiState.value.interpretation)
+            }
+            model.leave()
+        } finally { Dispatchers.resetMain() }
+    }
 }

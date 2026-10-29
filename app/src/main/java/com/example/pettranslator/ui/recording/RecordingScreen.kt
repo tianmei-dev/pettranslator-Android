@@ -3,25 +3,19 @@ package com.example.pettranslator.ui.recording
 import android.Manifest
 import android.app.Activity
 import android.content.Intent
-import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.os.SystemClock
-import android.util.Log
 import androidx.core.net.toUri
 import android.provider.Settings
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.animation.core.tween
-import androidx.compose.animation.core.LinearEasing
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
-import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
@@ -55,6 +49,7 @@ import com.example.pettranslator.domain.*
 import com.example.pettranslator.ui.theme.*
 import com.example.pettranslator.ui.analysis.AnalysisScreen
 import com.example.pettranslator.ui.result.InterpretationResultScreen
+import kotlinx.coroutines.delay
 import java.util.Locale
 
 @Composable
@@ -105,7 +100,8 @@ fun RecordingRoute(model: RecordingViewModel, onBack: () -> Unit, onHome: () -> 
     }
     BackHandler(onBack = leave)
     when {
-        state.phase == RecordingPhase.ANALYZING -> AnalysisScreen(model.pet, state.analysisStep, onBack = leave)
+        state.phase == RecordingPhase.ANALYZING -> AnalysisScreen(model.pet, state.analysisStep,
+            state.analysisStartedAtNanos, state.analysisTargetDurationMs, onBack = leave)
         state.phase == RecordingPhase.SUCCESS && state.interpretation != null -> InterpretationResultScreen(
             result = state.interpretation!!, onBack = leave, onHome = { if (!exiting) { exiting = true; model.leave(); onHome() } },
             onAgain = { if (model.prepareAnotherRecording()) Unit else scopeSnackbar(context, "当前暂不可使用") },
@@ -246,7 +242,7 @@ fun RecordingScreen(
                         fontFamily = FontFamily.Monospace, fontSize = 24.sp, lineHeight = 30.sp, fontWeight = FontWeight.Bold)
                     Text("/ 00:10", color = Muted, fontFamily = FontFamily.Monospace, fontSize = 14.sp, lineHeight = 24.sp)
                 }
-                RealWaveform(if (active) state.levels else emptyList(), if (active) state.peakLevels else emptyList(), active)
+                RecordingWaveform(active)
                 if (compact) RecordingTip()
             }
             Column(Modifier.widthIn(max = 520.dp).fillMaxWidth().padding(horizontal = 16.dp, vertical = 6.dp),
@@ -279,7 +275,7 @@ fun RecordingScreen(
                     }
                     if (state.phase in setOf(RecordingPhase.STARTING, RecordingPhase.RECORDING, RecordingPhase.STOPPING)) {
                         Column(Modifier.align(Alignment.TopStart).padding(top = 22.dp, start = 18.dp), horizontalAlignment = Alignment.CenterHorizontally) {
-                            FilledTonalIconButton(onClick = onCancel, modifier = Modifier.size(48.dp).semantics { contentDescription = "取消录音" },
+                            FilledTonalIconButton(onClick = onCancel, modifier = Modifier.size(48.dp).testTag("recording_cancel").semantics { contentDescription = "取消录音" },
                                 colors = IconButtonDefaults.filledTonalIconButtonColors(containerColor = Color.White.copy(alpha = .9f), contentColor = Muted)) {
                                 RecordingGlyph("close", Muted, Modifier.size(20.dp))
                             }
@@ -347,47 +343,48 @@ fun RecordingScreen(
     }
 }
 
-@Composable private fun RealWaveform(levels: List<Float>, peaks: List<Float>, active: Boolean) {
-    val diagnosticsEnabled = (LocalContext.current.applicationInfo.flags and ApplicationInfo.FLAG_DEBUGGABLE) != 0
-    val rmsHistory = List(40 - levels.size.coerceAtMost(40)) { 0f } + levels.takeLast(40)
-    val peakHistory = List(40 - peaks.size.coerceAtMost(40)) { 0f } + peaks.takeLast(40)
-    val smoothed = rmsHistory.indices.map { index ->
-        val target = if (active) pcmFrameToWaveLevel(rmsHistory[index], peakHistory[index]) else 0f
-        animateFloatAsState(target, tween(80, easing = LinearEasing), label = "pcmLevel").value
-    }
-    val lastDiagnosticAt = remember { mutableLongStateOf(0L) }
-    SideEffect {
-        if (diagnosticsEnabled && active && levels.isNotEmpty()) {
-            val now = SystemClock.elapsedRealtime()
-            if (now - lastDiagnosticAt.longValue >= 500L) {
-                val rms = levels.last()
-                val peak = peaks.lastOrNull() ?: 0f
-                val normalized = pcmFrameToWaveLevel(rms, peak)
-                val heightRange = smoothed.map { (it * 112f).coerceAtLeast(3f) }
-                val minHeight = heightRange.minOrNull() ?: 0f
-                val maxHeight = heightRange.maxOrNull() ?: 0f
-                Log.d(WAVEFORM_LOG_TAG, "rms=$rms peak=$peak normalized=$normalized barsDp=${minHeight}..$maxHeight")
-                lastDiagnosticAt.longValue = now
+@Composable private fun RecordingWaveform(active: Boolean) {
+    var elapsedSeconds by remember { mutableFloatStateOf(0f) }
+    LaunchedEffect(active) {
+        if (!active) {
+            elapsedSeconds = 0f
+        } else {
+            val startedAt = SystemClock.elapsedRealtimeNanos()
+            while (true) {
+                elapsedSeconds = (SystemClock.elapsedRealtimeNanos() - startedAt) / 1_000_000_000f
+                delay(33L)
             }
         }
     }
-    Canvas(Modifier.fillMaxWidth().height(112.dp).testTag(if (active) "recording_waveform" else "recording_waveform_idle")
-        .semantics { contentDescription = if (active) "根据实际录音音量变化的声波" else "声波未采集" }) {
-        val barWidth = 4.dp.toPx()
-        val gap = ((size.width - smoothed.size * barWidth) / (smoothed.size - 1).coerceAtLeast(1))
-            .coerceIn(3.dp.toPx(), 5.dp.toPx())
-        val totalWidth = smoothed.size * barWidth + (smoothed.size - 1).coerceAtLeast(0) * gap
-        val startX = (size.width - totalWidth).coerceAtLeast(0f) / 2f
-        val gradient = Brush.verticalGradient(listOf(Pink, Color(0xFFA48BE8), Blue))
-        smoothed.forEachIndexed { index, level ->
-            val height = (size.height * level).coerceAtLeast(if (active) 3.dp.toPx() else 0f)
-            if (height > 0f) drawRoundRect(gradient, Offset(startX + index * (barWidth + gap), (size.height - height) / 2),
-                Size(barWidth, height), CornerRadius(barWidth / 2))
+
+    val phases = remember { List(32) { index -> index * 0.47f + (index % 5) * 0.13f } }
+    Canvas(Modifier.widthIn(max = 360.dp).fillMaxWidth().height(88.dp)
+        .testTag(if (active) "recording_waveform" else "recording_waveform_idle")
+        .semantics { contentDescription = if (active) "装饰性动态声波，录音中" else "声波已停止" }) {
+        if (!active) return@Canvas
+
+        val count = phases.size
+        val barWidth = 5.dp.toPx()
+        val gap = ((size.width - count * barWidth) / (count - 1)).coerceAtLeast(1.dp.toPx())
+        val totalWidth = count * barWidth + (count - 1) * gap
+        val startX = (size.width - totalWidth) / 2f
+        val centerY = size.height / 2f
+        val minHeight = 14.dp.toPx()
+        val maxHeight = 70.dp.toPx()
+        val gradient = Brush.horizontalGradient(listOf(Pink, Color(0xFFA48BE8), Blue), startX, startX + totalWidth)
+
+        phases.forEachIndexed { index, phase ->
+            val speed = 1.45f + (index % 6) * 0.105f
+            val broad = kotlin.math.sin(elapsedSeconds * speed + phase)
+            val detail = kotlin.math.sin(elapsedSeconds * (2.05f + (index % 4) * 0.09f) + phase * 1.73f)
+            val swell = (0.48f + broad * 0.30f + detail * 0.16f).coerceIn(0f, 1f)
+            val height = minHeight + (maxHeight - minHeight) * swell
+            drawRoundRect(gradient,
+                Offset(startX + index * (barWidth + gap), centerY - height / 2f),
+                Size(barWidth, height), CornerRadius(barWidth / 2f))
         }
     }
 }
-
-private const val WAVEFORM_LOG_TAG = "RecordingWaveform"
 
 private fun recordingSceneArtwork(scene: PetScene): Int = when (scene) {
     PetScene.Door -> R.drawable.scene_door_window

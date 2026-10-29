@@ -13,6 +13,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.platform.testTag
 import com.example.pettranslator.domain.PetType
 import com.example.pettranslator.ui.theme.*
 
@@ -29,7 +30,7 @@ fun AnalysisOutcomeScreen(pet: PetType, phase: RecordingPhase, message: String?,
         .padding(horizontal = 24.dp, vertical = 8.dp), horizontalAlignment = Alignment.CenterHorizontally) {
         Box(Modifier.fillMaxWidth().height(48.dp), contentAlignment = Alignment.Center) {
             Text("声音分析", color = Ink, fontWeight = FontWeight.Bold, fontSize = 19.sp)
-            TextButton(onClick = onBack, modifier = Modifier.align(Alignment.CenterStart)) { Text("‹ 返回", color = Muted) }
+            TextButton(onClick = onBack, modifier = Modifier.align(Alignment.CenterStart).testTag("recording_back")) { Text("‹ 返回", color = Muted) }
         }
         Spacer(Modifier.weight(1f))
         Text(if (mismatch) "🐾" else "🌷", fontSize = 54.sp)

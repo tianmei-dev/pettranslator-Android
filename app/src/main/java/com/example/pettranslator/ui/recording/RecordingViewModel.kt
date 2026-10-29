@@ -15,6 +15,7 @@ import com.example.pettranslator.domain.interpretation.PetInterpretationEngine
 import com.example.pettranslator.domain.interpretation.PetInterpretationResult
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
+import kotlin.random.Random
 
 enum class RecordingPhase { READY, STARTING, RECORDING, STOPPING, ANALYZING, SUCCESS, UNCERTAIN, PET_MISMATCH, ANALYSIS_ERROR, ERROR }
 data class RecordingUiState(
@@ -30,6 +31,8 @@ data class RecordingUiState(
     val interpretation: PetInterpretationResult? = null,
     /** Number of genuinely completed analysis stages (0..4); UI progress remains illustrative. */
     val analysisStep: Int = 0,
+    val analysisStartedAtNanos: Long = 0L,
+    val analysisTargetDurationMs: Long = 0L,
 )
 /** Capture closes/releases the microphone before local inference begins. */
 class RecordingViewModel(
@@ -46,7 +49,6 @@ class RecordingViewModel(
     private var analysisTask: Job? = null
     @Volatile private var foreground = false
     @Volatile private var generation = 0
-    private var analysisStartedAtNanos = 0L
 
     fun foreground(active: Boolean) {
         foreground = active
@@ -120,8 +122,9 @@ class RecordingViewModel(
         val raw = state.value.rawRecognition ?: return
         pet = if (pet == PetType.Cat) PetType.Dog else PetType.Cat
         val token = generation
-        analysisStartedAtNanos = System.nanoTime()
+        val session = newAnalysisSession()
         state.update { it.copy(phase = RecordingPhase.ANALYZING, analysisStep = 2,
+            analysisStartedAtNanos = session.first, analysisTargetDurationMs = session.second,
             recognition = null, interpretation = null, message = null) }
         analysisTask = viewModelScope.launch { applyDecision(raw, pet, token) }
     }
@@ -141,7 +144,6 @@ class RecordingViewModel(
         if (state.value.phase != RecordingPhase.ANALYSIS_ERROR || analysisTask?.isActive == true) return
         val audio = state.value.audio ?: return
         val token = generation
-        analysisStartedAtNanos = System.nanoTime()
         state.value = state.value.copy(phase = RecordingPhase.ANALYZING, analysisStep = 0,
             message = null, recognition = null, interpretation = null)
         analyze(audio, token)
@@ -162,8 +164,9 @@ class RecordingViewModel(
 
     private fun analyze(audio: RecordedAudio, token: Int) {
         analysisTask?.cancel()
-        analysisStartedAtNanos = System.nanoTime()
-        state.update { it.copy(phase = RecordingPhase.ANALYZING, analysisStep = 0) }
+        val session = newAnalysisSession()
+        state.update { it.copy(phase = RecordingPhase.ANALYZING, analysisStep = 0,
+            analysisStartedAtNanos = session.first, analysisTargetDurationMs = session.second) }
         analysisTask = viewModelScope.launch {
             try {
                 val raw = recognizer.infer(audio)
@@ -208,14 +211,18 @@ class RecordingViewModel(
         val finalPhase = if (interpretation == null) RecordingPhase.ANALYSIS_ERROR else RecordingPhase.SUCCESS
         if (interpretation != null) state.update { it.copy(analysisStep = 4) }
         if (interpretation != null) {
-            val elapsedMs = (System.nanoTime() - analysisStartedAtNanos).coerceAtLeast(0L) / 1_000_000L
-            val minimumShowMs = 1_500L
-            val remaining = (minimumShowMs - elapsedMs).coerceAtLeast(0L)
-            if (remaining > 0) delay(remaining)
+            val current = state.value
+            val elapsedMs = (System.nanoTime() - current.analysisStartedAtNanos).coerceAtLeast(0L) / 1_000_000L
+            // Let the shared visual timeline reach 100% and settle before navigation.
+            val remaining = (current.analysisTargetDurationMs - elapsedMs).coerceAtLeast(0L) + 260L
+            delay(remaining)
         }
         if (token != generation) return
         val message = if (finalPhase == RecordingPhase.ANALYSIS_ERROR) "趣味解读暂时无法生成，请重试" else null
         state.update { it.copy(phase = finalPhase, recognition = result, rawRecognition = raw,
             interpretation = interpretation, analysisStep = if (interpretation != null) 4 else 3, message = message) }
     }
+
+    private fun newAnalysisSession(): Pair<Long, Long> =
+        System.nanoTime() to Random.nextLong(3_000L, 5_001L)
 }
