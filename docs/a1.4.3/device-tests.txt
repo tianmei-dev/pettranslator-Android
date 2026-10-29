@@ -1,0 +1,10 @@
+
+com.example.pettranslator.UncertainSheetFlowTest:..
+com.example.pettranslator.HomeFlowTest:.
+com.example.pettranslator.RecordingFlowTest:..
+
+Time: 61.043
+
+OK (5 tests)
+
+

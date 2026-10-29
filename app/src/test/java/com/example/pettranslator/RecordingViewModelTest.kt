@@ -38,6 +38,55 @@ class RecordingViewModelTest {
     private fun audio() = RecordedAudio("/private/test.pcm", 16000, 16000, 1000, rms = .02f, peak = .1f,
         audioFingerprint = "a".repeat(64))
 
+    @Test fun uncertainWaitsForSessionAndDismissesOnceWithoutStartingCaptureOrCheckingAccess() = runTest {
+        Dispatchers.setMain(StandardTestDispatcher(testScheduler))
+        try {
+            val capture = ControlledCapture()
+            val recognizer = FakeRecognizer(rawDog().copy(quality = rawDog().quality.copy(rmsDbfs = -90.0)))
+            var accessChecks = 0
+            val model = RecordingViewModel(PetType.Dog, PetScene.Play, capture, recognizer,
+                featureAccessManager = com.example.pettranslator.core.FeatureAccessManager { accessChecks++; false })
+            model.foreground(true); model.start(); runCurrent(); model.stop()
+            capture.result.complete(audio()); runCurrent()
+            assertEquals(RecordingPhase.ANALYZING, model.uiState.value.phase)
+            assertTrue(model.uiState.value.analysisTargetDurationMs in 3_000L..5_000L)
+            assertEquals(1, recognizer.calls)
+            advanceUntilIdle()
+            assertEquals(RecordingPhase.UNCERTAIN, model.uiState.value.phase)
+            assertNull(model.uiState.value.interpretation)
+            model.compositionDisposed(); model.foreground(true)
+            assertEquals(RecordingPhase.UNCERTAIN, model.uiState.value.phase)
+            assertFalse(model.prepareAnotherRecording())
+            assertEquals(1, accessChecks)
+            model.dismissUncertain(); val discards = capture.discards
+            model.dismissUncertain(); model.foreground(false); model.foreground(true)
+            advanceUntilIdle()
+            assertEquals(RecordingPhase.READY, model.uiState.value.phase)
+            assertNull(model.uiState.value.audio)
+            assertEquals(discards, capture.discards)
+            assertEquals(1, capture.starts)
+            assertEquals(1, recognizer.calls)
+            assertEquals(1, accessChecks)
+            model.leave()
+        } finally { Dispatchers.resetMain() }
+    }
+
+    @Test fun leavingDuringUncertainDelayCannotPublishOldSheet() = runTest {
+        Dispatchers.setMain(StandardTestDispatcher(testScheduler))
+        try {
+            val capture = ControlledCapture()
+            val recognizer = FakeRecognizer(rawDog().copy(quality = rawDog().quality.copy(rmsDbfs = -90.0)))
+            val model = model(capture, recognizer)
+            model.foreground(true); model.start(); runCurrent(); model.stop()
+            capture.result.complete(audio()); runCurrent()
+            assertEquals(RecordingPhase.ANALYZING, model.uiState.value.phase)
+            model.leave(); advanceUntilIdle()
+            assertEquals(RecordingPhase.READY, model.uiState.value.phase)
+            assertNull(model.uiState.value.audio)
+            assertEquals(1, recognizer.calls)
+        } finally { Dispatchers.resetMain() }
+    }
+
     @Test fun singleStartAndStopAndCompletedHandoff() = runTest {
         Dispatchers.setMain(StandardTestDispatcher(testScheduler))
         try {

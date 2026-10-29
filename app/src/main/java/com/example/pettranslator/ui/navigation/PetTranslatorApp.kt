@@ -64,7 +64,7 @@ private enum class Tab(val route: String, val title: String, val icon: ImageVect
         }
     }) { padding ->
         NavHost(controller, startDestination = Tab.Home.route, modifier = Modifier.padding(padding).consumeWindowInsets(padding)) {
-            composable(Tab.Home.route) { HomeScreen(state, model::selectPet, model::selectScene, model::startRecording, model::humanVoice) }
+            composable(Tab.Home.route) { HomeScreen(state, model::selectPet, model::selectScene, model::startRecording) }
             composable("recording/{pet}/{scene}") { recordingEntry ->
                 val pet = PetType.entries.firstOrNull { it.name == recordingEntry.arguments?.getString("pet") } ?: PetType.Cat
                 val scene = PetScene.entries.firstOrNull { it.name == recordingEntry.arguments?.getString("scene") } ?: PetScene.Unknown
@@ -76,7 +76,7 @@ private enum class Tab(val route: String, val title: String, val icon: ImageVect
                     controller.popBackStack(Tab.Home.route, inclusive = false)
                 })
             }
-            composable(Tab.Play.route) { PlayScreen { controller.popBackStack() } }
+            composable(Tab.Play.route) { PlayScreen(onBack = { controller.popBackStack() }, onHumanVoice = model::humanVoice) }
             composable(Tab.Profile.route) { ProfileScreen { controller.popBackStack() } }
         }
     }

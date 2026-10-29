@@ -116,6 +116,13 @@ class RecordingViewModel(
     }
     fun completedInput(): RecordingInput? = state.value.audio?.let { RecordingInput(it, pet, scene) }
 
+    /** Consumes the uncertain session once; dismissal never starts capture or grants access. */
+    fun dismissUncertain() {
+        if (state.value.phase != RecordingPhase.UNCERTAIN) return
+        capture.discard()
+        state.value = RecordingUiState()
+    }
+
     /** Re-evaluates cached, choice-independent model output; no second inference is run. */
     fun switchPetAndRejudge() {
         if (state.value.phase != RecordingPhase.PET_MISMATCH) return
@@ -195,6 +202,11 @@ class RecordingViewModel(
             RecognitionStatus.PET_MISMATCH -> RecordingPhase.PET_MISMATCH
         }
         if (result.status != RecognitionStatus.SUCCESS) {
+            if (result.status == RecognitionStatus.UNCERTAIN) {
+                val current = state.value
+                val elapsedMs = (System.nanoTime() - current.analysisStartedAtNanos).coerceAtLeast(0L) / 1_000_000L
+                delay((current.analysisTargetDurationMs - elapsedMs).coerceAtLeast(0L))
+            }
             if (token == generation) state.update { it.copy(phase = phase, recognition = result,
                 rawRecognition = raw, interpretation = null, analysisStep = 2, message = null) }
             return

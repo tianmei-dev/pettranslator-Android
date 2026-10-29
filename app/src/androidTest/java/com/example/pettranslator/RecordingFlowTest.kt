@@ -108,7 +108,7 @@ class RecordingFlowTest {
         rule.onAllNodesWithText("首页").assertCountEquals(0)
     }
     private fun capture(name: String, active: Boolean = false) {
-        if (!active) { rule.waitForIdle(); rule.onRoot().captureToImage() }
+        if (!active) rule.waitForIdle()
         val instrumentation = InstrumentationRegistry.getInstrumentation()
         val folder = File(rule.activity.getExternalFilesDir(null), "a121-evidence").apply { mkdirs() }
         val bitmap = checkNotNull(instrumentation.uiAutomation.takeScreenshot())
@@ -157,6 +157,12 @@ class RecordingFlowTest {
         capture("dog-recording.png", active = true)
         waitRecognitionFinal(20000)
         assertRecognitionVisible()
+        if (liveNode("哎呀，这次没听清毛孩子的声音～") != null) {
+            rule.activityRule.scenario.recreate()
+            waitText("哎呀，这次没听清毛孩子的声音～")
+            InstrumentationRegistry.getInstrumentation().sendKeyDownUpSync(android.view.KeyEvent.KEYCODE_BACK)
+            waitLiveText("开始录音")
+        }
         rule.onNodeWithTag("recording_back").performClick()
         rule.onNodeWithText("吃饭前后").performScrollTo().assertIsSelected()
     }

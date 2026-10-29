@@ -34,7 +34,7 @@ class AdaptiveHomeTest {
             CompositionLocalProvider(LocalDensity provides Density(density, scale)) {
                 PetTranslatorTheme {
                     Box(Modifier.width(width.dp)) {
-                        HomeScreen(HomeUiState(ready = true), {}, {}, {}, {})
+                        HomeScreen(HomeUiState(ready = true), {}, {}, {})
                     }
                 }
             }

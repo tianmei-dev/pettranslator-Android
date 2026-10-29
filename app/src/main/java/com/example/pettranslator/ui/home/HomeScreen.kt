@@ -7,8 +7,6 @@ import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -37,7 +35,6 @@ fun HomeScreen(
     onPet: (PetType) -> Unit,
     onScene: (PetScene) -> Unit,
     onRecord: () -> Unit,
-    onHumanVoice: () -> Unit,
 ) {
     Box(Modifier.fillMaxSize().background(Brush.verticalGradient(listOf(Blush, Mist, Blush)))) {
         Column(
@@ -69,7 +66,6 @@ fun HomeScreen(
                 }
             }
             RecordButton(state.ready, onRecord)
-            HumanVoiceEntry(onHumanVoice)
             Text(
                 "趣味声音模拟，不代表宠物真实语言翻译",
                 style = MaterialTheme.typography.labelSmall, color = Muted,
@@ -288,20 +284,6 @@ private fun RecordButton(enabled: Boolean, onClick: () -> Unit) {
 private fun RecordLabel(modifier: Modifier) {
     Text("开始录音翻译", fontSize = 20.sp, lineHeight = 28.sp, fontWeight = FontWeight.Bold,
         color = Color.White, textAlign = androidx.compose.ui.text.style.TextAlign.Center, modifier = modifier)
-}
-
-@Composable
-private fun HumanVoiceEntry(onClick: () -> Unit) {
-    Surface(onClick = onClick, modifier = Modifier.padding(horizontal = AppSpace.page), shape = RoundedCornerShape(22.dp), color = Color.White, shadowElevation = 1.dp) {
-        Row(Modifier.fillMaxWidth().padding(horizontal = 14.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
-            Text("≋", color = Pink, fontSize = 28.sp, modifier = Modifier.padding(end = 10.dp).clearAndSetSemantics {})
-            Column(Modifier.weight(1f)) {
-                Text("把我的话说给它听", style = MaterialTheme.typography.titleMedium, color = Ink)
-                Text("人声变宠物语", color = Muted, style = MaterialTheme.typography.bodyMedium)
-            }
-            Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, null, tint = Muted)
-        }
-    }
 }
 
 @Composable

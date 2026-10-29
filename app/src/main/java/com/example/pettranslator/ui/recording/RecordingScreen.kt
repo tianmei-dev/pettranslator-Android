@@ -106,13 +106,14 @@ fun RecordingRoute(model: RecordingViewModel, onBack: () -> Unit, onHome: () -> 
             result = state.interpretation!!, onBack = leave, onHome = { if (!exiting) { exiting = true; model.leave(); onHome() } },
             onAgain = { if (model.prepareAnotherRecording()) Unit else scopeSnackbar(context, "当前暂不可使用") },
         )
-        state.phase in setOf(RecordingPhase.UNCERTAIN, RecordingPhase.PET_MISMATCH, RecordingPhase.ANALYSIS_ERROR) -> AnalysisOutcomeScreen(
+        state.phase in setOf(RecordingPhase.PET_MISMATCH, RecordingPhase.ANALYSIS_ERROR) -> AnalysisOutcomeScreen(
             pet = model.pet, phase = state.phase, message = state.message,
             onBack = leave, onHome = { if (!exiting) { exiting = true; model.leave(); onHome() } },
             onAgain = { if (model.prepareAnotherRecording()) Unit else scopeSnackbar(context, "当前暂不可使用") },
             onSwitch = model::switchPetAndRejudge, onRetry = model::retryAnalysis,
         )
-        else -> RecordingScreen(model.pet, model.scene, state, onBack = leave, onStart = {
+        else -> RecordingScreen(model.pet, model.scene,
+            if (state.phase == RecordingPhase.UNCERTAIN) RecordingUiState() else state, onBack = leave, onStart = {
         if (!requestingPermission && !exiting) {
             if (granted()) {
                 pendingStart = true
@@ -126,6 +127,11 @@ fun RecordingRoute(model: RecordingViewModel, onBack: () -> Unit, onHome: () -> 
         pendingStart = false
         context.startActivity(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, "package:${context.packageName}".toUri()))
     }, onSwitchPet = model::switchPetAndRejudge, onRetryAnalysis = model::retryAnalysis)
+    }
+    if (state.phase == RecordingPhase.UNCERTAIN) {
+        UncertainRecordingSheet(pet = model.pet, onDismiss = model::dismissUncertain, onAgain = {
+            if (!model.prepareAnotherRecording()) scopeSnackbar(context, "当前暂不可使用")
+        })
     }
 }
 
@@ -357,31 +363,36 @@ fun RecordingScreen(
         }
     }
 
-    val phases = remember { List(32) { index -> index * 0.47f + (index % 5) * 0.13f } }
-    Canvas(Modifier.widthIn(max = 360.dp).fillMaxWidth().height(88.dp)
-        .testTag(if (active) "recording_waveform" else "recording_waveform_idle")
-        .semantics { contentDescription = if (active) "装饰性动态声波，录音中" else "声波已停止" }) {
-        if (!active) return@Canvas
+    BoxWithConstraints(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
+        val waveformWidth = minOf(240.dp, maxWidth * .70f)
+        Canvas(Modifier.width(waveformWidth).height(72.dp)
+            .testTag(if (active) "recording_waveform" else "recording_waveform_idle")
+            .semantics { contentDescription = if (active) "装饰性动态声波，录音中" else "声波已停止" }) {
+            if (!active) return@Canvas
 
-        val count = phases.size
-        val barWidth = 5.dp.toPx()
-        val gap = ((size.width - count * barWidth) / (count - 1)).coerceAtLeast(1.dp.toPx())
-        val totalWidth = count * barWidth + (count - 1) * gap
-        val startX = (size.width - totalWidth) / 2f
-        val centerY = size.height / 2f
-        val minHeight = 14.dp.toPx()
-        val maxHeight = 70.dp.toPx()
-        val gradient = Brush.horizontalGradient(listOf(Pink, Color(0xFFA48BE8), Blue), startX, startX + totalWidth)
+            val count = 41
+            val pitch = size.width / count
+            val gap = minOf(2.5.dp.toPx(), pitch * .45f)
+            val barWidth = pitch - gap
+            val centerY = size.height / 2f
+            val minHeight = 14.dp.toPx()
+            val maxHeight = 68.dp.toPx()
+            val gradient = Brush.linearGradient(
+                colors = listOf(Color(0xFFF265B5), Color(0xFFB88BF1), Color(0xFF66BDF6)),
+                start = Offset.Zero, end = Offset(size.width, 0f),
+            )
 
-        phases.forEachIndexed { index, phase ->
-            val speed = 1.45f + (index % 6) * 0.105f
-            val broad = kotlin.math.sin(elapsedSeconds * speed + phase)
-            val detail = kotlin.math.sin(elapsedSeconds * (2.05f + (index % 4) * 0.09f) + phase * 1.73f)
-            val swell = (0.48f + broad * 0.30f + detail * 0.16f).coerceIn(0f, 1f)
-            val height = minHeight + (maxHeight - minHeight) * swell
-            drawRoundRect(gradient,
-                Offset(startX + index * (barWidth + gap), centerY - height / 2f),
-                Size(barWidth, height), CornerRadius(barWidth / 2f))
+            repeat(count) { index ->
+                // Shared travelling waves keep neighbouring bars correlated over time.
+                val phase = index * .29f
+                val broad = kotlin.math.sin(elapsedSeconds * 2.2f - phase)
+                val detail = kotlin.math.sin(elapsedSeconds * 1.4f + phase * .57f + 1.1f)
+                val swell = (0.50f + broad * 0.32f + detail * 0.18f).coerceIn(0f, 1f)
+                val height = minHeight + (maxHeight - minHeight) * swell
+                drawRoundRect(gradient,
+                    Offset(index * pitch + gap / 2f, centerY - height / 2f),
+                    Size(barWidth, height), CornerRadius(barWidth / 2f))
+            }
         }
     }
 }
