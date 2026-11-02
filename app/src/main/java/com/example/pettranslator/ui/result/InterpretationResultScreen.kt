@@ -216,7 +216,9 @@ fun InterpretationResultScreen(result: PetInterpretationResult, onBack: () -> Un
                         Text("♥ ${result.coreThemeId.displayTitle}", Modifier.padding(horizontal = 9.dp, vertical = 4.dp),
                             color = Color.White, fontSize = 10.sp, lineHeight = 14.sp, fontWeight = FontWeight.SemiBold)
                     }
-                    Text("“${result.innerMonologue}”", color = Ink, fontSize = 15.sp, lineHeight = 22.sp, fontWeight = FontWeight.Bold)
+                    Text("“${result.innerMonologue}”", color = Ink, fontSize = 15.sp, lineHeight = 22.sp,
+                        style = LocalPetFontTrial.current.monologue.textStyle,
+                        modifier = Modifier.testTag("font_trial_monologue"))
                 }
                 Image(painterResource(quoteArt), contentDescription = "${result.petType.title}插画",
                     contentScale = ContentScale.Fit, modifier = Modifier.width(artworkWidth).heightIn(max = 138.dp).aspectRatio(0.76f))

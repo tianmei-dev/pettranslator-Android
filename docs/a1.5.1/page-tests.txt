@@ -1,0 +1,35 @@
+
+com.example.pettranslator.FontTrialEvidenceTest:
+Error in threeFontsOnThreeProductionPages(com.example.pettranslator.FontTrialEvidenceTest):
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes$default(TestOwner.kt:74)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes(SemanticsNodeInteraction.kt:249)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes$default(SemanticsNodeInteraction.kt:245)
+	at com.example.pettranslator.FontTrialEvidenceTest.threeFontsOnThreeProductionPages$lambda$25(FontTrialEvidenceTest.kt:129)
+	at com.example.pettranslator.FontTrialEvidenceTest.$r8$lambda$IDXnY2c966nnFQCMoQNbTWpqWk8(FontTrialEvidenceTest.kt:0)
+	at com.example.pettranslator.FontTrialEvidenceTest$$ExternalSyntheticLambda19.invoke(D8$$SyntheticClass:0)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:497)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.example.pettranslator.FontTrialEvidenceTest.threeFontsOnThreeProductionPages(FontTrialEvidenceTest.kt:129)
+
+
+Time: 1.844
+There was 1 failure:
+1) threeFontsOnThreeProductionPages(com.example.pettranslator.FontTrialEvidenceTest)
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes$default(TestOwner.kt:74)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes(SemanticsNodeInteraction.kt:249)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes$default(SemanticsNodeInteraction.kt:245)
+	at com.example.pettranslator.FontTrialEvidenceTest.threeFontsOnThreeProductionPages$lambda$25(FontTrialEvidenceTest.kt:129)
+	at com.example.pettranslator.FontTrialEvidenceTest.$r8$lambda$IDXnY2c966nnFQCMoQNbTWpqWk8(FontTrialEvidenceTest.kt:0)
+	at com.example.pettranslator.FontTrialEvidenceTest$$ExternalSyntheticLambda19.invoke(D8$$SyntheticClass:0)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:497)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.example.pettranslator.FontTrialEvidenceTest.threeFontsOnThreeProductionPages(FontTrialEvidenceTest.kt:129)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+

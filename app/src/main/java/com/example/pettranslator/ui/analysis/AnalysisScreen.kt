@@ -111,7 +111,8 @@ fun AnalysisScreen(pet: PetType, completedSteps: Int, startedAtNanos: Long, targ
                             })
                 }
                 Text("正在认真听它说话…", color = Ink, fontSize = 18.sp, lineHeight = 25.sp,
-                    fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
+                    style = LocalPetFontTrial.current.analysisTitle.textStyle, textAlign = TextAlign.Center,
+                    modifier = Modifier.testTag("font_trial_analysis"))
                 Spacer(Modifier.height(6.dp))
                 Text("AI正在分析声音类型，马上揭晓它的小心思～", color = Muted,
                     fontSize = 12.sp, lineHeight = 18.sp, textAlign = TextAlign.Center)

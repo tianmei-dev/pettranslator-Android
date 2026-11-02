@@ -1,0 +1,8 @@
+
+com.example.pettranslator.FontTrialEvidenceTest:...
+
+Time: 42.579
+
+OK (3 tests)
+
+

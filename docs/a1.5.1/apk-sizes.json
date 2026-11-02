@@ -1,0 +1,30 @@
+{
+  "baselineBytes": 48823633,
+  "bothFontsApkBytes": 73239818,
+  "deltaBytes": 24416185,
+  "entries": [
+    {
+      "path": "assets/licenses/lxgw_wenkai/OFL.txt",
+      "rawBytes": 5171,
+      "compressedBytes": 2414
+    },
+    {
+      "path": "assets/licenses/lxgw_zhenkai/OFL.txt",
+      "rawBytes": 5361,
+      "compressedBytes": 2488
+    },
+    {
+      "path": "res/font/pet_title_wenkai.ttf",
+      "rawBytes": 25928940,
+      "compressedBytes": 12904464
+    },
+    {
+      "path": "res/font/pet_title_zhenkai.ttf",
+      "rawBytes": 17453376,
+      "compressedBytes": 11606047
+    }
+  ],
+  "estimatedZhenKaiOnlyBytes": 60335354,
+  "estimatedWenKaiOnlyBytes": 61633771,
+  "note": "Single-font estimates subtract compressed TTF payload only; resource tables, ZIP headers and signing alignment may differ slightly. Debug universal APK, not release/AAB delivery size."
+}

@@ -1,0 +1,4 @@
+ZhenKai: 422 distinct codepoints including all 96 approved lines supported with Android fallback; cat emoji colored pixels=3658
+WenKai: 422 distinct codepoints including all 96 approved lines supported with Android fallback; cat emoji colored pixels=3658
+System: 422 distinct codepoints including all 96 approved lines supported with Android fallback; cat emoji colored pixels=3658
+Unmodified ResultCardExporter.render/writeShareFile: passed, PNG bytes=213162; no gallery write or share intent launched.
