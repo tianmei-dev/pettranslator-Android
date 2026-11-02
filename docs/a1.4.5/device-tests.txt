@@ -1,0 +1,8 @@
+
+com.example.pettranslator.ResultInfoBarTest:.
+
+Time: 4.884
+
+OK (1 test)
+
+

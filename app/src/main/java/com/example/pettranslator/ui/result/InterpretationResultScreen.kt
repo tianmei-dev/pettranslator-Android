@@ -68,11 +68,9 @@ fun InterpretationResultScreen(result: PetInterpretationResult, onBack: () -> Un
         if (allowed) scope.launch { export(true) } else notice = "需要照片存储权限才能保存卡片"
     }
 
-    val petIcon = petIcon(result.petType)
     val headerArt = if (result.petType == PetType.Cat) R.drawable.result_cat_header else R.drawable.result_dog_header
     val quoteArt = if (result.petType == PetType.Cat) R.drawable.result_cat_quote else R.drawable.result_dog_quote
     val tipArt = if (result.petType == PetType.Cat) R.drawable.result_cat_tip else R.drawable.result_dog_tip
-    val sceneArt = sceneIcon(result.scene)
     Scaffold(containerColor = Color.Transparent, snackbarHost = { SnackbarHost(snackbar) }) { insets ->
         Column(Modifier.fillMaxSize().background(Brush.verticalGradient(listOf(Color(0xFFFFF2F8), Color(0xFFF2F3FF), Color(0xFFFFF6FA))))
             .padding(insets)) {
@@ -94,7 +92,7 @@ fun InterpretationResultScreen(result: PetInterpretationResult, onBack: () -> Un
             }
             Column(Modifier.weight(1f).fillMaxWidth().verticalScroll(rememberScrollState()).padding(horizontal = 14.dp),
                 verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                PetInfoBar(result, petIcon, sceneArt)
+                PetInfoBar(result)
                 QuoteCard(result, quoteArt)
                 SoundAnalysisCard(result)
                 InteractionCard(result.interactionSuggestion, tipArt)
@@ -118,23 +116,91 @@ fun InterpretationResultScreen(result: PetInterpretationResult, onBack: () -> Un
     }
 }
 
-@Composable private fun PetInfoBar(result: PetInterpretationResult, petIcon: Int, sceneArt: Int) {
-    Surface(shape = RoundedCornerShape(18.dp), color = Color.White.copy(alpha = .88f), shadowElevation = 1.dp) {
-        Row(Modifier.fillMaxWidth().padding(horizontal = 10.dp, vertical = 8.dp), verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            Image(painterResource(petIcon), result.petType.title, contentScale = ContentScale.Fit,
-                modifier = Modifier.size(46.dp).clip(CircleShape).background(Color(0xFFFFEAF3)).padding(1.dp))
-            Column(Modifier.weight(1f)) {
-                Text(result.petType.title, color = Ink, fontSize = 14.sp, fontWeight = FontWeight.Bold)
-                Text(result.petType.subtitle, color = Muted, fontSize = 10.sp, lineHeight = 14.sp)
+@Composable internal fun PetInfoBar(result: PetInterpretationResult) {
+    val density = androidx.compose.ui.platform.LocalDensity.current
+    val measurer = androidx.compose.ui.text.rememberTextMeasurer()
+    val baseStyle = LocalTextStyle.current
+    val dateStyle = baseStyle.copy(fontSize = 10.sp, lineHeight = 14.sp)
+    val fullDate = SimpleDateFormat("yyyy年MM月dd日 HH:mm", Locale.CHINA).format(Date(result.createdAtEpochMs))
+    val shortDate = SimpleDateFormat("MM月dd日 HH:mm", Locale.CHINA).format(Date(result.createdAtEpochMs))
+    fun textWidth(text: String, style: androidx.compose.ui.text.TextStyle) =
+        with(density) { measurer.measure(text, baseStyle.merge(style), softWrap = false).size.width.toDp() } + 2.dp
+    Surface(modifier = Modifier.fillMaxWidth().testTag("result_pet_info"),
+        shape = RoundedCornerShape(20.dp), color = Color(0xFFFFF9FC),
+        border = BorderStroke(.5.dp, Color(0xFFF5E3EE))) {
+        Column(Modifier.padding(horizontal = 12.dp)) {
+            BoxWithConstraints(Modifier.fillMaxWidth().padding(vertical = 10.dp)) {
+                val leftWidth = 48.dp + textWidth(result.petType.subtitle,
+                    androidx.compose.ui.text.TextStyle(fontSize = 11.sp))
+                val sceneWidth = 42.dp + textWidth(result.scene.title,
+                    androidx.compose.ui.text.TextStyle(fontSize = 12.sp, fontWeight = FontWeight.SemiBold))
+                val fullWidth = maxOf(sceneWidth, textWidth(fullDate, dateStyle))
+                val shortWidth = maxOf(sceneWidth, textWidth(shortDate, dateStyle))
+                val useFullDate = leftWidth + 12.dp + fullWidth <= maxWidth
+                val rightWidth = if (useFullDate) fullWidth else shortWidth
+                val stacked = leftWidth + 12.dp + rightWidth > maxWidth
+                val petContent: @Composable () -> Unit = {
+                    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        PawBadge()
+                        Column {
+                            Text(result.petType.title, color = Ink, fontSize = 16.sp, lineHeight = 21.sp, fontWeight = FontWeight.Bold)
+                            Text(result.petType.subtitle, color = Muted, fontSize = 11.sp, lineHeight = 16.sp)
+                        }
+                    }
+                }
+                val sceneContent: @Composable () -> Unit = {
+                    Column(Modifier.width(rightWidth), horizontalAlignment = Alignment.End, verticalArrangement = Arrangement.spacedBy(3.dp)) {
+                        Row(Modifier.background(Color(0xFFF0E9FC), RoundedCornerShape(16.dp))
+                            .padding(horizontal = 8.dp, vertical = 3.dp).testTag("result_scene"),
+                            verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                            Image(painterResource(sceneIcon(result.scene)), contentDescription = null,
+                                contentScale = ContentScale.Fit, modifier = Modifier.size(22.dp))
+                            Text(result.scene.title, color = Ink, fontSize = 12.sp, lineHeight = 17.sp, fontWeight = FontWeight.SemiBold)
+                        }
+                        Text(if (useFullDate) fullDate else shortDate, color = Muted, style = dateStyle,
+                            maxLines = 1, softWrap = false, modifier = Modifier.testTag("result_created_at"))
+                    }
+                }
+                if (stacked) {
+                    // Large-font fallback preserves readable pet text and a single-line date.
+                    Column(Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        petContent()
+                        Box(Modifier.align(Alignment.End)) { sceneContent() }
+                    }
+                } else {
+                    Row(Modifier.fillMaxWidth().heightIn(min = 48.dp), verticalAlignment = Alignment.CenterVertically) {
+                        Box(Modifier.weight(1f)) { petContent() }
+                        Spacer(Modifier.width(12.dp))
+                        sceneContent()
+                    }
+                }
             }
-            Image(painterResource(sceneArt), null, contentScale = ContentScale.Fit, modifier = Modifier.size(30.dp))
-            Column(horizontalAlignment = Alignment.End) {
-                Text(result.scene.title, color = Ink, fontSize = 11.sp, fontWeight = FontWeight.SemiBold)
-                Text(SimpleDateFormat("yyyy年MM月dd日 HH:mm", Locale.CHINA).format(Date(result.createdAtEpochMs)),
-                    color = Muted, fontSize = 9.sp, lineHeight = 13.sp)
-            }
+            Box(Modifier.fillMaxWidth().height(1.dp).background(Brush.horizontalGradient(
+                listOf(Color(0xFFFBEAF3), Color(0xFFF3CDE3), Color(0xFFFBEAF3)))))
+            Spacer(Modifier.height(3.dp))
         }
+    }
+}
+
+@Composable private fun PawBadge() {
+    Canvas(Modifier.size(40.dp).background(Color(0xFFFFE7F3), CircleShape).padding(7.dp)) {
+        val pink = Color(0xFFF05AAA)
+        fun oval(x: Float, y: Float, w: Float, h: Float) = drawOval(pink,
+            androidx.compose.ui.geometry.Offset(size.width * x, size.height * y),
+            androidx.compose.ui.geometry.Size(size.width * w, size.height * h))
+        oval(.04f, .25f, .20f, .29f)
+        oval(.25f, .04f, .21f, .31f)
+        oval(.54f, .04f, .21f, .31f)
+        oval(.76f, .25f, .20f, .29f)
+        val pad = androidx.compose.ui.graphics.Path().apply {
+            moveTo(size.width * .5f, size.height * .40f)
+            cubicTo(size.width * .30f, size.height * .40f, size.width * .10f, size.height * .80f, size.width * .25f, size.height * .88f)
+            cubicTo(size.width * .38f, size.height * .96f, size.width * .43f, size.height * .84f, size.width * .5f, size.height * .86f)
+            cubicTo(size.width * .57f, size.height * .84f, size.width * .62f, size.height * .96f, size.width * .75f, size.height * .88f)
+            cubicTo(size.width * .90f, size.height * .80f, size.width * .70f, size.height * .40f, size.width * .5f, size.height * .40f)
+            close()
+        }
+        drawPath(pad, pink)
     }
 }
 
@@ -228,7 +294,6 @@ fun InterpretationResultScreen(result: PetInterpretationResult, onBack: () -> Un
     }
 }
 
-private fun petIcon(pet: PetType): Int = if (pet == PetType.Cat) R.drawable.pet_cat_main else R.drawable.pet_dog_main
 private fun sceneIcon(scene: PetScene): Int = when (scene) {
     PetScene.Door -> R.drawable.scene_door_window
     PetScene.Meal -> R.drawable.scene_food
