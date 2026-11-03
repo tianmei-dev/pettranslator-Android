@@ -1,0 +1,4 @@
+Header scrolls out; actions remain fixed; viewport does not overlap actions. Again/Back/Home each fired exactly once.
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声

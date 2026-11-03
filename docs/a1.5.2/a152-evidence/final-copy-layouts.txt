@@ -1,0 +1,833 @@
+Formal catalog longest=CAT_PLAY_01, UTF16 length=23; >35 characters tested only in synthetic fixture below.
+360dp-1x-CAT_DOOR_WINDOW_01 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“咦？外面是不是有新情况！本喵踮脚侦查一下👀”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_DOOR_WINDOW_02 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵呜～窗外的小世界，今天藏了什么新鲜趣事？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_DOOR_WINDOW_03 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“嘘！别出声，我耳朵抓到外面的细碎动静啦！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_DOOR_WINDOW_04 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“铲屎官快过来！本喵的好奇雷达滴滴响咯！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_DOOR_WINDOW_05 size=651 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“嗯？门口那边热热闹闹的，容本喵好好研究研究。”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_DOOR_WINDOW_06 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵？是谁路过啦？我、我就是随便瞅一眼而已！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_DOOR_WINDOW_07 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“哇呜！窗边观察员上线，今日盯梢任务启动！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_DOOR_WINDOW_08 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“等等别跑！那个影子我还没看清楚呢！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_FOOD_01 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵呜～算算时间，是不是快要开饭啦？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_FOOD_02 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“铲屎官！我的小碗碗好像在轻轻呼唤我哦！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_FOOD_03 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“哼，我只是例行巡视伙食，才不是馋嘴小猫！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_FOOD_04 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“咪呜！今天餐盘里，会不会有惊喜小零食？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_FOOD_05 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“这个味道好熟悉…… 是不是到干饭时间啦？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_FOOD_06 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“通知！本喵正式进入干饭蹲守模式！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_FOOD_07 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵喵～不会吧，你该不会忘记我们的干饭约定？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_FOOD_08 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“我才没有催饭！就是温柔提醒一丢丢啦。”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_PLAY_01 size=651 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵呜！那根晃悠悠的羽毛呢？我的扑抓爪蓄势待发！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_PLAY_02 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“嘿嘿，小球球，是不是等着被我一把按住？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_PLAY_03 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“铲屎官，动一动逗猫棒嘛，就玩一小下！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_PLAY_04 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“才不是想玩！刚好本喵现在有空，陪你玩玩也行。”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_PLAY_05 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“咪呜～陪我玩好不好？就一小会儿，求求啦！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_PLAY_06 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“警告！超级飞扑小猫咪马上出击！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_PLAY_07 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵！你挥玩具，我负责卖萌，这笔交易成交吗？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_PLAY_08 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“嘿咻！快来，和我开启毛茸茸小游戏！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_ALONE_01 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵呜！这里藏了一只小毛球，你有没有看见？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_ALONE_02 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“铲屎官？轻轻喊一声，看看你理不理我～”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_ALONE_03 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“咪呜～忙完了吗？能不能分我一点点偏爱？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_ALONE_04 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“四周安安静静，那我来冒个头打个招呼！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_ALONE_05 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“哼，我只是路过叫一声，才不是专门来找你的！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_ALONE_06 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵～听到的话，也回应我一下好不好？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_ALONE_07 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“一条软软的猫咪消息，已送达，请查收！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_ALONE_08 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“看这里看这里！有只小猫在跟你说话哦！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_HELD_01 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“哇！怎么突然离地起飞？我还没准备好！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_HELD_02 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵呜～原来是贴贴抱抱，让我先适应下高度。”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_HELD_03 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“哎呀！出行方式切换成人类托举模式啦！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_HELD_04 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“咪呜？你是想抱着我贴贴吗？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_HELD_05 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“等一下哦，我调整好小肉垫的位置！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_HELD_06 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“抱抱可以商量，先让我评估下安全情况！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_HELD_07 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵！飘起来啦，本小猫要发表感想咯！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_HELD_08 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“咦？是抱抱邀请吗？我先体验看看～”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_UNKNOWN_01 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵呜！本小猫有悄悄话要告诉你！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_UNKNOWN_02 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“咪呀！听见没，专属小猫问候送达✨”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_UNKNOWN_03 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“没啥大事，就是想喵喵和你唠两句！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_UNKNOWN_04 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵？铲屎官在吗，你的小可爱已上线！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_UNKNOWN_05 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“嗯哼！小猫发言时间，现在开始！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_UNKNOWN_06 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵喵～猜猜我刚刚心里在想什么？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_UNKNOWN_07 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“快看我一眼嘛，我有话想跟你说！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-CAT_UNKNOWN_08 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“一声软乎乎喵叫，打包送给你！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_DOOR_WINDOW_01 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪！外面有动静！主人快和我一起看看！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_DOOR_WINDOW_02 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“咦？门口是什么？耳朵立刻竖得高高的！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_DOOR_WINDOW_03 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪呜～窗外今天会不会路过好玩的东西？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_DOOR_WINDOW_04 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“主人主人！我听见声音啦，快来侦查！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_DOOR_WINDOW_05 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“叮咚！小狗好奇雷达启动，锁定前方！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_DOOR_WINDOW_06 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪汪！我就想看看外面发生啥啦！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_DOOR_WINDOW_07 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“那边好像超有意思，可以陪我看一眼吗？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_DOOR_WINDOW_08 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“报告主人！窗边侦查小狗，就位待命！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_FOOD_01 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪汪！是不是马上开饭？我先来蹲点位！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_FOOD_02 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“主人！今天碗里，会不会香香加倍？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_FOOD_03 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“嘿嘿，我只是路过厨房，顺便闻闻饭香！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_FOOD_04 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪呜！熟悉的饭点到啦，尾巴先开心摇起来！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_FOOD_05 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“是不是轮到小狗干饭环节啦？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_FOOD_06 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“主人！我乖乖坐好啦，快看看我的小碗！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_FOOD_07 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪！空气中全是我对肉肉的期待！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_FOOD_08 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“干饭预备小狗报到，耐心等候开饭信号！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_PLAY_01 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪！球球球球！我们再玩捡球游戏好不好！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_PLAY_02 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“看我！已经准备就绪！你扔，我飞速去捡！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_PLAY_03 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪汪！快乐的玩耍时间，是不是要开始啦？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_PLAY_04 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“快看我的尾巴！已经切换兴奋模式！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_PLAY_05 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“再来一次嘛！就一次，求求啦！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_PLAY_06 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪呜！我负责奔跑撒欢，你负责陪我玩！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_PLAY_07 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“嘿！玩具准备好了吗？快乐小狗申请出战！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_PLAY_08 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪！和你一起玩，就是最幸福的事！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_ALONE_01 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“呜汪～主人在吗？来跟你打个招呼！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_ALONE_02 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“主人快看我！我在这里呀！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_ALONE_03 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪呜～忙完了吗？能不能摸摸我的脑袋？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_ALONE_04 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“这里有只乖乖小狗，等着你来摸摸！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_ALONE_05 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪汪！听见我的叫声了吗，我来打卡报到！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_ALONE_06 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“没别的事，就是忍不住想喊喊你！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_ALONE_07 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“呜呜汪～给我一点点陪伴好不好，一点点就行！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_ALONE_08 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“报告主人！你的小狗在线等贴贴回复！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_HELD_01 size=651 x 75 lines=1 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“哇！突然飞高高啦！汪！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_HELD_02 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“哇呜，是抱抱吗？让我感受一下！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_HELD_03 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“主人主人，抱着我，我们要去哪里呀？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_HELD_04 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪呜！被抱起来咯，我的爪子该放哪儿呀？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_HELD_05 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“嘿嘿，今天出门方式好特别，我喜欢！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_HELD_06 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“咦？是抱抱邀约吗，我先观察一下！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_HELD_07 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪！等我调整好姿势，再安心贴贴！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_HELD_08 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“哇，离地好高！主人一定要抱稳我哦！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_UNKNOWN_01 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪！报告主人，我有小事要跟你说！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_UNKNOWN_02 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“嘿嘿！收到没，这是小狗专属问候！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_UNKNOWN_03 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪呜～主人，我来找你玩啦！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_UNKNOWN_04 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“你有在听吗？那我再汪汪一声！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_UNKNOWN_05 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪汪！你的毛茸茸小狗今天也在岗！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_UNKNOWN_06 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“嘿，没啥要紧事，就是想和你唠唠！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_UNKNOWN_07 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“主人！一条小狗语音消息，请查收📩”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+360dp-1x-DOG_UNKNOWN_08 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪呜～猜猜我现在在想什么呀？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_DOOR_WINDOW_01 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“咦？外面是不是有新情况！本喵踮脚侦查一下👀”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_DOOR_WINDOW_02 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵呜～窗外的小世界，今天藏了什么新鲜趣事？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_DOOR_WINDOW_03 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“嘘！别出声，我耳朵抓到外面的细碎动静啦！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_DOOR_WINDOW_04 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“铲屎官快过来！本喵的好奇雷达滴滴响咯！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_DOOR_WINDOW_05 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“嗯？门口那边热热闹闹的，容本喵好好研究研究。”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_DOOR_WINDOW_06 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵？是谁路过啦？我、我就是随便瞅一眼而已！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_DOOR_WINDOW_07 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“哇呜！窗边观察员上线，今日盯梢任务启动！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_DOOR_WINDOW_08 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“等等别跑！那个影子我还没看清楚呢！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_FOOD_01 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵呜～算算时间，是不是快要开饭啦？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_FOOD_02 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“铲屎官！我的小碗碗好像在轻轻呼唤我哦！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_FOOD_03 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“哼，我只是例行巡视伙食，才不是馋嘴小猫！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_FOOD_04 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“咪呜！今天餐盘里，会不会有惊喜小零食？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_FOOD_05 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“这个味道好熟悉…… 是不是到干饭时间啦？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_FOOD_06 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“通知！本喵正式进入干饭蹲守模式！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_FOOD_07 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵喵～不会吧，你该不会忘记我们的干饭约定？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_FOOD_08 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“我才没有催饭！就是温柔提醒一丢丢啦。”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_PLAY_01 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵呜！那根晃悠悠的羽毛呢？我的扑抓爪蓄势待发！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_PLAY_02 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“嘿嘿，小球球，是不是等着被我一把按住？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_PLAY_03 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“铲屎官，动一动逗猫棒嘛，就玩一小下！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_PLAY_04 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“才不是想玩！刚好本喵现在有空，陪你玩玩也行。”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_PLAY_05 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“咪呜～陪我玩好不好？就一小会儿，求求啦！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_PLAY_06 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“警告！超级飞扑小猫咪马上出击！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_PLAY_07 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵！你挥玩具，我负责卖萌，这笔交易成交吗？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_PLAY_08 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“嘿咻！快来，和我开启毛茸茸小游戏！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_ALONE_01 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵呜！这里藏了一只小毛球，你有没有看见？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_ALONE_02 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“铲屎官？轻轻喊一声，看看你理不理我～”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_ALONE_03 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“咪呜～忙完了吗？能不能分我一点点偏爱？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_ALONE_04 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“四周安安静静，那我来冒个头打个招呼！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_ALONE_05 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“哼，我只是路过叫一声，才不是专门来找你的！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_ALONE_06 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵～听到的话，也回应我一下好不好？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_ALONE_07 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“一条软软的猫咪消息，已送达，请查收！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_ALONE_08 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“看这里看这里！有只小猫在跟你说话哦！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_HELD_01 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“哇！怎么突然离地起飞？我还没准备好！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_HELD_02 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵呜～原来是贴贴抱抱，让我先适应下高度。”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_HELD_03 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“哎呀！出行方式切换成人类托举模式啦！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_HELD_04 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“咪呜？你是想抱着我贴贴吗？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_HELD_05 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“等一下哦，我调整好小肉垫的位置！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_HELD_06 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“抱抱可以商量，先让我评估下安全情况！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_HELD_07 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵！飘起来啦，本小猫要发表感想咯！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_HELD_08 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“咦？是抱抱邀请吗？我先体验看看～”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_UNKNOWN_01 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵呜！本小猫有悄悄话要告诉你！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_UNKNOWN_02 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“咪呀！听见没，专属小猫问候送达✨”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_UNKNOWN_03 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“没啥大事，就是想喵喵和你唠两句！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_UNKNOWN_04 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵？铲屎官在吗，你的小可爱已上线！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_UNKNOWN_05 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“嗯哼！小猫发言时间，现在开始！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_UNKNOWN_06 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵喵～猜猜我刚刚心里在想什么？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_UNKNOWN_07 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“快看我一眼嘛，我有话想跟你说！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-CAT_UNKNOWN_08 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“一声软乎乎喵叫，打包送给你！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_DOOR_WINDOW_01 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪！外面有动静！主人快和我一起看看！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_DOOR_WINDOW_02 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“咦？门口是什么？耳朵立刻竖得高高的！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_DOOR_WINDOW_03 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪呜～窗外今天会不会路过好玩的东西？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_DOOR_WINDOW_04 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“主人主人！我听见声音啦，快来侦查！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_DOOR_WINDOW_05 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“叮咚！小狗好奇雷达启动，锁定前方！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_DOOR_WINDOW_06 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪汪！我就想看看外面发生啥啦！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_DOOR_WINDOW_07 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“那边好像超有意思，可以陪我看一眼吗？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_DOOR_WINDOW_08 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“报告主人！窗边侦查小狗，就位待命！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_FOOD_01 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪汪！是不是马上开饭？我先来蹲点位！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_FOOD_02 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“主人！今天碗里，会不会香香加倍？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_FOOD_03 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“嘿嘿，我只是路过厨房，顺便闻闻饭香！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_FOOD_04 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪呜！熟悉的饭点到啦，尾巴先开心摇起来！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_FOOD_05 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“是不是轮到小狗干饭环节啦？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_FOOD_06 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“主人！我乖乖坐好啦，快看看我的小碗！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_FOOD_07 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪！空气中全是我对肉肉的期待！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_FOOD_08 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“干饭预备小狗报到，耐心等候开饭信号！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_PLAY_01 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪！球球球球！我们再玩捡球游戏好不好！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_PLAY_02 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“看我！已经准备就绪！你扔，我飞速去捡！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_PLAY_03 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪汪！快乐的玩耍时间，是不是要开始啦？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_PLAY_04 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“快看我的尾巴！已经切换兴奋模式！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_PLAY_05 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“再来一次嘛！就一次，求求啦！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_PLAY_06 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪呜！我负责奔跑撒欢，你负责陪我玩！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_PLAY_07 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“嘿！玩具准备好了吗？快乐小狗申请出战！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_PLAY_08 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪！和你一起玩，就是最幸福的事！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_ALONE_01 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“呜汪～主人在吗？来跟你打个招呼！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_ALONE_02 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“主人快看我！我在这里呀！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_ALONE_03 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪呜～忙完了吗？能不能摸摸我的脑袋？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_ALONE_04 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“这里有只乖乖小狗，等着你来摸摸！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_ALONE_05 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪汪！听见我的叫声了吗，我来打卡报到！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_ALONE_06 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“没别的事，就是忍不住想喊喊你！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_ALONE_07 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“呜呜汪～给我一点点陪伴好不好，一点点就行！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_ALONE_08 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“报告主人！你的小狗在线等贴贴回复！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_HELD_01 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“哇！突然飞高高啦！汪！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_HELD_02 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“哇呜，是抱抱吗？让我感受一下！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_HELD_03 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“主人主人，抱着我，我们要去哪里呀？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_HELD_04 size=531 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪呜！被抱起来咯，我的爪子该放哪儿呀？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_HELD_05 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“嘿嘿，今天出门方式好特别，我喜欢！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_HELD_06 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“咦？是抱抱邀约吗，我先观察一下！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_HELD_07 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪！等我调整好姿势，再安心贴贴！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_HELD_08 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“哇，离地好高！主人一定要抱稳我哦！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_UNKNOWN_01 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪！报告主人，我有小事要跟你说！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_UNKNOWN_02 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“嘿嘿！收到没，这是小狗专属问候！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_UNKNOWN_03 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪呜～主人，我来找你玩啦！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_UNKNOWN_04 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“你有在听吗？那我再汪汪一声！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_UNKNOWN_05 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪汪！你的毛茸茸小狗今天也在岗！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_UNKNOWN_06 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“嘿，没啥要紧事，就是想和你唠唠！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_UNKNOWN_07 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“主人！一条小狗语音消息，请查收📩”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1x-DOG_UNKNOWN_08 size=531 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“汪呜～猜猜我现在在想什么呀？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1.5x-CAT_HELD_04 size=819 x 200 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“咪呜？你是想抱着我贴贴吗？”
+action-再翻译一次 size=225 x 65 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=180 x 65 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=180 x 65 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1.5x-CAT_PLAY_01 size=819 x 300 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵呜！那根晃悠悠的羽毛呢？我的扑抓爪蓄势待发！”
+action-再翻译一次 size=225 x 65 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=180 x 65 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=180 x 65 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1.5x-CAT_DOOR_WINDOW_01 size=819 x 300 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“咦？外面是不是有新情况！本喵踮脚侦查一下👀”
+action-再翻译一次 size=225 x 65 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=180 x 65 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=180 x 65 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1.5x-Cat-synthetic-53chars size=819 x 500 lines=5 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵呜～今天我有好多悄悄话想告诉你，窗外的阳光暖暖的，最喜欢靠近你一起看看小鸟，再慢慢说说我的小心思！👀✨”
+action-再翻译一次 size=225 x 65 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=180 x 65 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=180 x 65 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1.5x-DOG_HELD_01 size=819 x 200 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“哇！突然飞高高啦！汪！”
+action-再翻译一次 size=225 x 65 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=180 x 65 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=180 x 65 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1.5x-DOG_ALONE_07 size=819 x 300 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“呜呜汪～给我一点点陪伴好不好，一点点就行！”
+action-再翻译一次 size=225 x 65 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=180 x 65 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=180 x 65 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1.5x-DOG_UNKNOWN_07 size=819 x 200 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“主人！一条小狗语音消息，请查收📩”
+action-再翻译一次 size=225 x 65 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=180 x 65 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=180 x 65 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-1.5x-Dog-synthetic-53chars size=819 x 500 lines=5 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵呜～今天我有好多悄悄话想告诉你，窗外的阳光暖暖的，最喜欢靠近你一起看看小鸟，再慢慢说说我的小心思！👀✨”
+action-再翻译一次 size=225 x 65 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=180 x 65 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=180 x 65 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-2.0x-CAT_HELD_04 size=819 x 250 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“咪呜？你是想抱着我贴贴吗？”
+action-再翻译一次 size=262 x 172 lines=2 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=238 x 88 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=238 x 88 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-2.0x-CAT_PLAY_01 size=819 x 375 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵呜！那根晃悠悠的羽毛呢？我的扑抓爪蓄势待发！”
+action-再翻译一次 size=262 x 172 lines=2 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=238 x 88 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=238 x 88 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-2.0x-CAT_DOOR_WINDOW_01 size=819 x 375 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“咦？外面是不是有新情况！本喵踮脚侦查一下👀”
+action-再翻译一次 size=262 x 172 lines=2 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=238 x 88 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=238 x 88 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-2.0x-Cat-synthetic-53chars size=819 x 875 lines=7 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵呜～今天我有好多悄悄话想告诉你，窗外的阳光暖暖的，最喜欢靠近你一起看看小鸟，再慢慢说说我的小心思！👀✨”
+action-再翻译一次 size=262 x 172 lines=2 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=238 x 88 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=238 x 88 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-2.0x-DOG_HELD_01 size=819 x 250 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“哇！突然飞高高啦！汪！”
+action-再翻译一次 size=262 x 172 lines=2 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=238 x 88 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=238 x 88 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-2.0x-DOG_ALONE_07 size=819 x 375 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“呜呜汪～给我一点点陪伴好不好，一点点就行！”
+action-再翻译一次 size=262 x 172 lines=2 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=238 x 88 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=238 x 88 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-2.0x-DOG_UNKNOWN_07 size=819 x 250 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“主人！一条小狗语音消息，请查收📩”
+action-再翻译一次 size=262 x 172 lines=2 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=238 x 88 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=238 x 88 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+320dp-2.0x-Dog-synthetic-53chars size=819 x 875 lines=7 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵呜～今天我有好多悄悄话想告诉你，窗外的阳光暖暖的，最喜欢靠近你一起看看小鸟，再慢慢说说我的小心思！👀✨”
+action-再翻译一次 size=262 x 172 lines=2 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=238 x 88 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=238 x 88 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声

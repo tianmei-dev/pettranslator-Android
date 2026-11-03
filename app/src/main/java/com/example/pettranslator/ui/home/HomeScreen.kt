@@ -141,7 +141,7 @@ private fun HomeHero() {
                     withStyle(SpanStyle(color = Pink)) { append("今天") }
                     withStyle(SpanStyle(color = Ink)) { append("想听懂谁？") }
                 }, fontSize = 28.sp, lineHeight = 36.sp,
-                    style = LocalPetFontTrial.current.homeTitle.textStyle,
+                    style = PetFontFamilies.TitleStyle,
                     modifier = Modifier.testTag("font_trial_home"))
                 Text("选择它和场景，听听毛孩子的小心思～", color = Ink,
                     fontSize = 12.sp, lineHeight = 18.sp)

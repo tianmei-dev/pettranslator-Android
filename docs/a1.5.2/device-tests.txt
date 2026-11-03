@@ -1,0 +1,24 @@
+
+com.example.pettranslator.FinalFontLayoutTest:
+Error in completePageScrollsWhileActionsStayFixedAndCallbacksWork(com.example.pettranslator.FinalFontLayoutTest):
+java.lang.AssertionError: Assert failed: The component is displayed!
+	at androidx.compose.ui.test.AssertionsKt.assertIsNotDisplayed(Assertions.kt:46)
+	at com.example.pettranslator.FinalFontLayoutTest.completePageScrollsWhileActionsStayFixedAndCallbacksWork(FinalFontLayoutTest.kt:243)
+...
+com.example.pettranslator.ResultCardFontExportTest:....
+com.example.pettranslator.ResultInfoBarTest:.
+com.example.pettranslator.HomeFlowTest:.
+com.example.pettranslator.UncertainSheetFlowTest:.....
+com.example.pettranslator.RecordingFlowTest:..
+
+Time: 148.828
+There was 1 failure:
+1) completePageScrollsWhileActionsStayFixedAndCallbacksWork(com.example.pettranslator.FinalFontLayoutTest)
+java.lang.AssertionError: Assert failed: The component is displayed!
+	at androidx.compose.ui.test.AssertionsKt.assertIsNotDisplayed(Assertions.kt:46)
+	at com.example.pettranslator.FinalFontLayoutTest.completePageScrollsWhileActionsStayFixedAndCallbacksWork(FinalFontLayoutTest.kt:243)
+
+FAILURES!!!
+Tests run: 17,  Failures: 1
+
+

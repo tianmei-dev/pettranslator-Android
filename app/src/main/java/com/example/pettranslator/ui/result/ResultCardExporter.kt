@@ -15,24 +15,29 @@ import androidx.core.content.FileProvider
 import com.example.pettranslator.R
 import com.example.pettranslator.domain.interpretation.PetInterpretationResult
 import com.example.pettranslator.domain.interpretation.displayTitle
+import com.example.pettranslator.ui.theme.PetFontFamilies
 import java.io.File
 import java.io.FileOutputStream
 
 internal object ResultCardExporter {
-    fun render(context: Context, result: PetInterpretationResult): Bitmap {
+    internal fun createMonologueLayout(context: Context, result: PetInterpretationResult): android.text.StaticLayout {
         val textPaint = android.text.TextPaint(Paint.ANTI_ALIAS_FLAG).apply {
             color = android.graphics.Color.rgb(37, 51, 105); textSize = 43f
-            typeface = Typeface.create("sans-serif", Typeface.NORMAL)
+            typeface = PetFontFamilies.monologueTypeface(context)
         }
-        val layout = android.text.StaticLayout.Builder.obtain(result.innerMonologue, 0, result.innerMonologue.length,
-            textPaint, 880).setLineSpacing(12f, 1f).build()
+        return android.text.StaticLayout.Builder.obtain(result.innerMonologue, 0, result.innerMonologue.length,
+            textPaint, 880).setLineSpacing(14f, 1f).build()
+    }
+
+    fun render(context: Context, result: PetInterpretationResult): Bitmap {
+        val layout = createMonologueLayout(context, result)
         val cardHeight = maxOf(1400, 790 + layout.height + 250)
         val bitmap = Bitmap.createBitmap(1080, cardHeight, Bitmap.Config.ARGB_8888)
         val canvas = Canvas(bitmap)
         canvas.drawColor(android.graphics.Color.rgb(255, 244, 249))
         val paint = Paint(Paint.ANTI_ALIAS_FLAG)
         paint.color = android.graphics.Color.WHITE
-        canvas.drawRoundRect(RectF(46f, 48f, 1034f, 1352f), 54f, 54f, paint)
+        canvas.drawRoundRect(RectF(46f, 48f, 1034f, (cardHeight - 48).toFloat()), 54f, 54f, paint)
         paint.color = android.graphics.Color.rgb(248, 105, 174)
         paint.textSize = 40f; paint.typeface = Typeface.create("sans-serif-medium", Typeface.BOLD)
         canvas.drawText("宠物翻译器 · 毛孩子的心声", 94f, 128f, paint)

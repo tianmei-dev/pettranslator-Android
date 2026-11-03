@@ -1,0 +1,22 @@
+{
+  "fonts": [
+    {
+      "path": "app\\src\\main\\res\\font\\pet_title_wenkai.ttf",
+      "bytes": 25928940,
+      "sha256": "2d73eea94ad808999d90c0000c239a84a33b09d4bc6ab6c5b8bbf1eda8a7fc8b"
+    },
+    {
+      "path": "app\\src\\main\\res\\font\\pet_title_zhenkai.ttf",
+      "bytes": 17453376,
+      "sha256": "bf4ea8c39b51784469020120125715d3075137233fe337b5d0a7327f9dfc03bd"
+    }
+  ],
+  "packagedLicenses": [
+    "assets/licenses/lxgw_wenkai/OFL.txt",
+    "assets/licenses/lxgw_zhenkai/OFL.txt"
+  ],
+  "unitTests": 27,
+  "uniqueDeviceTestsVerified": 17,
+  "scrollTestLog": "scroll-test.txt",
+  "fullRegressionLog": "device-tests.txt"
+}

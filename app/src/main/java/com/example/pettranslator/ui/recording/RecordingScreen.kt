@@ -27,6 +27,9 @@ import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.layout.SubcomposeLayout
+import com.example.pettranslator.ui.components.PetSpeechBubble
+import com.example.pettranslator.ui.components.PetSpeechBubbleStyle
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalWindowInfo
@@ -201,8 +204,8 @@ fun RecordingScreen(
                         }
                     }
                 }
-                PetRoom(image, pet, pageWidth)
-                Surface(shape = RoundedCornerShape(18.dp), color = Color.White.copy(alpha = .78f)) {
+                PetRoom(image, pet, pageWidth, active)
+                if (!active || quiet) Surface(shape = RoundedCornerShape(18.dp), color = Color.White.copy(alpha = .78f)) {
                     Text(when (state.phase) {
                         RecordingPhase.READY -> "准备好了吗？让我们听听它的声音～"
                         RecordingPhase.STARTING -> "正在准备麦克风…"
@@ -298,10 +301,41 @@ fun RecordingScreen(
     }
 }
 
-@Composable private fun PetRoom(image: Int, pet: PetType, screenWidth: androidx.compose.ui.unit.Dp) {
+@Composable private fun PetRoom(image: Int, pet: PetType, screenWidth: androidx.compose.ui.unit.Dp, listening: Boolean) {
+    if (!listening) {
+        PetRoomArtwork(image, pet, screenWidth)
+        return
+    }
+    SubcomposeLayout(Modifier.requiredWidth(screenWidth).testTag("recording_room")) { constraints ->
+        val width = constraints.maxWidth
+        val roomHeight = (screenWidth / 1.55f).roundToPx()
+        val bubbleWidth = (width * .42f).toInt()
+        val bubble = subcompose("listeningBubble") {
+            RecordingListeningBubble(Modifier.testTag("recording_art_bubble"), if (screenWidth < 340.dp) 14.sp else 15.sp)
+        }.single().measure(androidx.compose.ui.unit.Constraints.fixedWidth(bubbleWidth))
+        val art = subcompose("roomArtwork") { PetRoomArtwork(image, pet, screenWidth, tagged = false) }
+            .single().measure(androidx.compose.ui.unit.Constraints.fixed(width, roomHeight))
+        // Keep the original picture dimensions/crop. Reserve only what the bubble
+        // needs above the earliest point of the complete transparent pet asset.
+        val petHeight = width * .74f / (if (pet == PetType.Cat) 620f / 426f else 697f / 426f)
+        val petTop = roomHeight - petHeight - 2.dp.toPx()
+        val headroom = (bubble.height + 4.dp.toPx() - petTop).toInt().coerceAtLeast(0)
+        layout(width, roomHeight + headroom) {
+            art.place(0, headroom)
+            bubble.place(width - bubble.width - 6.dp.roundToPx(), 0)
+        }
+    }
+}
+
+@Composable private fun RecordingListeningBubble(modifier: Modifier = Modifier, fontSize: androidx.compose.ui.unit.TextUnit = 15.sp) {
+    PetSpeechBubble("正在听\n毛孩子的声音…", modifier, style = PetSpeechBubbleStyle.Cloud,
+        fontSize = fontSize, rotationDegrees = -5f)
+}
+
+@Composable private fun PetRoomArtwork(image: Int, pet: PetType, screenWidth: androidx.compose.ui.unit.Dp, tagged: Boolean = true) {
     val pageEdge = Color(0xFFFFF1F7)
     val pageBottom = Color(0xFFF3F1FC)
-    Box(Modifier.requiredWidth(screenWidth).aspectRatio(1.55f).testTag("recording_room")) {
+    Box(Modifier.requiredWidth(screenWidth).aspectRatio(1.55f).then(if (tagged) Modifier.testTag("recording_room") else Modifier)) {
         Image(painterResource(R.drawable.pet_recording_room_bg), null, contentScale = ContentScale.Crop,
             alignment = androidx.compose.ui.BiasAlignment(0f, .18f), modifier = Modifier.matchParentSize())
         Canvas(Modifier.matchParentSize()) {

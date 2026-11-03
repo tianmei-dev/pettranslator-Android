@@ -37,6 +37,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.pettranslator.R
+import com.example.pettranslator.ui.components.PetArtisticTitle
 import com.example.pettranslator.domain.PetType
 import com.example.pettranslator.ui.theme.*
 import kotlinx.coroutines.delay
@@ -110,8 +111,7 @@ fun AnalysisScreen(pet: PetType, completedSteps: Int, startedAtNanos: Long, targ
                                     1f to Color.Transparent), blendMode = BlendMode.DstIn)
                             })
                 }
-                Text("正在认真听它说话…", color = Ink, fontSize = 18.sp, lineHeight = 25.sp,
-                    style = LocalPetFontTrial.current.analysisTitle.textStyle, textAlign = TextAlign.Center,
+                PetArtisticTitle("正在认真听它说话…", fontSize = 22.sp,
                     modifier = Modifier.testTag("font_trial_analysis"))
                 Spacer(Modifier.height(6.dp))
                 Text("AI正在分析声音类型，马上揭晓它的小心思～", color = Muted,

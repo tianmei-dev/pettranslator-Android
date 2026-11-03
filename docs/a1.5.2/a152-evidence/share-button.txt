@@ -1,0 +1,1 @@
+Production share button: generated a readable PNG, ACTION_SEND image/png with content URI, ClipData and read grant. Exactly one ACTION_CHOOSER was intercepted and canceled by the test. No recipient app opened; no content sent.

@@ -1,0 +1,2 @@
+Header and bubble scroll together with preserved relative offset; fixed actions do not move.
+before header=DpRect(left=0.0.dp, top=27.0.dp, right=360.0.dp, bottom=334.0.dp) bubble=DpRect(left=210.0.dp, top=81.0.dp, right=354.0.dp, bottom=160.0.dp); after header=DpRect(left=0.0.dp, top=-532.0.dp, right=360.0.dp, bottom=-225.0.dp) bubble=DpRect(left=210.0.dp, top=-478.0.dp, right=354.0.dp, bottom=-399.0.dp)

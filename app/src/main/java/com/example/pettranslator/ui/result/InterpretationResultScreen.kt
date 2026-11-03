@@ -18,6 +18,9 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.layout.SubcomposeLayout
+import com.example.pettranslator.ui.components.PetSpeechBubble
+import com.example.pettranslator.ui.components.PetSpeechBubbleStyle
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
@@ -71,35 +74,13 @@ fun InterpretationResultScreen(result: PetInterpretationResult, onBack: () -> Un
     val headerArt = if (result.petType == PetType.Cat) R.drawable.result_cat_header else R.drawable.result_dog_header
     val quoteArt = if (result.petType == PetType.Cat) R.drawable.result_cat_quote else R.drawable.result_dog_quote
     val tipArt = if (result.petType == PetType.Cat) R.drawable.result_cat_tip else R.drawable.result_dog_tip
-    Scaffold(containerColor = Color.Transparent, snackbarHost = { SnackbarHost(snackbar) }) { insets ->
-        Column(Modifier.fillMaxSize().background(Brush.verticalGradient(listOf(Color(0xFFFFF2F8), Color(0xFFF2F3FF), Color(0xFFFFF6FA))))
-            .padding(insets)) {
-            Box(Modifier.fillMaxWidth().height(208.dp)) {
-                Image(painterResource(headerArt), contentDescription = "${result.petType.title}在温馨房间里的插画",
-                    contentScale = ContentScale.Crop, alignment = Alignment.Center,
-                    modifier = Modifier.fillMaxSize())
-                Box(Modifier.fillMaxSize().background(Brush.verticalGradient(0f to Color.Transparent, .62f to Color.Transparent, 1f to Color(0xFFFFF2F8))))
-                Box(Modifier.fillMaxWidth().height(52.dp), contentAlignment = Alignment.Center) {
-                    Text("翻译结果", color = Ink, fontSize = 18.sp, fontWeight = FontWeight.Bold)
-                    TextButton(onClick = onBack, modifier = Modifier.align(Alignment.CenterStart).padding(start = 2.dp).testTag("recording_back")) { Text("‹", color = Ink, fontSize = 30.sp) }
-                    TextButton(onClick = onHome, modifier = Modifier.align(Alignment.CenterEnd).padding(end = 4.dp)) { Text("⌂", color = Ink, fontSize = 22.sp) }
-                }
-                Surface(Modifier.align(Alignment.BottomEnd).padding(end = 14.dp, bottom = 18.dp), shape = RoundedCornerShape(23.dp),
-                    color = Color.White.copy(alpha = .91f), shadowElevation = 1.dp) {
-                    Text("毛孩子的\n心声来啦！", Modifier.padding(horizontal = 12.dp, vertical = 7.dp), color = Pink,
-                        fontSize = 14.sp, lineHeight = 20.sp, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
-                }
-            }
-            Column(Modifier.weight(1f).fillMaxWidth().verticalScroll(rememberScrollState()).padding(horizontal = 14.dp),
-                verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                PetInfoBar(result)
-                QuoteCard(result, quoteArt)
-                SoundAnalysisCard(result)
-                InteractionCard(result.interactionSuggestion, tipArt)
-                Text("趣味解读仅供娱乐参考，请结合宠物实际表现判断。", Modifier.fillMaxWidth().padding(bottom = 2.dp),
-                    color = Muted, fontSize = 10.sp, lineHeight = 15.sp, textAlign = TextAlign.Center)
-            }
-            Row(Modifier.fillMaxWidth().padding(horizontal = 10.dp, vertical = 7.dp),
+    Scaffold(modifier = Modifier.fillMaxSize().testTag("result_page")
+        .background(Brush.verticalGradient(listOf(Color(0xFFFFF2F8), Color(0xFFF2F3FF), Color(0xFFFFF6FA)))),
+        containerColor = Color.Transparent, contentWindowInsets = WindowInsets.safeDrawing,
+        snackbarHost = { SnackbarHost(snackbar) }, bottomBar = {
+            Row(Modifier.fillMaxWidth().testTag("result_actions")
+                .windowInsetsPadding(WindowInsets.safeDrawing.only(WindowInsetsSides.Bottom + WindowInsetsSides.Horizontal))
+                .padding(horizontal = 10.dp, vertical = 7.dp).height(IntrinsicSize.Min),
                 horizontalArrangement = Arrangement.spacedBy(7.dp), verticalAlignment = Alignment.CenterVertically) {
                 ActionTile("↻", "再翻译一次", Brush.linearGradient(listOf(Color.White, Color(0xFFE9F1FF))), Ink,
                     enabled = !busy, onClick = onAgain, modifier = Modifier.weight(1f))
@@ -112,6 +93,67 @@ fun InterpretationResultScreen(result: PetInterpretationResult, onBack: () -> Un
                 ActionTile("•", "分享心声", Brush.linearGradient(listOf(Color(0xFF65C3F4), Color(0xFF4A91EF))), Color.White,
                     enabled = !busy, onClick = { scope.launch { export(false) } }, modifier = Modifier.weight(1f))
             }
+        }) { insets ->
+        Column(Modifier.fillMaxSize().padding(insets).consumeWindowInsets(insets)
+            .verticalScroll(rememberScrollState()).testTag("result_scroll")) {
+            ResultHeroWithBubble(result.petType, navigation = {
+                Box(Modifier.fillMaxWidth().height(52.dp), contentAlignment = Alignment.Center) {
+                    Text("翻译结果", color = Ink, fontSize = 18.sp, fontWeight = FontWeight.Bold)
+                    TextButton(onClick = onBack, modifier = Modifier.align(Alignment.CenterStart).padding(start = 2.dp).testTag("recording_back")) { Text("‹", color = Ink, fontSize = 30.sp) }
+                    TextButton(onClick = onHome, modifier = Modifier.align(Alignment.CenterEnd).padding(end = 4.dp).testTag("result_home")) { Text("⌂", color = Ink, fontSize = 22.sp) }
+                }
+            }) {
+                Image(painterResource(headerArt), contentDescription = "${result.petType.title}在温馨房间里的插画",
+                    contentScale = ContentScale.Crop, alignment = Alignment.Center,
+                    modifier = Modifier.fillMaxWidth().height(208.dp).align(Alignment.BottomCenter))
+                Box(Modifier.fillMaxWidth().height(208.dp).align(Alignment.BottomCenter).background(Brush.verticalGradient(0f to Color.Transparent, .62f to Color.Transparent, 1f to Color(0xFFFFF2F8))))
+            }
+            Column(Modifier.fillMaxWidth().padding(horizontal = 14.dp),
+                verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                PetInfoBar(result)
+                QuoteCard(result, quoteArt)
+                SoundAnalysisCard(result)
+                InteractionCard(result.interactionSuggestion, tipArt)
+                Text("趣味解读仅供娱乐参考，请结合宠物实际表现判断。", Modifier.fillMaxWidth().padding(bottom = 2.dp),
+                    color = Muted, fontSize = 10.sp, lineHeight = 15.sp, textAlign = TextAlign.Center)
+            }
+        }
+    }
+}
+
+@Composable private fun ResultCelebrationBubble(modifier: Modifier = Modifier) {
+    PetSpeechBubble("毛孩子的\n心声来啦！", modifier, style = PetSpeechBubbleStyle.Dialogue,
+        fontSize = 16.sp, rotationDegrees = -3f)
+}
+
+/** Keep the existing 208dp artwork/crop; the extra room belongs only to the
+ * speech bubble and grows with accessibility text instead of covering the pet. */
+@Composable private fun ResultHeroWithBubble(
+    pet: PetType,
+    navigation: @Composable () -> Unit,
+    artwork: @Composable BoxScope.() -> Unit,
+) {
+    SubcomposeLayout(Modifier.fillMaxWidth().testTag("result_header")) { constraints ->
+        val width = constraints.maxWidth
+        val artHeight = 208.dp.roundToPx()
+        val nav = subcompose("navigation", navigation).single()
+            .measure(androidx.compose.ui.unit.Constraints.fixedWidth(width))
+        val bubbleWidth = maxOf(width * .40f, 16.sp.toPx() * 5 + 40.dp.toPx())
+            .coerceAtMost(width - 12.dp.toPx()).toInt()
+        val bubble = subcompose("resultBubble") {
+            ResultCelebrationBubble(Modifier.testTag("result_art_bubble"))
+        }.single().measure(androidx.compose.ui.unit.Constraints.fixedWidth(bubbleWidth))
+        // The current opaque header resources place both pets near the center.
+        // Their highest important details start about 38dp/40dp below the crop.
+        val earliestPetY = (if (pet == PetType.Cat) 38.dp else 40.dp).roundToPx()
+        val bubbleY = nav.height + 2.dp.roundToPx()
+        val headroom = (bubbleY + bubble.height + 4.dp.roundToPx() - earliestPetY).coerceAtLeast(0)
+        val art = subcompose("artwork") { Box(Modifier.fillMaxWidth().height(208.dp), content = artwork) }
+            .single().measure(androidx.compose.ui.unit.Constraints.fixed(width, artHeight))
+        layout(width, artHeight + headroom) {
+            art.place(0, headroom)
+            nav.place(0, 0)
+            bubble.place(width - bubble.width - 6.dp.roundToPx(), bubbleY)
         }
     }
 }
@@ -205,23 +247,47 @@ fun InterpretationResultScreen(result: PetInterpretationResult, onBack: () -> Un
 }
 
 @Composable private fun QuoteCard(result: PetInterpretationResult, quoteArt: Int) {
-    BoxWithConstraints {
+    val density = androidx.compose.ui.platform.LocalDensity.current
+    val measurer = androidx.compose.ui.text.rememberTextMeasurer()
+    val quote = "“${result.innerMonologue}”"
+    val textStyle = LocalTextStyle.current.merge(PetFontFamilies.MonologueStyle)
+        .copy(fontSize = 18.sp, lineHeight = 25.sp)
+    BoxWithConstraints(Modifier.fillMaxWidth()) {
         val artworkWidth = if (maxWidth < 350.dp) 88.dp else 106.dp
-        Surface(shape = RoundedCornerShape(22.dp), color = Color.Transparent, shadowElevation = 2.dp) {
-            Row(Modifier.fillMaxWidth().background(Brush.linearGradient(listOf(Color(0xFFFFE2F0), Color(0xFFF2E6FF), Color(0xFFFFF1F8))),
-                RoundedCornerShape(22.dp)).padding(start = 14.dp, top = 12.dp, bottom = 10.dp, end = 5.dp),
-                verticalAlignment = Alignment.CenterVertically) {
-                Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(9.dp)) {
-                    Surface(shape = RoundedCornerShape(16.dp), color = Color(0xFFE95AAB)) {
-                        Text("♥ ${result.coreThemeId.displayTitle}", Modifier.padding(horizontal = 9.dp, vertical = 4.dp),
-                            color = Color.White, fontSize = 10.sp, lineHeight = 14.sp, fontWeight = FontWeight.SemiBold)
-                    }
-                    Text("“${result.innerMonologue}”", color = Ink, fontSize = 15.sp, lineHeight = 22.sp,
-                        style = LocalPetFontTrial.current.monologue.textStyle,
-                        modifier = Modifier.testTag("font_trial_monologue"))
+        val textWidth = (maxWidth - 19.dp - 8.dp - artworkWidth).coerceAtLeast(1.dp)
+        val sideLayout = measurer.measure(quote, textStyle,
+            constraints = androidx.compose.ui.unit.Constraints(maxWidth = with(density) { textWidth.roundToPx() }))
+        val stacked = sideLayout.lineCount > 4 || result.innerMonologue.codePointCount(0, result.innerMonologue.length) > 35 ||
+            (maxWidth < 300.dp && density.fontScale > 1.3f)
+        val textContent: @Composable () -> Unit = {
+            Column(verticalArrangement = Arrangement.spacedBy(9.dp)) {
+                Surface(shape = RoundedCornerShape(16.dp), color = Color(0xFFE95AAB)) {
+                    Text("♥ ${result.coreThemeId.displayTitle}", Modifier.padding(horizontal = 9.dp, vertical = 4.dp),
+                        color = Color.White, fontSize = 10.sp, lineHeight = 14.sp, fontWeight = FontWeight.SemiBold)
                 }
-                Image(painterResource(quoteArt), contentDescription = "${result.petType.title}插画",
-                    contentScale = ContentScale.Fit, modifier = Modifier.width(artworkWidth).heightIn(max = 138.dp).aspectRatio(0.76f))
+                Text(quote, color = Ink, style = textStyle, modifier = Modifier.testTag("font_trial_monologue"))
+            }
+        }
+        val art: @Composable (Modifier) -> Unit = { modifier ->
+            Image(painterResource(quoteArt), contentDescription = "${result.petType.title}插画",
+                contentScale = ContentScale.Fit, modifier = modifier.width(if (stacked) 68.dp else artworkWidth)
+                    .aspectRatio(.76f).testTag("result_quote_art"))
+        }
+        Surface(modifier = Modifier.fillMaxWidth().testTag("result_quote"),
+            shape = RoundedCornerShape(22.dp), color = Color.Transparent, shadowElevation = 2.dp) {
+            Box(Modifier.fillMaxWidth().background(Brush.linearGradient(listOf(Color(0xFFFFE2F0), Color(0xFFF2E6FF), Color(0xFFFFF1F8))),
+                RoundedCornerShape(22.dp)).padding(start = 14.dp, top = 12.dp, bottom = 10.dp, end = 5.dp)) {
+                if (stacked) {
+                    Column(Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                        textContent()
+                        art(Modifier.align(Alignment.End))
+                    }
+                } else {
+                    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Box(Modifier.weight(1f)) { textContent() }
+                        art(Modifier)
+                    }
+                }
             }
         }
     }
@@ -287,11 +353,11 @@ fun InterpretationResultScreen(result: PetInterpretationResult, onBack: () -> Un
 @Composable private fun ActionTile(glyph: String, label: String, brush: Brush, contentColor: Color,
                                    enabled: Boolean, onClick: () -> Unit, modifier: Modifier = Modifier) {
     Surface(onClick = onClick, enabled = enabled, shape = RoundedCornerShape(17.dp), color = Color.Transparent,
-        modifier = modifier.height(65.dp)) {
-        Column(Modifier.fillMaxSize().background(brush, RoundedCornerShape(17.dp)), horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = modifier.heightIn(min = 65.dp).fillMaxHeight()) {
+        Column(Modifier.fillMaxWidth().background(brush, RoundedCornerShape(17.dp)).padding(horizontal = 4.dp, vertical = 10.dp), horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center) {
             Text(glyph, color = contentColor, fontSize = 18.sp, lineHeight = 21.sp, fontWeight = FontWeight.Bold)
-            Text(label, color = contentColor, fontSize = 10.sp, lineHeight = 14.sp, fontWeight = FontWeight.Bold, maxLines = 1)
+            Text(label, color = contentColor, fontSize = 10.sp, lineHeight = 14.sp, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
         }
     }
 }

@@ -1,0 +1,27 @@
+home-title size=588 x 100 lines=1 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034113, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=28.0.sp lineHeight=36.0.sp text=今天想听懂谁？
+home-system-body size=603 x 54 lines=1 font=FontFamily.SansSerif sizeSp=12.0.sp lineHeight=18.0.sp text=选择它和场景，听听毛孩子的小心思～
+analysis-title size=486 x 64 lines=1 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034113, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=正在认真听它说话…
+Cat-short-CAT_HELD_04 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“咪呜？你是想抱着我贴贴吗？”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+Cat-longest-formal-CAT_PLAY_01 size=651 x 225 lines=3 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“喵呜！那根晃悠悠的羽毛呢？我的扑抓爪蓄势待发！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+Dog-short-DOG_HELD_01 size=651 x 75 lines=1 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“哇！突然飞高高啦！汪！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+Dog-longest-formal-DOG_ALONE_07 size=651 x 150 lines=2 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“呜呜汪～给我一点点陪伴好不好，一点点就行！”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+normal-width-Cat-synthetic-50chars size=939 x 300 lines=4 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“今天我有好多悄悄话想告诉你，窗外的阳光暖暖的，最喜欢靠近你一起看看小鸟，再慢慢说说我的小心思！👀✨”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声
+normal-width-Dog-synthetic-50chars size=939 x 300 lines=4 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034112, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) sizeSp=18.0.sp lineHeight=25.0.sp text=“今天我有好多悄悄话想告诉你，窗外的阳光暖暖的，最喜欢靠近你一起看看小鸟，再慢慢说说我的小心思！👀✨”
+action-再翻译一次 size=152 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=再翻译一次
+action-保存结果 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=保存结果
+action-分享心声 size=122 x 44 lines=1 font=FontFamily.SansSerif sizeSp=10.0.sp lineHeight=14.0.sp text=分享心声

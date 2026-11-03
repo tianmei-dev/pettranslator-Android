@@ -1,0 +1,15 @@
+Cat-recording textSize=315 x 115 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034113, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) fontSize=15.0.sp lines=2 text=正在听
+毛孩子的声音…
+Cat-recording bubble=DpRect(left=203.0.dp, top=159.0.dp, right=354.0.dp, bottom=240.66667.dp) visual=DpRect(left=0.0.dp, top=159.0.dp, right=360.0.dp, bottom=429.66666.dp) text=DpRect(left=224.5293.dp, top=180.31526.dp, right=329.5293.dp, bottom=218.6486.dp) navigation=DpRect(left=10.0.dp, top=33.0.dp, right=50.0.dp, bottom=73.0.dp)
+Dog-recording textSize=315 x 115 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034113, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) fontSize=15.0.sp lines=2 text=正在听
+毛孩子的声音…
+Dog-recording bubble=DpRect(left=203.0.dp, top=159.0.dp, right=354.0.dp, bottom=240.66667.dp) visual=DpRect(left=0.0.dp, top=159.0.dp, right=360.0.dp, bottom=409.33334.dp) text=DpRect(left=224.5293.dp, top=180.31526.dp, right=329.5293.dp, bottom=218.6486.dp) navigation=DpRect(left=10.0.dp, top=33.0.dp, right=50.0.dp, bottom=73.0.dp)
+analysis textSize=594 x 90 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034113, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) fontSize=22.0.sp lines=1 text=正在认真听它说话…
+analysis title=DpRect(left=81.0.dp, top=314.66666.dp, right=279.0.dp, bottom=348.66666.dp); shallow arc is drawn from actual glyph advances and inspected in screenshots
+analysis-normal-line textSize=594 x 90 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034113, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) fontSize=22.0.sp lines=1 text=正在认真听它说话…
+Cat-result textSize=240 x 122 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034113, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) fontSize=16.0.sp lines=2 text=毛孩子的
+心声来啦！
+Cat-result bubble=DpRect(left=210.0.dp, top=81.0.dp, right=354.0.dp, bottom=160.0.dp) visual=DpRect(left=0.0.dp, top=27.0.dp, right=360.0.dp, bottom=334.0.dp) text=DpRect(left=240.99066.dp, top=97.45464.dp, right=320.99066.dp, bottom=138.1213.dp) navigation=DpRect(left=2.0.dp, top=27.333334.dp, right=60.0.dp, bottom=78.666664.dp)
+Dog-result textSize=240 x 122 font=FontListFontFamily(fonts=[ResourceFont(resId=2131034113, weight=FontWeight(weight=400), style=Normal, loadingStrategy=Optional)]) fontSize=16.0.sp lines=2 text=毛孩子的
+心声来啦！
+Dog-result bubble=DpRect(left=210.0.dp, top=81.0.dp, right=354.0.dp, bottom=160.0.dp) visual=DpRect(left=0.0.dp, top=27.0.dp, right=360.0.dp, bottom=332.0.dp) text=DpRect(left=240.99066.dp, top=97.45464.dp, right=320.99066.dp, bottom=138.1213.dp) navigation=DpRect(left=2.0.dp, top=27.333334.dp, right=60.0.dp, bottom=78.666664.dp)

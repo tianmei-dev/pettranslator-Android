@@ -1,0 +1,2 @@
+Test-only long copy: 384 UTF-16 units; lines=17; textHeight=1102px; no missing glyphs or ellipsis; colored emoji pixels=5707.
+The production render/writeShareFile paths were exercised; no gallery entry or share intent was launched.

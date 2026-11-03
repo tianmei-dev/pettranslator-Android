@@ -1,0 +1,11 @@
+
+com.example.pettranslator.ArtisticDecorationTest:...
+com.example.pettranslator.FinalFontLayoutTest:....
+com.example.pettranslator.AnalysisLayoutTest:..
+com.example.pettranslator.RecordingFlowTest:..
+
+Time: 124.105
+
+OK (11 tests)
+
+
