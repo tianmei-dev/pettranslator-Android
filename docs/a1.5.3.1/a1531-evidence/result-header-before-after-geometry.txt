@@ -1,0 +1,48 @@
+cat-360dp-font1.0 textSize=180 x 86, lines=2, text=毛孩子的
+心声来啦！
+cat-360dp-font1.0 bubble=DpRect(left=258.66666.dp, top=155.04762.dp, right=355.8095.dp, bottom=206.09525.dp); text=DpRect(left=271.9516.dp, top=162.57874.dp, right=340.523.dp, bottom=195.34064.dp)
+cat-360dp-font1.0 expectedHeaderBefore=208dp measuredAfter=DpRect(left=0.0.dp, top=0.0.dp, right=360.0.dp, bottom=208.0.dp); picture=DpRect(left=0.0.dp, top=0.0.dp, right=360.0.dp, bottom=208.0.dp); infoTop=208.0.dp
+dog-360dp-font1.0 textSize=180 x 86, lines=2, text=毛孩子的
+心声来啦！
+dog-360dp-font1.0 bubble=DpRect(left=258.66666.dp, top=155.04762.dp, right=355.8095.dp, bottom=206.09525.dp); text=DpRect(left=271.9516.dp, top=162.57874.dp, right=340.523.dp, bottom=195.34064.dp)
+dog-360dp-font1.0 expectedHeaderBefore=208dp measuredAfter=DpRect(left=0.0.dp, top=0.0.dp, right=360.0.dp, bottom=208.0.dp); picture=DpRect(left=0.0.dp, top=0.0.dp, right=360.0.dp, bottom=208.0.dp); infoTop=208.0.dp
+cat-360dp-font1.5 textSize=180 x 86, lines=2, text=毛孩子的
+心声来啦！
+cat-360dp-font1.5 bubble=DpRect(left=258.66666.dp, top=155.04762.dp, right=355.8095.dp, bottom=206.09525.dp); text=DpRect(left=271.9516.dp, top=162.57874.dp, right=340.523.dp, bottom=195.34064.dp)
+cat-360dp-font1.5 expectedHeaderBefore=208dp measuredAfter=DpRect(left=0.0.dp, top=0.0.dp, right=360.0.dp, bottom=208.0.dp); picture=DpRect(left=0.0.dp, top=0.0.dp, right=360.0.dp, bottom=208.0.dp); infoTop=208.0.dp
+dog-360dp-font1.5 textSize=180 x 86, lines=2, text=毛孩子的
+心声来啦！
+dog-360dp-font1.5 bubble=DpRect(left=258.66666.dp, top=155.04762.dp, right=355.8095.dp, bottom=206.09525.dp); text=DpRect(left=271.9516.dp, top=162.57874.dp, right=340.523.dp, bottom=195.34064.dp)
+dog-360dp-font1.5 expectedHeaderBefore=208dp measuredAfter=DpRect(left=0.0.dp, top=0.0.dp, right=360.0.dp, bottom=208.0.dp); picture=DpRect(left=0.0.dp, top=0.0.dp, right=360.0.dp, bottom=208.0.dp); infoTop=208.0.dp
+cat-360dp-font2.0 textSize=180 x 86, lines=2, text=毛孩子的
+心声来啦！
+cat-360dp-font2.0 bubble=DpRect(left=258.66666.dp, top=155.04762.dp, right=355.8095.dp, bottom=206.09525.dp); text=DpRect(left=271.9516.dp, top=162.57874.dp, right=340.523.dp, bottom=195.34064.dp)
+cat-360dp-font2.0 expectedHeaderBefore=208dp measuredAfter=DpRect(left=0.0.dp, top=0.0.dp, right=360.0.dp, bottom=208.0.dp); picture=DpRect(left=0.0.dp, top=0.0.dp, right=360.0.dp, bottom=208.0.dp); infoTop=208.0.dp
+dog-360dp-font2.0 textSize=180 x 86, lines=2, text=毛孩子的
+心声来啦！
+dog-360dp-font2.0 bubble=DpRect(left=258.66666.dp, top=155.04762.dp, right=355.8095.dp, bottom=206.09525.dp); text=DpRect(left=271.9516.dp, top=162.57874.dp, right=340.523.dp, bottom=195.34064.dp)
+dog-360dp-font2.0 expectedHeaderBefore=208dp measuredAfter=DpRect(left=0.0.dp, top=0.0.dp, right=360.0.dp, bottom=208.0.dp); picture=DpRect(left=0.0.dp, top=0.0.dp, right=360.0.dp, bottom=208.0.dp); infoTop=208.0.dp
+cat-320dp-font1.0 textSize=180 x 86, lines=2, text=毛孩子的
+心声来啦！
+cat-320dp-font1.0 bubble=DpRect(left=221.71428.dp, top=155.04762.dp, right=315.8095.dp, bottom=206.09525.dp); text=DpRect(left=233.4754.dp, top=162.57874.dp, right=302.0468.dp, bottom=195.34064.dp)
+cat-320dp-font1.0 expectedHeaderBefore=208dp measuredAfter=DpRect(left=0.0.dp, top=0.0.dp, right=320.0.dp, bottom=208.0.dp); picture=DpRect(left=0.0.dp, top=0.0.dp, right=320.0.dp, bottom=208.0.dp); infoTop=208.0.dp
+dog-320dp-font1.0 textSize=180 x 86, lines=2, text=毛孩子的
+心声来啦！
+dog-320dp-font1.0 bubble=DpRect(left=221.71428.dp, top=155.04762.dp, right=315.8095.dp, bottom=206.09525.dp); text=DpRect(left=233.4754.dp, top=162.57874.dp, right=302.0468.dp, bottom=195.34064.dp)
+dog-320dp-font1.0 expectedHeaderBefore=208dp measuredAfter=DpRect(left=0.0.dp, top=0.0.dp, right=320.0.dp, bottom=208.0.dp); picture=DpRect(left=0.0.dp, top=0.0.dp, right=320.0.dp, bottom=208.0.dp); infoTop=208.0.dp
+cat-320dp-font1.5 textSize=180 x 86, lines=2, text=毛孩子的
+心声来啦！
+cat-320dp-font1.5 bubble=DpRect(left=221.71428.dp, top=155.04762.dp, right=315.8095.dp, bottom=206.09525.dp); text=DpRect(left=233.4754.dp, top=162.57874.dp, right=302.0468.dp, bottom=195.34064.dp)
+cat-320dp-font1.5 expectedHeaderBefore=208dp measuredAfter=DpRect(left=0.0.dp, top=0.0.dp, right=320.0.dp, bottom=208.0.dp); picture=DpRect(left=0.0.dp, top=0.0.dp, right=320.0.dp, bottom=208.0.dp); infoTop=208.0.dp
+dog-320dp-font1.5 textSize=180 x 86, lines=2, text=毛孩子的
+心声来啦！
+dog-320dp-font1.5 bubble=DpRect(left=221.71428.dp, top=155.04762.dp, right=315.8095.dp, bottom=206.09525.dp); text=DpRect(left=233.4754.dp, top=162.57874.dp, right=302.0468.dp, bottom=195.34064.dp)
+dog-320dp-font1.5 expectedHeaderBefore=208dp measuredAfter=DpRect(left=0.0.dp, top=0.0.dp, right=320.0.dp, bottom=208.0.dp); picture=DpRect(left=0.0.dp, top=0.0.dp, right=320.0.dp, bottom=208.0.dp); infoTop=208.0.dp
+cat-320dp-font2.0 textSize=180 x 86, lines=2, text=毛孩子的
+心声来啦！
+cat-320dp-font2.0 bubble=DpRect(left=221.71428.dp, top=155.04762.dp, right=315.8095.dp, bottom=206.09525.dp); text=DpRect(left=233.4754.dp, top=162.57874.dp, right=302.0468.dp, bottom=195.34064.dp)
+cat-320dp-font2.0 expectedHeaderBefore=208dp measuredAfter=DpRect(left=0.0.dp, top=0.0.dp, right=320.0.dp, bottom=208.0.dp); picture=DpRect(left=0.0.dp, top=0.0.dp, right=320.0.dp, bottom=208.0.dp); infoTop=208.0.dp
+dog-320dp-font2.0 textSize=180 x 86, lines=2, text=毛孩子的
+心声来啦！
+dog-320dp-font2.0 bubble=DpRect(left=221.71428.dp, top=155.04762.dp, right=315.8095.dp, bottom=206.09525.dp); text=DpRect(left=233.4754.dp, top=162.57874.dp, right=302.0468.dp, bottom=195.34064.dp)
+dog-320dp-font2.0 expectedHeaderBefore=208dp measuredAfter=DpRect(left=0.0.dp, top=0.0.dp, right=320.0.dp, bottom=208.0.dp); picture=DpRect(left=0.0.dp, top=0.0.dp, right=320.0.dp, bottom=208.0.dp); infoTop=208.0.dp

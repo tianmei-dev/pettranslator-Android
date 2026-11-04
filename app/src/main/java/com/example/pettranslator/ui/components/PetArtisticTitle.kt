@@ -1,5 +1,8 @@
 package com.example.pettranslator.ui.components
 
+import android.graphics.Paint
+import android.graphics.Rect
+import android.graphics.Typeface
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.LocalTextStyle
@@ -13,10 +16,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalFontFamilyResolver
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.TextLayoutResult
 import androidx.compose.ui.text.drawText
 import androidx.compose.ui.text.font.FontSynthesis
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.style.TextAlign
@@ -28,7 +34,8 @@ import com.example.pettranslator.ui.theme.PetFontFamilies
 
 /**
  * A shallow, upright arc for a short pet-themed title. Glyph advances come from
- * the actual font; first/last glyph baselines sit 4dp below the middle of the arc.
+ * the actual font; first/last glyph baselines sit 8dp below the middle of the arc.
+ * Ink bounds distribute this larger curve inside the same existing measured box.
  *
  * The single Text remains the accessibility and text-layout semantics host. The
  * glyph drawing has no separate accessibility children. If the title wraps, or
@@ -53,6 +60,9 @@ internal fun PetArtisticTitle(
         textAlign = TextAlign.Center,
     )
     val measurer = rememberTextMeasurer()
+    val density = LocalDensity.current
+    val typeface = LocalFontFamilyResolver.current.resolve(style.fontFamily,
+        FontWeight.Normal, FontStyle.Normal, FontSynthesis.None).value as? Typeface ?: Typeface.DEFAULT
     val glyphs = remember(text, style, measurer) {
         text.codePoints().toArray().map { codePoint ->
             measurer.measure(String(Character.toChars(codePoint)), style.copy(textAlign = TextAlign.Start),
@@ -64,6 +74,21 @@ internal fun PetArtisticTitle(
         glyphs.map { glyph ->
             kotlin.math.abs(glyph.getHorizontalPosition(glyph.layoutInput.text.length, true) -
                 glyph.getHorizontalPosition(0, true))
+        }
+    }
+    // Layout boxes include font leading, not the actual glyph ink. Resolve the
+    // same platform font and measure ink once so the 8dp curve can use available
+    // leading plus the existing 4dp lower padding without changing layout height.
+    val inkBounds = remember(text, typeface, size, density) {
+        val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            this.typeface = typeface
+            textSize = with(density) { size.toPx() }
+        }
+        text.codePoints().toArray().map { codePoint ->
+            val character = String(Character.toChars(codePoint))
+            val bounds = Rect()
+            paint.getTextBounds(character, 0, character.length, bounds)
+            bounds.top.toFloat() to bounds.bottom.toFloat()
         }
     }
     val totalAdvance = advances.sum()
@@ -94,17 +119,34 @@ internal fun PetArtisticTitle(
                     val firstCenter = advances.first() / 2f
                     val lastCenter = totalAdvance - advances.last() / 2f
                     val centerSpan = lastCenter - firstCenter
-                    var x = (arcLayout.size.width - totalAdvance) / 2f
                     var advanceBefore = 0f
-                    glyphs.forEachIndexed { index, glyph ->
-                        val center = advanceBefore + advances[index] / 2f
+                    val drops = advances.map { advance ->
+                        val center = advanceBefore + advance / 2f
+                        advanceBefore += advance
                         val normalized = if (centerSpan > 0f)
                             ((center - firstCenter) / centerSpan * 2f - 1f).coerceIn(-1f, 1f) else 0f
-                        val baselineDrop = 4.dp.toPx() * normalized * normalized
+                        8.dp.toPx() * normalized * normalized
+                    }
+                    // Each glyph imposes an interval for a common vertical shift.
+                    // Intersect those intervals, preferring -4dp: a balanced -4..+4
+                    // curve. This leaves the component baseline and following UI
+                    // exactly where they were while keeping actual ink inside it.
+                    val minimumShift = inkBounds.indices.maxOf { index ->
+                        -arcLayout.firstBaseline - inkBounds[index].first - drops[index]
+                    }
+                    val maximumShift = inkBounds.indices.minOf { index ->
+                        this.size.height - arcLayout.firstBaseline - inkBounds[index].second - drops[index]
+                    }
+                    if (minimumShift > maximumShift) {
+                        drawContent()
+                        return@drawWithContent
+                    }
+                    val shift = (-4).dp.toPx().coerceIn(minimumShift, maximumShift)
+                    var x = (arcLayout.size.width - totalAdvance) / 2f
+                    glyphs.forEachIndexed { index, glyph ->
                         drawText(glyph, topLeft = Offset(x,
-                            arcLayout.firstBaseline - glyph.firstBaseline + baselineDrop))
+                            arcLayout.firstBaseline - glyph.firstBaseline + shift + drops[index]))
                         x += advances[index]
-                        advanceBefore += advances[index]
                     }
                 }
             }.padding(bottom = 4.dp),

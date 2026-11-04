@@ -1,0 +1,8 @@
+
+com.example.pettranslator.BubbleLayoutRegressionTest:....
+
+Time: 41.095
+
+OK (4 tests)
+
+

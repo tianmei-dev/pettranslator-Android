@@ -18,7 +18,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.layout.SubcomposeLayout
 import com.example.pettranslator.ui.components.PetSpeechBubble
 import com.example.pettranslator.ui.components.PetSpeechBubbleStyle
 import androidx.compose.ui.platform.LocalContext
@@ -121,40 +120,33 @@ fun InterpretationResultScreen(result: PetInterpretationResult, onBack: () -> Un
     }
 }
 
-@Composable private fun ResultCelebrationBubble(modifier: Modifier = Modifier) {
-    PetSpeechBubble("毛孩子的\n心声来啦！", modifier, style = PetSpeechBubbleStyle.Dialogue,
-        fontSize = 16.sp, rotationDegrees = -3f)
+@Composable private fun ResultCelebrationBubble(scale: Float, modifier: Modifier = Modifier) {
+    val density = androidx.compose.ui.platform.LocalDensity.current
+    CompositionLocalProvider(androidx.compose.ui.platform.LocalDensity provides
+        androidx.compose.ui.unit.Density(density.density, 1f)) {
+        PetSpeechBubble("毛孩子的\n心声来啦！", modifier,
+            style = PetSpeechBubbleStyle.Dialogue, fontSize = 14.sp,
+            rotationDegrees = -3f, compact = true, visualScale = scale)
+    }
 }
 
-/** Keep the existing 208dp artwork/crop; the extra room belongs only to the
- * speech bubble and grows with accessibility text instead of covering the pet. */
+/** Both overlays share the original fixed artwork bounds; neither adds height. */
 @Composable private fun ResultHeroWithBubble(
     pet: PetType,
     navigation: @Composable () -> Unit,
     artwork: @Composable BoxScope.() -> Unit,
 ) {
-    SubcomposeLayout(Modifier.fillMaxWidth().testTag("result_header")) { constraints ->
-        val width = constraints.maxWidth
-        val artHeight = 208.dp.roundToPx()
-        val nav = subcompose("navigation", navigation).single()
-            .measure(androidx.compose.ui.unit.Constraints.fixedWidth(width))
-        val bubbleWidth = maxOf(width * .40f, 16.sp.toPx() * 5 + 40.dp.toPx())
-            .coerceAtMost(width - 12.dp.toPx()).toInt()
-        val bubble = subcompose("resultBubble") {
-            ResultCelebrationBubble(Modifier.testTag("result_art_bubble"))
-        }.single().measure(androidx.compose.ui.unit.Constraints.fixedWidth(bubbleWidth))
-        // The current opaque header resources place both pets near the center.
-        // Their highest important details start about 38dp/40dp below the crop.
-        val earliestPetY = (if (pet == PetType.Cat) 38.dp else 40.dp).roundToPx()
-        val bubbleY = nav.height + 2.dp.roundToPx()
-        val headroom = (bubbleY + bubble.height + 4.dp.roundToPx() - earliestPetY).coerceAtLeast(0)
-        val art = subcompose("artwork") { Box(Modifier.fillMaxWidth().height(208.dp), content = artwork) }
-            .single().measure(androidx.compose.ui.unit.Constraints.fixed(width, artHeight))
-        layout(width, artHeight + headroom) {
-            art.place(0, headroom)
-            nav.place(0, 0)
-            bubble.place(width - bubble.width - 6.dp.roundToPx(), bubbleY)
-        }
+    BoxWithConstraints(Modifier.fillMaxWidth().height(208.dp).testTag("result_header")) {
+        artwork()
+        navigation()
+        // The dog's right ear extends lower into this corner than the cat's.
+        val scale = if (pet == PetType.Cat) 1.15f else 1.10f
+        val bottom = if (pet == PetType.Cat) 18.dp else 2.dp
+        val end = if (pet == PetType.Cat) 2.dp else 1.dp
+        ResultCelebrationBubble(scale, Modifier.align(Alignment.BottomEnd)
+            .padding(end = end, bottom = bottom)
+            .width((maxWidth * .27f).coerceAtLeast(94.dp) * scale)
+            .testTag("result_art_bubble"))
     }
 }
 

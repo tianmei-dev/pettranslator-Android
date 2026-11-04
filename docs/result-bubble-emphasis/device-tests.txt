@@ -1,0 +1,8 @@
+
+com.example.pettranslator.ResultBubbleEmphasisTest:..
+
+Time: 12.063
+
+OK (2 tests)
+
+

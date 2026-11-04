@@ -1,0 +1,16 @@
+phone-recording-cat room=DpRect(left=0.0.dp, top=132.19048.dp, right=411.42856.dp, bottom=397.7143.dp), art=DpRect(left=53.714287.dp, top=186.66667.dp, right=358.09525.dp, bottom=397.7143.dp); expectedOriginalRoomHeight=265.43777.dp
+phone-recording-cat textSize=252 x 86, lines=2, text=正在听
+毛孩子的声音…
+phone-recording-cat bubble=DpRect(left=234.28572.dp, top=132.19048.dp, right=407.2381.dp, bottom=189.33333.dp); text=DpRect(left=271.51685.dp, top=145.1982.dp, right=367.51685.dp, bottom=177.9601.dp)
+phone-recording-dog room=DpRect(left=0.0.dp, top=132.19048.dp, right=411.42856.dp, bottom=397.7143.dp), art=DpRect(left=53.714287.dp, top=209.90475.dp, right=358.09525.dp, bottom=397.7143.dp); expectedOriginalRoomHeight=265.43777.dp
+phone-recording-dog textSize=252 x 86, lines=2, text=正在听
+毛孩子的声音…
+phone-recording-dog bubble=DpRect(left=234.28572.dp, top=132.19048.dp, right=407.2381.dp, bottom=189.33333.dp); text=DpRect(left=271.51685.dp, top=145.1982.dp, right=367.51685.dp, bottom=177.9601.dp)
+phone-analysis textSize=513 x 78, lines=1, text=正在认真听它说话…
+phone-result-cat textSize=180 x 86, lines=2, text=毛孩子的
+心声来啦！
+phone-result-cat bubble=DpRect(left=296.0.dp, top=155.04762.dp, right=407.2381.dp, bottom=206.09525.dp); text=DpRect(left=316.523.dp, top=162.57874.dp, right=385.09445.dp, bottom=195.34064.dp)
+phone-result-dog textSize=180 x 86, lines=2, text=毛孩子的
+心声来啦！
+phone-result-dog bubble=DpRect(left=296.0.dp, top=155.04762.dp, right=407.2381.dp, bottom=206.09525.dp); text=DpRect(left=316.523.dp, top=162.57874.dp, right=385.09445.dp, bottom=195.34064.dp)
+Physical device viewport: DpRect(left=0.0.dp, top=0.0.dp, right=411.42856.dp, bottom=777.9048.dp); density=2.625; no fixed-width fixture.

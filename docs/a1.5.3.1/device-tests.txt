@@ -1,0 +1,12 @@
+
+com.example.pettranslator.BubbleLayoutRegressionTest:....
+com.example.pettranslator.ArtisticDecorationTest:...
+com.example.pettranslator.AnalysisLayoutTest:..
+com.example.pettranslator.FinalFontLayoutTest:....
+com.example.pettranslator.RecordingFlowTest:..
+
+Time: 187.085
+
+OK (15 tests)
+
+

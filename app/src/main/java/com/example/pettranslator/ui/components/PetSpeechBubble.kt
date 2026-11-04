@@ -11,6 +11,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Outline
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.graphics.asAndroidPath
 import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.style.TextAlign
@@ -39,22 +40,27 @@ fun PetSpeechBubble(
     fontSize: TextUnit = 16.sp,
     rotationDegrees: Float = -5f,
     textColor: Color = Color(0xFFEF4F9C),
+    compact: Boolean = false,
+    tailAtEnd: Boolean = false,
+    visualScale: Float = 1f,
 ) {
-    val shape = when (style) {
+    val scaledFontSize = fontSize * visualScale
+    val baseShape = when (style) {
         PetSpeechBubbleStyle.Cloud -> CloudBubbleShape
         PetSpeechBubbleStyle.Dialogue -> DialogueBubbleShape
     }
+    val shape = if (tailAtEnd) EndTailBubbleShape(baseShape) else baseShape
     Layout(
         modifier = modifier
-            .shadow(1.dp, shape, clip = false,
+            .shadow(1.dp * visualScale, shape, clip = false,
                 ambientColor = Color(0xFFE2C7D6), spotColor = Color(0xFFE2C7D6))
             .background(Color(0xFFFFF9FC).copy(alpha = .98f), shape)
-            .border(.5.dp, Color(0xFFF2E2EB), shape),
+            .border(.5.dp * visualScale, Color(0xFFF2E2EB), shape),
         content = {
             Text(
                 text = text,
                 color = textColor,
-                style = PetFontFamilies.TitleStyle.copy(fontSize = fontSize, lineHeight = fontSize * 1.35f,
+                style = PetFontFamilies.TitleStyle.copy(fontSize = scaledFontSize, lineHeight = scaledFontSize * (if (compact) 1.15f else 1.35f),
                     letterSpacing = 0.sp),
                 textAlign = TextAlign.Center,
                 modifier = Modifier.testTag("pet_bubble_text"),
@@ -63,9 +69,9 @@ fun PetSpeechBubble(
     ) { measurables, constraints ->
         // Reserve the soft-lobed edges and the tilted text's corner clearance.
         // The text itself is measured normally, retaining wrapping and semantics.
-        val horizontalInset = 18.dp.roundToPx()
-        val verticalInset = 12.dp.roundToPx()
-        val tailHeight = 10.dp.roundToPx()
+        val horizontalInset = ((if (compact) 10.dp else 18.dp) * visualScale).roundToPx()
+        val verticalInset = ((if (compact) 2.dp else 12.dp) * visualScale).roundToPx()
+        val tailHeight = ((if (compact) 4.dp else 10.dp) * visualScale).roundToPx()
         val maxTextWidth = if (constraints.hasBoundedWidth) {
             (constraints.maxWidth - horizontalInset * 2).coerceAtLeast(1)
         } else Constraints.Infinity
@@ -78,7 +84,7 @@ fun PetSpeechBubble(
         // above its lobed lower edge and tail, rather than just inside the root.
         val height = constraints.constrainHeight(maxOf(
             rotatedHeight + verticalInset * 2 + tailHeight,
-            ceil(rotatedHeight / .64f).toInt(),
+            ceil(rotatedHeight / (if (compact) .72f else .64f)).toInt(),
         ))
         layout(width, height) {
             textPlaceable.placeRelativeWithLayer(
@@ -86,6 +92,20 @@ fun PetSpeechBubble(
                 y = (height * .44f - textPlaceable.height / 2f).toInt(),
             ) { rotationZ = rotationDegrees }
         }
+    }
+}
+
+/** Reuse the same contour, facing its tail away from the pet's ears. */
+private class EndTailBubbleShape(private val original: Shape) : Shape {
+    override fun createOutline(size: Size, layoutDirection: LayoutDirection, density: Density): Outline {
+        val outline = original.createOutline(size, layoutDirection, density)
+        if (outline !is Outline.Generic) return outline
+        val mirrored = Path().apply { addPath(outline.path) }
+        mirrored.asAndroidPath().transform(android.graphics.Matrix().apply {
+            setScale(-1f, 1f)
+            postTranslate(size.width, 0f)
+        })
+        return Outline.Generic(mirrored)
     }
 }
 

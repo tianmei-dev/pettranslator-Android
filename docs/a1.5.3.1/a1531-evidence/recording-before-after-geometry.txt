@@ -1,0 +1,60 @@
+cat-360dp-font1.0-READY room=DpRect(left=0.0.dp, top=132.19048.dp, right=360.0.dp, bottom=364.57144.dp), art=DpRect(left=46.857143.dp, top=179.80952.dp, right=313.14285.dp, bottom=364.57144.dp); expectedOriginalRoomHeight=232.25807.dp
+cat-360dp-font1.0-RECORDING room=DpRect(left=0.0.dp, top=132.19048.dp, right=360.0.dp, bottom=364.57144.dp), art=DpRect(left=46.857143.dp, top=179.80952.dp, right=313.14285.dp, bottom=364.57144.dp); expectedOriginalRoomHeight=232.25807.dp
+cat-360dp-font1.0 textSize=252 x 86, lines=2, text=正在听
+毛孩子的声音…
+cat-360dp-font1.0 bubble=DpRect(left=204.57143.dp, top=132.19048.dp, right=355.8095.dp, bottom=189.33333.dp); text=DpRect(left=230.75496.dp, top=145.1982.dp, right=326.75494.dp, bottom=177.9601.dp)
+dog-360dp-font1.0-READY room=DpRect(left=0.0.dp, top=132.19048.dp, right=360.0.dp, bottom=364.57144.dp), art=DpRect(left=46.857143.dp, top=200.0.dp, right=313.14285.dp, bottom=364.57144.dp); expectedOriginalRoomHeight=232.25807.dp
+dog-360dp-font1.0-RECORDING room=DpRect(left=0.0.dp, top=132.19048.dp, right=360.0.dp, bottom=364.57144.dp), art=DpRect(left=46.857143.dp, top=200.0.dp, right=313.14285.dp, bottom=364.57144.dp); expectedOriginalRoomHeight=232.25807.dp
+dog-360dp-font1.0 textSize=252 x 86, lines=2, text=正在听
+毛孩子的声音…
+dog-360dp-font1.0 bubble=DpRect(left=204.57143.dp, top=132.19048.dp, right=355.8095.dp, bottom=189.33333.dp); text=DpRect(left=230.75496.dp, top=145.1982.dp, right=326.75494.dp, bottom=177.9601.dp)
+cat-360dp-font1.5-READY room=DpRect(left=0.0.dp, top=145.14285.dp, right=360.0.dp, bottom=377.5238.dp), art=DpRect(left=46.857143.dp, top=192.7619.dp, right=313.14285.dp, bottom=377.5238.dp); expectedOriginalRoomHeight=232.25807.dp
+cat-360dp-font1.5-RECORDING room=DpRect(left=0.0.dp, top=145.14285.dp, right=360.0.dp, bottom=377.5238.dp), art=DpRect(left=46.857143.dp, top=192.7619.dp, right=313.14285.dp, bottom=377.5238.dp); expectedOriginalRoomHeight=232.25807.dp
+cat-360dp-font1.5 textSize=252 x 86, lines=2, text=正在听
+毛孩子的声音…
+cat-360dp-font1.5 bubble=DpRect(left=204.57143.dp, top=145.14285.dp, right=355.8095.dp, bottom=202.28572.dp); text=DpRect(left=230.75496.dp, top=158.15057.dp, right=326.75494.dp, bottom=190.91248.dp)
+dog-360dp-font1.5-READY room=DpRect(left=0.0.dp, top=145.14285.dp, right=360.0.dp, bottom=377.5238.dp), art=DpRect(left=46.857143.dp, top=212.95238.dp, right=313.14285.dp, bottom=377.5238.dp); expectedOriginalRoomHeight=232.25807.dp
+dog-360dp-font1.5-RECORDING room=DpRect(left=0.0.dp, top=145.14285.dp, right=360.0.dp, bottom=377.5238.dp), art=DpRect(left=46.857143.dp, top=212.95238.dp, right=313.14285.dp, bottom=377.5238.dp); expectedOriginalRoomHeight=232.25807.dp
+dog-360dp-font1.5 textSize=252 x 86, lines=2, text=正在听
+毛孩子的声音…
+dog-360dp-font1.5 bubble=DpRect(left=204.57143.dp, top=145.14285.dp, right=355.8095.dp, bottom=202.28572.dp); text=DpRect(left=230.75496.dp, top=158.15057.dp, right=326.75494.dp, bottom=190.91248.dp)
+cat-360dp-font2.0-READY room=DpRect(left=0.0.dp, top=201.5238.dp, right=360.0.dp, bottom=433.90475.dp), art=DpRect(left=46.857143.dp, top=249.14285.dp, right=313.14285.dp, bottom=433.90475.dp); expectedOriginalRoomHeight=232.25807.dp
+cat-360dp-font2.0-RECORDING room=DpRect(left=0.0.dp, top=201.5238.dp, right=360.0.dp, bottom=433.90475.dp), art=DpRect(left=46.857143.dp, top=249.14285.dp, right=313.14285.dp, bottom=433.90475.dp); expectedOriginalRoomHeight=232.25807.dp
+cat-360dp-font2.0 textSize=252 x 86, lines=2, text=正在听
+毛孩子的声音…
+cat-360dp-font2.0 bubble=DpRect(left=204.57143.dp, top=201.5238.dp, right=355.8095.dp, bottom=258.66666.dp); text=DpRect(left=230.75496.dp, top=214.53152.dp, right=326.75494.dp, bottom=247.29343.dp)
+dog-360dp-font2.0-READY room=DpRect(left=0.0.dp, top=201.5238.dp, right=360.0.dp, bottom=433.90475.dp), art=DpRect(left=46.857143.dp, top=269.33334.dp, right=313.14285.dp, bottom=433.90475.dp); expectedOriginalRoomHeight=232.25807.dp
+dog-360dp-font2.0-RECORDING room=DpRect(left=0.0.dp, top=201.5238.dp, right=360.0.dp, bottom=433.90475.dp), art=DpRect(left=46.857143.dp, top=269.33334.dp, right=313.14285.dp, bottom=433.90475.dp); expectedOriginalRoomHeight=232.25807.dp
+dog-360dp-font2.0 textSize=252 x 86, lines=2, text=正在听
+毛孩子的声音…
+dog-360dp-font2.0 bubble=DpRect(left=204.57143.dp, top=201.5238.dp, right=355.8095.dp, bottom=258.66666.dp); text=DpRect(left=230.75496.dp, top=214.53152.dp, right=326.75494.dp, bottom=247.29343.dp)
+cat-320dp-font1.0-READY room=DpRect(left=0.0.dp, top=132.19048.dp, right=320.0.dp, bottom=338.66666.dp), art=DpRect(left=41.52381.dp, top=174.09525.dp, right=278.4762.dp, bottom=338.66666.dp); expectedOriginalRoomHeight=206.45161.dp
+cat-320dp-font1.0-RECORDING room=DpRect(left=0.0.dp, top=132.19048.dp, right=320.0.dp, bottom=338.66666.dp), art=DpRect(left=41.52381.dp, top=174.09525.dp, right=278.4762.dp, bottom=338.66666.dp); expectedOriginalRoomHeight=206.45161.dp
+cat-320dp-font1.0 textSize=252 x 86, lines=2, text=正在听
+毛孩子的声音…
+cat-320dp-font1.0 bubble=DpRect(left=181.33333.dp, top=132.19048.dp, right=315.8095.dp, bottom=189.33333.dp); text=DpRect(left=199.13591.dp, top=145.1982.dp, right=295.1359.dp, bottom=177.9601.dp)
+dog-320dp-font1.0-READY room=DpRect(left=0.0.dp, top=132.19048.dp, right=320.0.dp, bottom=338.66666.dp), art=DpRect(left=41.52381.dp, top=192.0.dp, right=278.4762.dp, bottom=338.66666.dp); expectedOriginalRoomHeight=206.45161.dp
+dog-320dp-font1.0-RECORDING room=DpRect(left=0.0.dp, top=132.19048.dp, right=320.0.dp, bottom=338.66666.dp), art=DpRect(left=41.52381.dp, top=192.0.dp, right=278.4762.dp, bottom=338.66666.dp); expectedOriginalRoomHeight=206.45161.dp
+dog-320dp-font1.0 textSize=252 x 86, lines=2, text=正在听
+毛孩子的声音…
+dog-320dp-font1.0 bubble=DpRect(left=181.33333.dp, top=132.19048.dp, right=315.8095.dp, bottom=189.33333.dp); text=DpRect(left=199.13591.dp, top=145.1982.dp, right=295.1359.dp, bottom=177.9601.dp)
+cat-320dp-font1.5-READY room=DpRect(left=0.0.dp, top=168.0.dp, right=320.0.dp, bottom=374.4762.dp), art=DpRect(left=41.52381.dp, top=209.90475.dp, right=278.4762.dp, bottom=374.4762.dp); expectedOriginalRoomHeight=206.45161.dp
+cat-320dp-font1.5-RECORDING room=DpRect(left=0.0.dp, top=168.0.dp, right=320.0.dp, bottom=374.4762.dp), art=DpRect(left=41.52381.dp, top=209.90475.dp, right=278.4762.dp, bottom=374.4762.dp); expectedOriginalRoomHeight=206.45161.dp
+cat-320dp-font1.5 textSize=252 x 86, lines=2, text=正在听
+毛孩子的声音…
+cat-320dp-font1.5 bubble=DpRect(left=181.33333.dp, top=168.0.dp, right=315.8095.dp, bottom=225.14285.dp); text=DpRect(left=199.13591.dp, top=181.00772.dp, right=295.1359.dp, bottom=213.76962.dp)
+dog-320dp-font1.5-READY room=DpRect(left=0.0.dp, top=168.0.dp, right=320.0.dp, bottom=374.4762.dp), art=DpRect(left=41.52381.dp, top=227.80952.dp, right=278.4762.dp, bottom=374.4762.dp); expectedOriginalRoomHeight=206.45161.dp
+dog-320dp-font1.5-RECORDING room=DpRect(left=0.0.dp, top=168.0.dp, right=320.0.dp, bottom=374.4762.dp), art=DpRect(left=41.52381.dp, top=227.80952.dp, right=278.4762.dp, bottom=374.4762.dp); expectedOriginalRoomHeight=206.45161.dp
+dog-320dp-font1.5 textSize=252 x 86, lines=2, text=正在听
+毛孩子的声音…
+dog-320dp-font1.5 bubble=DpRect(left=181.33333.dp, top=168.0.dp, right=315.8095.dp, bottom=225.14285.dp); text=DpRect(left=199.13591.dp, top=181.00772.dp, right=295.1359.dp, bottom=213.76962.dp)
+cat-320dp-font2.0-READY room=DpRect(left=0.0.dp, top=201.5238.dp, right=320.0.dp, bottom=408.0.dp), art=DpRect(left=41.52381.dp, top=243.42857.dp, right=278.4762.dp, bottom=408.0.dp); expectedOriginalRoomHeight=206.45161.dp
+cat-320dp-font2.0-RECORDING room=DpRect(left=0.0.dp, top=201.5238.dp, right=320.0.dp, bottom=408.0.dp), art=DpRect(left=41.52381.dp, top=243.42857.dp, right=278.4762.dp, bottom=408.0.dp); expectedOriginalRoomHeight=206.45161.dp
+cat-320dp-font2.0 textSize=252 x 86, lines=2, text=正在听
+毛孩子的声音…
+cat-320dp-font2.0 bubble=DpRect(left=181.33333.dp, top=201.5238.dp, right=315.8095.dp, bottom=258.66666.dp); text=DpRect(left=199.13591.dp, top=214.53152.dp, right=295.1359.dp, bottom=247.29343.dp)
+dog-320dp-font2.0-READY room=DpRect(left=0.0.dp, top=201.5238.dp, right=320.0.dp, bottom=408.0.dp), art=DpRect(left=41.52381.dp, top=261.33334.dp, right=278.4762.dp, bottom=408.0.dp); expectedOriginalRoomHeight=206.45161.dp
+dog-320dp-font2.0-RECORDING room=DpRect(left=0.0.dp, top=201.5238.dp, right=320.0.dp, bottom=408.0.dp), art=DpRect(left=41.52381.dp, top=261.33334.dp, right=278.4762.dp, bottom=408.0.dp); expectedOriginalRoomHeight=206.45161.dp
+dog-320dp-font2.0 textSize=252 x 86, lines=2, text=正在听
+毛孩子的声音…
+dog-320dp-font2.0 bubble=DpRect(left=181.33333.dp, top=201.5238.dp, right=315.8095.dp, bottom=258.66666.dp); text=DpRect(left=199.13591.dp, top=214.53152.dp, right=295.1359.dp, bottom=247.29343.dp)
