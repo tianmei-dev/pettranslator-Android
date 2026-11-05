@@ -40,7 +40,7 @@ internal object ResultCardExporter {
         canvas.drawRoundRect(RectF(46f, 48f, 1034f, (cardHeight - 48).toFloat()), 54f, 54f, paint)
         paint.color = android.graphics.Color.rgb(248, 105, 174)
         paint.textSize = 40f; paint.typeface = Typeface.create("sans-serif-medium", Typeface.BOLD)
-        canvas.drawText("宠物翻译器 · 毛孩子的心声", 94f, 128f, paint)
+        canvas.drawText(context.getString(R.string.share_card_brand, context.getString(R.string.app_name)), 94f, 128f, paint)
 
         val petRes = if (result.petType.name == "Cat") R.drawable.pet_cat_main else R.drawable.pet_dog_main
         BitmapFactory.decodeResource(context.resources, petRes)?.let { pet ->

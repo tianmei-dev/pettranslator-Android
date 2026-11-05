@@ -140,11 +140,10 @@ class FinalFontLayoutTest {
         }
         rule.waitForIdle()
         rule.waitUntil(5_000) {
-            runCatching { rule.onAllNodesWithTag("font_trial_home").fetchSemanticsNodes().isNotEmpty() }.getOrDefault(false)
+            runCatching { rule.onAllNodesWithText("猫言狗语翻译官").fetchSemanticsNodes().isNotEmpty() }.getOrDefault(false)
         }
-        val home = layout(rule.onNodeWithTag("font_trial_home").assertIsDisplayed(), "home-title")
-        assertEquals(PetFontFamilies.Title, home.layoutInput.style.fontFamily)
-        val body = layout(rule.onNodeWithText("选择它和场景，听听毛孩子的小心思～"), "home-system-body")
+        rule.onNodeWithTag("font_trial_home").assertDoesNotExist()
+        val body = layout(rule.onNodeWithText("猫言狗语翻译官"), "home-brand")
         assertNotEquals(PetFontFamilies.ZhenKai, body.layoutInput.style.fontFamily)
         assertNotEquals(PetFontFamilies.WenKai, body.layoutInput.style.fontFamily)
         capture("final-home")

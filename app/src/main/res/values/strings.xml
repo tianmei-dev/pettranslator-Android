@@ -1,1 +1,4 @@
-<resources><string name="app_name">宠物翻译器</string></resources>
+<resources>
+    <string name="app_name">猫言狗语翻译官</string>
+    <string name="share_card_brand">%1$s · 毛孩子的心声</string>
+</resources>

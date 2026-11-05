@@ -4,7 +4,7 @@ import android.graphics.Bitmap
 import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.test.platform.app.InstrumentationRegistry
 import java.io.File
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.layout.Box
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
@@ -34,14 +34,17 @@ class AdaptiveHomeTest {
             CompositionLocalProvider(LocalDensity provides Density(density, scale)) {
                 PetTranslatorTheme {
                     Box(Modifier.width(width.dp)) {
-                        HomeScreen(HomeUiState(ready = true), {}, {}, {})
+                        Column(Modifier.fillMaxSize()) {
+                            Box(Modifier.weight(1f)) { HomeScreen(HomeUiState(ready = true), {}, {}) }
+                            HomeRecordActionBar(true, {})
+                        }
                     }
                 }
             }
         }
-        rule.onNodeWithText("今天想听懂谁？").assertIsDisplayed()
+        rule.onNodeWithText("今天想听懂谁？").assertDoesNotExist()
         capture("adaptive-$width-$scale-top.png")
-        rule.onNodeWithTag(if (width < 350 || scale >= 1.3f) "scene_grid_2" else "scene_grid_3").assertExists()
+        rule.onNodeWithTag("scene_grid_3").assertExists()
         listOf("门口或窗边", "吃饭前后", "玩耍", "独处", "被抱起", "不确定").forEach { title ->
             rule.onNodeWithText(title).performScrollTo().assertIsDisplayed()
             rule.onNodeWithText(title).performSemanticsAction(SemanticsActions.GetTextLayoutResult) { action ->
@@ -51,9 +54,9 @@ class AdaptiveHomeTest {
             }
         }
         rule.onNodeWithText("不确定").performScrollTo().assertIsSelected()
-        rule.onNodeWithText("开始录音翻译").performScrollTo().assertIsDisplayed()
-        rule.onNodeWithText("人声变宠物语").performScrollTo().assertIsDisplayed()
-        rule.onNodeWithText("趣味声音模拟，不代表宠物真实语言翻译").performScrollTo().assertIsDisplayed()
+        rule.onNodeWithText("开始录音翻译").assertIsDisplayed()
+        rule.onNodeWithText("人声变宠物语").assertDoesNotExist()
+        rule.onNodeWithText("趣味声音模拟，不代表宠物真实语言翻译").assertIsDisplayed()
         capture("adaptive-$width-$scale-bottom.png")
     }
     private fun capture(name: String) {

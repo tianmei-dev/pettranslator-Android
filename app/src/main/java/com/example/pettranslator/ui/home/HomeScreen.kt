@@ -18,11 +18,9 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.*
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.SpanStyle
-import androidx.compose.ui.text.buildAnnotatedString
-import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.pettranslator.R
@@ -34,43 +32,59 @@ fun HomeScreen(
     state: HomeUiState,
     onPet: (PetType) -> Unit,
     onScene: (PetScene) -> Unit,
-    onRecord: () -> Unit,
 ) {
-    Box(Modifier.fillMaxSize().background(Brush.verticalGradient(listOf(Blush, Mist, Blush)))) {
+    Box(Modifier.fillMaxSize().testTag("home_viewport").background(Brush.verticalGradient(listOf(Blush, Mist, Blush)))) {
         Column(
             Modifier.widthIn(max = 600.dp).fillMaxWidth().align(Alignment.TopCenter)
                 .verticalScroll(rememberScrollState())
-                .padding(bottom = 18.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp),
+                .padding(bottom = 12.dp),
         ) {
-            HomeHero()
-            HomeSection("1", "选择宠物") {
-                Row(Modifier.fillMaxWidth().selectableGroup(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    listOf(PetType.Dog, PetType.Cat).forEach { pet ->
-                        PetChoice(pet, state.pet == pet, state.ready, { onPet(pet) }, Modifier.weight(1f))
+            Column {
+                // Keep the hero's previous total height after removing the 36sp title
+                // and its 8dp top spacing; give that space to the illustration.
+                val formerTitleHeight = with(LocalDensity.current) { 36.sp.toDp() }
+                HomeHero(110.dp + 8.dp + formerTitleHeight)
+                Spacer(Modifier.height(8.dp))
+                HomeSection("1", "选择宠物") {
+                    Row(Modifier.fillMaxWidth().selectableGroup(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        listOf(PetType.Dog, PetType.Cat).forEach { pet ->
+                            PetChoice(pet, state.pet == pet, state.ready, { onPet(pet) }, Modifier.weight(1f))
+                        }
                     }
                 }
-            }
-            HomeSection("2", "它现在在哪里？") {
-                BoxWithConstraints {
-                    val columns = if (maxWidth < 290.dp || LocalDensity.current.fontScale >= 1.3f) 2 else 3
-                    Column(Modifier.selectableGroup().testTag("scene_grid_$columns"), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                        PetScene.entries.chunked(columns).forEach { pair ->
-                            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                                pair.forEach { scene ->
-                                    SceneChoice(scene, state.scene == scene, { onScene(scene) }, Modifier.weight(1f))
+                Spacer(Modifier.height(10.dp))
+                HomeSection("2", "它现在在哪里？") {
+                    Box {
+                        val columns = 3
+                        Column(Modifier.selectableGroup().testTag("scene_grid_$columns"), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                            PetScene.entries.chunked(columns).forEach { pair ->
+                                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                                    pair.forEach { scene ->
+                                        SceneChoice(scene, state.scene == scene, { onScene(scene) }, Modifier.weight(1f))
+                                    }
                                 }
                             }
                         }
                     }
                 }
             }
-            RecordButton(state.ready, onRecord)
-            Text(
-                "趣味声音模拟，不代表宠物真实语言翻译",
+        }
+    }
+}
+
+/** Owned by the app Scaffold so it stays visible while HomeScreen scrolls. */
+@Composable
+fun HomeRecordActionBar(enabled: Boolean, onRecord: () -> Unit) {
+    Box(Modifier.fillMaxWidth().background(Blush)
+        .windowInsetsPadding(WindowInsets.safeDrawing.only(WindowInsetsSides.Horizontal))) {
+        Column(Modifier.widthIn(max = 600.dp).fillMaxWidth().align(Alignment.Center)
+            .padding(top = 8.dp, bottom = 10.dp).testTag("home_actions"),
+            verticalArrangement = Arrangement.spacedBy(7.dp)) {
+            RecordButton(enabled, onRecord)
+            Text("趣味声音模拟，不代表宠物真实语言翻译",
                 style = MaterialTheme.typography.labelSmall, color = Muted,
-                modifier = Modifier.fillMaxWidth().padding(horizontal = AppSpace.page),
-            )
+                textAlign = androidx.compose.ui.text.style.TextAlign.Center,
+                modifier = Modifier.fillMaxWidth().padding(horizontal = AppSpace.page))
         }
     }
 }
@@ -95,7 +109,7 @@ private fun HomeHeader() {
 private fun Brand(modifier: Modifier) {
     Row(modifier, verticalAlignment = Alignment.CenterVertically) {
         BrandPaw()
-        Text("宠物翻译器", style = MaterialTheme.typography.titleLarge, color = Ink,
+        Text(stringResource(R.string.app_name), fontSize = 20.sp, lineHeight = 26.sp, fontWeight = FontWeight.Bold, color = Ink,
             modifier = Modifier.weight(1f).padding(start = 5.dp))
     }
 }
@@ -125,7 +139,7 @@ private fun VipPlaceholder() {
 }
 
 @Composable
-private fun HomeHero() {
+private fun HomeHero(illustrationHeight: androidx.compose.ui.unit.Dp) {
     Box(Modifier.fillMaxWidth().testTag("home_hero")) {
         // Panoramic room fills the measured content height. Text and pets remain separate layers.
         Image(painterResource(R.drawable.pet_home_room_bg), null,
@@ -135,19 +149,8 @@ private fun HomeHero() {
             Blush.copy(alpha = .68f), Color.White.copy(alpha = .32f), Blush.copy(alpha = .10f), Blush))))
         Column(Modifier.fillMaxWidth().padding(top = 8.dp)) {
             Box(Modifier.padding(horizontal = AppSpace.page)) { HomeHeader() }
-            Column(Modifier.padding(horizontal = AppSpace.page).padding(top = 8.dp),
-                verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                Text(buildAnnotatedString {
-                    withStyle(SpanStyle(color = Pink)) { append("今天") }
-                    withStyle(SpanStyle(color = Ink)) { append("想听懂谁？") }
-                }, fontSize = 28.sp, lineHeight = 36.sp,
-                    style = PetFontFamilies.TitleStyle,
-                    modifier = Modifier.testTag("font_trial_home"))
-                Text("选择它和场景，听听毛孩子的小心思～", color = Ink,
-                    fontSize = 12.sp, lineHeight = 18.sp)
-            }
             Image(painterResource(R.drawable.pet_home_hero), null,
-                modifier = Modifier.fillMaxWidth().aspectRatio(1419f / 515f).clearAndSetSemantics {},
+                modifier = Modifier.fillMaxWidth().height(illustrationHeight).clearAndSetSemantics {},
                 contentScale = ContentScale.Fit)
         }
     }
@@ -160,13 +163,19 @@ private fun HomeSection(number: String, title: String, content: @Composable () -
         shape = RoundedCornerShape(AppSpace.cardRadius), color = Color.White.copy(alpha = .94f),
         shadowElevation = 1.dp,
     ) {
-        Column(Modifier.padding(10.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        Column(Modifier.padding(8.dp), verticalArrangement = Arrangement.spacedBy(5.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Box(Modifier.size(25.dp * LocalDensity.current.fontScale.coerceAtLeast(1f)).background(Brush.verticalGradient(listOf(Color(0xFFFF98CA), Pink)), CircleShape), contentAlignment = Alignment.Center) {
                     Text(number, color = Color.White, fontSize = 15.sp, lineHeight = 18.sp, fontWeight = FontWeight.Bold)
                 }
-                Text(title, fontSize = 18.sp, lineHeight = 26.sp, fontWeight = FontWeight.Bold, color = Ink,
-                    modifier = Modifier.weight(1f).padding(start = 8.dp))
+                Text(title, fontSize = 16.sp, lineHeight = 22.sp, fontWeight = FontWeight.Bold, color = Ink,
+                    modifier = (if (LocalDensity.current.fontScale >= 1.3f) Modifier.weight(1f) else Modifier)
+                        .padding(start = 6.dp))
+                Spacer(Modifier.width(6.dp))
+                Text(if (number == "1") "选择你想翻译的毛孩子" else "不同场景下，TA的含义可能不同哦",
+                    color = Muted, fontSize = 9.sp, lineHeight = 12.sp,
+                    textAlign = androidx.compose.ui.text.style.TextAlign.End,
+                    modifier = Modifier.weight(1f))
             }
             content()
         }
@@ -180,6 +189,7 @@ private fun ChoiceSurface(
     enabled: Boolean,
     onClick: () -> Unit,
     modifier: Modifier,
+    verticalPadding: androidx.compose.ui.unit.Dp = 5.dp,
     content: @Composable RowScope.() -> Unit,
 ) {
     val tint by animateColorAsState(if (selected) Color(0xFFFFE8F3) else Color(0xFFF0F6FF), label = "choiceTint")
@@ -188,16 +198,16 @@ private fun ChoiceSurface(
         modifier.heightIn(min = 48.dp).clip(RoundedCornerShape(17.dp))
             .background(Brush.linearGradient(listOf(tint, Color.White.copy(alpha = .76f), tint))).border(if (selected) 1.5.dp else 1.dp, outline, RoundedCornerShape(17.dp))
             .selectable(selected, enabled = enabled, role = Role.RadioButton, onClick = onClick)
-            .padding(horizontal = 8.dp, vertical = 8.dp),
+            .padding(horizontal = 7.dp, vertical = verticalPadding),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(6.dp), content = content,
+        horizontalArrangement = Arrangement.spacedBy(8.dp), content = content,
     )
 }
 
 @Composable
 private fun PetChoice(pet: PetType, selected: Boolean, enabled: Boolean, onClick: () -> Unit, modifier: Modifier) {
     val largeFont = LocalDensity.current.fontScale >= 1.3f
-    ChoiceSurface(selected, enabled, onClick, modifier) {
+    ChoiceSurface(selected, enabled, onClick, modifier, verticalPadding = 10.dp) {
         if (largeFont) {
             Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(4.dp)) {
@@ -216,9 +226,8 @@ private fun PetChoice(pet: PetType, selected: Boolean, enabled: Boolean, onClick
 @Composable
 private fun PetImage(pet: PetType) {
     val resource = if (pet == PetType.Cat) R.drawable.pet_cat_main else R.drawable.pet_dog_main
-    val ratio = if (pet == PetType.Cat) 620f / 426f else 697f / 426f
     Image(painterResource(resource), null, contentScale = ContentScale.Fit,
-        modifier = Modifier.width(62.dp).aspectRatio(ratio).clearAndSetSemantics {})
+        modifier = Modifier.width(54.dp).height(40.dp).clearAndSetSemantics {})
 }
 
 @Composable
@@ -239,12 +248,12 @@ private fun sceneArtwork(scene: PetScene): Int = when (scene) {
 
 @Composable
 private fun SceneChoice(scene: PetScene, selected: Boolean, onClick: () -> Unit, modifier: Modifier) {
-    ChoiceSurface(selected, true, onClick, modifier.testTag("scene_${scene.name}")) {
+    ChoiceSurface(selected, true, onClick, modifier.testTag("scene_${scene.name}"), verticalPadding = 9.dp) {
         Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(4.dp)) {
             Image(painterResource(sceneArtwork(scene)), null, contentScale = ContentScale.Fit,
-                modifier = Modifier.fillMaxWidth().height(46.dp).clearAndSetSemantics {})
-            Text(scene.title, fontSize = 14.sp, lineHeight = 21.sp, fontWeight = FontWeight.SemiBold,
+                modifier = Modifier.fillMaxWidth().height(34.dp).clearAndSetSemantics {})
+            Text(scene.title, fontSize = 13.sp, lineHeight = 18.sp, fontWeight = FontWeight.SemiBold,
                 color = Ink, textAlign = androidx.compose.ui.text.style.TextAlign.Center, modifier = Modifier.fillMaxWidth())
         }
     }
@@ -269,7 +278,7 @@ private fun RecordButton(enabled: Boolean, onClick: () -> Unit) {
             }
         } else {
             Row(
-                Modifier.fillMaxWidth().background(gradient).padding(horizontal = 24.dp, vertical = 17.dp),
+                Modifier.fillMaxWidth().background(gradient).padding(horizontal = 20.dp, vertical = 11.dp),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(10.dp, Alignment.CenterHorizontally),
             ) {

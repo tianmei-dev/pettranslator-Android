@@ -1,11 +1,18 @@
 package com.example.pettranslator.ui.navigation
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.background
+import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.unit.sp
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.platform.LocalContext
 import com.example.pettranslator.data.recording.AndroidPcmRecorder
 import com.example.pettranslator.data.recognition.YamnetRuntime
@@ -53,18 +60,34 @@ private enum class Tab(val route: String, val title: String, val icon: ImageVect
         } }
     }
     Scaffold(containerColor = Blush, contentWindowInsets = if (recording) WindowInsets.safeDrawing else WindowInsets.safeDrawing.only(WindowInsetsSides.Top + WindowInsetsSides.Horizontal), snackbarHost = { SnackbarHost(snackbar) }, bottomBar = {
-        if (!recording) NavigationBar(containerColor = Color.White, windowInsets = WindowInsets.navigationBars.only(WindowInsetsSides.Bottom + WindowInsetsSides.Horizontal)) {
-            Tab.entries.forEach { tab -> NavigationBarItem(selected = entry?.destination?.route == tab.route, onClick = {
-                controller.navigate(tab.route) {
-                    popUpTo(controller.graph.findStartDestination().id) { saveState = true }
-                    launchSingleTop = true
-                    restoreState = true
+        if (!recording) Column {
+            if (entry?.destination?.route == Tab.Home.route) HomeRecordActionBar(state.ready, model::startRecording)
+            Surface(color = Color.White) {
+            Row(Modifier.windowInsetsPadding(WindowInsets.navigationBars.only(WindowInsetsSides.Bottom + WindowInsetsSides.Horizontal))
+                .fillMaxWidth().height(58.dp)) {
+                Tab.entries.forEach { tab ->
+                    val selected = entry?.destination?.route == tab.route
+                    val tint = if (selected) Pink else Muted
+                    Column(Modifier.weight(1f).fillMaxHeight().selectable(selected, role = Role.Tab, onClick = {
+                    controller.navigate(tab.route) {
+                        popUpTo(controller.graph.findStartDestination().id) { saveState = true }
+                        launchSingleTop = true
+                        restoreState = true
+                    }
+                    }), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(2.dp, Alignment.CenterVertically)) {
+                        Box(Modifier.size(width = 64.dp, height = 28.dp)
+                            .background(if (selected) Blush else Color.Transparent, RoundedCornerShape(24.dp)), contentAlignment = Alignment.Center) {
+                            Icon(tab.icon, null, tint = tint, modifier = Modifier.size(24.dp))
+                        }
+                        Text(tab.title, color = tint, fontSize = 12.sp, lineHeight = 16.sp)
+                    }
                 }
-            }, icon = { Icon(tab.icon, null) }, label = { Text(tab.title) }, colors = NavigationBarItemDefaults.colors(selectedIconColor = Pink, selectedTextColor = Pink, indicatorColor = Blush, unselectedIconColor = Muted, unselectedTextColor = Muted)) }
+            }
+            }
         }
     }) { padding ->
         NavHost(controller, startDestination = Tab.Home.route, modifier = Modifier.padding(padding).consumeWindowInsets(padding)) {
-            composable(Tab.Home.route) { HomeScreen(state, model::selectPet, model::selectScene, model::startRecording) }
+            composable(Tab.Home.route) { HomeScreen(state, model::selectPet, model::selectScene) }
             composable("recording/{pet}/{scene}") { recordingEntry ->
                 val pet = PetType.entries.firstOrNull { it.name == recordingEntry.arguments?.getString("pet") } ?: PetType.Cat
                 val scene = PetScene.entries.firstOrNull { it.name == recordingEntry.arguments?.getString("scene") } ?: PetScene.Unknown
