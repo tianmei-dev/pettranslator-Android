@@ -99,7 +99,7 @@ private enum class Tab(val route: String, val title: String, val icon: ImageVect
                     controller.popBackStack(Tab.Home.route, inclusive = false)
                 })
             }
-            composable(Tab.Play.route) { PlayScreen(onBack = { controller.popBackStack() }, onHumanVoice = model::humanVoice) }
+            composable(Tab.Play.route) { PlayScreen() }
             composable(Tab.Profile.route) { ProfileScreen { controller.popBackStack() } }
         }
     }

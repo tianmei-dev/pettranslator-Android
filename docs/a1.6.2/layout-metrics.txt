@@ -1,0 +1,5 @@
+--------- beginning of main
+11-06 16:21:34.225 15079 15099 I A162    : 393x800 font=1.0 content=648.7757 pet=129.6768 scene=255.82764 gap=19.196838 sceneToRecord=29.382935 scroll=false
+11-06 16:21:36.562 15079 15099 I A162    : 412x900 font=1.0 content=748.82465 pet=130.01958 scene=256.0725 gap=45.837402 sceneToRecord=74.92651 scroll=false
+11-06 16:21:38.550 15079 15099 I A162    : 360x720 font=1.0 content=569.5238 pet=115.04761 scene=218.2857 gap=9.904755 sceneToRecord=20.19049 scroll=false
+11-06 16:21:40.604 15079 15099 I A162    : 393x800 font=1.3 content=595.4946 pet=172.38002 scene=224.094 gap=10.186096 sceneToRecord=-59.157654 scroll=true

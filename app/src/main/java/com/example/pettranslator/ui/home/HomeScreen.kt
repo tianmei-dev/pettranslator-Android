@@ -12,6 +12,9 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.layout.SubcomposeLayout
+import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
@@ -33,38 +36,47 @@ fun HomeScreen(
     onPet: (PetType) -> Unit,
     onScene: (PetScene) -> Unit,
 ) {
-    Box(Modifier.fillMaxSize().testTag("home_viewport").background(Brush.verticalGradient(listOf(Blush, Mist, Blush)))) {
-        Column(
-            Modifier.widthIn(max = 600.dp).fillMaxWidth().align(Alignment.TopCenter)
-                .verticalScroll(rememberScrollState())
-                .padding(bottom = 12.dp),
-        ) {
-            Column {
-                // Keep the hero's previous total height after removing the 36sp title
-                // and its 8dp top spacing; give that space to the illustration.
+    BoxWithConstraints(Modifier.fillMaxSize().testTag("home_viewport")
+        .background(Brush.verticalGradient(listOf(Blush, Mist, Blush)))) {
+        val viewport = maxHeight
+        val scale = LocalDensity.current.fontScale
+        SubcomposeLayout(Modifier.widthIn(max = 600.dp).fillMaxWidth().align(Alignment.TopCenter)
+            .verticalScroll(rememberScrollState())) { constraints ->
+            val childConstraints = constraints.copy(minHeight = 0, maxHeight = Constraints.Infinity)
+            val hero = subcompose("hero") {
                 val formerTitleHeight = with(LocalDensity.current) { 36.sp.toDp() }
                 HomeHero(110.dp + 8.dp + formerTitleHeight)
-                Spacer(Modifier.height(8.dp))
-                HomeSection("1", "选择宠物") {
-                    Row(Modifier.fillMaxWidth().selectableGroup(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        listOf(PetType.Dog, PetType.Cat).forEach { pet ->
-                            PetChoice(pet, state.pet == pet, state.ready, { onPet(pet) }, Modifier.weight(1f))
-                        }
-                    }
+            }.single().measure(childConstraints)
+            val dimensions = HomeResponsiveDimensions.resolve((viewport.toPx() - hero.height) / density, scale)
+            val modules = subcompose("modules") { HomeSelectionModules(state, onPet, onScene, dimensions) }
+                .single().measure(childConstraints)
+            layout(constraints.maxWidth, hero.height + modules.height) {
+                hero.placeRelative(0, 0)
+                modules.placeRelative(0, hero.height)
+            }
+        }
+    }
+}
+
+@Composable
+private fun HomeSelectionModules(state: HomeUiState, onPet: (PetType) -> Unit,
+    onScene: (PetScene) -> Unit, sizes: HomeResponsiveDimensions) {
+    Column(Modifier.fillMaxWidth().padding(top = sizes.topGap.dp, bottom = sizes.bottomGap.dp)) {
+        HomeSection("1", "选择宠物") {
+            Row(Modifier.fillMaxWidth().selectableGroup(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                listOf(PetType.Dog, PetType.Cat).forEach { pet ->
+                    PetChoice(pet, state.pet == pet, state.ready, { onPet(pet) },
+                        Modifier.weight(1f).heightIn(min = sizes.petCard.dp))
                 }
-                Spacer(Modifier.height(10.dp))
-                HomeSection("2", "它现在在哪里？") {
-                    Box {
-                        val columns = 3
-                        Column(Modifier.selectableGroup().testTag("scene_grid_$columns"), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                            PetScene.entries.chunked(columns).forEach { pair ->
-                                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                                    pair.forEach { scene ->
-                                        SceneChoice(scene, state.scene == scene, { onScene(scene) }, Modifier.weight(1f))
-                                    }
-                                }
-                            }
-                        }
+            }
+        }
+        Spacer(Modifier.height(sizes.moduleGap.dp))
+        HomeSection("2", "它现在在哪里？") {
+            Column(Modifier.selectableGroup().testTag("scene_grid_3"), verticalArrangement = Arrangement.spacedBy(sizes.rowGap.dp)) {
+                PetScene.entries.chunked(3).forEach { row ->
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        row.forEach { scene -> SceneChoice(scene, state.scene == scene, { onScene(scene) },
+                            Modifier.weight(1f).heightIn(min = sizes.sceneCard.dp), sizes.iconTextGap) }
                     }
                 }
             }
@@ -160,12 +172,14 @@ private fun HomeHero(illustrationHeight: androidx.compose.ui.unit.Dp) {
 private fun HomeSection(number: String, title: String, content: @Composable () -> Unit) {
     Surface(
         modifier = Modifier.fillMaxWidth().padding(horizontal = AppSpace.page).testTag("home_section_$number"),
-        shape = RoundedCornerShape(AppSpace.cardRadius), color = Color.White.copy(alpha = .94f),
-        shadowElevation = 1.dp,
+        shape = RoundedCornerShape(AppSpace.cardRadius), color = Color.Transparent,
+        shadowElevation = 2.dp,
     ) {
-        Column(Modifier.padding(8.dp), verticalArrangement = Arrangement.spacedBy(5.dp)) {
+        Column(Modifier.background(Brush.linearGradient(listOf(Color(0xF2FFF9FD), Color(0xCFEAF3FF), Color(0xEFFFF4FA))))
+            .border(1.dp, Brush.linearGradient(listOf(Color.White, Color(0x66DBC9F4), Color(0xB3FFFFFF))), RoundedCornerShape(AppSpace.cardRadius))
+            .padding(8.dp), verticalArrangement = Arrangement.spacedBy(5.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Box(Modifier.size(25.dp * LocalDensity.current.fontScale.coerceAtLeast(1f)).background(Brush.verticalGradient(listOf(Color(0xFFFF98CA), Pink)), CircleShape), contentAlignment = Alignment.Center) {
+                Box(Modifier.size(25.dp * LocalDensity.current.fontScale.coerceAtLeast(1f)).background(Brush.verticalGradient(if (number == "1") listOf(Color(0xFFFF98CA), Pink) else listOf(Color(0xFFBDB4EE), Color(0xFF889FE0))), CircleShape), contentAlignment = Alignment.Center) {
                     Text(number, color = Color.White, fontSize = 15.sp, lineHeight = 18.sp, fontWeight = FontWeight.Bold)
                 }
                 Text(title, fontSize = 16.sp, lineHeight = 22.sp, fontWeight = FontWeight.Bold, color = Ink,
@@ -195,8 +209,13 @@ private fun ChoiceSurface(
     val tint by animateColorAsState(if (selected) Color(0xFFFFE8F3) else Color(0xFFF0F6FF), label = "choiceTint")
     val outline by animateColorAsState(if (selected) Pink else Color(0xFFE6ECF7), label = "choiceOutline")
     Row(
-        modifier.heightIn(min = 48.dp).clip(RoundedCornerShape(17.dp))
-            .background(Brush.linearGradient(listOf(tint, Color.White.copy(alpha = .76f), tint))).border(if (selected) 1.5.dp else 1.dp, outline, RoundedCornerShape(17.dp))
+        modifier.heightIn(min = 48.dp)
+            .shadow(if (selected) 3.dp else 1.dp, RoundedCornerShape(17.dp),
+                ambientColor = if (selected) Pink.copy(alpha = .22f) else Blue.copy(alpha = .15f),
+                spotColor = if (selected) Pink.copy(alpha = .18f) else Blue.copy(alpha = .12f))
+            .clip(RoundedCornerShape(17.dp))
+            .background(Brush.linearGradient(listOf(tint, Color.White.copy(alpha = .76f), tint))).border(if (selected) 1.25.dp else 1.dp,
+                Brush.linearGradient(listOf(outline, if (selected) Color(0xFFFFB7DC) else Color.White, outline)), RoundedCornerShape(17.dp))
             .selectable(selected, enabled = enabled, role = Role.RadioButton, onClick = onClick)
             .padding(horizontal = 7.dp, vertical = verticalPadding),
         verticalAlignment = Alignment.CenterVertically,
@@ -247,10 +266,10 @@ private fun sceneArtwork(scene: PetScene): Int = when (scene) {
 }
 
 @Composable
-private fun SceneChoice(scene: PetScene, selected: Boolean, onClick: () -> Unit, modifier: Modifier) {
+private fun SceneChoice(scene: PetScene, selected: Boolean, onClick: () -> Unit, modifier: Modifier, iconTextGap: Float) {
     ChoiceSurface(selected, true, onClick, modifier.testTag("scene_${scene.name}"), verticalPadding = 9.dp) {
         Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(4.dp)) {
+            verticalArrangement = Arrangement.spacedBy(iconTextGap.dp)) {
             Image(painterResource(sceneArtwork(scene)), null, contentScale = ContentScale.Fit,
                 modifier = Modifier.fillMaxWidth().height(34.dp).clearAndSetSemantics {})
             Text(scene.title, fontSize = 13.sp, lineHeight = 18.sp, fontWeight = FontWeight.SemiBold,
