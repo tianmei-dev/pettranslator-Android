@@ -120,22 +120,10 @@ private fun HomeHeader() {
 @Composable
 private fun Brand(modifier: Modifier) {
     Row(modifier, verticalAlignment = Alignment.CenterVertically) {
-        BrandPaw()
+        Image(painterResource(R.drawable.app_icon), contentDescription = null,
+            contentScale = ContentScale.Fit, modifier = Modifier.size(30.dp).clip(RoundedCornerShape(7.dp)))
         Text(stringResource(R.string.app_name), fontSize = 20.sp, lineHeight = 26.sp, fontWeight = FontWeight.Bold, color = Ink,
             modifier = Modifier.weight(1f).padding(start = 5.dp))
-    }
-}
-
-@Composable
-private fun BrandPaw() {
-    Canvas(Modifier.size(30.dp).clearAndSetSemantics {}) {
-        val unit = size.width / 30f
-        listOf(6f to 11f, 12f to 6f, 20f to 6f, 26f to 12f).forEach { (x, y) ->
-            drawOval(Pink, androidx.compose.ui.geometry.Offset((x - 3f) * unit, (y - 4f) * unit),
-                androidx.compose.ui.geometry.Size(6f * unit, 8f * unit))
-        }
-        drawOval(Pink, androidx.compose.ui.geometry.Offset(7f * unit, 15f * unit),
-            androidx.compose.ui.geometry.Size(18f * unit, 14f * unit))
     }
 }
 

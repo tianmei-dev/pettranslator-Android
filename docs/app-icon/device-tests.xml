@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.example.pettranslator.HomeFlowTest" tests="3" failures="0" errors="0" skipped="0" time="9.981" timestamp="2026-11-12T08:53:40" hostname="localhost">
+  <properties>
+    <property name="device" value="SM-S9010 - 15" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="selectionTabsAndComingSoon" classname="com.example.pettranslator.HomeFlowTest" time="5.331" />
+  <testcase name="captureHomeRegions" classname="com.example.pettranslator.HomeVisualEvidenceTest" time="3.309" />
+  <testcase name="longTextAndColoredEmojiRemainInsideExpandedExport" classname="com.example.pettranslator.ResultCardFontExportTest" time="0.465" />
+</testsuite>

@@ -1,0 +1,1 @@
+shared-artwork: samples=2044, white=0.0, longestWhiteRun=0.0, nonOpaque=0

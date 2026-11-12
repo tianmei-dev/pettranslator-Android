@@ -1,0 +1,1 @@
+ic_launcher-192: samples=720, white=0.0, longestWhiteRun=0.0, nonOpaque=0

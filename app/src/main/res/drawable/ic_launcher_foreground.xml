@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fill the complete 72dp visible viewport; the remaining 18dp per side is adaptive overscan. -->
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="16.666667%"
+    android:insetTop="16.666667%"
+    android:insetRight="16.666667%"
+    android:insetBottom="16.666667%">
+    <bitmap android:src="@drawable/app_icon" android:gravity="fill" />
+</inset>

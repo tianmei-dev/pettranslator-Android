@@ -6,6 +6,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Canvas
 import android.graphics.Paint
+import android.graphics.Path
 import android.graphics.RectF
 import android.graphics.Typeface
 import android.os.Build
@@ -40,7 +41,16 @@ internal object ResultCardExporter {
         canvas.drawRoundRect(RectF(46f, 48f, 1034f, (cardHeight - 48).toFloat()), 54f, 54f, paint)
         paint.color = android.graphics.Color.rgb(248, 105, 174)
         paint.textSize = 40f; paint.typeface = Typeface.create("sans-serif-medium", Typeface.BOLD)
-        canvas.drawText(context.getString(R.string.share_card_brand, context.getString(R.string.app_name)), 94f, 128f, paint)
+        BitmapFactory.decodeResource(context.resources, R.drawable.app_icon)?.let { icon ->
+            val iconBounds = RectF(94f, 72f, 166f, 144f)
+            canvas.save()
+            canvas.clipPath(Path().apply { addRoundRect(iconBounds, 16f, 16f, Path.Direction.CW) })
+            canvas.drawBitmap(icon, null, iconBounds,
+                Paint(Paint.ANTI_ALIAS_FLAG or Paint.FILTER_BITMAP_FLAG))
+            canvas.restore()
+            icon.recycle()
+        }
+        canvas.drawText(context.getString(R.string.share_card_brand, context.getString(R.string.app_name)), 184f, 128f, paint)
 
         val petRes = if (result.petType.name == "Cat") R.drawable.pet_cat_main else R.drawable.pet_dog_main
         BitmapFactory.decodeResource(context.resources, petRes)?.let { pet ->
