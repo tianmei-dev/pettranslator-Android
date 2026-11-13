@@ -1,0 +1,15 @@
+{
+  "Branch": "feature/a1.4-cloud-home",
+  "StartingHead": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "CurrentHead": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "MainBefore": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "MainAfter": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "ProtectedFilesChecked": 88,
+  "ProtectedFilesChanged": [],
+  "ProductionFiles": [
+    "app/src/main/java/com/example/pettranslator/ui/home/HomeScreen.kt",
+    "app/src/main/java/com/example/pettranslator/ui/home/HomeResponsiveDimensions.kt"
+  ],
+  "TestFile": "app/src/androidTest/java/com/example/pettranslator/CloudHomeLayoutTest.kt",
+  "ApkSHA256": "104FE4C6674266A83AB68E02DA4EC1799816E53D9FCF94F9836B2CD764FC5BA7"
+}

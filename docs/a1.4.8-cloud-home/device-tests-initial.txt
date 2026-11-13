@@ -1,0 +1,283 @@
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=
+com.example.pettranslator.CloudHomeLayoutTest:
+INSTRUMENTATION_STATUS: test=tallViewportFitsEveryScene
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Visible Cat pixels must keep 4dp clear of Alone's circular outline: DpRect(left=105.9633.dp, top=467.8899.dp, right=305.9633.dp, bottom=606.422.dp) / DpRect(left=64.220184.dp, top=568.8073.dp, right=151.83485.dp, bottom=656.422.dp)
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyPetPixelsAvoidControls(CloudHomeLayoutTest.kt:173)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyReferenceComposition(CloudHomeLayoutTest.kt:200)
+	at com.example.pettranslator.CloudHomeLayoutTest.normalViewport(CloudHomeLayoutTest.kt:244)
+	at com.example.pettranslator.CloudHomeLayoutTest.tallViewportFitsEveryScene(CloudHomeLayoutTest.kt:259)
+
+INSTRUMENTATION_STATUS: stream=
+Error in tallViewportFitsEveryScene(com.example.pettranslator.CloudHomeLayoutTest):
+java.lang.AssertionError: Visible Cat pixels must keep 4dp clear of Alone's circular outline: DpRect(left=105.9633.dp, top=467.8899.dp, right=305.9633.dp, bottom=606.422.dp) / DpRect(left=64.220184.dp, top=568.8073.dp, right=151.83485.dp, bottom=656.422.dp)
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyPetPixelsAvoidControls(CloudHomeLayoutTest.kt:173)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyReferenceComposition(CloudHomeLayoutTest.kt:200)
+	at com.example.pettranslator.CloudHomeLayoutTest.normalViewport(CloudHomeLayoutTest.kt:244)
+	at com.example.pettranslator.CloudHomeLayoutTest.tallViewportFitsEveryScene(CloudHomeLayoutTest.kt:259)
+
+INSTRUMENTATION_STATUS: test=tallViewportFitsEveryScene
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=shortViewportFitsEveryScene
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=shortViewportFitsEveryScene
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=standardViewportFitsEveryScene
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Visible Cat pixels must keep 4dp clear of Alone's circular outline: DpRect(left=101.1213.dp, top=400.8155.dp, right=291.947.dp, bottom=523.13965.dp) / DpRect(left=61.162075.dp, top=487.25787.dp, right=144.75024.dp, bottom=570.84607.dp)
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyPetPixelsAvoidControls(CloudHomeLayoutTest.kt:173)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyReferenceComposition(CloudHomeLayoutTest.kt:200)
+	at com.example.pettranslator.CloudHomeLayoutTest.normalViewport(CloudHomeLayoutTest.kt:244)
+	at com.example.pettranslator.CloudHomeLayoutTest.standardViewportFitsEveryScene(CloudHomeLayoutTest.kt:258)
+
+INSTRUMENTATION_STATUS: stream=
+Error in standardViewportFitsEveryScene(com.example.pettranslator.CloudHomeLayoutTest):
+java.lang.AssertionError: Visible Cat pixels must keep 4dp clear of Alone's circular outline: DpRect(left=101.1213.dp, top=400.8155.dp, right=291.947.dp, bottom=523.13965.dp) / DpRect(left=61.162075.dp, top=487.25787.dp, right=144.75024.dp, bottom=570.84607.dp)
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyPetPixelsAvoidControls(CloudHomeLayoutTest.kt:173)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyReferenceComposition(CloudHomeLayoutTest.kt:200)
+	at com.example.pettranslator.CloudHomeLayoutTest.normalViewport(CloudHomeLayoutTest.kt:244)
+	at com.example.pettranslator.CloudHomeLayoutTest.standardViewportFitsEveryScene(CloudHomeLayoutTest.kt:258)
+
+INSTRUMENTATION_STATUS: test=standardViewportFitsEveryScene
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=narrowLargeFontKeepsTextAndFixedActionsReachable
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=narrowLargeFontKeepsTextAndFixedActionsReachable
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=callbacksSelectionAndGeometryRemainStable
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Visible Cat pixels must keep 4dp clear of Alone's circular outline: DpRect(left=101.1213.dp, top=400.8155.dp, right=291.947.dp, bottom=523.13965.dp) / DpRect(left=61.162075.dp, top=487.25787.dp, right=144.75024.dp, bottom=570.84607.dp)
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyPetPixelsAvoidControls(CloudHomeLayoutTest.kt:173)
+	at com.example.pettranslator.CloudHomeLayoutTest.callbacksSelectionAndGeometryRemainStable(CloudHomeLayoutTest.kt:337)
+
+INSTRUMENTATION_STATUS: stream=
+Error in callbacksSelectionAndGeometryRemainStable(com.example.pettranslator.CloudHomeLayoutTest):
+java.lang.AssertionError: Visible Cat pixels must keep 4dp clear of Alone's circular outline: DpRect(left=101.1213.dp, top=400.8155.dp, right=291.947.dp, bottom=523.13965.dp) / DpRect(left=61.162075.dp, top=487.25787.dp, right=144.75024.dp, bottom=570.84607.dp)
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyPetPixelsAvoidControls(CloudHomeLayoutTest.kt:173)
+	at com.example.pettranslator.CloudHomeLayoutTest.callbacksSelectionAndGeometryRemainStable(CloudHomeLayoutTest.kt:337)
+
+INSTRUMENTATION_STATUS: test=callbacksSelectionAndGeometryRemainStable
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=controlledReferenceViewportKeepsBothPetsFullSized
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Visible Dog pixels must keep 4dp clear of Alone's circular outline: DpRect(left=105.85678.dp, top=438.04333.dp, right=305.16873.dp, bottom=547.00055.dp) / DpRect(left=68.20898.dp, top=514.6677.dp, right=147.93375.dp, bottom=594.39246.dp)
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyPetPixelsAvoidControls(CloudHomeLayoutTest.kt:173)
+	at com.example.pettranslator.CloudHomeLayoutTest.controlledReferenceViewportKeepsBothPetsFullSized(CloudHomeLayoutTest.kt:319)
+
+INSTRUMENTATION_STATUS: stream=
+Error in controlledReferenceViewportKeepsBothPetsFullSized(com.example.pettranslator.CloudHomeLayoutTest):
+java.lang.AssertionError: Visible Dog pixels must keep 4dp clear of Alone's circular outline: DpRect(left=105.85678.dp, top=438.04333.dp, right=305.16873.dp, bottom=547.00055.dp) / DpRect(left=68.20898.dp, top=514.6677.dp, right=147.93375.dp, bottom=594.39246.dp)
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyPetPixelsAvoidControls(CloudHomeLayoutTest.kt:173)
+	at com.example.pettranslator.CloudHomeLayoutTest.controlledReferenceViewportKeepsBothPetsFullSized(CloudHomeLayoutTest.kt:319)
+
+INSTRUMENTATION_STATUS: test=controlledReferenceViewportKeepsBothPetsFullSized
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=readinessKeepsRecordAndPetGating
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=readinessKeepsRecordAndPetGating
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.HomeFlowTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=
+com.example.pettranslator.HomeFlowTest:
+INSTRUMENTATION_STATUS: test=selectionTabsAndComingSoon
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.HomeFlowTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=selectionTabsAndComingSoon
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.HomeVisualEvidenceTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=
+com.example.pettranslator.HomeVisualEvidenceTest:
+INSTRUMENTATION_STATUS: test=captureHomeRegions
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.HomeVisualEvidenceTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=captureHomeRegions
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.HomeResponsiveEvidenceTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=
+com.example.pettranslator.HomeResponsiveEvidenceTest:
+INSTRUMENTATION_STATUS: test=largeFont
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.HomeResponsiveEvidenceTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=largeFont
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.AdaptiveHomeTest
+INSTRUMENTATION_STATUS: current=11
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=
+com.example.pettranslator.AdaptiveHomeTest:
+INSTRUMENTATION_STATUS: test=largeContent
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.AdaptiveHomeTest
+INSTRUMENTATION_STATUS: current=11
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=largeContent
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.AdaptiveHomeTest
+INSTRUMENTATION_STATUS: current=12
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=smallPhone
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.AdaptiveHomeTest
+INSTRUMENTATION_STATUS: current=12
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=smallPhone
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 46.601
+There were 4 failures:
+1) tallViewportFitsEveryScene(com.example.pettranslator.CloudHomeLayoutTest)
+java.lang.AssertionError: Visible Cat pixels must keep 4dp clear of Alone's circular outline: DpRect(left=105.9633.dp, top=467.8899.dp, right=305.9633.dp, bottom=606.422.dp) / DpRect(left=64.220184.dp, top=568.8073.dp, right=151.83485.dp, bottom=656.422.dp)
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyPetPixelsAvoidControls(CloudHomeLayoutTest.kt:173)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyReferenceComposition(CloudHomeLayoutTest.kt:200)
+	at com.example.pettranslator.CloudHomeLayoutTest.normalViewport(CloudHomeLayoutTest.kt:244)
+	at com.example.pettranslator.CloudHomeLayoutTest.tallViewportFitsEveryScene(CloudHomeLayoutTest.kt:259)
+2) standardViewportFitsEveryScene(com.example.pettranslator.CloudHomeLayoutTest)
+java.lang.AssertionError: Visible Cat pixels must keep 4dp clear of Alone's circular outline: DpRect(left=101.1213.dp, top=400.8155.dp, right=291.947.dp, bottom=523.13965.dp) / DpRect(left=61.162075.dp, top=487.25787.dp, right=144.75024.dp, bottom=570.84607.dp)
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyPetPixelsAvoidControls(CloudHomeLayoutTest.kt:173)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyReferenceComposition(CloudHomeLayoutTest.kt:200)
+	at com.example.pettranslator.CloudHomeLayoutTest.normalViewport(CloudHomeLayoutTest.kt:244)
+	at com.example.pettranslator.CloudHomeLayoutTest.standardViewportFitsEveryScene(CloudHomeLayoutTest.kt:258)
+3) callbacksSelectionAndGeometryRemainStable(com.example.pettranslator.CloudHomeLayoutTest)
+java.lang.AssertionError: Visible Cat pixels must keep 4dp clear of Alone's circular outline: DpRect(left=101.1213.dp, top=400.8155.dp, right=291.947.dp, bottom=523.13965.dp) / DpRect(left=61.162075.dp, top=487.25787.dp, right=144.75024.dp, bottom=570.84607.dp)
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyPetPixelsAvoidControls(CloudHomeLayoutTest.kt:173)
+	at com.example.pettranslator.CloudHomeLayoutTest.callbacksSelectionAndGeometryRemainStable(CloudHomeLayoutTest.kt:337)
+4) controlledReferenceViewportKeepsBothPetsFullSized(com.example.pettranslator.CloudHomeLayoutTest)
+java.lang.AssertionError: Visible Dog pixels must keep 4dp clear of Alone's circular outline: DpRect(left=105.85678.dp, top=438.04333.dp, right=305.16873.dp, bottom=547.00055.dp) / DpRect(left=68.20898.dp, top=514.6677.dp, right=147.93375.dp, bottom=594.39246.dp)
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyPetPixelsAvoidControls(CloudHomeLayoutTest.kt:173)
+	at com.example.pettranslator.CloudHomeLayoutTest.controlledReferenceViewportKeepsBothPetsFullSized(CloudHomeLayoutTest.kt:319)
+
+FAILURES!!!
+Tests run: 12,  Failures: 4
+
+
+INSTRUMENTATION_CODE: -1

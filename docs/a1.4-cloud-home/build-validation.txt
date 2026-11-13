@@ -1,0 +1,10 @@
+Validation summary (not raw console output).
+Commands:
+gradlew --offline :app:assembleDebug :app:lintDebug :app:testDebugUnitTest :app:assembleDebugAndroidTest
+Final production and test APK builds: successful.
+lintDebug: 0 errors, 9 warnings.
+testDebugUnitTest: 27 tests, 0 failures.
+Direct AndroidJUnitRunner: OK (11 tests), see device-tests.txt.
+Current branch: feature/a1.4-cloud-home.
+Protected source/resource/config SHA256 comparisons: 88 checked, 0 changed.
+main ref unchanged; no checkout, merge, reset or clean commands executed.

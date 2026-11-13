@@ -1,0 +1,22 @@
+Controlled Compose viewport; 58dp navigation placeholder, not a separate physical device.
+viewport=DpRect(left=0.0.dp, top=24.0.dp, right=320.0.dp, bottom=458.9091.dp)
+actions=DpRect(left=0.0.dp, top=465.0909.dp, right=320.0.dp, bottom=655.63635.dp)
+cloud=DpRect(left=1.4545455.dp, top=-220.0.dp, right=318.18182.dp, bottom=486.9091.dp)
+centralPet=DpRect(left=86.90909.dp, top=134.18182.dp, right=232.72728.dp, bottom=226.18182.dp)
+petTitle=DpRect(left=80.0.dp, top=-350.18182.dp, right=240.0.dp, bottom=-301.45456.dp)
+petCat=DpRect(left=166.18182.dp, top=-295.27274.dp, right=304.36365.dp, bottom=-235.27272.dp)
+petDog=DpRect(left=16.0.dp, top=-295.27274.dp, right=154.18182.dp, bottom=-235.27272.dp)
+cloudRendering=expanded-fit
+cloudAlpha240Source=HomeSourceAlpha(width=1216, height=1293, left=23, top=88, right=1203, bottom=1204)
+cloudOpaqueOutline=DpRect(left=7.44529.dp, top=-12.016006.dp, right=314.79575.dp, bottom=278.6646.dp)
+cloudOpaqueWidthRatio=0.9604702
+cloudOpaqueToRecordGap=186.4263.dp
+centralCatImage=DpRect(left=86.90909.dp, top=134.18182.dp, right=232.72728.dp, bottom=226.18182.dp)
+centralCatSource=HomeSourceAlpha(width=620, height=426, left=73, top=0, right=573, bottom=408)
+centralCatVisible=DpRect(left=108.635086.dp, top=134.18182.dp, right=216.6163.dp, bottom=222.2945.dp)
+Door: DpRect(left=14.545455.dp, top=-124.0.dp, right=146.54546.dp, bottom=8.0.dp)
+Meal: DpRect(left=185.09091.dp, top=-120.0.dp, right=293.0909.dp, bottom=-12.0.dp)
+Play: DpRect(left=113.818184.dp, top=24.0.dp, right=206.18182.dp, bottom=116.36364.dp)
+Alone: DpRect(left=34.545456.dp, top=246.18182.dp, right=126.90909.dp, bottom=338.54544.dp)
+Held: DpRect(left=192.72728.dp, top=258.18182.dp, right=285.0909.dp, bottom=350.54544.dp)
+Unknown: DpRect(left=113.818184.dp, top=366.54544.dp, right=206.18182.dp, bottom=458.9091.dp)

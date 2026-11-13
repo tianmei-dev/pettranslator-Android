@@ -1,0 +1,196 @@
+{
+  "Status": "passed",
+  "VerifiedAt": "2026-11-13 18:05:26 Asia/Shanghai",
+  "Device": "Pixel 3",
+  "Unit": "dp",
+  "EvidenceKind": "Final physical-device run after label-band correction; evidence/home only",
+  "ProductionSourcePath": "app/src/main/java/com/example/pettranslator/ui/home/HomeScreen.kt",
+  "ProductionSourceHash": "71ADD69CEA861F23AF375F44FD8306CAB8F5D3D70936CB86BAC146D9EE2AC557",
+  "BeforeLayout": "docs/home-local-polish/before-layout.txt",
+  "FinalLayout": "docs/home-local-polish/evidence/home/layout.txt",
+  "FrozenBoundsCount": 12,
+  "FrozenBounds": [
+    {
+      "Tag": "home_hero",
+      "Before": "DpRect(left=0.0.dp, top=24.0.dp, right=392.72726.dp, bottom=197.81818.dp)",
+      "After": "DpRect(left=0.0.dp, top=24.0.dp, right=392.72726.dp, bottom=197.81818.dp)",
+      "Unchanged": true,
+      "DeltaX": 0,
+      "DeltaY": 0,
+      "DeltaWidth": 0,
+      "DeltaHeight": 0
+    },
+    {
+      "Tag": "home_section_2",
+      "Before": "DpRect(left=1.8181819.dp, top=252.0.dp, right=390.54544.dp, bottom=592.36365.dp)",
+      "After": "DpRect(left=1.8181819.dp, top=252.0.dp, right=390.54544.dp, bottom=592.36365.dp)",
+      "Unchanged": true,
+      "DeltaX": 0,
+      "DeltaY": 0,
+      "DeltaWidth": 0,
+      "DeltaHeight": 0
+    },
+    {
+      "Tag": "home_cloud",
+      "Before": "DpRect(left=1.8181819.dp, top=252.0.dp, right=390.54544.dp, bottom=592.36365.dp)",
+      "After": "DpRect(left=1.8181819.dp, top=252.0.dp, right=390.54544.dp, bottom=592.36365.dp)",
+      "Unchanged": true,
+      "DeltaX": 0,
+      "DeltaY": 0,
+      "DeltaWidth": 0,
+      "DeltaHeight": 0
+    },
+    {
+      "Tag": "home_center_pet",
+      "Before": "DpRect(left=101.09091.dp, top=390.18182.dp, right=291.63635.dp, bottom=481.45456.dp)",
+      "After": "DpRect(left=101.09091.dp, top=390.18182.dp, right=291.63635.dp, bottom=481.45456.dp)",
+      "Unchanged": true,
+      "DeltaX": 0,
+      "DeltaY": 0,
+      "DeltaWidth": 0,
+      "DeltaHeight": 0
+    },
+    {
+      "Tag": "home_record",
+      "Before": "DpRect(left=20.0.dp, top=600.36365.dp, right=372.72726.dp, bottom=651.63635.dp)",
+      "After": "DpRect(left=20.0.dp, top=600.36365.dp, right=372.72726.dp, bottom=651.63635.dp)",
+      "Unchanged": true,
+      "DeltaX": 0,
+      "DeltaY": 0,
+      "DeltaWidth": 0,
+      "DeltaHeight": 0
+    },
+    {
+      "Tag": "home_scene_title",
+      "Before": "DpRect(left=1.8181819.dp, top=290.18182.dp, right=390.54544.dp, bottom=316.36365.dp)",
+      "After": "DpRect(left=1.8181819.dp, top=290.18182.dp, right=390.54544.dp, bottom=316.36365.dp)",
+      "Unchanged": true,
+      "DeltaX": 0,
+      "DeltaY": 0,
+      "DeltaWidth": 0,
+      "DeltaHeight": 0
+    },
+    {
+      "Tag": "scene_Door",
+      "Before": "DpRect(left=59.272728.dp, top=355.63635.dp, right=131.27272.dp, bottom=427.63635.dp)",
+      "After": "DpRect(left=59.272728.dp, top=355.63635.dp, right=131.27272.dp, bottom=427.63635.dp)",
+      "Unchanged": true,
+      "DeltaX": 0,
+      "DeltaY": 0,
+      "DeltaWidth": 0,
+      "DeltaHeight": 0
+    },
+    {
+      "Tag": "scene_Meal",
+      "Before": "DpRect(left=165.45454.dp, top=320.0.dp, right=226.90909.dp, bottom=381.45456.dp)",
+      "After": "DpRect(left=165.45454.dp, top=320.0.dp, right=226.90909.dp, bottom=381.45456.dp)",
+      "Unchanged": true,
+      "DeltaX": 0,
+      "DeltaY": 0,
+      "DeltaWidth": 0,
+      "DeltaHeight": 0
+    },
+    {
+      "Tag": "scene_Play",
+      "Before": "DpRect(left=262.18182.dp, top=356.36365.dp, right=332.72726.dp, bottom=426.9091.dp)",
+      "After": "DpRect(left=262.18182.dp, top=356.36365.dp, right=332.72726.dp, bottom=426.9091.dp)",
+      "Unchanged": true,
+      "DeltaX": 0,
+      "DeltaY": 0,
+      "DeltaWidth": 0,
+      "DeltaHeight": 0
+    },
+    {
+      "Tag": "scene_Alone",
+      "Before": "DpRect(left=68.36364.dp, top=450.54544.dp, right=137.09091.dp, bottom=519.2727.dp)",
+      "After": "DpRect(left=68.36364.dp, top=450.54544.dp, right=137.09091.dp, bottom=519.2727.dp)",
+      "Unchanged": true,
+      "DeltaX": 0,
+      "DeltaY": 0,
+      "DeltaWidth": 0,
+      "DeltaHeight": 0
+    },
+    {
+      "Tag": "scene_Held",
+      "Before": "DpRect(left=163.27272.dp, top=498.18182.dp, right=228.72728.dp, bottom=563.63635.dp)",
+      "After": "DpRect(left=163.27272.dp, top=498.18182.dp, right=228.72728.dp, bottom=563.63635.dp)",
+      "Unchanged": true,
+      "DeltaX": 0,
+      "DeltaY": 0,
+      "DeltaWidth": 0,
+      "DeltaHeight": 0
+    },
+    {
+      "Tag": "scene_Unknown",
+      "Before": "DpRect(left=254.18182.dp, top=449.45456.dp, right=324.72726.dp, bottom=520.0.dp)",
+      "After": "DpRect(left=254.18182.dp, top=449.45456.dp, right=324.72726.dp, bottom=520.0.dp)",
+      "Unchanged": true,
+      "DeltaX": 0,
+      "DeltaY": 0,
+      "DeltaWidth": 0,
+      "DeltaHeight": 0
+    }
+  ],
+  "NormalizedAnchors": {
+    "Before": "docs/home-local-polish/before-anchor-metrics.txt",
+    "After": "docs/home-local-polish/evidence/home/anchor-metrics.txt",
+    "BeforeSha256": "F89904EB9C21BD3E67F7EC3CB0E4F26BEA0E2FAF18879281F35FA114F9C693CE",
+    "AfterSha256": "F89904EB9C21BD3E67F7EC3CB0E4F26BEA0E2FAF18879281F35FA114F9C693CE",
+    "ByteIdentical": true
+  },
+  "AllowedPetAreaChanges": [
+    {
+      "Tag": "home_section_1",
+      "Before": "DpRect(left=0.0.dp, top=200.0.dp, right=392.72726.dp, bottom=285.81818.dp)",
+      "After": "DpRect(left=0.0.dp, top=200.0.dp, right=392.72726.dp, bottom=284.0.dp)",
+      "DeltaX": 0.0,
+      "DeltaY": 0.0,
+      "DeltaWidth": 0.0,
+      "DeltaHeight": -1.81818
+    },
+    {
+      "Tag": "pet_Dog",
+      "Before": "DpRect(left=64.36364.dp, top=237.81818.dp, right=178.54546.dp, bottom=285.81818.dp)",
+      "After": "DpRect(left=82.545456.dp, top=218.18182.dp, right=196.72728.dp, bottom=266.18182.dp)",
+      "DeltaX": 18.181816,
+      "DeltaY": -19.63636,
+      "DeltaWidth": 4E-06,
+      "DeltaHeight": 0.0
+    },
+    {
+      "Tag": "pet_Cat",
+      "Before": "DpRect(left=214.54546.dp, top=237.81818.dp, right=328.72726.dp, bottom=285.81818.dp)",
+      "After": "DpRect(left=196.72728.dp, top=218.18182.dp, right=310.18182.dp, bottom=266.18182.dp)",
+      "DeltaX": -17.81818,
+      "DeltaY": -19.63636,
+      "DeltaWidth": -0.72726,
+      "DeltaHeight": 0.0
+    }
+  ],
+  "RemovedAllowedPetTitle": "DpRect(left=141.45454.dp, top=200.0.dp, right=251.63637.dp, bottom=231.63637.dp)",
+  "AddedAllowedElements": [
+    {
+      "Tag": "home_brand",
+      "Bounds": "DpRect(left=20.0.dp, top=42.18182.dp, right=135.63637.dp, bottom=65.818184.dp)"
+    },
+    {
+      "Tag": "home_pet_switch",
+      "Bounds": "DpRect(left=80.36364.dp, top=218.18182.dp, right=312.36365.dp, bottom=266.18182.dp)"
+    }
+  ],
+  "BrandLayoutEvidence": {
+    "Path": "docs/home-local-polish/evidence/home/brand-layout.txt",
+    "Sha256": "215AAB75E1DF4E575CCC5060599569002D5BF0AD025675D4EF416611C6174CCB",
+    "OneLine": true,
+    "ReportedVisualOverflow": false,
+    "ReportedWidthOverflow": false,
+    "ReportedHeightOverflow": false
+  },
+  "FinalUiSuite": {
+    "Log": "docs/home-local-polish/device-tests.txt",
+    "Sha256": "504D705BC2AD2C7641401E5F4218DB49971BD83A6BFC2AB397CDD4A66D31D302",
+    "Passed": 15,
+    "DurationSeconds": 91.886
+  },
+  "InkClippingAudit": "Separate glyph-verification.json audit; bounds identity and TextLayout overflow flags do not themselves prove glyph ink is unclipped"
+}

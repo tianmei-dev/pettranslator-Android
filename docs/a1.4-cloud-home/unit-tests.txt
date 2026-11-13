@@ -1,0 +1,10 @@
+
+Suite                                                 Tests Failures Errors
+-----                                                 ----- -------- ------
+com.example.pettranslator.HomeViewModelTest               2        0      0
+com.example.pettranslator.PetInterpretationEngineTest    10        0      0
+com.example.pettranslator.PetRecognitionPolicyTest        4        0      0
+com.example.pettranslator.RecordingViewModelTest          7        0      0
+com.example.pettranslator.WaveformLevelsTest              4        0      0
+
+

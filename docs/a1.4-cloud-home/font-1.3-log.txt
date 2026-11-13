@@ -1,0 +1,2 @@
+--------- beginning of main
+11-13 18:04:07.437  2964  3043 I A162    : 393x800 font=1.3 content=595.4946 pet=142.60527 scene=287.16943 gap=10.186096 sceneToRecord=-63.467163 scroll=true

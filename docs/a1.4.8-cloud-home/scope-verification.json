@@ -1,0 +1,45 @@
+{
+  "Status": "passed",
+  "VerifiedAt": "2026-11-13 16:10:55 Asia/Shanghai",
+  "Baseline": "artifacts/a1.4.8-cloud-home/baseline.json",
+  "Branch": "feature/a1.4-cloud-home",
+  "HeadBefore": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "HeadAfter": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "MainBefore": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "MainAfter": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "ProtectedFilesChecked": 109,
+  "ProtectedFilesChanged": [],
+  "AllowedProductionFiles": [
+    "app/src/main/java/com/example/pettranslator/ui/home/HomeResponsiveDimensions.kt"
+  ],
+  "AllowedTestFiles": [
+    "app/src/androidTest/java/com/example/pettranslator/CloudHomeLayoutTest.kt"
+  ],
+  "SourceHashes": [
+    {
+      "Path": "app/src/main/java/com/example/pettranslator/ui/home/HomeResponsiveDimensions.kt",
+      "Sha256": "528E53F3F88243EAA9024C3D13109293986F75688246C222A5848D281BAB2AEB"
+    },
+    {
+      "Path": "app/src/androidTest/java/com/example/pettranslator/CloudHomeLayoutTest.kt",
+      "Sha256": "79DE539E702FB30F0FB90C7B0789C310016E9700C72668D59005EC19F15E50BE"
+    }
+  ],
+  "LayoutDiffAudit": {
+    "CloudButtonAndPetSizingUnchanged": true,
+    "ExpandedBranchUnchanged": true,
+    "HorizontalSpreadHelperUnchanged": true,
+    "AffectedMode": "normal only",
+    "AffectedSceneIndices": [
+      0,
+      2,
+      3,
+      5
+    ],
+    "RequestedYFormula": "0.54 + (previousY - 0.54) * 0.72",
+    "SafetyAdjustment": "Only Y retreats toward the previous safe Y if the unchanged cat/dog source outline intersects; binary search keeps 1dp for pixel rounding.",
+    "SceneXAndDiameterChanged": false,
+    "PetAnchorOrSizeChanged": false,
+    "BusinessLogicChanged": false
+  }
+}

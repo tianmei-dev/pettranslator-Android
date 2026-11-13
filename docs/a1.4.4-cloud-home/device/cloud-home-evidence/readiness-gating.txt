@@ -1,0 +1,22 @@
+Controlled Compose viewport; 58dp navigation placeholder, not a separate physical device.
+viewport=DpRect(left=0.0.dp, top=29.474998.dp, right=393.0.dp, bottom=659.00275.dp)
+actions=DpRect(left=0.0.dp, top=664.82495.dp, right=393.0.dp, bottom=736.1472.dp)
+cloud=DpRect(left=1.8194444.dp, top=261.27222.dp, right=390.81665.dp, bottom=656.8194.dp)
+centralPet=DpRect(left=101.16111.dp, top=425.02222.dp, right=291.83887.dp, bottom=538.91943.dp)
+petTitle=DpRect(left=143.7361.dp, top=217.60555.dp, right=249.26389.dp, bottom=248.17221.dp)
+petCat=DpRect(left=214.69444.dp, top=253.99443.dp, right=328.59164.dp, bottom=302.02777.dp)
+petDog=DpRect(left=64.77222.dp, top=253.99443.dp, right=178.66943.dp, bottom=302.02777.dp)
+cloudRendering=body-and-tail
+cloudAlpha240Source=HomeSourceAlpha(width=1216, height=1293, left=23, top=88, right=1203, bottom=1204)
+cloudOpaqueOutline=DpRect(left=9.177122.dp, top=289.45746.dp, right=386.65796.dp, bottom=646.8977.dp)
+cloudOpaqueWidthRatio=0.960511
+cloudOpaqueToRecordGap=17.927246.dp
+centralDogImage=DpRect(left=101.16111.dp, top=427.56943.dp, right=291.83887.dp, bottom=536.7361.dp)
+centralDogSource=HomeSourceAlpha(width=697, height=426, left=86, top=0, right=645, bottom=413)
+centralDogVisible=DpRect(left=129.23181.dp, top=427.56943.dp, right=272.48102.dp, bottom=533.4047.dp)
+Door: DpRect(left=56.402775.dp, top=348.96942.dp, right=138.27777.dp, bottom=430.84442.dp)
+Meal: DpRect(left=163.02222.dp, top=337.68887.dp, right=229.97777.dp, bottom=404.64444.dp)
+Play: DpRect(left=262.3639.dp, top=348.96942.dp, right=344.2389.dp, bottom=430.84442.dp)
+Alone: DpRect(left=57.494442.dp, top=535.6444.dp, right=137.54999.dp, bottom=615.69995.dp)
+Held: DpRect(left=158.29166.dp, top=557.4778.dp, right=234.70833.dp, bottom=633.8944.dp)
+Unknown: DpRect(left=262.3639.dp, top=532.73334.dp, right=344.2389.dp, bottom=614.60834.dp)

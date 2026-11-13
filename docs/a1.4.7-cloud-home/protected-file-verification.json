@@ -1,0 +1,656 @@
+[
+  {
+    "Path": "app/build.gradle.kts",
+    "Before": "CBF82C2E92973A4D6E36AB0193CB40E823288F8960E57AA75A26F14153BDA328",
+    "After": "CBF82C2E92973A4D6E36AB0193CB40E823288F8960E57AA75A26F14153BDA328",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/androidTest/java/com/example/pettranslator/AdaptiveHomeTest.kt",
+    "Before": "15864D7587049DA7F624EF9EDDDC2B18350F2C79D98DCAA5C8194E460BB17078",
+    "After": "15864D7587049DA7F624EF9EDDDC2B18350F2C79D98DCAA5C8194E460BB17078",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/androidTest/java/com/example/pettranslator/AnalysisLayoutTest.kt",
+    "Before": "AB7EAAC0BF475582702B8A2F5247EE8C17ECABD64E59A4F1AFC18FAD9657923B",
+    "After": "AB7EAAC0BF475582702B8A2F5247EE8C17ECABD64E59A4F1AFC18FAD9657923B",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/androidTest/java/com/example/pettranslator/AppIconRenderingTest.kt",
+    "Before": "86A5BB70B6736F7919EA680900DBEE7601BC50AF904965E6E96422AE791C6245",
+    "After": "86A5BB70B6736F7919EA680900DBEE7601BC50AF904965E6E96422AE791C6245",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/androidTest/java/com/example/pettranslator/ArtisticDecorationTest.kt",
+    "Before": "8DAB9E425259ED05EF2BD17AAB64B636AE411D227658420235B0F2F9F0DDD238",
+    "After": "8DAB9E425259ED05EF2BD17AAB64B636AE411D227658420235B0F2F9F0DDD238",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/androidTest/java/com/example/pettranslator/AudioRecordDeviceTest.kt",
+    "Before": "0276812BEA3C4C820BE522CE984E03B3CD8158C481F26123FAE2808009A96098",
+    "After": "0276812BEA3C4C820BE522CE984E03B3CD8158C481F26123FAE2808009A96098",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/androidTest/java/com/example/pettranslator/BubbleLayoutRegressionTest.kt",
+    "Before": "8A6921618D83F9BF5B24AE0D201DF9F245021A0A98B2D2410798F29962EE5E00",
+    "After": "8A6921618D83F9BF5B24AE0D201DF9F245021A0A98B2D2410798F29962EE5E00",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/androidTest/java/com/example/pettranslator/FinalFontLayoutTest.kt",
+    "Before": "2CD5F7520C603D2E0E213BD93B90555F02AB62F97C50D2E5C89C59BDE776C86F",
+    "After": "2CD5F7520C603D2E0E213BD93B90555F02AB62F97C50D2E5C89C59BDE776C86F",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/androidTest/java/com/example/pettranslator/HomeFlowTest.kt",
+    "Before": "C6F7C555FED0AF8AC5A6A4F14BF5DF9EC047B30E4BCC2A2625C900EF53961E2B",
+    "After": "C6F7C555FED0AF8AC5A6A4F14BF5DF9EC047B30E4BCC2A2625C900EF53961E2B",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/androidTest/java/com/example/pettranslator/HomeResponsiveEvidenceTest.kt",
+    "Before": "F713D6E42D98BF6FF295EF9B90B646C5E437589CE98C0659D2AE78E6607F027A",
+    "After": "F713D6E42D98BF6FF295EF9B90B646C5E437589CE98C0659D2AE78E6607F027A",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/androidTest/java/com/example/pettranslator/HomeVisualEvidenceTest.kt",
+    "Before": "C27F1175BD97B02688039A1E94086C0CD13A59E071220FD36F0060051F2E0E07",
+    "After": "C27F1175BD97B02688039A1E94086C0CD13A59E071220FD36F0060051F2E0E07",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/androidTest/java/com/example/pettranslator/PetFunFlowTest.kt",
+    "Before": "E87F06BFBC10F19F5508948024459FB0D6DB240A3E34F46BCE07F962BC50C0C0",
+    "After": "E87F06BFBC10F19F5508948024459FB0D6DB240A3E34F46BCE07F962BC50C0C0",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/androidTest/java/com/example/pettranslator/PetFunLayoutTest.kt",
+    "Before": "D191EB5C2F456ABDD1A294972AA18C0DCAFAF5641CACFF7DC9FF2363203C5D20",
+    "After": "D191EB5C2F456ABDD1A294972AA18C0DCAFAF5641CACFF7DC9FF2363203C5D20",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/androidTest/java/com/example/pettranslator/PetPreferencesTest.kt",
+    "Before": "DE3820260797AF59CD96FD87F4E47540EF0D0F1495BEE89D3C7468F4F971A20F",
+    "After": "DE3820260797AF59CD96FD87F4E47540EF0D0F1495BEE89D3C7468F4F971A20F",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/androidTest/java/com/example/pettranslator/RecordingFlowTest.kt",
+    "Before": "0198F19CBF0BD8DA4AC4E94686552D1A100A4F23C7F60819AF1B7E807E986D08",
+    "After": "0198F19CBF0BD8DA4AC4E94686552D1A100A4F23C7F60819AF1B7E807E986D08",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/androidTest/java/com/example/pettranslator/RecordingLayoutTest.kt",
+    "Before": "5C480DD2E32C2A56EF4D13FEEEB437BDAE22AEC01A19E950FCC98237C0DA8C3E",
+    "After": "5C480DD2E32C2A56EF4D13FEEEB437BDAE22AEC01A19E950FCC98237C0DA8C3E",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/androidTest/java/com/example/pettranslator/ResultBubbleEmphasisTest.kt",
+    "Before": "447834A1228CADE1957BF4E6DA3BB6D7AC1E7F7F610E1664469A414CAD559840",
+    "After": "447834A1228CADE1957BF4E6DA3BB6D7AC1E7F7F610E1664469A414CAD559840",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/androidTest/java/com/example/pettranslator/ResultCardFontExportTest.kt",
+    "Before": "78FADFB52D5C4B39DBADE084A119FA4038B81522884E602B56697CD46D45B563",
+    "After": "78FADFB52D5C4B39DBADE084A119FA4038B81522884E602B56697CD46D45B563",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/androidTest/java/com/example/pettranslator/ResultInfoBarTest.kt",
+    "Before": "64717A8765739F8E59B433C32C352A2AEC01020DD28B65DEF3C7FB7A53B5ABE4",
+    "After": "64717A8765739F8E59B433C32C352A2AEC01020DD28B65DEF3C7FB7A53B5ABE4",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/androidTest/java/com/example/pettranslator/TestDeviceWake.kt",
+    "Before": "5E6D6FCD7A84FCC34C682705B52DFB1C105D867CA24BA44CD1688D00715C8446",
+    "After": "5E6D6FCD7A84FCC34C682705B52DFB1C105D867CA24BA44CD1688D00715C8446",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/androidTest/java/com/example/pettranslator/UncertainSheetFlowTest.kt",
+    "Before": "2266916F1E1C78CA5A17D1EA341DE88C63C2358FC6AF0BBDFCECB2E2E92E4C58",
+    "After": "2266916F1E1C78CA5A17D1EA341DE88C63C2358FC6AF0BBDFCECB2E2E92E4C58",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/AndroidManifest.xml",
+    "Before": "F45DDD0CB6159B61B7F231D67C40D472792E82B4F08EF67D737BA4B09C8B7CED",
+    "After": "F45DDD0CB6159B61B7F231D67C40D472792E82B4F08EF67D737BA4B09C8B7CED",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/assets/licenses/lxgw_wenkai/OFL.txt",
+    "Before": "CB973995026E28C931886A1D127397152187E03E53B2F71864E86CEE8C25E54A",
+    "After": "CB973995026E28C931886A1D127397152187E03E53B2F71864E86CEE8C25E54A",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/assets/licenses/lxgw_zhenkai/OFL.txt",
+    "Before": "1EE66A22DDFA5241D407A5FD9A2BA666C4DE5700F17182D5EE729E0434E7B42D",
+    "After": "1EE66A22DDFA5241D407A5FD9A2BA666C4DE5700F17182D5EE729E0434E7B42D",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/assets/yamnet-model-manifest.json",
+    "Before": "1463CDE0FBDB7C6BE475D50221C15BD3DF2965374882E1C70F54A7C09907C2F1",
+    "After": "1463CDE0FBDB7C6BE475D50221C15BD3DF2965374882E1C70F54A7C09907C2F1",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/assets/yamnet.tflite",
+    "Before": "10C95EA3EB9A7BB4CB8BDDF6FEB023250381008177AC162CE169694D05C317DE",
+    "After": "10C95EA3EB9A7BB4CB8BDDF6FEB023250381008177AC162CE169694D05C317DE",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/assets/yamnet_label_list.txt",
+    "Before": "8E1267A120C1932B7273C0D0E0C5529EDBB9A35512B437B1C8982BAA59047051",
+    "After": "8E1267A120C1932B7273C0D0E0C5529EDBB9A35512B437B1C8982BAA59047051",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/MainActivity.kt",
+    "Before": "8F77EB2DB016960087FA8792B88151A2CAFAF74395A114A4844910B13ECC238F",
+    "After": "8F77EB2DB016960087FA8792B88151A2CAFAF74395A114A4844910B13ECC238F",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/PetTranslatorApplication.kt",
+    "Before": "260D7AB2749E9BC9BCCE8F93B71E966729160C4060D721874D4A04A4644E2400",
+    "After": "260D7AB2749E9BC9BCCE8F93B71E966729160C4060D721874D4A04A4644E2400",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/core/FeatureAccessManager.kt",
+    "Before": "98F46513AECF6A2F87FD22C4EA759ECEC6E11D657F20D9168CFD654E9CCD843D",
+    "After": "98F46513AECF6A2F87FD22C4EA759ECEC6E11D657F20D9168CFD654E9CCD843D",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/data/PetPreferencesRepository.kt",
+    "Before": "D29039B02883D196ACFBBF5BA58359529F30A4CDFF8F03A519516543B036DCB5",
+    "After": "D29039B02883D196ACFBBF5BA58359529F30A4CDFF8F03A519516543B036DCB5",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/data/recognition/YamnetEngine.kt",
+    "Before": "DCB76CE2D76CDA0F80E31E15AB9507AD5660C3C9DE808B3F23A283729AEB1DFA",
+    "After": "DCB76CE2D76CDA0F80E31E15AB9507AD5660C3C9DE808B3F23A283729AEB1DFA",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/data/recognition/YamnetRecognitionRepository.kt",
+    "Before": "F160910780EC18B8CEBC710775DCEAAED04AEA9D8D09B6B0850768667FBA6C6B",
+    "After": "F160910780EC18B8CEBC710775DCEAAED04AEA9D8D09B6B0850768667FBA6C6B",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/data/recording/AndroidPcmRecorder.kt",
+    "Before": "9693AF52970B736A5303F27302524EB478E199812D961FC1BA300FA279EE911F",
+    "After": "9693AF52970B736A5303F27302524EB478E199812D961FC1BA300FA279EE911F",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/domain/HomeModels.kt",
+    "Before": "6C96350A1A9977AEF5C1B9A71FB7D76A716E6224710FF465AF6850D2C253CC30",
+    "After": "6C96350A1A9977AEF5C1B9A71FB7D76A716E6224710FF465AF6850D2C253CC30",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/domain/interpretation/PetInterpretationCodec.kt",
+    "Before": "C98E738D544418DC0AFDD8FEE7C875599801DECED1B514DF1C7FDAA612046871",
+    "After": "C98E738D544418DC0AFDD8FEE7C875599801DECED1B514DF1C7FDAA612046871",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/domain/interpretation/PetInterpretationEngine.kt",
+    "Before": "1161B9D5D8600027ED03BF36F98160DD7DE0EB3436BD936CE58BF18147BA44B5",
+    "After": "1161B9D5D8600027ED03BF36F98160DD7DE0EB3436BD936CE58BF18147BA44B5",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/domain/interpretation/PetInterpretationModels.kt",
+    "Before": "74B7716CCF672D7AD26B621FA419CA06F0FBA533DED28FE3B2F4D3CCF0D8F2B7",
+    "After": "74B7716CCF672D7AD26B621FA419CA06F0FBA533DED28FE3B2F4D3CCF0D8F2B7",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/domain/interpretation/PetInterpretationTemplateCatalog.kt",
+    "Before": "B70DD7BC595C2DB1448FBDA9018A35F3D16A2F0F2970164BDFD064F861E241E2",
+    "After": "B70DD7BC595C2DB1448FBDA9018A35F3D16A2F0F2970164BDFD064F861E241E2",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/domain/recognition/PetRecognitionPolicy.kt",
+    "Before": "03EF59EB9BDB7B0E005F652E068DD11ED3CAFC6904DD1E993E4F94FD0CF0C44A",
+    "After": "03EF59EB9BDB7B0E005F652E068DD11ED3CAFC6904DD1E993E4F94FD0CF0C44A",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/domain/recognition/RecognitionModels.kt",
+    "Before": "9942DC25EEA38224116C3CA2400E5D047BBD2A16330BF156C8EDADFDBFB2782B",
+    "After": "9942DC25EEA38224116C3CA2400E5D047BBD2A16330BF156C8EDADFDBFB2782B",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/domain/recording/AudioCapture.kt",
+    "Before": "C0574A137D81DCA1B033509068695BFA71E2F420DA575B4EC0AFD3FBD51F1519",
+    "After": "C0574A137D81DCA1B033509068695BFA71E2F420DA575B4EC0AFD3FBD51F1519",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/ui/analysis/AnalysisScreen.kt",
+    "Before": "621C3736DECFEC38107B805C84D76CC7215FEEC1334DD5B958AA6CBA53BAC56D",
+    "After": "621C3736DECFEC38107B805C84D76CC7215FEEC1334DD5B958AA6CBA53BAC56D",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/ui/components/PetArtisticTitle.kt",
+    "Before": "1820D57EF7133FE87A82FEFB0141D4F2B40CB02F67A76C9BB9F49397F114B9EB",
+    "After": "1820D57EF7133FE87A82FEFB0141D4F2B40CB02F67A76C9BB9F49397F114B9EB",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/ui/components/PetSpeechBubble.kt",
+    "Before": "42C94FCB05E0E5655E6E3FCB2468C06A5F87A7CBFCD59FD2300DF0FF3B7E773D",
+    "After": "42C94FCB05E0E5655E6E3FCB2468C06A5F87A7CBFCD59FD2300DF0FF3B7E773D",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/ui/core/PlaceholderScreen.kt",
+    "Before": "A9C56DADC00C2B1B74E7AABF389666732F4E87106E735A91CE9C86895059D8AD",
+    "After": "A9C56DADC00C2B1B74E7AABF389666732F4E87106E735A91CE9C86895059D8AD",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/ui/home/HomeScreen.kt",
+    "Before": "D8BEBAE047CAC8F5E293112BDCE3D0DDC962C4E5667031190CD06997AB4DB2E3",
+    "After": "D8BEBAE047CAC8F5E293112BDCE3D0DDC962C4E5667031190CD06997AB4DB2E3",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/ui/home/HomeViewModel.kt",
+    "Before": "055E5264448266FC835BC18C822FE4EF5A9D6E41EAEC2979A41D44436B81E4DF",
+    "After": "055E5264448266FC835BC18C822FE4EF5A9D6E41EAEC2979A41D44436B81E4DF",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/ui/navigation/PetTranslatorApp.kt",
+    "Before": "D721DD77E658279B0D3038FF1B0A03FD7699F26ED5DC376988830817CF7791CB",
+    "After": "D721DD77E658279B0D3038FF1B0A03FD7699F26ED5DC376988830817CF7791CB",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/ui/play/PetFunSoundItem.kt",
+    "Before": "1A33A03D1DEAE6FB156B3AD551391FB685228B892F14814A0E6447F28F073A96",
+    "After": "1A33A03D1DEAE6FB156B3AD551391FB685228B892F14814A0E6447F28F073A96",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/ui/play/PlayScreen.kt",
+    "Before": "68BA2D933813C786A6935192BC95BA352131DAAE0BD425B12B492EA5AA3BB691",
+    "After": "68BA2D933813C786A6935192BC95BA352131DAAE0BD425B12B492EA5AA3BB691",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/ui/profile/ProfileScreen.kt",
+    "Before": "28C3D195FCC800BBB019A27059265E6CCF4C172C50B33071FC386E1A64FAB27D",
+    "After": "28C3D195FCC800BBB019A27059265E6CCF4C172C50B33071FC386E1A64FAB27D",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/ui/recording/AnalysisOutcomeScreen.kt",
+    "Before": "89499213461A917551AD3DEE3B64ED7F21811C672BC50FAD7DD750B02EEFBA02",
+    "After": "89499213461A917551AD3DEE3B64ED7F21811C672BC50FAD7DD750B02EEFBA02",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/ui/recording/RecordingScreen.kt",
+    "Before": "48EFA4D1A61CB17CF1B2D574CDEA6F407581B086F2BB14C2ABFE40004702B5BF",
+    "After": "48EFA4D1A61CB17CF1B2D574CDEA6F407581B086F2BB14C2ABFE40004702B5BF",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/ui/recording/RecordingViewModel.kt",
+    "Before": "03CF1FC4F9EDA164CBAEA5FF7DB322E39003A0498EB18106B9D5E3C4A148EA90",
+    "After": "03CF1FC4F9EDA164CBAEA5FF7DB322E39003A0498EB18106B9D5E3C4A148EA90",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/ui/recording/UncertainRecordingSheet.kt",
+    "Before": "6E4CDACB11BB8A8E5653DF11F28902D7912ADBF9DA3C1A7CCCED8995912059BD",
+    "After": "6E4CDACB11BB8A8E5653DF11F28902D7912ADBF9DA3C1A7CCCED8995912059BD",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/ui/recording/WaveformLevels.kt",
+    "Before": "3968A1BB32C76C6DCE9F57343C50FC7FA8A8D2478747CC830D030B4759030AD1",
+    "After": "3968A1BB32C76C6DCE9F57343C50FC7FA8A8D2478747CC830D030B4759030AD1",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/ui/result/InterpretationResultScreen.kt",
+    "Before": "FECADF05254A427D469083020468B64475CF2F8C0B43B4FA4F5B31608A26C1B5",
+    "After": "FECADF05254A427D469083020468B64475CF2F8C0B43B4FA4F5B31608A26C1B5",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/ui/result/ResultCardExporter.kt",
+    "Before": "CB4187F9F81250D4C7C1197AD6AFBBEBD946CF65E17D5C72F39B3C2912B2D6FD",
+    "After": "CB4187F9F81250D4C7C1197AD6AFBBEBD946CF65E17D5C72F39B3C2912B2D6FD",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/ui/theme/PetFontFamilies.kt",
+    "Before": "1288FA4C488E4CBC7B14E493571F1722B52DC26EB751FA2C5EA06D42806FA0FD",
+    "After": "1288FA4C488E4CBC7B14E493571F1722B52DC26EB751FA2C5EA06D42806FA0FD",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/java/com/example/pettranslator/ui/theme/Theme.kt",
+    "Before": "A25777C016A33569342256702147F61149468F50F16263DF2A4B0165A6EEC780",
+    "After": "A25777C016A33569342256702147F61149468F50F16263DF2A4B0165A6EEC780",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable-nodpi/analysis_cloud_background.png",
+    "Before": "C83AFB1083EA4E310236718E15EF6CC53420900C80CFB5385B1E448E025C38FC",
+    "After": "C83AFB1083EA4E310236718E15EF6CC53420900C80CFB5385B1E448E025C38FC",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable-nodpi/app_icon.png",
+    "Before": "C72114B3D8E9070173E52F9C7FC7F6F3D0FCFB914A1A25479594A117C4366DA5",
+    "After": "C72114B3D8E9070173E52F9C7FC7F6F3D0FCFB914A1A25479594A117C4366DA5",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable-nodpi/pastel_cloud_pet_app_frame.png",
+    "Before": "357B788EE06BBC83352FC2981DCF8E39D3BAE3A783B82379A5EE8C444D5AF53A",
+    "After": "357B788EE06BBC83352FC2981DCF8E39D3BAE3A783B82379A5EE8C444D5AF53A",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable-nodpi/pet_cat_main.png",
+    "Before": "56E4C336DFE80995E9A69E83018055545A0A9BD7E230C1B0E6E6FBBDCF6FB2AF",
+    "After": "56E4C336DFE80995E9A69E83018055545A0A9BD7E230C1B0E6E6FBBDCF6FB2AF",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable-nodpi/pet_dog_main.png",
+    "Before": "0CE83BCCD241D2F0C141070A1D57C10644AA24B3C807E96B6414631E7C14FB51",
+    "After": "0CE83BCCD241D2F0C141070A1D57C10644AA24B3C807E96B6414631E7C14FB51",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable-nodpi/pet_fun_header.png",
+    "Before": "347FA550D4F7D678F5C103B9C2134272FD2EEC134ED0BB35D28B2A9C4223F67E",
+    "After": "347FA550D4F7D678F5C103B9C2134272FD2EEC134ED0BB35D28B2A9C4223F67E",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable-nodpi/pet_fun_microphone.png",
+    "Before": "BED653382274EDB6028D786926962D99C75D183A6BF94B5B99023D72AA36CF09",
+    "After": "BED653382274EDB6028D786926962D99C75D183A6BF94B5B99023D72AA36CF09",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable-nodpi/pet_home_hero.png",
+    "Before": "9B749142137CCB4CB0007BCE1466EF90D120AB12EFB0F8A076EC454E6DA6FEE0",
+    "After": "9B749142137CCB4CB0007BCE1466EF90D120AB12EFB0F8A076EC454E6DA6FEE0",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable-nodpi/pet_home_room_bg.png",
+    "Before": "9613D286A876761D509FCB01E3D132BAD63C17B545214964CD2826760B56413B",
+    "After": "9613D286A876761D509FCB01E3D132BAD63C17B545214964CD2826760B56413B",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable-nodpi/pet_recording_room_bg.png",
+    "Before": "4BDC7358A0CCE761E85721E2EEE31529DE6139B4DF41AB181FC2508AA17E5B8E",
+    "After": "4BDC7358A0CCE761E85721E2EEE31529DE6139B4DF41AB181FC2508AA17E5B8E",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable-nodpi/record_uncertain_cat.png",
+    "Before": "06D525178A22F41CE97933DC83C6EA1C3EB9ADB2B3997ABB0EA5B7717D2DACF2",
+    "After": "06D525178A22F41CE97933DC83C6EA1C3EB9ADB2B3997ABB0EA5B7717D2DACF2",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable-nodpi/record_uncertain_dog.png",
+    "Before": "168BCFCC2F7C90080CB85A93444787A20154695A3B9433737EA8B6AE216C3BD1",
+    "After": "168BCFCC2F7C90080CB85A93444787A20154695A3B9433737EA8B6AE216C3BD1",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable-nodpi/result_cat_header.png",
+    "Before": "D823BA373FBB72F255049C25345E4D465E49B412468EACEEE553DFEDB1B2B302",
+    "After": "D823BA373FBB72F255049C25345E4D465E49B412468EACEEE553DFEDB1B2B302",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable-nodpi/result_cat_quote.png",
+    "Before": "872BD17004DB755C8B6AE9847BF04DCD905B4A37D968484313B605106C6091E9",
+    "After": "872BD17004DB755C8B6AE9847BF04DCD905B4A37D968484313B605106C6091E9",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable-nodpi/result_cat_tip.png",
+    "Before": "E32B839FC995A20E020642960EC42C5DDFBC505BC843DE7BB7C71A379B706B9A",
+    "After": "E32B839FC995A20E020642960EC42C5DDFBC505BC843DE7BB7C71A379B706B9A",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable-nodpi/result_dog_header.png",
+    "Before": "E8AF86F2E3B698E9A0791B60CD72B440F889AC253A0B37AF38E32EE34EE107FA",
+    "After": "E8AF86F2E3B698E9A0791B60CD72B440F889AC253A0B37AF38E32EE34EE107FA",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable-nodpi/result_dog_quote.png",
+    "Before": "8A17DD93CF9563C40CCFC008C273691EE9357DD94C27E7339258844946324857",
+    "After": "8A17DD93CF9563C40CCFC008C273691EE9357DD94C27E7339258844946324857",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable-nodpi/result_dog_tip.png",
+    "Before": "D6FBBCB2CA396618E47EBEE5CA8297DF4A14F478C753DBC795E6240DE4531ED6",
+    "After": "D6FBBCB2CA396618E47EBEE5CA8297DF4A14F478C753DBC795E6240DE4531ED6",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable-nodpi/scene_alone.png",
+    "Before": "A997D4A062211F294BBEFD4152EAA1733171EFD7E52FF331F8A00DA491E800AA",
+    "After": "A997D4A062211F294BBEFD4152EAA1733171EFD7E52FF331F8A00DA491E800AA",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable-nodpi/scene_door_window.png",
+    "Before": "FD71FB20062FB0F7F14FFF7F1F6FB3FA80121B9C8BC824BBB9E310B682B7A5BC",
+    "After": "FD71FB20062FB0F7F14FFF7F1F6FB3FA80121B9C8BC824BBB9E310B682B7A5BC",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable-nodpi/scene_food.png",
+    "Before": "F33C3469AF0D1AF9D47F3D2764962E672362E99843331D198E25A2C3AA1E23E7",
+    "After": "F33C3469AF0D1AF9D47F3D2764962E672362E99843331D198E25A2C3AA1E23E7",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable-nodpi/scene_held.png",
+    "Before": "6D6F32E34B0015E2698C79612C5D3E04278E649A647815792220BE4327A245F8",
+    "After": "6D6F32E34B0015E2698C79612C5D3E04278E649A647815792220BE4327A245F8",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable-nodpi/scene_play.png",
+    "Before": "0A116BA18E1521F94BF411B0D22799112ADA686FFF984D79DCA6306FC194D422",
+    "After": "0A116BA18E1521F94BF411B0D22799112ADA686FFF984D79DCA6306FC194D422",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable-nodpi/scene_unknown.png",
+    "Before": "EA1F5A55F180FE537611B00461F9980AA4892FA780D6273BB453DC2417DB514D",
+    "After": "EA1F5A55F180FE537611B00461F9980AA4892FA780D6273BB453DC2417DB514D",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable/ic_launcher_background.xml",
+    "Before": "EE657EC2EEEE5564E628A715B3DC9FC40326BC43EE210CDC4FCBD410F94FA173",
+    "After": "EE657EC2EEEE5564E628A715B3DC9FC40326BC43EE210CDC4FCBD410F94FA173",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/drawable/ic_launcher_foreground.xml",
+    "Before": "3C6DE1EAEDAB37583FB93975C90CB972C7A328ACF285DFCA4ED7E4AAC5F34832",
+    "After": "3C6DE1EAEDAB37583FB93975C90CB972C7A328ACF285DFCA4ED7E4AAC5F34832",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/font/pet_title_wenkai.ttf",
+    "Before": "2D73EEA94AD808999D90C0000C239A84A33B09D4BC6AB6C5B8BBF1EDA8A7FC8B",
+    "After": "2D73EEA94AD808999D90C0000C239A84A33B09D4BC6AB6C5B8BBF1EDA8A7FC8B",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/font/pet_title_zhenkai.ttf",
+    "Before": "BF4EA8C39B51784469020120125715D3075137233FE337B5D0A7327F9DFC03BD",
+    "After": "BF4EA8C39B51784469020120125715D3075137233FE337B5D0A7327F9DFC03BD",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/mipmap-anydpi/ic_launcher.xml",
+    "Before": "0C3DFAD5310DC2D325479D6EAC829A6EF251DB9C6468D529EC10D4CFA0126476",
+    "After": "0C3DFAD5310DC2D325479D6EAC829A6EF251DB9C6468D529EC10D4CFA0126476",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/mipmap-anydpi/ic_launcher_round.xml",
+    "Before": "0C3DFAD5310DC2D325479D6EAC829A6EF251DB9C6468D529EC10D4CFA0126476",
+    "After": "0C3DFAD5310DC2D325479D6EAC829A6EF251DB9C6468D529EC10D4CFA0126476",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/mipmap-hdpi/ic_launcher.png",
+    "Before": "C725D9EFC89CFCA56E7222E1A010A065BE7C1CD122EB5615D4A2917ECEBAC159",
+    "After": "C725D9EFC89CFCA56E7222E1A010A065BE7C1CD122EB5615D4A2917ECEBAC159",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/mipmap-hdpi/ic_launcher_round.png",
+    "Before": "43FAA04829BB786CEC9DD6C0DD3624304533AAE7FD466695B54E9807DC0E92F8",
+    "After": "43FAA04829BB786CEC9DD6C0DD3624304533AAE7FD466695B54E9807DC0E92F8",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/mipmap-mdpi/ic_launcher.png",
+    "Before": "D3640CDE4BCEB2483CC1C6ED694D5536FED344BE0AE0016929BEDA6C0AF3E566",
+    "After": "D3640CDE4BCEB2483CC1C6ED694D5536FED344BE0AE0016929BEDA6C0AF3E566",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/mipmap-mdpi/ic_launcher_round.png",
+    "Before": "370C0ABE375751CD3CF2F1FFBB0337EE6B2572D421FB679F34435CEBB5587CD6",
+    "After": "370C0ABE375751CD3CF2F1FFBB0337EE6B2572D421FB679F34435CEBB5587CD6",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+    "Before": "DDF791D23025366C03D0E417E5533AA5B98E938A32D5F86E0AB22393C21B216C",
+    "After": "DDF791D23025366C03D0E417E5533AA5B98E938A32D5F86E0AB22393C21B216C",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/mipmap-xhdpi/ic_launcher_round.png",
+    "Before": "D70B84F59D0C2B2BD35CEFD1A5CE77C81305992C1144F2D052F67E90E50C40BD",
+    "After": "D70B84F59D0C2B2BD35CEFD1A5CE77C81305992C1144F2D052F67E90E50C40BD",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+    "Before": "A14B0D2A50195A4B217C13904EC98261160E4AE35D93A501B2A1439046BECE0D",
+    "After": "A14B0D2A50195A4B217C13904EC98261160E4AE35D93A501B2A1439046BECE0D",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png",
+    "Before": "3E8F79C56393B24E8D2876B2B769EC775F119B280B850216F2B05F09C368D5BE",
+    "After": "3E8F79C56393B24E8D2876B2B769EC775F119B280B850216F2B05F09C368D5BE",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+    "Before": "2714ED0323147126B9C81EFB228917D983C6FE02A1EA3C68A6A2D9B38646FAD6",
+    "After": "2714ED0323147126B9C81EFB228917D983C6FE02A1EA3C68A6A2D9B38646FAD6",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png",
+    "Before": "3DAC69953F11A7D7B8E4D94734384442AC335197BF5AE527E5B60235A8C84A99",
+    "After": "3DAC69953F11A7D7B8E4D94734384442AC335197BF5AE527E5B60235A8C84A99",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/values/strings.xml",
+    "Before": "59CF765979680441AAE5BC484CE561F23A39748385ACD72D1DEB37BA6660D4E3",
+    "After": "59CF765979680441AAE5BC484CE561F23A39748385ACD72D1DEB37BA6660D4E3",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/values/themes.xml",
+    "Before": "E5F0D54F2B9793F61F40C20D98B232CF4DADBB7A83935BA7EB311A7EE279CD37",
+    "After": "E5F0D54F2B9793F61F40C20D98B232CF4DADBB7A83935BA7EB311A7EE279CD37",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/xml/backup_rules.xml",
+    "Before": "AC534EF100D6FC95EF8C396E1A01220709DFB8A6E114BA5CFFE02F48E2F061C1",
+    "After": "AC534EF100D6FC95EF8C396E1A01220709DFB8A6E114BA5CFFE02F48E2F061C1",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/xml/data_extraction_rules.xml",
+    "Before": "A256F0350BAC2211A9BCB74FD8F7A47D668A1960E3889BB5588892A2448531D3",
+    "After": "A256F0350BAC2211A9BCB74FD8F7A47D668A1960E3889BB5588892A2448531D3",
+    "Unchanged": true
+  },
+  {
+    "Path": "app/src/main/res/xml/file_paths.xml",
+    "Before": "DB2C9AE72E5EE7D8D509879C413BA9AC11A342D42E9CCC74EAB225BF72F9E611",
+    "After": "DB2C9AE72E5EE7D8D509879C413BA9AC11A342D42E9CCC74EAB225BF72F9E611",
+    "Unchanged": true
+  },
+  {
+    "Path": "build.gradle.kts",
+    "Before": "9158D8C3717CB4D4EFFB6FD5EFB1B037931D452664F9872CC4F6B24DFA21C496",
+    "After": "9158D8C3717CB4D4EFFB6FD5EFB1B037931D452664F9872CC4F6B24DFA21C496",
+    "Unchanged": true
+  },
+  {
+    "Path": "gradle.properties",
+    "Before": "A74247BBE3312C9702FE0DCEF373262CD361AF1B57BF5711553D2C0EA7F0B24A",
+    "After": "A74247BBE3312C9702FE0DCEF373262CD361AF1B57BF5711553D2C0EA7F0B24A",
+    "Unchanged": true
+  },
+  {
+    "Path": "settings.gradle.kts",
+    "Before": "918CB456B1BE5DF7D1622237A1197B746709DA212575BE6DECDDCAEBC6C94934",
+    "After": "918CB456B1BE5DF7D1622237A1197B746709DA212575BE6DECDDCAEBC6C94934",
+    "Unchanged": true
+  }
+]

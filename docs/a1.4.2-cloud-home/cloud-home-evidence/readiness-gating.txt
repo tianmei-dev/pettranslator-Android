@@ -1,0 +1,11 @@
+Controlled Compose viewport; 58dp navigation placeholder, not a separate physical device.
+viewport=DpRect(left=0.0.dp, top=0.0.dp, right=392.9481.dp, bottom=658.1783.dp)
+actions=DpRect(left=0.0.dp, top=664.0549.dp, right=392.9481.dp, bottom=736.14105.dp)
+cloud=DpRect(left=5.8765917.dp, top=238.19785.dp, right=386.67972.dp, bottom=643.2909.dp)
+centralPet=DpRect(left=120.27424.dp, top=410.96964.dp, right=272.67386.dp, bottom=499.90207.dp)
+Door: DpRect(left=51.714005.dp, top=317.72772.dp, right=135.55338.dp, bottom=401.56708.dp)
+Meal: DpRect(left=162.19392.dp, top=309.1087.dp, right=230.75417.dp, bottom=377.66895.dp)
+Play: DpRect(left=264.83838.dp, top=319.68658.dp, right=348.67776.dp, bottom=403.52594.dp)
+Alone: DpRect(left=52.49755.dp, top=506.95398.dp, right=134.37807.dp, bottom=588.8345.dp)
+Held: DpRect(left=157.49266.dp, top=519.09894.dp, right=235.45543.dp, bottom=597.0617.dp)
+Unknown: DpRect(left=264.83838.dp, top=508.12927.dp, right=348.67776.dp, bottom=591.9686.dp)

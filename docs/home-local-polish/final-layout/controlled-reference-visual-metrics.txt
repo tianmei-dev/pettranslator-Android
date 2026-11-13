@@ -1,0 +1,10 @@
+CONTROLLED reference viewport, rendered on Pixel 3; not a physical SM-G973U measurement.
+411x869dp, font1.1, reference status inset42.6667dp, system navigation inset47.2381dp, app navigation placeholder58dp.
+Prior A1.4.5 controlled reference alpha-derived pet sizes provide the no-shrink baseline.
+viewport=DpRect(left=0.0.dp, top=42.51988.dp, right=411.0255.dp, bottom=675.8889.dp), cloud=DpRect(left=2.214577.dp, top=279.0367.dp, right=409.25385.dp, bottom=674.11725.dp), opaqueOutline=DpRect(left=9.913511.dp, top=307.18802.dp, right=404.90225.dp, bottom=664.1979.dp)
+opaqueCloudWidthRatio=0.9609835, opaqueCloudToRecordGap=17.891846.dp
+Cat: alphaSource=HomeSourceAlpha(width=620, height=426, left=73, top=0, right=573, bottom=408), visible=DpRect(left=142.43163.dp, top=435.82877.dp, right=275.51416.dp, bottom=544.42413.dp)
+Cat: visibleWidth=133.08253dp, visibleHeight=108.59537dp, visibleArea=14452.146dp2, priorA145WidthGrowth=0.010497689, priorA145HeightGrowth=0.010189414
+Dog: alphaSource=HomeSourceAlpha(width=697, height=426, left=86, top=0, right=645, bottom=413), visible=DpRect(left=138.37363.dp, top=438.04333.dp, right=281.34802.dp, bottom=543.67554.dp)
+Dog: visibleWidth=142.9744dp, visibleHeight=105.6322dp, visibleArea=15102.7dp2, priorA145WidthGrowth=0.008282065, priorA145HeightGrowth=0.008903623
+catDogOpaqueAreaRatio=1.0450144

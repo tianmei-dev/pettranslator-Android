@@ -1,0 +1,501 @@
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=
+com.example.pettranslator.CloudHomeLayoutTest:
+INSTRUMENTATION_STATUS: test=tallViewportFitsEveryScene
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=tallViewportFitsEveryScene
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=shortViewportFitsEveryScene
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=shortViewportFitsEveryScene
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=wideOrdinaryViewportKeepsArtworkClear
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=wideOrdinaryViewportKeepsArtworkClear
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=standardViewportFitsEveryScene
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=standardViewportFitsEveryScene
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=narrowLargeFontKeepsTextAndFixedActionsReachable
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: App name must not overflow or ellipsize: size=470 x 101, paragraph=470.0x101.0, lines=1, didExceedMaxLines=true, hasVisualOverflow=true, didOverflowWidth=false, didOverflowHeight=true, constraints=Constraints(minWidth = 0, maxWidth = 470, minHeight = 0, maxHeight = 120), fontSize=13.429603.sp, lineHeight=16.787003.sp
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyHeaderAndPetSwitch$lambda$26(CloudHomeLayoutTest.kt:173)
+	at com.example.pettranslator.CloudHomeLayoutTest.$r8$lambda$P709oQ3c3o-8Dlb-qYjNi7UEEbE(Unknown Source:0)
+	at com.example.pettranslator.CloudHomeLayoutTest$$ExternalSyntheticLambda5.invoke(D8$$SyntheticClass:0)
+	at androidx.compose.ui.test.ActionsKt$performSemanticsAction$2.invoke(Actions.kt:581)
+	at androidx.compose.ui.test.ActionsKt$performSemanticsAction$2.invoke(Actions.kt:581)
+	at androidx.compose.ui.test.AndroidSynchronization_androidKt.runOnUiThread$lambda$0(AndroidSynchronization.android.kt:39)
+	at androidx.compose.ui.test.AndroidSynchronization_androidKt.$r8$lambda$opyMdTZ52jorqLaIG4SKpPr_Zno(Unknown Source:0)
+	at androidx.compose.ui.test.AndroidSynchronization_androidKt$$ExternalSyntheticLambda0.call(D8$$SyntheticClass:0)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:462)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:2214)
+	at android.os.Handler.handleCallback(Handler.java:883)
+	at android.os.Handler.dispatchMessage(Handler.java:100)
+	at android.os.Looper.loop(Looper.java:214)
+	at android.app.ActivityThread.main(ActivityThread.java:7356)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:930)
+	Suppressed: java.util.concurrent.ExecutionException: An Exception occurred on the UI thread during runOnUiThread()
+		at androidx.compose.ui.test.AndroidSynchronization_androidKt.runOnUiThread(AndroidSynchronization.android.kt:50)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidTestOwner.runOnUiThread(ComposeUiTest.android.kt:599)
+		at androidx.compose.ui.test.ActionsKt.performSemanticsAction(Actions.kt:581)
+		at com.example.pettranslator.CloudHomeLayoutTest.verifyHeaderAndPetSwitch(CloudHomeLayoutTest.kt:161)
+		at com.example.pettranslator.CloudHomeLayoutTest.narrowLargeFontKeepsTextAndFixedActionsReachable(CloudHomeLayoutTest.kt:477)
+		at java.lang.reflect.Method.invoke(Native Method)
+		at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+		at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+		at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+		at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+		at androidx.test.internal.runner.junit4.statement.RunBefores.evaluate(RunBefores.java:80)
+		at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:54)
+		at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt:295)
+		at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt:295)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.withDisposableContent(ComposeUiTest.android.kt:565)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1$1.invoke(ComposeUiTest.android.kt:370)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withComposeIdlingResource(ComposeUiTest.android.kt:439)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withComposeIdlingResource(ComposeUiTest.android.kt:235)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invoke(ComposeUiTest.android.kt:369)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withWindowRecomposer(ComposeUiTest.android.kt:413)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withWindowRecomposer(ComposeUiTest.android.kt:235)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1.invoke(ComposeUiTest.android.kt:368)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withTestCoroutines(ComposeUiTest.android.kt:426)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withTestCoroutines(ComposeUiTest.android.kt:235)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1.invoke(ComposeUiTest.android.kt:367)
+		at androidx.compose.ui.test.EspressoLink.withStrategy(EspressoLink.android.kt:69)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invoke(ComposeUiTest.android.kt:366)
+		at androidx.compose.ui.test.IdlingResourceRegistry.withRegistry(IdlingResourceRegistry.jvm.kt:148)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1.invoke(ComposeUiTest.android.kt:365)
+		at androidx.compose.ui.test.ComposeRootRegistry.withRegistry(ComposeRootRegistry.android.kt:139)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.runTest(ComposeUiTest.android.kt:364)
+		at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1.evaluate(AndroidComposeTestRule.android.kt:295)
+		at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+		at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+		at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+		at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+		at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+		at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+		at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+		at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+		at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+		at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+		at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+		at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+		at org.junit.runners.Suite.runChild(Suite.java:128)
+		at org.junit.runners.Suite.runChild(Suite.java:27)
+		at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+		at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+		at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+		at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+		at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+		at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+		at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+		at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+		at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+		at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:68)
+		at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)
+		at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:463)
+		at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2196)
+
+INSTRUMENTATION_STATUS: stream=
+Error in narrowLargeFontKeepsTextAndFixedActionsReachable(com.example.pettranslator.CloudHomeLayoutTest):
+java.lang.AssertionError: App name must not overflow or ellipsize: size=470 x 101, paragraph=470.0x101.0, lines=1, didExceedMaxLines=true, hasVisualOverflow=true, didOverflowWidth=false, didOverflowHeight=true, constraints=Constraints(minWidth = 0, maxWidth = 470, minHeight = 0, maxHeight = 120), fontSize=13.429603.sp, lineHeight=16.787003.sp
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyHeaderAndPetSwitch$lambda$26(CloudHomeLayoutTest.kt:173)
+	at com.example.pettranslator.CloudHomeLayoutTest.$r8$lambda$P709oQ3c3o-8Dlb-qYjNi7UEEbE(Unknown Source:0)
+	at com.example.pettranslator.CloudHomeLayoutTest$$ExternalSyntheticLambda5.invoke(D8$$SyntheticClass:0)
+	at androidx.compose.ui.test.ActionsKt$performSemanticsAction$2.invoke(Actions.kt:581)
+	at androidx.compose.ui.test.ActionsKt$performSemanticsAction$2.invoke(Actions.kt:581)
+	at androidx.compose.ui.test.AndroidSynchronization_androidKt.runOnUiThread$lambda$0(AndroidSynchronization.android.kt:39)
+	at androidx.compose.ui.test.AndroidSynchronization_androidKt.$r8$lambda$opyMdTZ52jorqLaIG4SKpPr_Zno(Unknown Source:0)
+	at androidx.compose.ui.test.AndroidSynchronization_androidKt$$ExternalSyntheticLambda0.call(D8$$SyntheticClass:0)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:462)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:2214)
+	at android.os.Handler.handleCallback(Handler.java:883)
+	at android.os.Handler.dispatchMessage(Handler.java:100)
+	at android.os.Looper.loop(Looper.java:214)
+	at android.app.ActivityThread.main(ActivityThread.java:7356)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:930)
+	Suppressed: java.util.concurrent.ExecutionException: An Exception occurred on the UI thread during runOnUiThread()
+		at androidx.compose.ui.test.AndroidSynchronization_androidKt.runOnUiThread(AndroidSynchronization.android.kt:50)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidTestOwner.runOnUiThread(ComposeUiTest.android.kt:599)
+		at androidx.compose.ui.test.ActionsKt.performSemanticsAction(Actions.kt:581)
+		at com.example.pettranslator.CloudHomeLayoutTest.verifyHeaderAndPetSwitch(CloudHomeLayoutTest.kt:161)
+		at com.example.pettranslator.CloudHomeLayoutTest.narrowLargeFontKeepsTextAndFixedActionsReachable(CloudHomeLayoutTest.kt:477)
+		at java.lang.reflect.Method.invoke(Native Method)
+		at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+		at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+		at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+		at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+		at androidx.test.internal.runner.junit4.statement.RunBefores.evaluate(RunBefores.java:80)
+		at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:54)
+		at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt:295)
+		at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt:295)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.withDisposableContent(ComposeUiTest.android.kt:565)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1$1.invoke(ComposeUiTest.android.kt:370)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withComposeIdlingResource(ComposeUiTest.android.kt:439)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withComposeIdlingResource(ComposeUiTest.android.kt:235)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invoke(ComposeUiTest.android.kt:369)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withWindowRecomposer(ComposeUiTest.android.kt:413)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withWindowRecomposer(ComposeUiTest.android.kt:235)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1.invoke(ComposeUiTest.android.kt:368)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withTestCoroutines(ComposeUiTest.android.kt:426)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withTestCoroutines(ComposeUiTest.android.kt:235)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1.invoke(ComposeUiTest.android.kt:367)
+		at androidx.compose.ui.test.EspressoLink.withStrategy(EspressoLink.android.kt:69)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invoke(ComposeUiTest.android.kt:366)
+		at androidx.compose.ui.test.IdlingResourceRegistry.withRegistry(IdlingResourceRegistry.jvm.kt:148)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1.invoke(ComposeUiTest.android.kt:365)
+		at androidx.compose.ui.test.ComposeRootRegistry.withRegistry(ComposeRootRegistry.android.kt:139)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.runTest(ComposeUiTest.android.kt:364)
+		at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1.evaluate(AndroidComposeTestRule.android.kt:295)
+		at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+		at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+		at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+		at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+		at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+		at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+		at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+		at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+		at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+		at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+		at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+		at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+		at org.junit.runners.Suite.runChild(Suite.java:128)
+		at org.junit.runners.Suite.runChild(Suite.java:27)
+		at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+		at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+		at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+		at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+		at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+		at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+		at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+		at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+		at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+		at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:68)
+		at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)
+		at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:463)
+		at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2196)
+
+INSTRUMENTATION_STATUS: test=narrowLargeFontKeepsTextAndFixedActionsReachable
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=callbacksSelectionAndGeometryRemainStable
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=callbacksSelectionAndGeometryRemainStable
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=narrowOrdinaryFontKeepsArtworkClear
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=narrowOrdinaryFontKeepsArtworkClear
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=controlledReferenceViewportKeepsBothPetsFullSized
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Cat keeps at least a 48dp touch target
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyHeaderAndPetSwitch(CloudHomeLayoutTest.kt:192)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyReferenceComposition(CloudHomeLayoutTest.kt:237)
+	at com.example.pettranslator.CloudHomeLayoutTest.controlledReferenceViewportKeepsBothPetsFullSized(CloudHomeLayoutTest.kt:334)
+
+INSTRUMENTATION_STATUS: stream=
+Error in controlledReferenceViewportKeepsBothPetsFullSized(com.example.pettranslator.CloudHomeLayoutTest):
+java.lang.AssertionError: Cat keeps at least a 48dp touch target
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyHeaderAndPetSwitch(CloudHomeLayoutTest.kt:192)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyReferenceComposition(CloudHomeLayoutTest.kt:237)
+	at com.example.pettranslator.CloudHomeLayoutTest.controlledReferenceViewportKeepsBothPetsFullSized(CloudHomeLayoutTest.kt:334)
+
+INSTRUMENTATION_STATUS: test=controlledReferenceViewportKeepsBothPetsFullSized
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=readinessKeepsRecordAndPetGating
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=readinessKeepsRecordAndPetGating
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.HomeFlowTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=
+com.example.pettranslator.HomeFlowTest:
+INSTRUMENTATION_STATUS: test=selectionTabsAndComingSoon
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.HomeFlowTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=selectionTabsAndComingSoon
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.HomeVisualEvidenceTest
+INSTRUMENTATION_STATUS: current=11
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=
+com.example.pettranslator.HomeVisualEvidenceTest:
+INSTRUMENTATION_STATUS: test=captureHomeRegions
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.HomeVisualEvidenceTest
+INSTRUMENTATION_STATUS: current=11
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=captureHomeRegions
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.HomeResponsiveEvidenceTest
+INSTRUMENTATION_STATUS: current=12
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=
+com.example.pettranslator.HomeResponsiveEvidenceTest:
+INSTRUMENTATION_STATUS: test=largeFont
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.HomeResponsiveEvidenceTest
+INSTRUMENTATION_STATUS: current=12
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=largeFont
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.AdaptiveHomeTest
+INSTRUMENTATION_STATUS: current=13
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=
+com.example.pettranslator.AdaptiveHomeTest:
+INSTRUMENTATION_STATUS: test=largeContent
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.AdaptiveHomeTest
+INSTRUMENTATION_STATUS: current=13
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=largeContent
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.AdaptiveHomeTest
+INSTRUMENTATION_STATUS: current=14
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=smallPhone
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.AdaptiveHomeTest
+INSTRUMENTATION_STATUS: current=14
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=smallPhone
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.FinalFontLayoutTest
+INSTRUMENTATION_STATUS: current=15
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=
+com.example.pettranslator.FinalFontLayoutTest:
+INSTRUMENTATION_STATUS: test=approvedDefaultPairingAndPageScreenshots
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.FinalFontLayoutTest
+INSTRUMENTATION_STATUS: current=15
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=15
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=approvedDefaultPairingAndPageScreenshots
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 76.615
+There were 2 failures:
+1) narrowLargeFontKeepsTextAndFixedActionsReachable(com.example.pettranslator.CloudHomeLayoutTest)
+java.lang.AssertionError: App name must not overflow or ellipsize: size=470 x 101, paragraph=470.0x101.0, lines=1, didExceedMaxLines=true, hasVisualOverflow=true, didOverflowWidth=false, didOverflowHeight=true, constraints=Constraints(minWidth = 0, maxWidth = 470, minHeight = 0, maxHeight = 120), fontSize=13.429603.sp, lineHeight=16.787003.sp
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyHeaderAndPetSwitch$lambda$26(CloudHomeLayoutTest.kt:173)
+	at com.example.pettranslator.CloudHomeLayoutTest.$r8$lambda$P709oQ3c3o-8Dlb-qYjNi7UEEbE(Unknown Source:0)
+	at com.example.pettranslator.CloudHomeLayoutTest$$ExternalSyntheticLambda5.invoke(D8$$SyntheticClass:0)
+	at androidx.compose.ui.test.ActionsKt$performSemanticsAction$2.invoke(Actions.kt:581)
+	at androidx.compose.ui.test.ActionsKt$performSemanticsAction$2.invoke(Actions.kt:581)
+	at androidx.compose.ui.test.AndroidSynchronization_androidKt.runOnUiThread$lambda$0(AndroidSynchronization.android.kt:39)
+	at androidx.compose.ui.test.AndroidSynchronization_androidKt.$r8$lambda$opyMdTZ52jorqLaIG4SKpPr_Zno(Unknown Source:0)
+	at androidx.compose.ui.test.AndroidSynchronization_androidKt$$ExternalSyntheticLambda0.call(D8$$SyntheticClass:0)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:462)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:2214)
+	at android.os.Handler.handleCallback(Handler.java:883)
+	at android.os.Handler.dispatchMessage(Handler.java:100)
+	at android.os.Looper.loop(Looper.java:214)
+	at android.app.ActivityThread.main(ActivityThread.java:7356)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:930)
+	Suppressed: java.util.concurrent.ExecutionException: An Exception occurred on the UI thread during runOnUiThread()
+		at androidx.compose.ui.test.AndroidSynchronization_androidKt.runOnUiThread(AndroidSynchronization.android.kt:50)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidTestOwner.runOnUiThread(ComposeUiTest.android.kt:599)
+		at androidx.compose.ui.test.ActionsKt.performSemanticsAction(Actions.kt:581)
+		at com.example.pettranslator.CloudHomeLayoutTest.verifyHeaderAndPetSwitch(CloudHomeLayoutTest.kt:161)
+		at com.example.pettranslator.CloudHomeLayoutTest.narrowLargeFontKeepsTextAndFixedActionsReachable(CloudHomeLayoutTest.kt:477)
+		at java.lang.reflect.Method.invoke(Native Method)
+		at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+		at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+		at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+		at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+		at androidx.test.internal.runner.junit4.statement.RunBefores.evaluate(RunBefores.java:80)
+		at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:54)
+		at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt:295)
+		at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt:295)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.withDisposableContent(ComposeUiTest.android.kt:565)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1$1.invoke(ComposeUiTest.android.kt:370)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withComposeIdlingResource(ComposeUiTest.android.kt:439)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withComposeIdlingResource(ComposeUiTest.android.kt:235)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invoke(ComposeUiTest.android.kt:369)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withWindowRecomposer(ComposeUiTest.android.kt:413)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withWindowRecomposer(ComposeUiTest.android.kt:235)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1.invoke(ComposeUiTest.android.kt:368)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withTestCoroutines(ComposeUiTest.android.kt:426)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withTestCoroutines(ComposeUiTest.android.kt:235)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1.invoke(ComposeUiTest.android.kt:367)
+		at androidx.compose.ui.test.EspressoLink.withStrategy(EspressoLink.android.kt:69)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invoke(ComposeUiTest.android.kt:366)
+		at androidx.compose.ui.test.IdlingResourceRegistry.withRegistry(IdlingResourceRegistry.jvm.kt:148)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1.invoke(ComposeUiTest.android.kt:365)
+		at androidx.compose.ui.test.ComposeRootRegistry.withRegistry(ComposeRootRegistry.android.kt:139)
+		at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.runTest(ComposeUiTest.android.kt:364)
+		at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1.evaluate(AndroidComposeTestRule.android.kt:295)
+		at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+		at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+		at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+		at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+		at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+		at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+		at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+		at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+		at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+		at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+		at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+		at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+		at org.junit.runners.Suite.runChild(Suite.java:128)
+		at org.junit.runners.Suite.runChild(Suite.java:27)
+		at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+		at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+		at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+		at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+		at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+		at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+		at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+		at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+		at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+		at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:68)
+		at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)
+		at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:463)
+		at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2196)
+2) controlledReferenceViewportKeepsBothPetsFullSized(com.example.pettranslator.CloudHomeLayoutTest)
+java.lang.AssertionError: Cat keeps at least a 48dp touch target
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyHeaderAndPetSwitch(CloudHomeLayoutTest.kt:192)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyReferenceComposition(CloudHomeLayoutTest.kt:237)
+	at com.example.pettranslator.CloudHomeLayoutTest.controlledReferenceViewportKeepsBothPetsFullSized(CloudHomeLayoutTest.kt:334)
+
+FAILURES!!!
+Tests run: 15,  Failures: 2
+
+
+INSTRUMENTATION_CODE: -1

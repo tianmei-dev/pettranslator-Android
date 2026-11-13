@@ -1,0 +1,43 @@
+{
+  "Branch": "feature/a1.4-cloud-home",
+  "MainBefore": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "MainAfter": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "ProtectedFilesChecked": 88,
+  "ProtectedFilesChanged": [],
+  "DeviceAtStart": "SM-G973U /1080x2280/420dpi/font1.1",
+  "CurrentDevice": "SM-S9010 /1080x2340/480dpi/font1.0",
+  "ReferenceValidation": "Controlled411x869dp/font1.1,notphysicalS10",
+  "ProductionFiles": [
+    "app/src/main/java/com/example/pettranslator/ui/home/HomeScreen.kt",
+    "app/src/main/java/com/example/pettranslator/ui/home/HomeResponsiveDimensions.kt"
+  ],
+  "TestFiles": [
+    "app/src/androidTest/java/com/example/pettranslator/CloudHomeLayoutTest.kt",
+    "app/src/androidTest/java/com/example/pettranslator/HomeVisualEvidenceTest.kt"
+  ],
+  "VerifiedAt": "2026-11-13 10:28:23 Asia/Shanghai",
+  "HeadUnchanged": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "EmulatorUiTests": "12 passed; API35 emulator-5556",
+  "PhysicalAcceptance": "Passed: SM-S9010, Android15/API35, 1080x2340/480dpi/font1.0;12 UI tests plus one supplemental existing font2 test;cat/dog screenshots reviewed",
+  "ApkSha256": "45200586C99B956D450F1ABE618B9ACD21FE0112ACDD111FA681B5788AAD3B54",
+  "ReferenceAcceptance": "Passed: controlled411x869dp/font1.1 on SM-S9010;not physicalS10",
+  "TestPackageRemoved": true,
+  "TestedSourceHashes": [
+    {
+      "Path": "app/src/main/java/com/example/pettranslator/ui/home/HomeScreen.kt",
+      "Sha256": "C6AE4841445D0C5655CBB72095418F400A70C522D4F1924EA16E69171D7A1863"
+    },
+    {
+      "Path": "app/src/main/java/com/example/pettranslator/ui/home/HomeResponsiveDimensions.kt",
+      "Sha256": "A66145DF19BC5D2BD12DDC3EA185FCA63D573E7492F4CE525FB2AED43173A8FA"
+    },
+    {
+      "Path": "app/src/androidTest/java/com/example/pettranslator/CloudHomeLayoutTest.kt",
+      "Sha256": "3D256217A4D488FEB4FC194B599A55721085E25F6C384EA49002807980BEE3B1"
+    },
+    {
+      "Path": "app/src/androidTest/java/com/example/pettranslator/HomeVisualEvidenceTest.kt",
+      "Sha256": "C9532452F88EB5BD525D164928C93A3472FC316C0667D197F7B1E4046988591E"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "Branch": "feature/a1.4-cloud-home",
+  "Head": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "MainBefore": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "MainAfter": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "VerifiedAt": "2026-11-13 11:01:30 Asia/Shanghai",
+  "ProtectedFilesChecked": 88,
+  "ProtectedFilesChanged": [
+    null
+  ],
+  "ProductionFiles": [
+    "app/src/main/java/com/example/pettranslator/ui/home/HomeScreen.kt",
+    "app/src/main/java/com/example/pettranslator/ui/home/HomeResponsiveDimensions.kt"
+  ],
+  "TestFiles": [
+    "app/src/androidTest/java/com/example/pettranslator/CloudHomeLayoutTest.kt",
+    "app/src/androidTest/java/com/example/pettranslator/HomeVisualEvidenceTest.kt"
+  ],
+  "SourceHashes": [
+    {
+      "Path": "app/src/main/java/com/example/pettranslator/ui/home/HomeScreen.kt",
+      "Sha256": "4839788089AF0654374B54713C7C92408F15958FF1A93E3EDECB6465F5F9CFD4"
+    },
+    {
+      "Path": "app/src/main/java/com/example/pettranslator/ui/home/HomeResponsiveDimensions.kt",
+      "Sha256": "190F09560239F74360F3131D191330B6D06248A900721792A931415513BF01A4"
+    },
+    {
+      "Path": "app/src/androidTest/java/com/example/pettranslator/CloudHomeLayoutTest.kt",
+      "Sha256": "D8AFE3AE15AD450F82352F19B5FD02ACA513D86667921D393C6F22CE326F270A"
+    },
+    {
+      "Path": "app/src/androidTest/java/com/example/pettranslator/HomeVisualEvidenceTest.kt",
+      "Sha256": "A9D81901A74D37A7265571A782D6E28AC690154129484B0C17B3BF596604736F"
+    }
+  ],
+  "Device": "SM-S9010 /1080x2340/480dpi/font1.0",
+  "UiTests": "12 passed",
+  "UnitTests": "27 passed",
+  "Lint": "0 errors,9 warnings",
+  "TestPackageRemoved": true,
+  "ApkSha256": "10FD8B93C1C3AA0CA97C1CFD7DDF0746E8D38097384A6C2F8E7DAC0511A7B91E"
+}
