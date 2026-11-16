@@ -1,0 +1,26 @@
+{
+  "Build": "Passed after one explicit compile-error fix",
+  "FirstBuild": "Failed: DetailHeader referenced onClick instead of onBack",
+  "AllowedRebuild": "BUILD SUCCESSFUL in 37s",
+  "Device": "Samsung SM-G973U / API31 / font1.1",
+  "InstrumentationRuns": 1,
+  "InstrumentationResult": "FAIL: timeout waiting for App foreground after returning from system Settings",
+  "RuntimeVerified": [
+    "Profile entry opens permission details",
+    "Microphone status matches actual grant: denied",
+    "System Settings opened: com.android.settings",
+    "Permission screenshot saved"
+  ],
+  "NotRuntimeVerified": [
+    "Return from Settings and status refresh",
+    "7 document reader flows and scroll/back",
+    "Remaining placeholder/contact/Tab regression",
+    "API26-28 storage branch"
+  ],
+  "PackagedDocuments": 7,
+  "PermissionScreenshot": "device/b22-profile-privacy-evidence/permission-details.png",
+  "LegalScreenshot": null,
+  "LockStateWhenCollectingLogs": "showing=true / secure=false",
+  "ApkSha256": "88D584633DCA7DC8FF1C34972665C5590B2B464D95F0706D6EC120401C797342",
+  "NoRerun": true
+}

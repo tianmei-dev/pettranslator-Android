@@ -1,0 +1,1 @@
+warning: in the working copy of 'app/src/main/java/com/example/pettranslator/data/recognition/YamnetRecognitionRepository.kt', LF will be replaced by CRLF the next time Git touches it

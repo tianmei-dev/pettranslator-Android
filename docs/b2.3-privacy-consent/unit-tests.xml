@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.pettranslator.PrivacyConsentControllerTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-11-16T10:30:40.705Z" hostname="DESKTOP-7K3SJCV" time="0.377">
+  <properties/>
+  <testcase name="acceptedCurrentPolicyRestoresAfterControllerRestart" classname="com.example.pettranslator.PrivacyConsentControllerTest" time="0.317"/>
+  <testcase name="initializationReadFailureRequiresConsentAndBlocksGate" classname="com.example.pettranslator.PrivacyConsentControllerTest" time="0.004"/>
+  <testcase name="declineWriteFailureKeepsGateBlockedWithoutExiting" classname="com.example.pettranslator.PrivacyConsentControllerTest" time="0.005"/>
+  <testcase name="revokeCancelsTrackedJobThenPersistsStopsAndExits" classname="com.example.pettranslator.PrivacyConsentControllerTest" time="0.007"/>
+  <testcase name="stopFailureRemainsRevokingWithoutExitAndCanBeRetried" classname="com.example.pettranslator.PrivacyConsentControllerTest" time="0.005"/>
+  <testcase name="unknownAndDeclinedConsentCannotInitializeOrProcessSdk" classname="com.example.pettranslator.PrivacyConsentControllerTest" time="0.002"/>
+  <testcase name="acceptanceWithoutPositiveTimestampDoesNotGrantConsent" classname="com.example.pettranslator.PrivacyConsentControllerTest" time="0.002"/>
+  <testcase name="previousPolicyVersionRequiresFreshConsent" classname="com.example.pettranslator.PrivacyConsentControllerTest" time="0.002"/>
+  <testcase name="agreementIsIgnoredWhileLoadingAndGrantedButAllowedAfterDenial" classname="com.example.pettranslator.PrivacyConsentControllerTest" time="0.003"/>
+  <testcase name="revokeWriteFailureRemainsRevokingAndRetryCompletes" classname="com.example.pettranslator.PrivacyConsentControllerTest" time="0.005"/>
+  <testcase name="agreementWriteFailureNeverUnlocksOrExits" classname="com.example.pettranslator.PrivacyConsentControllerTest" time="0.003"/>
+  <testcase name="consentChangesLeaveBusinessSentinelsUntouched" classname="com.example.pettranslator.PrivacyConsentControllerTest" time="0.003"/>
+  <testcase name="concurrentRevokeConfirmationsWriteStopAndExitOnlyOnce" classname="com.example.pettranslator.PrivacyConsentControllerTest" time="0.014"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

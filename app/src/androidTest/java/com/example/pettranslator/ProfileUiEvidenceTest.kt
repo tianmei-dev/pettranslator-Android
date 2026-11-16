@@ -170,7 +170,11 @@ class ProfileUiEvidenceTest {
             assertFixedTabs()
             note("placeholder=$tag explicit, dismissible, Profile remains active")
         }
-        assertPlaceholder("profile_menu_0")
+        rule.onNodeWithTag("profile_menu_1").performScrollTo().performClick()
+        rule.onNodeWithTag("privacy_revoke_dialog").assertIsDisplayed()
+        rule.onNodeWithTag("privacy_revoke_cancel").performClick()
+        rule.onNodeWithTag("privacy_revoke_dialog").assertDoesNotExist()
+        assertFixedTabs()
         val cacheSentinel = File.createTempFile("b21-profile-", ".sentinel", context.cacheDir)
         try {
             cacheSentinel.writeText("B2.1 UI placeholder must leave cache untouched")

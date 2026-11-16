@@ -1,0 +1,44 @@
+[
+  {
+    "Id": "user-agreement",
+    "Title": "用户协议",
+    "File": "user_agreement.txt",
+    "Lines": 23
+  },
+  {
+    "Id": "privacy-policy",
+    "Title": "隐私政策",
+    "File": "privacy_policy.txt",
+    "Lines": 20
+  },
+  {
+    "Id": "children-privacy",
+    "Title": "儿童隐私政策",
+    "File": "children_privacy_policy.txt",
+    "Lines": 20
+  },
+  {
+    "Id": "personal-info",
+    "Title": "个人信息收集清单",
+    "File": "personal_info_collection.txt",
+    "Lines": 27
+  },
+  {
+    "Id": "third-party-info",
+    "Title": "第三方信息收集清单",
+    "File": "third_party_info_collection.txt",
+    "Lines": 24
+  },
+  {
+    "Id": "third-party-sdk",
+    "Title": "第三方 SDK 共享清单",
+    "File": "third_party_sdk_sharing.txt",
+    "Lines": 21
+  },
+  {
+    "Id": "collected-info",
+    "Title": "已收集个人信息清单",
+    "File": "collected_personal_info.txt",
+    "Lines": 19
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "File": "children_privacy_policy.txt",
+    "PresentInApk": true,
+    "Utf8TextMatchesSource": true,
+    "Characters": 862
+  },
+  {
+    "File": "collected_personal_info.txt",
+    "PresentInApk": true,
+    "Utf8TextMatchesSource": true,
+    "Characters": 866
+  },
+  {
+    "File": "personal_info_collection.txt",
+    "PresentInApk": true,
+    "Utf8TextMatchesSource": true,
+    "Characters": 856
+  },
+  {
+    "File": "privacy_policy.txt",
+    "PresentInApk": true,
+    "Utf8TextMatchesSource": true,
+    "Characters": 978
+  },
+  {
+    "File": "third_party_info_collection.txt",
+    "PresentInApk": true,
+    "Utf8TextMatchesSource": true,
+    "Characters": 860
+  },
+  {
+    "File": "third_party_sdk_sharing.txt",
+    "PresentInApk": true,
+    "Utf8TextMatchesSource": true,
+    "Characters": 1051
+  },
+  {
+    "File": "user_agreement.txt",
+    "PresentInApk": true,
+    "Utf8TextMatchesSource": true,
+    "Characters": 822
+  }
+]

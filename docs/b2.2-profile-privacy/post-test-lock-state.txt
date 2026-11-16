@@ -1,0 +1,4 @@
+      showing=true
+      secure=false
+        mIsShowing=true
+        mSimSecure=false

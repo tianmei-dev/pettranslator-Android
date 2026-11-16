@@ -1,0 +1,5 @@
+device=samsung SM-G973U sdk=31 fontScale=1.1 initialMicrophone=-1
+microphone=entered actual=-1 displayed=未授权 unchanged=true
+screenshot=permission-details.png 1080x2280
+systemSettings=foreground package=com.android.settings; no permission controls changed
+FAIL: ComposeTimeoutException: Condition still not satisfied after 10000 ms

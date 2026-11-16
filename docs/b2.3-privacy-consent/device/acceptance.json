@@ -1,0 +1,53 @@
+[
+  {
+    "case": "P05-first-consent",
+    "result": "PASS",
+    "persistent_consent_preexisting": false
+  },
+  {
+    "case": "P06-before-agreement",
+    "result": "PASS",
+    "normal_business_absent": true,
+    "yamnet_initialization_absent": true,
+    "denied_persisted": true
+  },
+  {
+    "case": "P07-agree-and-restart",
+    "result": "PASS",
+    "restored_without_prompt": true
+  },
+  {
+    "case": "P01-confirmation",
+    "result": "PASS"
+  },
+  {
+    "case": "P02-cancel",
+    "result": "PASS",
+    "consent_bytes_unchanged": true
+  },
+  {
+    "case": "P03-P04-withdraw-and-exit",
+    "result": "PASS",
+    "revoked_persisted": true,
+    "process_terminated": true
+  },
+  {
+    "case": "P05-P06-after-withdrawal",
+    "result": "PASS",
+    "normal_business_absent": true,
+    "yamnet_initialization_absent": true
+  },
+  {
+    "case": "P08-data-preserved",
+    "result": "PASS",
+    "pet_preferences_sha256": null,
+    "persistent_sentinel_unchanged": true,
+    "android_permissions_unchanged": true
+  },
+  {
+    "case": "COMPLETE",
+    "result": "PASS",
+    "remaining_failure_scenarios": "JVM tests",
+    "real_native_inflight_not_exercised": true
+  }
+]

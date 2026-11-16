@@ -1,0 +1,9 @@
+P05-first-consent: PASS
+P06-before-agreement: PASS
+P07-agree-and-restart: PASS
+P01-confirmation: PASS
+P02-cancel: PASS
+P03-P04-withdraw-and-exit: PASS
+P05-P06-after-withdrawal: PASS
+P08-data-preserved: PASS
+COMPLETE: PASS

@@ -60,10 +60,16 @@ private val SettingsMenus = listOf(
 /** Presentation only; the existing app Scaffold continues to own navigation and system insets. */
 @Suppress("UNUSED_PARAMETER")
 @Composable
-fun ProfileScreen(onBack: () -> Unit) {
+fun ProfileScreen(
+    onPermissions: () -> Unit = {},
+    onDocument: (LegalDocument) -> Unit = {},
+    onRevokeConsent: () -> Unit = {},
+    onBack: () -> Unit,
+) {
     val context = LocalContext.current
     val version = remember(context) { installedVersion(context) }
     var dialogEntry by remember { mutableStateOf<String?>(null) }
+    var showRevokeConfirmation by remember { mutableStateOf(false) }
     Box(Modifier.fillMaxSize().testTag("profile_viewport")
         .background(Brush.verticalGradient(listOf(Color(0xFFF0E6FC), Color(0xFFFDF0F8), Color(0xFFEDF2FF))))) {
         Column(Modifier.widthIn(max = 600.dp).fillMaxWidth().align(Alignment.TopCenter)
@@ -79,7 +85,13 @@ fun ProfileScreen(onBack: () -> Unit) {
                     ProfileSectionTitle("隐私设置", Icons.Default.Lock)
                     PrivacyMenus.forEachIndexed { index, (title, icon) ->
                         ProfileMenuRow(title, icon, index, Modifier.testTag("profile_menu_$index")) {
-                            dialogEntry = title
+                            val document = LegalDocument.entries.firstOrNull { it.title == title }
+                            when {
+                                index == 0 -> onPermissions()
+                                index == 1 -> showRevokeConfirmation = true
+                                document != null -> onDocument(document)
+                                else -> dialogEntry = title
+                            }
                         }
                         if (index < PrivacyMenus.lastIndex) ProfileDivider()
                     }
@@ -96,6 +108,35 @@ fun ProfileScreen(onBack: () -> Unit) {
                 }
             }
         }
+    }
+    if (showRevokeConfirmation) {
+        AlertDialog(
+            onDismissRequest = { showRevokeConfirmation = false },
+            modifier = Modifier.testTag("privacy_revoke_dialog"),
+            shape = RoundedCornerShape(26.dp), containerColor = Color(0xFFFFF7FC),
+            titleContentColor = ProfileInk, textContentColor = ProfileMuted,
+            title = { Text("撤销隐私政策授权", fontWeight = FontWeight.Bold) },
+            text = {
+                Text("撤销后，我们将停止基于你此前隐私同意而进行的相关数据收集与处理。部分功能可能暂时无法使用。\n\n确认撤销后，应用将退出。下次打开时，你需要重新确认隐私政策。",
+                    modifier = Modifier.verticalScroll(rememberScrollState()))
+            },
+            confirmButton = {
+                TextButton(onClick = {
+                    showRevokeConfirmation = false
+                    onRevokeConsent()
+                }, modifier = Modifier.testTag("privacy_revoke_confirm"),
+                    colors = ButtonDefaults.textButtonColors(contentColor = ProfilePurple)) {
+                    Text("确认撤销")
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { showRevokeConfirmation = false },
+                    modifier = Modifier.testTag("privacy_revoke_cancel"),
+                    colors = ButtonDefaults.textButtonColors(contentColor = ProfileMuted)) {
+                    Text("取消")
+                }
+            },
+        )
     }
     dialogEntry?.let { entry ->
         val contact = entry == "联系我们"

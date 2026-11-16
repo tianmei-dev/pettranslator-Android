@@ -27,10 +27,15 @@ import androidx.lifecycle.viewmodel.viewModelFactory
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.*
 import com.example.pettranslator.core.DefaultFeatureAccessManager
+import com.example.pettranslator.core.FeatureAccessManager
+import com.example.pettranslator.privacy.PrivacyGate
 import com.example.pettranslator.domain.*
 import com.example.pettranslator.ui.home.*
 import com.example.pettranslator.ui.play.PlayScreen
 import com.example.pettranslator.ui.profile.ProfileScreen
+import com.example.pettranslator.ui.profile.ProfileRoutes
+import com.example.pettranslator.ui.profile.PermissionDetailsScreen
+import com.example.pettranslator.ui.profile.LegalDocumentScreen
 import com.example.pettranslator.ui.theme.*
 
 /** Injectable recording entry; the default opens the full-screen recording destination. */
@@ -38,20 +43,25 @@ fun interface RecordingEntry { suspend fun open(pet: PetType, scene: PetScene) }
 private enum class Tab(val route: String, val title: String, val icon: ImageVector) {
     Home("home", "首页", Icons.Default.Home), Play("play", "逗宠", Icons.Default.Favorite), Profile("profile", "我的", Icons.Default.Person)
 }
-@Composable fun PetTranslatorApp(preferences: PetPreferences, recordingEntry: RecordingEntry? = null) {
+@Composable fun PetTranslatorApp(preferences: PetPreferences, recordingEntry: RecordingEntry? = null,
+    onRevokeConsent: () -> Unit = {}) {
     val controller = rememberNavController()
     val entry by controller.currentBackStackEntryAsState()
     val snackbar = remember { SnackbarHostState() }
     val recording = entry?.destination?.route?.startsWith("recording/") == true
+    val profileDetail = entry?.destination?.route == ProfileRoutes.Permissions ||
+        entry?.destination?.route == ProfileRoutes.Document
     val appContext = LocalContext.current.applicationContext
     val model: HomeViewModel = viewModel(factory = viewModelFactory { initializer {
-        HomeViewModel(preferences, DefaultFeatureAccessManager(), createSavedStateHandle())
+        HomeViewModel(preferences, FeatureAccessManager { feature ->
+            PrivacyGate.isGranted() && DefaultFeatureAccessManager().canAccess(feature)
+        }, createSavedStateHandle())
     } })
     val state by model.uiState.collectAsStateWithLifecycle()
     LaunchedEffect(model, recordingEntry) {
         model.effects.collect { effect -> when (effect) {
             is HomeEffect.Message -> snackbar.showSnackbar(effect.text)
-            is HomeEffect.OpenRecording -> if (recordingEntry != null) recordingEntry.open(effect.pet, effect.scene) else if (controller.currentDestination?.route == Tab.Home.route) {
+            is HomeEffect.OpenRecording -> if (!PrivacyGate.isGranted()) Unit else if (recordingEntry != null) recordingEntry.open(effect.pet, effect.scene) else if (controller.currentDestination?.route == Tab.Home.route) {
                 val destination: RecordingEntry = RecordingEntry { pet, scene ->
                     controller.navigate("recording/${pet.name}/${scene.name}") { launchSingleTop = true }
                 }
@@ -59,8 +69,8 @@ private enum class Tab(val route: String, val title: String, val icon: ImageVect
             }
         } }
     }
-    Scaffold(containerColor = Blush, contentWindowInsets = if (recording) WindowInsets.safeDrawing else WindowInsets.safeDrawing.only(WindowInsetsSides.Top + WindowInsetsSides.Horizontal), snackbarHost = { SnackbarHost(snackbar) }, bottomBar = {
-        if (!recording) Column {
+    Scaffold(containerColor = Blush, contentWindowInsets = if (recording || profileDetail) WindowInsets.safeDrawing else WindowInsets.safeDrawing.only(WindowInsetsSides.Top + WindowInsetsSides.Horizontal), snackbarHost = { SnackbarHost(snackbar) }, bottomBar = {
+        if (!recording && !profileDetail) Column {
             if (entry?.destination?.route == Tab.Home.route) HomeRecordActionBar(state.ready, model::startRecording)
             Surface(color = Color.White) {
             Row(Modifier.windowInsetsPadding(WindowInsets.navigationBars.only(WindowInsetsSides.Bottom + WindowInsetsSides.Horizontal))
@@ -100,7 +110,15 @@ private enum class Tab(val route: String, val title: String, val icon: ImageVect
                 })
             }
             composable(Tab.Play.route) { PlayScreen() }
-            composable(Tab.Profile.route) { ProfileScreen { controller.popBackStack() } }
+            composable(Tab.Profile.route) {
+                ProfileScreen(onPermissions = { controller.navigate(ProfileRoutes.Permissions) { launchSingleTop = true } },
+                    onDocument = { document -> controller.navigate(ProfileRoutes.document(document)) { launchSingleTop = true } },
+                    onRevokeConsent = onRevokeConsent, onBack = { controller.popBackStack() })
+            }
+            composable(ProfileRoutes.Permissions) { PermissionDetailsScreen { controller.popBackStack() } }
+            composable(ProfileRoutes.Document) { documentEntry ->
+                LegalDocumentScreen(documentEntry.arguments?.getString("documentId")) { controller.popBackStack() }
+            }
         }
     }
 }

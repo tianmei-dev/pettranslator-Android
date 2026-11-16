@@ -1,0 +1,55 @@
+--------- beginning of system
+11-17 17:26:14.686  1161  1985 E ActivityTaskManager: TouchDown intent received, starting ActiveLaunch
+11-17 17:26:14.710  1161  1780 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.example.app/com.aifindspot.app.MainActivity bnds=[39,1004][285,1349]} from uid 10139
+11-17 17:29:14.241  1161  1461 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000100 cmp=com.sec.android.app.launcher/.activities.LauncherActivity (has extras)} from uid 0
+11-17 17:29:15.727  1161  4830 I ActivityTaskManager: Removing activity ActivityRecord{1ef210b u0 com.example.app/com.aifindspot.app.MainActivity t7412 f}}(appDied)  from stack callers=com.android.server.wm.ActivityRecord.handleAppDied:4181 com.android.server.wm.WindowProcessController.handleAppDied:1286 com.android.server.wm.ActivityTaskManagerService$LocalService.handleAppDied:6998 com.android.server.am.ActivityManagerService.handleAppDiedLocked:3639 com.android.server.am.ActivityManagerService.appDiedLocked:3826 
+11-17 17:29:15.730  1161  1464 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=7412 attached=false
+11-17 17:29:15.730  1161  1464 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=7412 attached=false
+11-17 17:29:15.731  1161  1464 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=7412 attached=false
+11-17 17:29:24.673  1161  1985 E ActivityTaskManager: TouchDown intent received, starting ActiveLaunch
+11-17 17:29:24.743  1161 10006 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.example.app/com.aifindspot.app.MainActivity bnds=[39,1004][285,1349]} from uid 10139
+11-17 17:29:24.744  1161 10006 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=7415 attached=false
+--------- beginning of main
+11-17 17:29:25.875  1161  1460 I ActivityTaskManager: Displayed com.example.app/com.aifindspot.app.MainActivity: +1s131ms
+11-17 17:36:39.049  1161  1461 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000100 cmp=com.sec.android.app.launcher/.activities.LauncherActivity (has extras)} from uid 0
+11-17 17:36:40.206  1161  4809 I ActivityTaskManager: Removing activity ActivityRecord{86f5aac u0 com.example.app/com.aifindspot.app.MainActivity t7415 f}}(appDied)  from stack callers=com.android.server.wm.ActivityRecord.handleAppDied:4181 com.android.server.wm.WindowProcessController.handleAppDied:1286 com.android.server.wm.ActivityTaskManagerService$LocalService.handleAppDied:6998 com.android.server.am.ActivityManagerService.handleAppDiedLocked:3639 com.android.server.am.ActivityManagerService.appDiedLocked:3826 
+11-17 17:36:40.209  1161  1464 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=7415 attached=false
+11-17 17:36:40.209  1161  1464 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=7415 attached=false
+11-17 17:36:40.209  1161  1464 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=7415 attached=false
+11-17 17:38:59.674  1161  1486 W ActivityTaskManager: Force removing ActivityRecord{c5febc7 u0 com.example.pettranslator/.MainActivity t7414 f}}: app died, no saved state
+11-17 17:38:59.674  1161  1486 I ActivityTaskManager: Removing activity ActivityRecord{c5febc7 u0 com.example.pettranslator/.MainActivity t7414 f}}(appDied)  from stack callers=com.android.server.wm.ActivityRecord.handleAppDied:4181 com.android.server.wm.WindowProcessController.handleAppDied:1286 com.android.server.wm.ActivityTaskManagerService$LocalService.handleAppDied:6998 com.android.server.am.ActivityManagerService.handleAppDiedLocked:3639 com.android.server.am.ProcessList.removeProcessLocked:3687 
+11-17 17:38:59.690  1161  1464 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=7414 attached=false
+11-17 17:38:59.690  1161  1464 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=7414 attached=false
+11-17 17:38:59.690  1161  1464 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=7414 attached=false
+11-17 17:39:05.211  1161  1460 I ActivityTaskManager: updateAssetConfiguration() called with: processes = [[]], updateFrameworkRes = [false]
+11-17 17:39:06.715  1161  2981 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.example.pettranslator/.MainActivity} from uid 11279
+11-17 17:39:06.717  1161  2981 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=7416 attached=false
+11-17 17:39:07.653  1161  1460 I ActivityTaskManager: Displayed com.example.pettranslator/.MainActivity: +895ms
+11-17 17:39:07.672  1161  3250 I ActivityTaskManager: [SecIpm] intent received, starting preload launch:com.example.app
+11-17 17:39:07.790  2695  2863 I B22ProfilePrivacy: device=samsung SM-G973U sdk=31 fontScale=1.1 initialMicrophone=-1
+11-17 17:39:08.986  2695  2863 I B22ProfilePrivacy: microphone=entered actual=-1 displayed=未授权 unchanged=true
+11-17 17:39:09.367  2695  2863 I B22ProfilePrivacy: screenshot=permission-details.png 1080x2280
+11-17 17:39:09.433  1161  9479 I ActivityTaskManager: START u0 {act=android.settings.APPLICATION_DETAILS_SETTINGS dat=package:com.example.pettranslator flg=0x10000000 cmp=com.android.settings/.applications.InstalledAppDetails} from uid 11279
+11-17 17:39:09.469  1161  9479 W ActivityTaskManager: Tried to set launchTime (0) < mLastActivityLaunchTime (1195757971)
+11-17 17:39:09.860  1161  1460 I ActivityTaskManager: Displayed com.android.settings/.applications.InstalledAppDetails: +407ms
+11-17 17:39:09.860  1161  1460 I ActivityTaskManager: Fully drawn com.android.settings/.applications.InstalledAppDetails: +407ms
+11-17 17:39:09.864  1161  3250 I ActivityTaskManager: [SecIpm] intent received, starting preload launch:com.aurora.calculatorvault
+11-17 17:39:09.872  2695  2863 I B22ProfilePrivacy: systemSettings=foreground package=com.android.settings; no permission controls changed
+11-17 17:39:10.416  1161  2606 I ActivityTaskManager: Removing activity ActivityRecord{8cb175 u0 com.android.settings/.applications.InstalledAppDetails t7394 f}}(activityDestroyed)  from stack callers=com.android.server.wm.ActivityRecord.destroyed:4006 com.android.server.wm.ActivityClientController.activityDestroyed:287 android.app.IActivityClientController$Stub.onTransact:604 com.android.server.wm.ActivityClientController.onTransact:129 android.os.Binder.execTransactInternal:1220 
+11-17 17:39:20.013  2695  2863 I B22ProfilePrivacy: FAIL: ComposeTimeoutException: Condition still not satisfied after 10000 ms
+11-17 17:39:20.036  1161  2981 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.example.pettranslator.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} from uid 11279
+11-17 17:39:20.045  1161  2981 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=7417 attached=false
+11-17 17:39:20.293  1161  2573 I ActivityTaskManager: Removing activity ActivityRecord{d766eba u0 com.example.pettranslator/.MainActivity t7416 f}}(activityDestroyed)  from stack callers=com.android.server.wm.ActivityRecord.destroyed:4006 com.android.server.wm.ActivityClientController.activityDestroyed:287 android.app.IActivityClientController$Stub.onTransact:604 com.android.server.wm.ActivityClientController.onTransact:129 android.os.Binder.execTransactInternal:1220 
+11-17 17:39:20.306  1161  2606 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=7416 attached=false
+11-17 17:39:20.306  1161  2606 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=7416 attached=false
+11-17 17:39:20.306  1161  2606 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=7416 attached=false
+11-17 17:39:20.746  1161  1833 I ActivityTaskManager: Removing activity ActivityRecord{828767a u0 com.example.pettranslator.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t7417 f}}(activityDestroyed)  from stack callers=com.android.server.wm.ActivityRecord.destroyed:4006 com.android.server.wm.ActivityClientController.activityDestroyed:287 android.app.IActivityClientController$Stub.onTransact:604 com.android.server.wm.ActivityClientController.onTransact:129 android.os.Binder.execTransactInternal:1220 
+11-17 17:39:20.748  1161  1464 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=7417 attached=false
+11-17 17:39:20.748  1161  1464 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=7417 attached=false
+11-17 17:39:20.748  1161  1464 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=7417 attached=false
+11-17 17:40:02.935  1161  1461 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000100 cmp=com.sec.android.app.launcher/.activities.LauncherActivity (has extras)} from uid 0
+11-17 17:40:04.092  1161  1985 E ActivityTaskManager: TouchDown intent received, starting ActiveLaunch
+11-17 17:40:04.124  1161  9479 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.example.app/com.aifindspot.app.MainActivity bnds=[39,1004][285,1349]} from uid 10139
+11-17 17:40:04.128  1161  9479 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=7418 attached=false
+11-17 17:40:04.786  1161  1460 I ActivityTaskManager: Displayed com.example.app/com.aifindspot.app.MainActivity: +656ms
+11-17 17:40:04.790  1161  3250 I ActivityTaskManager: [SecIpm] intent received, starting preload launch:com.example.pettranslator

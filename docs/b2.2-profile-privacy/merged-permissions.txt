@@ -1,0 +1,6 @@
+<uses-permission android:name="android.permission.RECORD_AUDIO" />
+<uses-permission
+android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+android:maxSdkVersion="28" />
+android:name="com.example.pettranslator.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+<uses-permission android:name="com.example.pettranslator.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />

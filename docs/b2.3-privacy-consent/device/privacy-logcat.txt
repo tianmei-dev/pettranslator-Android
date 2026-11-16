@@ -1,0 +1,11 @@
+--------- beginning of main
+11-17 18:33:44.839 23619 23619 I PrivacyConsent: consent_required
+11-17 18:33:58.626 23619 23619 I PrivacyConsent: consent_denied_persisted
+11-17 18:34:07.536 23619 23619 I PrivacyConsent: consent_accepted_persisted
+11-17 18:34:12.235 24039 24039 I PrivacyConsent: consent_restored
+11-17 18:34:30.537 24039 24039 I PrivacyConsent: consent_gate_closed
+11-17 18:34:30.645 24039 24039 I PrivacyConsent: consent_revoked_persisted
+11-17 18:34:30.647 24039 24039 I PrivacyConsent: controlled_work_stopped
+11-17 18:34:30.647 24039 24039 I PrivacyConsent: privacy_exit_process
+11-17 18:34:38.404 24445 24445 I PrivacyConsent: consent_required
+11-17 18:34:51.394 24445 24445 I PrivacyConsent: consent_accepted_persisted

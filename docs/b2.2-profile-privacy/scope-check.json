@@ -1,0 +1,11 @@
+{
+  "Branch": "main",
+  "HeadUnchanged": true,
+  "ProtectedFiles": 119,
+  "UnexpectedChanges": [],
+  "AllowedModifiedFiles": [
+    "app/src/main/java/com/example/pettranslator/ui/profile/ProfileScreen.kt",
+    "app/src/main/java/com/example/pettranslator/ui/navigation/PetTranslatorApp.kt",
+    "app/src/androidTest/java/com/example/pettranslator/ProfileUiEvidenceTest.kt"
+  ]
+}

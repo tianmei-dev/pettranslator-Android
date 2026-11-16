@@ -1,0 +1,1 @@
+/sdcard/Android/data/com.example.pettranslator/files/b22-profile-privacy-evidence/: 2 files pulled, 0 skipped. 3.1 MB/s (173361 bytes in 0.053s)

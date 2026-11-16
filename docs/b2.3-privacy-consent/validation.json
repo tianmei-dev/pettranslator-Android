@@ -1,0 +1,26 @@
+{
+  "Branch": "main",
+  "HeadUnchanged": true,
+  "ProtectedFileCount": 125,
+  "UnexpectedChanges": [],
+  "Build": "BUILD SUCCESSFUL in 1m 29s",
+  "BuildRuns": 1,
+  "UnitTests": 13,
+  "UnitFailures": 0,
+  "Device": "Samsung SM-G973U API31 font1.1",
+  "DeviceRounds": 1,
+  "DeviceCoreFlowPassed": true,
+  "PolicyVersion": "2026-11-16-draft-1",
+  "ConsentStorage": "files/datastore/privacy_consent.preferences_pb",
+  "Gate": "Default deny; runtime entry/work/callback and controlled Job cancellation",
+  "NoAndroidPermissionChanges": true,
+  "ExistingPetPreferencesOnDevice": false,
+  "PersistentSentinelPreserved": true,
+  "KnownUnverified": [
+    "Real native inference/load in flight during withdrawal",
+    "Existing non-default pet preferences on the device; none were present",
+    "Actual flash I/O failure (injected JVM store failure tested)",
+    "Fresh uninstall/reinstall not performed; initial consent record absent on upgrade"
+  ],
+  "ApkSha256": "0B6B385615502C16C09BBA2C2FBF765E2B34AF26C909685F9233A2CAE3F8EA07"
+}
