@@ -1,0 +1,17 @@
+Controlled Compose viewport=320x740dp fontScale=2; same physical device=SM-G973U; footer=58dp placeholder, not production navigation.
+initialFooter=DpRect(left=0.0.dp, top=682.2857.dp, right=320.0.dp, bottom=740.1905.dp)
+profile_menu_0=系统权限管理 lines=1 size=524 x 103 overflow=false ellipsized=false
+profile_menu_1=隐私政策授权撤销 lines=2 size=524 x 206 overflow=false ellipsized=false
+profile_menu_2=用户协议 lines=1 size=524 x 103 overflow=false ellipsized=false
+profile_menu_3=隐私政策 lines=1 size=524 x 103 overflow=false ellipsized=false
+profile_menu_4=儿童隐私政策 lines=1 size=524 x 103 overflow=false ellipsized=false
+profile_menu_5=个人信息收集清单 lines=2 size=524 x 206 overflow=false ellipsized=false
+profile_menu_6=第三方信息收集清单 lines=2 size=524 x 206 overflow=false ellipsized=false
+profile_menu_7=第三方 SDK 共享清单 lines=2 size=524 x 206 overflow=false ellipsized=false
+profile_menu_8=已收集个人信息清单 lines=2 size=524 x 206 overflow=false ellipsized=false
+profile_setting_0=关于我们 lines=1 size=524 x 103 overflow=false ellipsized=false
+profile_setting_1=清除缓存 lines=1 size=524 x 103 overflow=false ellipsized=false
+profile_setting_2=当前版本号 lines=1 size=524 x 103 overflow=false ellipsized=false
+profile_setting_3=联系我们 lines=1 size=524 x 103 overflow=false ellipsized=false
+screenshot=controlled-320-font2-bottom.png 1080x2280; controlled viewport on the same physical device
+PASS: all 9 privacy + 4 setting rows reached without text overflow; contact dialog complete and dismissible

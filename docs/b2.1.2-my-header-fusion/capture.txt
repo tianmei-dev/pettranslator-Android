@@ -1,0 +1,5 @@
+UI hierchary dumped to: /sdcard/Download/b212-ready.xml
+/sdcard/Download/b212-ready.xml: 1 file pulled, 0 skipped. 2.1 MB/s (22733 bytes in 0.010s)
+UI hierchary dumped to: /sdcard/Download/b212-profile.xml
+/sdcard/Download/b212-profile.xml: 1 file pulled, 0 skipped. 1.3 MB/s (18512 bytes in 0.013s)
+/sdcard/Download/b212-my-top-fused.png: 1 file pulled, 0 skipped. 23.0 MB/s (913382 bytes in 0.038s)

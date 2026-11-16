@@ -1,0 +1,43 @@
+device=samsung SM-G973U sdk=31 fontScale=1.1
+text=立即登录 lines=1 size=679 x 72 overflow=false ellipsized=false
+text=未登录 lines=1 size=679 x 56 overflow=false ellipsized=false
+text=会员中心 lines=1 size=545 x 72 overflow=false ellipsized=false
+text=未开通会员 lines=1 size=545 x 52 overflow=false ellipsized=false
+text=会员有效期：— lines=1 size=545 x 52 overflow=false ellipsized=false
+viewport=DpRect(left=0.0.dp, top=42.666668.dp, right=411.42856.dp, bottom=762.6667.dp) fixedTabs={首页=DpRect(left=0.0.dp, top=762.6667.dp, right=137.14285.dp, bottom=820.5714.dp), 逗宠=DpRect(left=137.14285.dp, top=762.6667.dp, right=274.2857.dp, bottom=820.5714.dp), 我的=DpRect(left=274.2857.dp, top=762.6667.dp, right=411.42856.dp, bottom=820.5714.dp)}
+screenshot=profile-top.png 1080x2280
+text=系统权限管理 lines=1 size=764 x 62 overflow=false ellipsized=false
+reachable=profile_menu_0 系统权限管理
+text=隐私政策授权撤销 lines=1 size=764 x 62 overflow=false ellipsized=false
+reachable=profile_menu_1 隐私政策授权撤销
+text=用户协议 lines=1 size=764 x 62 overflow=false ellipsized=false
+reachable=profile_menu_2 用户协议
+text=隐私政策 lines=1 size=764 x 62 overflow=false ellipsized=false
+reachable=profile_menu_3 隐私政策
+text=儿童隐私政策 lines=1 size=764 x 62 overflow=false ellipsized=false
+reachable=profile_menu_4 儿童隐私政策
+text=个人信息收集清单 lines=1 size=764 x 62 overflow=false ellipsized=false
+reachable=profile_menu_5 个人信息收集清单
+text=第三方信息收集清单 lines=1 size=764 x 62 overflow=false ellipsized=false
+reachable=profile_menu_6 第三方信息收集清单
+text=第三方 SDK 共享清单 lines=1 size=764 x 62 overflow=false ellipsized=false
+reachable=profile_menu_7 第三方 SDK 共享清单
+text=已收集个人信息清单 lines=1 size=764 x 62 overflow=false ellipsized=false
+reachable=profile_menu_8 已收集个人信息清单
+screenshot=profile-privacy.png 1080x2280
+text=关于我们 lines=1 size=764 x 62 overflow=false ellipsized=false
+reachable=profile_setting_0 关于我们
+text=清除缓存 lines=1 size=764 x 62 overflow=false ellipsized=false
+reachable=profile_setting_1 清除缓存
+text=当前版本号 lines=1 size=654 x 62 overflow=false ellipsized=false
+displayedVersion=1.0.0 source=PackageManager
+reachable=profile_setting_2 当前版本号
+text=联系我们 lines=1 size=764 x 62 overflow=false ellipsized=false
+reachable=profile_setting_3 联系我们
+screenshot=profile-bottom.png 1080x2280
+screenshot=profile-contact.png 1080x2280
+contactDialog=opened, exact content verified, closed
+placeholder=profile_menu_0 explicit, dismissible, Profile remains active
+placeholder=profile_setting_1 explicit, dismissible, Profile remains active
+clearCache=placeholder only; preexisting cache sentinel preserved
+navigation=Profile -> Home (home_record visible) -> Profile; PASS

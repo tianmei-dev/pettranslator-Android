@@ -1,0 +1,151 @@
+{
+  "Status": "passed",
+  "VerifiedAt": "2026-11-16 15:55:15 Asia/Shanghai",
+  "Baseline": "artifacts/b2.1-my-page-ui/baseline.json",
+  "BranchBefore": "feature/my-page-ui",
+  "BranchAfter": "feature/my-page-ui",
+  "BranchUnchanged": true,
+  "HeadBefore": "fc007fa2946caf87ba0b47095648953bde1e794b",
+  "HeadAfter": "fc007fa2946caf87ba0b47095648953bde1e794b",
+  "HeadUnchanged": true,
+  "MainBefore": "fc007fa2946caf87ba0b47095648953bde1e794b",
+  "MainAfter": "fc007fa2946caf87ba0b47095648953bde1e794b",
+  "MainUnchanged": true,
+  "RefReadMethod": "Read-only .git/HEAD and loose/packed reference files; no Git command executed",
+  "ProtectedFilesChecked": 118,
+  "ProtectedFilesChanged": [],
+  "AllowedProductionFiles": [
+    "app/src/main/java/com/example/pettranslator/ui/profile/ProfileScreen.kt"
+  ],
+  "AllowedTestFiles": [
+    "app/src/androidTest/java/com/example/pettranslator/HomeFlowTest.kt",
+    "app/src/androidTest/java/com/example/pettranslator/ProfileUiEvidenceTest.kt"
+  ],
+  "AllowedSourceHashes": [
+    {
+      "Path": "app/src/main/java/com/example/pettranslator/ui/profile/ProfileScreen.kt",
+      "Sha256": "DBB81B24AFFCDBCF2047A0B1E591E9BDD29A37DAEFDCECE7BB52DC78364E40B9"
+    },
+    {
+      "Path": "app/src/androidTest/java/com/example/pettranslator/HomeFlowTest.kt",
+      "Sha256": "89879FB6855DA71EA8EA1BCC5727F9B6436DD9133D4D93FCAC3CC59CA5ECC1D7"
+    },
+    {
+      "Path": "app/src/androidTest/java/com/example/pettranslator/ProfileUiEvidenceTest.kt",
+      "Sha256": "6CD781AA9C4C0BF85B0C525E01EBA1EE8D7C8C8C9F4E792FC698E77D26766D4D"
+    }
+  ],
+  "RequiredPngFilesChecked": 3,
+  "RequiredPngFiles": [
+    {
+      "Path": "app/src/main/res/drawable-nodpi/my_avatar_paw_default.png",
+      "BeforeSha256": "6515FE90040DF01DCE49CEA3D7532864E31DF26CFA89E39EAF2EE800EA232172",
+      "AfterSha256": "6515FE90040DF01DCE49CEA3D7532864E31DF26CFA89E39EAF2EE800EA232172",
+      "Unchanged": true
+    },
+    {
+      "Path": "app/src/main/res/drawable-nodpi/my_header_pets_cloud.png",
+      "BeforeSha256": "6D0E1CFE8E126B01DDB7A8AADCBDF7B867517DB1CAA4975F197E39380114E8F8",
+      "AfterSha256": "6D0E1CFE8E126B01DDB7A8AADCBDF7B867517DB1CAA4975F197E39380114E8F8",
+      "Unchanged": true
+    },
+    {
+      "Path": "app/src/main/res/drawable-nodpi/my_vip_crown.png",
+      "BeforeSha256": "56328A9215BB2D471F732ABD218740EC346B59A6C9B45D2563628D16301FB7FB",
+      "AfterSha256": "56328A9215BB2D471F732ABD218740EC346B59A6C9B45D2563628D16301FB7FB",
+      "Unchanged": true
+    }
+  ],
+  "CriticalProtectedFiles": [
+    {
+      "Path": "app/build.gradle.kts",
+      "BeforeSha256": "CBF82C2E92973A4D6E36AB0193CB40E823288F8960E57AA75A26F14153BDA328",
+      "AfterSha256": "CBF82C2E92973A4D6E36AB0193CB40E823288F8960E57AA75A26F14153BDA328",
+      "Unchanged": true
+    },
+    {
+      "Path": "app/src/androidTest/java/com/example/pettranslator/PetPreferencesTest.kt",
+      "BeforeSha256": "DE3820260797AF59CD96FD87F4E47540EF0D0F1495BEE89D3C7468F4F971A20F",
+      "AfterSha256": "DE3820260797AF59CD96FD87F4E47540EF0D0F1495BEE89D3C7468F4F971A20F",
+      "Unchanged": true
+    },
+    {
+      "Path": "app/src/main/AndroidManifest.xml",
+      "BeforeSha256": "F45DDD0CB6159B61B7F231D67C40D472792E82B4F08EF67D737BA4B09C8B7CED",
+      "AfterSha256": "F45DDD0CB6159B61B7F231D67C40D472792E82B4F08EF67D737BA4B09C8B7CED",
+      "Unchanged": true
+    },
+    {
+      "Path": "app/src/main/java/com/example/pettranslator/data/PetPreferencesRepository.kt",
+      "BeforeSha256": "D29039B02883D196ACFBBF5BA58359529F30A4CDFF8F03A519516543B036DCB5",
+      "AfterSha256": "D29039B02883D196ACFBBF5BA58359529F30A4CDFF8F03A519516543B036DCB5",
+      "Unchanged": true
+    },
+    {
+      "Path": "app/src/main/java/com/example/pettranslator/data/recognition/YamnetRecognitionRepository.kt",
+      "BeforeSha256": "F160910780EC18B8CEBC710775DCEAAED04AEA9D8D09B6B0850768667FBA6C6B",
+      "AfterSha256": "F160910780EC18B8CEBC710775DCEAAED04AEA9D8D09B6B0850768667FBA6C6B",
+      "Unchanged": true
+    },
+    {
+      "Path": "app/src/main/java/com/example/pettranslator/ui/home/HomeResponsiveDimensions.kt",
+      "BeforeSha256": "81E43F1E17CB76A910B82659AC24E4FD14243D03D0D11158098285F955A78FED",
+      "AfterSha256": "81E43F1E17CB76A910B82659AC24E4FD14243D03D0D11158098285F955A78FED",
+      "Unchanged": true
+    },
+    {
+      "Path": "app/src/main/java/com/example/pettranslator/ui/home/HomeScreen.kt",
+      "BeforeSha256": "E36B0E2EAFECBBFAFE4CA562A400BACD55A0173858BD261221EA1CA1FF64A467",
+      "AfterSha256": "E36B0E2EAFECBBFAFE4CA562A400BACD55A0173858BD261221EA1CA1FF64A467",
+      "Unchanged": true
+    },
+    {
+      "Path": "app/src/main/java/com/example/pettranslator/ui/home/HomeViewModel.kt",
+      "BeforeSha256": "055E5264448266FC835BC18C822FE4EF5A9D6E41EAEC2979A41D44436B81E4DF",
+      "AfterSha256": "055E5264448266FC835BC18C822FE4EF5A9D6E41EAEC2979A41D44436B81E4DF",
+      "Unchanged": true
+    },
+    {
+      "Path": "app/src/main/java/com/example/pettranslator/ui/navigation/PetTranslatorApp.kt",
+      "BeforeSha256": "D721DD77E658279B0D3038FF1B0A03FD7699F26ED5DC376988830817CF7791CB",
+      "AfterSha256": "D721DD77E658279B0D3038FF1B0A03FD7699F26ED5DC376988830817CF7791CB",
+      "Unchanged": true
+    },
+    {
+      "Path": "app/src/main/java/com/example/pettranslator/ui/recording/RecordingViewModel.kt",
+      "BeforeSha256": "03CF1FC4F9EDA164CBAEA5FF7DB322E39003A0498EB18106B9D5E3C4A148EA90",
+      "AfterSha256": "03CF1FC4F9EDA164CBAEA5FF7DB322E39003A0498EB18106B9D5E3C4A148EA90",
+      "Unchanged": true
+    },
+    {
+      "Path": "app/src/main/java/com/example/pettranslator/ui/theme/PetFontFamilies.kt",
+      "BeforeSha256": "1288FA4C488E4CBC7B14E493571F1722B52DC26EB751FA2C5EA06D42806FA0FD",
+      "AfterSha256": "1288FA4C488E4CBC7B14E493571F1722B52DC26EB751FA2C5EA06D42806FA0FD",
+      "Unchanged": true
+    },
+    {
+      "Path": "app/src/main/java/com/example/pettranslator/ui/theme/Theme.kt",
+      "BeforeSha256": "A25777C016A33569342256702147F61149468F50F16263DF2A4B0165A6EEC780",
+      "AfterSha256": "A25777C016A33569342256702147F61149468F50F16263DF2A4B0165A6EEC780",
+      "Unchanged": true
+    },
+    {
+      "Path": "build.gradle.kts",
+      "BeforeSha256": "9158D8C3717CB4D4EFFB6FD5EFB1B037931D452664F9872CC4F6B24DFA21C496",
+      "AfterSha256": "9158D8C3717CB4D4EFFB6FD5EFB1B037931D452664F9872CC4F6B24DFA21C496",
+      "Unchanged": true
+    }
+  ],
+  "DeviceEvidence": {
+    "Device": "Samsung S10 SM-G973U",
+    "Sdk": 31,
+    "FontScale": 1.1,
+    "ScreenshotDirectory": "docs/b2.1-my-page-ui/device",
+    "TestsLog": "docs/b2.1-my-page-ui/device-tests.txt",
+    "TestsLogSha256": "CA36E9683A89A4B4F604636C5E8664E0382042CE56EC6C0517536B289F9ABB09",
+    "Passed": 2,
+    "DurationSeconds": 20.359,
+    "InstallOrTestExecutedByThisAudit": false
+  },
+  "AuditOperations": "Read-only source, baseline, evidence log and Git ref inspection; wrote only this scope report; no build, install, test or device operation"
+}

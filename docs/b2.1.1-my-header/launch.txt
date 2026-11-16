@@ -1,0 +1,15 @@
+Starting: Intent { cmp=com.example.pettranslator/.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: com.example.pettranslator/.MainActivity
+TotalTime: 1808
+WaitTime: 1810
+Complete
+Starting: Intent { cmp=com.example.pettranslator/.MainActivity }
+Warning: Activity not started, its current task has been brought to the front
+Status: ok
+LaunchState: HOT
+Activity: com.example.pettranslator/.MainActivity
+TotalTime: 148
+WaitTime: 149
+Complete

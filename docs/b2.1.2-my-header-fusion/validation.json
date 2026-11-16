@@ -1,0 +1,49 @@
+{
+  "Branch": "feature/my-page-ui",
+  "HeadUnchanged": true,
+  "MainUnchanged": true,
+  "ProtectedFileCount": 121,
+  "ProtectedFilesUnchanged": true,
+  "ChangedProtectedFiles": [],
+  "SourceFilesModified": [
+    "app/src/main/java/com/example/pettranslator/ui/profile/ProfileScreen.kt"
+  ],
+  "HeaderCardOverlapDp": 16,
+  "CardInternalSpacingDp": 12,
+  "IllustrationAspectRatio": "1774/600",
+  "Build": "BUILD SUCCESSFUL in 49s",
+  "BuildCount": 1,
+  "Install": "Success",
+  "InstallCount": 1,
+  "Device": "Samsung SM-G973U",
+  "ScreenshotCount": 1,
+  "Screenshot": "D:\\pettranslator\\docs\\b2.1.2-my-header-fusion\\my-top-fused.png",
+  "ScreenshotReviewed": true,
+  "Geometry": [
+    {
+      "Text": "我的",
+      "BeforeBounds": "[53,154][181,249]",
+      "AfterBounds": "[53,154][181,249]"
+    },
+    {
+      "Text": "立即登录",
+      "BeforeBounds": "[253,521][932,593]",
+      "AfterBounds": "[253,479][932,551]"
+    },
+    {
+      "Text": "未登录",
+      "BeforeBounds": "[253,604][932,660]",
+      "AfterBounds": "[253,562][932,618]"
+    },
+    {
+      "Text": "会员中心",
+      "BeforeBounds": "[211,772][756,844]",
+      "AfterBounds": "[211,730][756,802]"
+    },
+    {
+      "Text": "隐私设置",
+      "BeforeBounds": "[148,1064][1011,1136]",
+      "AfterBounds": "[148,1022][1011,1094]"
+    }
+  ]
+}
