@@ -1,0 +1,573 @@
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=
+com.example.pettranslator.CloudHomeLayoutTest:
+INSTRUMENTATION_STATUS: test=tallViewportFitsEveryScene
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes$default(TestOwner.kt:74)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes(SemanticsNodeInteraction.kt:249)
+	at androidx.compose.ui.test.AssertionsKt.assertCountEquals(Assertions.kt:276)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyIndependentSceneControls(CloudHomeLayoutTest.kt:121)
+	at com.example.pettranslator.CloudHomeLayoutTest.normalViewport(CloudHomeLayoutTest.kt:219)
+	at com.example.pettranslator.CloudHomeLayoutTest.tallViewportFitsEveryScene(CloudHomeLayoutTest.kt:240)
+
+INSTRUMENTATION_STATUS: stream=
+Error in tallViewportFitsEveryScene(com.example.pettranslator.CloudHomeLayoutTest):
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes$default(TestOwner.kt:74)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes(SemanticsNodeInteraction.kt:249)
+	at androidx.compose.ui.test.AssertionsKt.assertCountEquals(Assertions.kt:276)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyIndependentSceneControls(CloudHomeLayoutTest.kt:121)
+	at com.example.pettranslator.CloudHomeLayoutTest.normalViewport(CloudHomeLayoutTest.kt:219)
+	at com.example.pettranslator.CloudHomeLayoutTest.tallViewportFitsEveryScene(CloudHomeLayoutTest.kt:240)
+
+INSTRUMENTATION_STATUS: test=tallViewportFitsEveryScene
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=shortViewportFitsEveryScene
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes$default(TestOwner.kt:74)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes(SemanticsNodeInteraction.kt:249)
+	at androidx.compose.ui.test.AssertionsKt.assertCountEquals(Assertions.kt:276)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyIndependentSceneControls(CloudHomeLayoutTest.kt:121)
+	at com.example.pettranslator.CloudHomeLayoutTest.normalViewport(CloudHomeLayoutTest.kt:219)
+	at com.example.pettranslator.CloudHomeLayoutTest.shortViewportFitsEveryScene(CloudHomeLayoutTest.kt:238)
+
+INSTRUMENTATION_STATUS: stream=
+Error in shortViewportFitsEveryScene(com.example.pettranslator.CloudHomeLayoutTest):
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes$default(TestOwner.kt:74)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes(SemanticsNodeInteraction.kt:249)
+	at androidx.compose.ui.test.AssertionsKt.assertCountEquals(Assertions.kt:276)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyIndependentSceneControls(CloudHomeLayoutTest.kt:121)
+	at com.example.pettranslator.CloudHomeLayoutTest.normalViewport(CloudHomeLayoutTest.kt:219)
+	at com.example.pettranslator.CloudHomeLayoutTest.shortViewportFitsEveryScene(CloudHomeLayoutTest.kt:238)
+
+INSTRUMENTATION_STATUS: test=shortViewportFitsEveryScene
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=standardViewportFitsEveryScene
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes$default(TestOwner.kt:74)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes(SemanticsNodeInteraction.kt:249)
+	at androidx.compose.ui.test.AssertionsKt.assertCountEquals(Assertions.kt:276)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyIndependentSceneControls(CloudHomeLayoutTest.kt:121)
+	at com.example.pettranslator.CloudHomeLayoutTest.normalViewport(CloudHomeLayoutTest.kt:219)
+	at com.example.pettranslator.CloudHomeLayoutTest.standardViewportFitsEveryScene(CloudHomeLayoutTest.kt:239)
+
+INSTRUMENTATION_STATUS: stream=
+Error in standardViewportFitsEveryScene(com.example.pettranslator.CloudHomeLayoutTest):
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes$default(TestOwner.kt:74)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes(SemanticsNodeInteraction.kt:249)
+	at androidx.compose.ui.test.AssertionsKt.assertCountEquals(Assertions.kt:276)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyIndependentSceneControls(CloudHomeLayoutTest.kt:121)
+	at com.example.pettranslator.CloudHomeLayoutTest.normalViewport(CloudHomeLayoutTest.kt:219)
+	at com.example.pettranslator.CloudHomeLayoutTest.standardViewportFitsEveryScene(CloudHomeLayoutTest.kt:239)
+
+INSTRUMENTATION_STATUS: test=standardViewportFitsEveryScene
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=narrowLargeFontKeepsTextAndFixedActionsReachable
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNodes$ui_test_release(SemanticsNodeInteraction.kt:64)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:157)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.BoundsAssertionsKt.withUnclippedBoundsInRoot(BoundsAssertions.kt:259)
+	at androidx.compose.ui.test.BoundsAssertionsKt.getUnclippedBoundsInRoot(BoundsAssertions.kt:150)
+	at com.example.pettranslator.CloudHomeLayoutTest.bounds(CloudHomeLayoutTest.kt:102)
+	at com.example.pettranslator.CloudHomeLayoutTest.narrowLargeFontKeepsTextAndFixedActionsReachable(CloudHomeLayoutTest.kt:378)
+
+INSTRUMENTATION_STATUS: stream=
+Error in narrowLargeFontKeepsTextAndFixedActionsReachable(com.example.pettranslator.CloudHomeLayoutTest):
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNodes$ui_test_release(SemanticsNodeInteraction.kt:64)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:157)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.BoundsAssertionsKt.withUnclippedBoundsInRoot(BoundsAssertions.kt:259)
+	at androidx.compose.ui.test.BoundsAssertionsKt.getUnclippedBoundsInRoot(BoundsAssertions.kt:150)
+	at com.example.pettranslator.CloudHomeLayoutTest.bounds(CloudHomeLayoutTest.kt:102)
+	at com.example.pettranslator.CloudHomeLayoutTest.narrowLargeFontKeepsTextAndFixedActionsReachable(CloudHomeLayoutTest.kt:378)
+
+INSTRUMENTATION_STATUS: test=narrowLargeFontKeepsTextAndFixedActionsReachable
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=callbacksSelectionAndGeometryRemainStable
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNodes$ui_test_release(SemanticsNodeInteraction.kt:64)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:157)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.BoundsAssertionsKt.withUnclippedBoundsInRoot(BoundsAssertions.kt:259)
+	at androidx.compose.ui.test.BoundsAssertionsKt.getUnclippedBoundsInRoot(BoundsAssertions.kt:150)
+	at com.example.pettranslator.CloudHomeLayoutTest.bounds(CloudHomeLayoutTest.kt:102)
+	at com.example.pettranslator.CloudHomeLayoutTest.sceneBounds(CloudHomeLayoutTest.kt:103)
+	at com.example.pettranslator.CloudHomeLayoutTest.callbacksSelectionAndGeometryRemainStable(CloudHomeLayoutTest.kt:314)
+
+INSTRUMENTATION_STATUS: stream=
+Error in callbacksSelectionAndGeometryRemainStable(com.example.pettranslator.CloudHomeLayoutTest):
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNodes$ui_test_release(SemanticsNodeInteraction.kt:64)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:157)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.BoundsAssertionsKt.withUnclippedBoundsInRoot(BoundsAssertions.kt:259)
+	at androidx.compose.ui.test.BoundsAssertionsKt.getUnclippedBoundsInRoot(BoundsAssertions.kt:150)
+	at com.example.pettranslator.CloudHomeLayoutTest.bounds(CloudHomeLayoutTest.kt:102)
+	at com.example.pettranslator.CloudHomeLayoutTest.sceneBounds(CloudHomeLayoutTest.kt:103)
+	at com.example.pettranslator.CloudHomeLayoutTest.callbacksSelectionAndGeometryRemainStable(CloudHomeLayoutTest.kt:314)
+
+INSTRUMENTATION_STATUS: test=callbacksSelectionAndGeometryRemainStable
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=controlledReferenceViewportEnlargesBothPets
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes$default(TestOwner.kt:74)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes(SemanticsNodeInteraction.kt:249)
+	at androidx.compose.ui.test.AssertionsKt.assertCountEquals(Assertions.kt:276)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyIndependentSceneControls(CloudHomeLayoutTest.kt:121)
+	at com.example.pettranslator.CloudHomeLayoutTest.controlledReferenceViewportEnlargesBothPets(CloudHomeLayoutTest.kt:244)
+
+INSTRUMENTATION_STATUS: stream=
+Error in controlledReferenceViewportEnlargesBothPets(com.example.pettranslator.CloudHomeLayoutTest):
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes$default(TestOwner.kt:74)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes(SemanticsNodeInteraction.kt:249)
+	at androidx.compose.ui.test.AssertionsKt.assertCountEquals(Assertions.kt:276)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyIndependentSceneControls(CloudHomeLayoutTest.kt:121)
+	at com.example.pettranslator.CloudHomeLayoutTest.controlledReferenceViewportEnlargesBothPets(CloudHomeLayoutTest.kt:244)
+
+INSTRUMENTATION_STATUS: test=controlledReferenceViewportEnlargesBothPets
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=readinessKeepsRecordAndPetGating
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.CloudHomeLayoutTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNodes$ui_test_release(SemanticsNodeInteraction.kt:64)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:157)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:258)
+	at androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:250)
+	at androidx.compose.ui.test.AssertionsKt.assertIsNotEnabled(Assertions.kt:63)
+	at com.example.pettranslator.CloudHomeLayoutTest.readinessKeepsRecordAndPetGating(CloudHomeLayoutTest.kt:359)
+
+INSTRUMENTATION_STATUS: stream=
+Error in readinessKeepsRecordAndPetGating(com.example.pettranslator.CloudHomeLayoutTest):
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNodes$ui_test_release(SemanticsNodeInteraction.kt:64)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:157)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:258)
+	at androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:250)
+	at androidx.compose.ui.test.AssertionsKt.assertIsNotEnabled(Assertions.kt:63)
+	at com.example.pettranslator.CloudHomeLayoutTest.readinessKeepsRecordAndPetGating(CloudHomeLayoutTest.kt:359)
+
+INSTRUMENTATION_STATUS: test=readinessKeepsRecordAndPetGating
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.HomeFlowTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=
+com.example.pettranslator.HomeFlowTest:
+INSTRUMENTATION_STATUS: test=selectionTabsAndComingSoon
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.HomeFlowTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes$default(TestOwner.kt:74)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes(SemanticsNodeInteraction.kt:249)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes$default(SemanticsNodeInteraction.kt:245)
+	at com.example.pettranslator.HomeFlowTest.selectionTabsAndComingSoon$lambda$0(HomeFlowTest.kt:14)
+	at com.example.pettranslator.HomeFlowTest.$r8$lambda$_nGud6URGH7_MN0cxwbp5F0g7wo(HomeFlowTest.kt:0)
+	at com.example.pettranslator.HomeFlowTest$$ExternalSyntheticLambda0.invoke(D8$$SyntheticClass:0)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:497)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.example.pettranslator.HomeFlowTest.selectionTabsAndComingSoon(HomeFlowTest.kt:14)
+
+INSTRUMENTATION_STATUS: stream=
+Error in selectionTabsAndComingSoon(com.example.pettranslator.HomeFlowTest):
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes$default(TestOwner.kt:74)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes(SemanticsNodeInteraction.kt:249)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes$default(SemanticsNodeInteraction.kt:245)
+	at com.example.pettranslator.HomeFlowTest.selectionTabsAndComingSoon$lambda$0(HomeFlowTest.kt:14)
+	at com.example.pettranslator.HomeFlowTest.$r8$lambda$_nGud6URGH7_MN0cxwbp5F0g7wo(HomeFlowTest.kt:0)
+	at com.example.pettranslator.HomeFlowTest$$ExternalSyntheticLambda0.invoke(D8$$SyntheticClass:0)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:497)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.example.pettranslator.HomeFlowTest.selectionTabsAndComingSoon(HomeFlowTest.kt:14)
+
+INSTRUMENTATION_STATUS: test=selectionTabsAndComingSoon
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.HomeVisualEvidenceTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=
+com.example.pettranslator.HomeVisualEvidenceTest:
+INSTRUMENTATION_STATUS: test=captureHomeRegions
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.HomeVisualEvidenceTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes$default(TestOwner.kt:74)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes(SemanticsNodeInteraction.kt:249)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes$default(SemanticsNodeInteraction.kt:245)
+	at com.example.pettranslator.HomeVisualEvidenceTest.captureHomeRegions$lambda$1(HomeVisualEvidenceTest.kt:26)
+	at com.example.pettranslator.HomeVisualEvidenceTest.$r8$lambda$8ubVPguANHD4j1oA__0JHZ65JRs(HomeVisualEvidenceTest.kt:0)
+	at com.example.pettranslator.HomeVisualEvidenceTest$$ExternalSyntheticLambda1.invoke(D8$$SyntheticClass:0)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:497)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.example.pettranslator.HomeVisualEvidenceTest.captureHomeRegions(HomeVisualEvidenceTest.kt:26)
+
+INSTRUMENTATION_STATUS: stream=
+Error in captureHomeRegions(com.example.pettranslator.HomeVisualEvidenceTest):
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes$default(TestOwner.kt:74)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes(SemanticsNodeInteraction.kt:249)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes$default(SemanticsNodeInteraction.kt:245)
+	at com.example.pettranslator.HomeVisualEvidenceTest.captureHomeRegions$lambda$1(HomeVisualEvidenceTest.kt:26)
+	at com.example.pettranslator.HomeVisualEvidenceTest.$r8$lambda$8ubVPguANHD4j1oA__0JHZ65JRs(HomeVisualEvidenceTest.kt:0)
+	at com.example.pettranslator.HomeVisualEvidenceTest$$ExternalSyntheticLambda1.invoke(D8$$SyntheticClass:0)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:497)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.example.pettranslator.HomeVisualEvidenceTest.captureHomeRegions(HomeVisualEvidenceTest.kt:26)
+
+INSTRUMENTATION_STATUS: test=captureHomeRegions
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.HomeResponsiveEvidenceTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=
+com.example.pettranslator.HomeResponsiveEvidenceTest:
+INSTRUMENTATION_STATUS: test=largeFont
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.HomeResponsiveEvidenceTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNodes$ui_test_release(SemanticsNodeInteraction.kt:64)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:157)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.BoundsAssertionsKt.withUnclippedBoundsInRoot(BoundsAssertions.kt:259)
+	at androidx.compose.ui.test.BoundsAssertionsKt.getUnclippedBoundsInRoot(BoundsAssertions.kt:150)
+	at com.example.pettranslator.HomeResponsiveEvidenceTest.verify(HomeResponsiveEvidenceTest.kt:44)
+	at com.example.pettranslator.HomeResponsiveEvidenceTest.largeFont(HomeResponsiveEvidenceTest.kt:69)
+
+INSTRUMENTATION_STATUS: stream=
+Error in largeFont(com.example.pettranslator.HomeResponsiveEvidenceTest):
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNodes$ui_test_release(SemanticsNodeInteraction.kt:64)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:157)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.BoundsAssertionsKt.withUnclippedBoundsInRoot(BoundsAssertions.kt:259)
+	at androidx.compose.ui.test.BoundsAssertionsKt.getUnclippedBoundsInRoot(BoundsAssertions.kt:150)
+	at com.example.pettranslator.HomeResponsiveEvidenceTest.verify(HomeResponsiveEvidenceTest.kt:44)
+	at com.example.pettranslator.HomeResponsiveEvidenceTest.largeFont(HomeResponsiveEvidenceTest.kt:69)
+
+INSTRUMENTATION_STATUS: test=largeFont
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.AdaptiveHomeTest
+INSTRUMENTATION_STATUS: current=11
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=
+com.example.pettranslator.AdaptiveHomeTest:
+INSTRUMENTATION_STATUS: test=largeContent
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.AdaptiveHomeTest
+INSTRUMENTATION_STATUS: current=11
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNodes$ui_test_release(SemanticsNodeInteraction.kt:64)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:157)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.AndroidImageHelpers_androidKt.captureToImage(AndroidImageHelpers.android.kt:51)
+	at com.example.pettranslator.AdaptiveHomeTest.capture(AdaptiveHomeTest.kt:66)
+	at com.example.pettranslator.AdaptiveHomeTest.verify(AdaptiveHomeTest.kt:46)
+	at com.example.pettranslator.AdaptiveHomeTest.largeContent(AdaptiveHomeTest.kt:73)
+
+INSTRUMENTATION_STATUS: stream=
+Error in largeContent(com.example.pettranslator.AdaptiveHomeTest):
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNodes$ui_test_release(SemanticsNodeInteraction.kt:64)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:157)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.AndroidImageHelpers_androidKt.captureToImage(AndroidImageHelpers.android.kt:51)
+	at com.example.pettranslator.AdaptiveHomeTest.capture(AdaptiveHomeTest.kt:66)
+	at com.example.pettranslator.AdaptiveHomeTest.verify(AdaptiveHomeTest.kt:46)
+	at com.example.pettranslator.AdaptiveHomeTest.largeContent(AdaptiveHomeTest.kt:73)
+
+INSTRUMENTATION_STATUS: test=largeContent
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.AdaptiveHomeTest
+INSTRUMENTATION_STATUS: current=12
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=smallPhone
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.AdaptiveHomeTest
+INSTRUMENTATION_STATUS: current=12
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=12
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNodes$ui_test_release(SemanticsNodeInteraction.kt:64)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:157)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.AndroidImageHelpers_androidKt.captureToImage(AndroidImageHelpers.android.kt:51)
+	at com.example.pettranslator.AdaptiveHomeTest.capture(AdaptiveHomeTest.kt:66)
+	at com.example.pettranslator.AdaptiveHomeTest.verify(AdaptiveHomeTest.kt:46)
+	at com.example.pettranslator.AdaptiveHomeTest.smallPhone(AdaptiveHomeTest.kt:69)
+
+INSTRUMENTATION_STATUS: stream=
+Error in smallPhone(com.example.pettranslator.AdaptiveHomeTest):
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNodes$ui_test_release(SemanticsNodeInteraction.kt:64)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:157)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.AndroidImageHelpers_androidKt.captureToImage(AndroidImageHelpers.android.kt:51)
+	at com.example.pettranslator.AdaptiveHomeTest.capture(AdaptiveHomeTest.kt:66)
+	at com.example.pettranslator.AdaptiveHomeTest.verify(AdaptiveHomeTest.kt:46)
+	at com.example.pettranslator.AdaptiveHomeTest.smallPhone(AdaptiveHomeTest.kt:69)
+
+INSTRUMENTATION_STATUS: test=smallPhone
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 131.497
+There were 12 failures:
+1) tallViewportFitsEveryScene(com.example.pettranslator.CloudHomeLayoutTest)
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes$default(TestOwner.kt:74)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes(SemanticsNodeInteraction.kt:249)
+	at androidx.compose.ui.test.AssertionsKt.assertCountEquals(Assertions.kt:276)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyIndependentSceneControls(CloudHomeLayoutTest.kt:121)
+	at com.example.pettranslator.CloudHomeLayoutTest.normalViewport(CloudHomeLayoutTest.kt:219)
+	at com.example.pettranslator.CloudHomeLayoutTest.tallViewportFitsEveryScene(CloudHomeLayoutTest.kt:240)
+2) shortViewportFitsEveryScene(com.example.pettranslator.CloudHomeLayoutTest)
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes$default(TestOwner.kt:74)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes(SemanticsNodeInteraction.kt:249)
+	at androidx.compose.ui.test.AssertionsKt.assertCountEquals(Assertions.kt:276)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyIndependentSceneControls(CloudHomeLayoutTest.kt:121)
+	at com.example.pettranslator.CloudHomeLayoutTest.normalViewport(CloudHomeLayoutTest.kt:219)
+	at com.example.pettranslator.CloudHomeLayoutTest.shortViewportFitsEveryScene(CloudHomeLayoutTest.kt:238)
+3) standardViewportFitsEveryScene(com.example.pettranslator.CloudHomeLayoutTest)
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes$default(TestOwner.kt:74)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes(SemanticsNodeInteraction.kt:249)
+	at androidx.compose.ui.test.AssertionsKt.assertCountEquals(Assertions.kt:276)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyIndependentSceneControls(CloudHomeLayoutTest.kt:121)
+	at com.example.pettranslator.CloudHomeLayoutTest.normalViewport(CloudHomeLayoutTest.kt:219)
+	at com.example.pettranslator.CloudHomeLayoutTest.standardViewportFitsEveryScene(CloudHomeLayoutTest.kt:239)
+4) narrowLargeFontKeepsTextAndFixedActionsReachable(com.example.pettranslator.CloudHomeLayoutTest)
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNodes$ui_test_release(SemanticsNodeInteraction.kt:64)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:157)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.BoundsAssertionsKt.withUnclippedBoundsInRoot(BoundsAssertions.kt:259)
+	at androidx.compose.ui.test.BoundsAssertionsKt.getUnclippedBoundsInRoot(BoundsAssertions.kt:150)
+	at com.example.pettranslator.CloudHomeLayoutTest.bounds(CloudHomeLayoutTest.kt:102)
+	at com.example.pettranslator.CloudHomeLayoutTest.narrowLargeFontKeepsTextAndFixedActionsReachable(CloudHomeLayoutTest.kt:378)
+5) callbacksSelectionAndGeometryRemainStable(com.example.pettranslator.CloudHomeLayoutTest)
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNodes$ui_test_release(SemanticsNodeInteraction.kt:64)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:157)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.BoundsAssertionsKt.withUnclippedBoundsInRoot(BoundsAssertions.kt:259)
+	at androidx.compose.ui.test.BoundsAssertionsKt.getUnclippedBoundsInRoot(BoundsAssertions.kt:150)
+	at com.example.pettranslator.CloudHomeLayoutTest.bounds(CloudHomeLayoutTest.kt:102)
+	at com.example.pettranslator.CloudHomeLayoutTest.sceneBounds(CloudHomeLayoutTest.kt:103)
+	at com.example.pettranslator.CloudHomeLayoutTest.callbacksSelectionAndGeometryRemainStable(CloudHomeLayoutTest.kt:314)
+6) controlledReferenceViewportEnlargesBothPets(com.example.pettranslator.CloudHomeLayoutTest)
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes$default(TestOwner.kt:74)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes(SemanticsNodeInteraction.kt:249)
+	at androidx.compose.ui.test.AssertionsKt.assertCountEquals(Assertions.kt:276)
+	at com.example.pettranslator.CloudHomeLayoutTest.verifyIndependentSceneControls(CloudHomeLayoutTest.kt:121)
+	at com.example.pettranslator.CloudHomeLayoutTest.controlledReferenceViewportEnlargesBothPets(CloudHomeLayoutTest.kt:244)
+7) readinessKeepsRecordAndPetGating(com.example.pettranslator.CloudHomeLayoutTest)
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNodes$ui_test_release(SemanticsNodeInteraction.kt:64)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:157)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:258)
+	at androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:250)
+	at androidx.compose.ui.test.AssertionsKt.assertIsNotEnabled(Assertions.kt:63)
+	at com.example.pettranslator.CloudHomeLayoutTest.readinessKeepsRecordAndPetGating(CloudHomeLayoutTest.kt:359)
+8) selectionTabsAndComingSoon(com.example.pettranslator.HomeFlowTest)
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes$default(TestOwner.kt:74)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes(SemanticsNodeInteraction.kt:249)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes$default(SemanticsNodeInteraction.kt:245)
+	at com.example.pettranslator.HomeFlowTest.selectionTabsAndComingSoon$lambda$0(HomeFlowTest.kt:14)
+	at com.example.pettranslator.HomeFlowTest.$r8$lambda$_nGud6URGH7_MN0cxwbp5F0g7wo(HomeFlowTest.kt:0)
+	at com.example.pettranslator.HomeFlowTest$$ExternalSyntheticLambda0.invoke(D8$$SyntheticClass:0)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:497)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.example.pettranslator.HomeFlowTest.selectionTabsAndComingSoon(HomeFlowTest.kt:14)
+9) captureHomeRegions(com.example.pettranslator.HomeVisualEvidenceTest)
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes$default(TestOwner.kt:74)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes(SemanticsNodeInteraction.kt:249)
+	at androidx.compose.ui.test.SemanticsNodeInteractionCollection.fetchSemanticsNodes$default(SemanticsNodeInteraction.kt:245)
+	at com.example.pettranslator.HomeVisualEvidenceTest.captureHomeRegions$lambda$1(HomeVisualEvidenceTest.kt:26)
+	at com.example.pettranslator.HomeVisualEvidenceTest.$r8$lambda$8ubVPguANHD4j1oA__0JHZ65JRs(HomeVisualEvidenceTest.kt:0)
+	at com.example.pettranslator.HomeVisualEvidenceTest$$ExternalSyntheticLambda1.invoke(D8$$SyntheticClass:0)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:497)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.example.pettranslator.HomeVisualEvidenceTest.captureHomeRegions(HomeVisualEvidenceTest.kt:26)
+10) largeFont(com.example.pettranslator.HomeResponsiveEvidenceTest)
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNodes$ui_test_release(SemanticsNodeInteraction.kt:64)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:157)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.BoundsAssertionsKt.withUnclippedBoundsInRoot(BoundsAssertions.kt:259)
+	at androidx.compose.ui.test.BoundsAssertionsKt.getUnclippedBoundsInRoot(BoundsAssertions.kt:150)
+	at com.example.pettranslator.HomeResponsiveEvidenceTest.verify(HomeResponsiveEvidenceTest.kt:44)
+	at com.example.pettranslator.HomeResponsiveEvidenceTest.largeFont(HomeResponsiveEvidenceTest.kt:69)
+11) largeContent(com.example.pettranslator.AdaptiveHomeTest)
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNodes$ui_test_release(SemanticsNodeInteraction.kt:64)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:157)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.AndroidImageHelpers_androidKt.captureToImage(AndroidImageHelpers.android.kt:51)
+	at com.example.pettranslator.AdaptiveHomeTest.capture(AdaptiveHomeTest.kt:66)
+	at com.example.pettranslator.AdaptiveHomeTest.verify(AdaptiveHomeTest.kt:46)
+	at com.example.pettranslator.AdaptiveHomeTest.largeContent(AdaptiveHomeTest.kt:73)
+12) smallPhone(com.example.pettranslator.AdaptiveHomeTest)
+java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:82)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNodes$ui_test_release(SemanticsNodeInteraction.kt:64)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:157)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.AndroidImageHelpers_androidKt.captureToImage(AndroidImageHelpers.android.kt:51)
+	at com.example.pettranslator.AdaptiveHomeTest.capture(AdaptiveHomeTest.kt:66)
+	at com.example.pettranslator.AdaptiveHomeTest.verify(AdaptiveHomeTest.kt:46)
+	at com.example.pettranslator.AdaptiveHomeTest.smallPhone(AdaptiveHomeTest.kt:69)
+
+FAILURES!!!
+Tests run: 12,  Failures: 12
+
+
+INSTRUMENTATION_CODE: -1

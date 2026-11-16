@@ -1,0 +1,9 @@
+device=sdk_gphone64_x86_64
+anchorCoordinates=element centers normalized to the rendered cloud bounds
+centralPet.anchor=(0.5004677, 0.5406218)
+Door.anchor=(0.2956034, 0.35305917)
+Meal.anchor=(0.50000006, 0.28134403)
+Play.anchor=(0.7043966, 0.35305917)
+Alone.anchor=(0.2909261, 0.74924767)
+Held.anchor=(0.4995323, 0.81945825)
+Unknown.anchor=(0.7090739, 0.7482448)

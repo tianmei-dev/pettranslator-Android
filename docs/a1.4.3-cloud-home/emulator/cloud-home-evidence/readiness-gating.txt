@@ -1,0 +1,18 @@
+Controlled Compose viewport; 58dp navigation placeholder, not a separate physical device.
+viewport=DpRect(left=0.0.dp, top=24.444445.dp, right=392.96295.dp, bottom=657.03705.dp)
+actions=DpRect(left=0.0.dp, top=662.96295.dp, right=392.96295.dp, bottom=735.9259.dp)
+cloud=DpRect(left=1.8518518.dp, top=256.66666.dp, right=390.74072.dp, bottom=654.8148.dp)
+centralPet=DpRect(left=101.11111.dp, top=421.48148.dp, right=291.85184.dp, bottom=536.29626.dp)
+cloudRendering=body-and-tail
+cloudAlpha240Source=HomeSourceAlpha(width=1216, height=1293, left=23, top=88, right=1203, bottom=1204)
+cloudOpaqueOutline=DpRect(left=9.20748.dp, top=285.04108.dp, right=386.5832.dp, bottom=644.8802.dp)
+cloudOpaqueWidthRatio=0.96033406
+cloudOpaqueToRecordGap=18.082764.dp
+centralDogSource=HomeSourceAlpha(width=697, height=426, left=86, top=0, right=645, bottom=413)
+centralDogVisible=DpRect(left=128.6998.dp, top=424.07407.dp, right=273.04248.dp, bottom=530.7172.dp)
+Door: DpRect(left=50.0.dp, top=334.81482.dp, right=132.59259.dp, bottom=417.4074.dp)
+Meal: DpRect(left=162.59259.dp, top=333.3333.dp, right=230.0.dp, bottom=400.74072.dp)
+Play: DpRect(left=268.14813.dp, top=334.81482.dp, right=350.74072.dp, bottom=417.4074.dp)
+Alone: DpRect(left=51.11111.dp, top=542.96295.dp, right=131.48148.dp, bottom=623.3333.dp)
+Held: DpRect(left=158.14815.dp, top=554.8148.dp, right=234.8148.dp, bottom=631.48145.dp)
+Unknown: DpRect(left=268.14813.dp, top=540.0.dp, right=350.74072.dp, bottom=622.5926.dp)

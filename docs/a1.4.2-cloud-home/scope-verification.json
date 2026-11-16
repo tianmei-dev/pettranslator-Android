@@ -1,0 +1,23 @@
+{
+  "Branch": "feature/a1.4-cloud-home",
+  "HeadBefore": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "HeadAfter": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "MainBefore": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "MainAfter": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "ProtectedFilesChecked": 88,
+  "ProtectedFilesChanged": [],
+  "ModifiedProductionFiles": [
+    "app/src/main/java/com/example/pettranslator/ui/home/HomeScreen.kt",
+    "app/src/main/java/com/example/pettranslator/ui/home/HomeResponsiveDimensions.kt"
+  ],
+  "ModifiedTestFiles": [
+    "app/src/androidTest/java/com/example/pettranslator/CloudHomeLayoutTest.kt",
+    "app/src/androidTest/java/com/example/pettranslator/HomeVisualEvidenceTest.kt"
+  ],
+  "ReusedImages": [
+    "pet_cat_main.png (620x426)",
+    "pet_dog_main.png (697x426)",
+    "pastel_cloud_pet_app_frame.png (1216x1293)"
+  ],
+  "ApkSHA256": "55C2F67F39B1995963820ECE899A620EB22BBCDF3B9E0C2CE2968B5161AE658E"
+}

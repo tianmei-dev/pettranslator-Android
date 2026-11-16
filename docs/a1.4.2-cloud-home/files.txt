@@ -1,0 +1,42 @@
+app/src/androidTest/java/com/example/pettranslator/CloudHomeLayoutTest.kt
+app/src/androidTest/java/com/example/pettranslator/HomeVisualEvidenceTest.kt
+app/src/main/java/com/example/pettranslator/ui/home/HomeResponsiveDimensions.kt
+app/src/main/java/com/example/pettranslator/ui/home/HomeScreen.kt
+artifacts/a1.4.2-cloud-home/baseline.json (gitignored baseline)
+artifacts/a1.4.2-cloud-home/HomeResponsiveDimensions.before.kt (gitignored baseline)
+artifacts/a1.4.2-cloud-home/HomeScreen.before.kt (gitignored baseline)
+artifacts/pettranslator-a1.4.2-cloud-home-debug.apk (gitignored)
+docs/a1.4.2-cloud-home/before-samsung.png
+docs/a1.4.2-cloud-home/build-final.txt
+docs/a1.4.2-cloud-home/build-initial.txt
+docs/a1.4.2-cloud-home/build-tests.txt
+docs/a1.4.2-cloud-home/cloud-home-evidence/callbacks-and-selection.png
+docs/a1.4.2-cloud-home/cloud-home-evidence/callbacks-and-selection.txt
+docs/a1.4.2-cloud-home/cloud-home-evidence/central-cat.png
+docs/a1.4.2-cloud-home/cloud-home-evidence/central-cat.txt
+docs/a1.4.2-cloud-home/cloud-home-evidence/central-dog.png
+docs/a1.4.2-cloud-home/cloud-home-evidence/central-dog.txt
+docs/a1.4.2-cloud-home/cloud-home-evidence/narrow-320-font2.png
+docs/a1.4.2-cloud-home/cloud-home-evidence/narrow-320-font2.txt
+docs/a1.4.2-cloud-home/cloud-home-evidence/readiness-gating.png
+docs/a1.4.2-cloud-home/cloud-home-evidence/readiness-gating.txt
+docs/a1.4.2-cloud-home/cloud-home-evidence/viewport-360x720.png
+docs/a1.4.2-cloud-home/cloud-home-evidence/viewport-360x720.txt
+docs/a1.4.2-cloud-home/cloud-home-evidence/viewport-393x800.png
+docs/a1.4.2-cloud-home/cloud-home-evidence/viewport-393x800.txt
+docs/a1.4.2-cloud-home/cloud-home-evidence/viewport-412x900.png
+docs/a1.4.2-cloud-home/cloud-home-evidence/viewport-412x900.txt
+docs/a1.4.2-cloud-home/comparison.png
+docs/a1.4.2-cloud-home/delivery.md
+docs/a1.4.2-cloud-home/device-tests-initial.txt
+docs/a1.4.2-cloud-home/device-tests.txt
+docs/a1.4.2-cloud-home/files.txt
+docs/a1.4.2-cloud-home/font-1.3.png
+docs/a1.4.2-cloud-home/home-cat.png
+docs/a1.4.2-cloud-home/home-dog.png
+docs/a1.4.2-cloud-home/home-initial.png
+docs/a1.4.2-cloud-home/lint.txt
+docs/a1.4.2-cloud-home/reference.png
+docs/a1.4.2-cloud-home/samsung-layout.txt
+docs/a1.4.2-cloud-home/scope-verification.json
+docs/a1.4.2-cloud-home/unit-tests.txt

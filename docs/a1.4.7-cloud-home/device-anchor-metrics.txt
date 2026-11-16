@@ -1,0 +1,9 @@
+device=SM-S9010
+anchorCoordinates=element centers normalized to the rendered cloud bounds
+centralPet.anchor=(0.5004677, 0.54)
+Door.anchor=(0.24041161, 0.36)
+Meal.anchor=(0.5, 0.29349995)
+Play.anchor=(0.76005614, 0.36049998)
+Alone.anchor=(0.26005614, 0.74)
+Held.anchor=(0.5, 0.8205001)
+Unknown.anchor=(0.7404116, 0.7405)

@@ -1,0 +1,7 @@
+Starting: Intent { cmp=com.example.pettranslator/.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: com.example.pettranslator/.MainActivity
+TotalTime: 1511
+WaitTime: 1538
+Complete

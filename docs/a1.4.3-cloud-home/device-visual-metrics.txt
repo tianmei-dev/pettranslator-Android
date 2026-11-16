@@ -1,0 +1,12 @@
+device=SM-S9010, fontScale=1.0, referenceDevice=false
+Cloud metrics use source alpha >= 240, excluding faint transparent glow.
+cloudAlphaSource=HomeSourceAlpha(width=1216, height=1293, left=23, top=88, right=1203, bottom=1204)
+cloudArtwork=DpRect(left=1.6666666.dp, top=254.0.dp, right=358.0.dp, bottom=587.3333.dp)
+cloudOpaqueOutline=DpRect(left=8.406525.dp, top=277.6606.dp, right=354.19052.dp, bottom=577.7201.dp)
+cloudOpaqueWidthRatio=0.9605111
+cloudOpaqueToRecordGap=17.61322.dp
+Cat: alphaSource=HomeSourceAlpha(width=620, height=426, left=73, top=0, right=573, bottom=408), imageLayout=DpRect(left=92.666664.dp, top=399.66666.dp, right=267.33334.dp, bottom=487.0.dp), visible=DpRect(left=131.41315.dp, top=399.66666.dp, right=233.91707.dp, bottom=483.30988.dp)
+Cat: visibleWidth=102.50392dp, visibleHeight=83.64322dp, visibleArea=8573.758dp2, referenceWidthGrowth=0.013886452, referenceHeightGrowth=0.013857245
+Dog: alphaSource=HomeSourceAlpha(width=697, height=426, left=86, top=0, right=645, bottom=413), imageLayout=DpRect(left=92.666664.dp, top=401.33334.dp, right=267.33334.dp, bottom=485.33334.dp), visible=DpRect(left=128.23944.dp, top=401.33334.dp, right=238.4648.dp, bottom=482.76996.dp)
+Dog: visibleWidth=110.22536dp, visibleHeight=81.436615dp, visibleArea=8976.38dp2, referenceWidthGrowth=-0.024554372, referenceHeightGrowth=-0.024711192
+catDogOpaqueAreaRatio=1.0469598

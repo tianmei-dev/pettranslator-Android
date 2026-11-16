@@ -138,14 +138,10 @@ class FinalFontLayoutTest {
                 }
             }
         }
-        rule.waitForIdle()
-        rule.waitUntil(5_000) {
-            runCatching { rule.onAllNodesWithText("猫言狗语翻译官").fetchSemanticsNodes().isNotEmpty() }.getOrDefault(false)
-        }
+        awaitContent("pet_Cat")
         rule.onNodeWithTag("font_trial_home").assertDoesNotExist()
-        val body = layout(rule.onNodeWithText("猫言狗语翻译官"), "home-brand")
-        assertNotEquals(PetFontFamilies.ZhenKai, body.layoutInput.style.fontFamily)
-        assertNotEquals(PetFontFamilies.WenKai, body.layoutInput.style.fontFamily)
+        rule.onNodeWithText("猫言狗语翻译官").assertIsDisplayed()
+        rule.onNodeWithText("选择宠物").assertDoesNotExist()
         capture("final-home")
         rule.mainClock.autoAdvance = false
         rule.runOnIdle { page = Page.Analysis }

@@ -1,0 +1,135 @@
+{
+  "Status": "passed",
+  "VerifiedAt": "2026-11-13 18:05:26 Asia/Shanghai",
+  "Baseline": "artifacts/home-local-polish/baseline.json",
+  "Branch": "feature/a1.4-cloud-home",
+  "HeadBefore": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "HeadAfter": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "MainBefore": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "MainAfter": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "RefReadMethod": "Read-only .git/HEAD and loose/packed reference files; no Git command executed",
+  "AllowedProductionFiles": [
+    "app/src/main/java/com/example/pettranslator/ui/home/HomeScreen.kt"
+  ],
+  "AllowedTestFiles": [
+    "app/src/androidTest/java/com/example/pettranslator/CloudHomeLayoutTest.kt",
+    "app/src/androidTest/java/com/example/pettranslator/HomeVisualEvidenceTest.kt",
+    "app/src/androidTest/java/com/example/pettranslator/FinalFontLayoutTest.kt"
+  ],
+  "ProtectedFilesChecked": 113,
+  "ProtectedFilesChanged": [],
+  "HomeResponsiveDimensions": {
+    "Path": "app/src/main/java/com/example/pettranslator/ui/home/HomeResponsiveDimensions.kt",
+    "BeforeSha256": "528E53F3F88243EAA9024C3D13109293986F75688246C222A5848D281BAB2AEB",
+    "AfterSha256": "528E53F3F88243EAA9024C3D13109293986F75688246C222A5848D281BAB2AEB",
+    "Unchanged": true
+  },
+  "HomeScreenFunctionAudit": {
+    "Comparison": "Function text with CRLF normalized to LF and trailing inter-function whitespace ignored",
+    "UnchangedFunctions": [
+      {
+        "Name": "HomeScreen",
+        "Unchanged": true,
+        "Sha256": "E9E4C8263F010D6C0C1AB61A353B5BCE1A08D2E2E2F65F590DCD6A0CCDB20A59"
+      },
+      {
+        "Name": "HomeCloud",
+        "Unchanged": true,
+        "Sha256": "1816A5C0E500F3F5FB9F2B4B63EA47D1B6FC353A60A245326809967479ED1A38"
+      },
+      {
+        "Name": "CloudBackdrop",
+        "Unchanged": true,
+        "Sha256": "C3D2597BC2D4BF2FEF382E2F3AA7FCEFBFAF289BBC41039E99056102F32FAA78"
+      },
+      {
+        "Name": "HomeRecordActionBar",
+        "Unchanged": true,
+        "Sha256": "830A0E2AD78C25F0AEC9DE31C36C36263625D0988BE6FB0943BF9113A85ADCA1"
+      },
+      {
+        "Name": "HomeHero",
+        "Unchanged": true,
+        "Sha256": "C7FC318B8648903EEBD1A3AFDFA6152939F2AB79E1FF0AB433997117CA348B82"
+      },
+      {
+        "Name": "VipPlaceholder",
+        "Unchanged": true,
+        "Sha256": "6961A651E6C6F3167B20DB5AD4942ECEA584BC830BD4E782228FF283D32AA681"
+      },
+      {
+        "Name": "RecordButton",
+        "Unchanged": true,
+        "Sha256": "AC1967BD2C8693BE171A298A85981C3C40D9B65D0CDEB3F0475DC4C9D6D34FF5"
+      },
+      {
+        "Name": "RecordLabel",
+        "Unchanged": true,
+        "Sha256": "EB179816413C042E70765534811E8CDE4D888FF51CBDE7E7DD2A7B3DA48F92E2"
+      },
+      {
+        "Name": "Microphone",
+        "Unchanged": true,
+        "Sha256": "325FE05CEA99FBA9AAE012CE2BF735CA3EE572A82C289D57AD649A8F96C26AA3"
+      },
+      {
+        "Name": "petArtwork",
+        "Unchanged": true,
+        "Sha256": "CD51A0EF49DF935BDDAEFD7C773644B732176C9FF48EF3340FEB6388A71DBA2A"
+      },
+      {
+        "Name": "sceneArtwork",
+        "Unchanged": true,
+        "Sha256": "FB8D063ADB0BBF4A04E0CA82F3F8A22EE8CEB926A9DC57D22F339519A2957285"
+      }
+    ],
+    "ModifiedFunctions": [
+      "HomeHeader",
+      "HomeSelectionModules",
+      "PetChoice",
+      "SceneChoice"
+    ],
+    "AddedFunctions": [
+      "sceneCloudPath"
+    ],
+    "RemovedFunctions": [],
+    "ImportsAdded": [
+      "import androidx.compose.ui.graphics.Path",
+      "import androidx.compose.ui.geometry.Offset",
+      "import androidx.compose.ui.geometry.Size",
+      "import androidx.compose.ui.res.stringResource",
+      "import androidx.compose.ui.text.rememberTextMeasurer",
+      "import kotlin.math.PI",
+      "import kotlin.math.cos",
+      "import kotlin.math.sin",
+      "import kotlin.math.ceil"
+    ],
+    "ImportsRemoved": [
+      "import androidx.compose.foundation.shape.CircleShape"
+    ]
+  },
+  "ProductionSourceHash": "71ADD69CEA861F23AF375F44FD8306CAB8F5D3D70936CB86BAC146D9EE2AC557",
+  "AllowedSourceHashes": [
+    {
+      "Path": "app/src/main/java/com/example/pettranslator/ui/home/HomeScreen.kt",
+      "Sha256": "71ADD69CEA861F23AF375F44FD8306CAB8F5D3D70936CB86BAC146D9EE2AC557"
+    },
+    {
+      "Path": "app/src/androidTest/java/com/example/pettranslator/CloudHomeLayoutTest.kt",
+      "Sha256": "7627AF2670C7FB5575B7F0A693CA3B787FF12ECA0DEFF2D23BD500BE8A20604A"
+    },
+    {
+      "Path": "app/src/androidTest/java/com/example/pettranslator/HomeVisualEvidenceTest.kt",
+      "Sha256": "420AC0E7D6913431F7809AD7D5C6D333D610418E46D997303C4256CBB2DA647D"
+    },
+    {
+      "Path": "app/src/androidTest/java/com/example/pettranslator/FinalFontLayoutTest.kt",
+      "Sha256": "9C94C80AE5C0DDA9CBC6375583A96FB5E5C556DA5DF227A76E94A71BA445A910"
+    }
+  ],
+  "FinalDeviceTestStatus": "Passed: 15 UI tests, 91.886s; docs/home-local-polish/device-tests.txt",
+  "FinalEvidenceDirectory": "docs/home-local-polish/evidence/home",
+  "FinalGeometryAuditStatus": "Passed: evidence/home/layout.txt frozen bounds identical and evidence/home/anchor-metrics.txt byte-identical to same-device before evidence",
+  "FinalGeometryReport": "docs/home-local-polish/layout-verification.json",
+  "ImageInkAuditStatus": "Separate glyph-verification.json audit; no pixel or glyph-ink conclusion is made by these two reports"
+}

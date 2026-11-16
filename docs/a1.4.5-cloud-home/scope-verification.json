@@ -1,0 +1,38 @@
+{
+  "Branch": "feature/a1.4-cloud-home",
+  "Head": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "MainBefore": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "MainAfter": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "VerifiedAt": "2026-11-13 11:55:00 Asia/Shanghai",
+  "ProtectedFilesChecked": 108,
+  "ProtectedFilesChanged": [],
+  "ProductionFiles": [
+    "app/src/main/java/com/example/pettranslator/ui/home/HomeResponsiveDimensions.kt"
+  ],
+  "TestFiles": [
+    "app/src/androidTest/java/com/example/pettranslator/CloudHomeLayoutTest.kt",
+    "app/src/androidTest/java/com/example/pettranslator/HomeVisualEvidenceTest.kt"
+  ],
+  "SourceHashes": [
+    {
+      "Path": "app/src/main/java/com/example/pettranslator/ui/home/HomeResponsiveDimensions.kt",
+      "Sha256": "E7DE021079A02E7549CA5C7B4A9D30F074BF7CF25F08A10F96EFAEB920B2DDFC"
+    },
+    {
+      "Path": "app/src/androidTest/java/com/example/pettranslator/CloudHomeLayoutTest.kt",
+      "Sha256": "ED6ADF2E0E09696E44F97156B3D450F8D2E921F8B56571ECAB3D0994824E8A5A"
+    },
+    {
+      "Path": "app/src/androidTest/java/com/example/pettranslator/HomeVisualEvidenceTest.kt",
+      "Sha256": "6787D3467929AA5A6E865C15CD20F82EEE5621879FDAF45CE020D5AEC5E56E1D"
+    }
+  ],
+  "Device": "SM-S9010 /1080x2340/480dpi/font1.0",
+  "PhysicalUiTests": "12 passed",
+  "EmulatorUiTests": "12 passed",
+  "UnitTests": "27 passed",
+  "Lint": "0 errors,9 warnings",
+  "TestPackageRemoved": true,
+  "OwnEmulatorClosed": true,
+  "ApkSha256": "5765F82A0B087AD2B792BED8657B3461C6703E6055EEECB71ADA49C45BC3982E"
+}

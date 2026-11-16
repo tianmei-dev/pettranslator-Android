@@ -1,0 +1,10 @@
+CONTROLLED reference viewport, rendered on SM-S9010; not a physical SM-G973U measurement.
+411x869dp, font1.1, reference status inset42.6667dp, system navigation inset47.2381dp, app navigation placeholder58dp.
+Prior physical SM-G973U alpha-derived pet sizes provide the comparison baseline.
+viewport=DpRect(left=0.0.dp, top=42.622223.dp, right=411.0.dp, bottom=676.62775.dp), cloud=DpRect(left=1.9027778.dp, top=278.9472.dp, right=408.71664.dp, bottom=674.725.dp), opaqueOutline=DpRect(left=9.597448.dp, top=307.14923.dp, right=404.36746.dp, bottom=664.8021.dp)
+opaqueCloudWidthRatio=0.96051097, opaqueCloudToRecordGap=17.91455.dp
+Cat: alphaSource=HomeSourceAlpha(width=620, height=426, left=73, top=0, right=573, bottom=408), visible=DpRect(left=143.04333.dp, top=444.10834.dp, right=274.8084.dp, bottom=551.62866.dp)
+Cat: visibleWidth=131.76508dp, visibleHeight=107.520325dp, visibleArea=14167.424dp2, referenceWidthGrowth=0.30331433, referenceHeightGrowth=0.30327666
+Dog: alphaSource=HomeSourceAlpha(width=697, height=426, left=86, top=0, right=645, bottom=413), visible=DpRect(left=138.90279.dp, top=446.39166.dp, right=280.7231.dp, bottom=551.17126.dp)
+Dog: visibleWidth=141.82033dp, visibleHeight=104.7796dp, visibleArea=14859.878dp2, referenceWidthGrowth=0.2550472, referenceHeightGrowth=0.2548455
+catDogOpaqueAreaRatio=1.0488765

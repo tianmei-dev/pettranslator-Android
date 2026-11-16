@@ -1,0 +1,5 @@
+com.example.pettranslator.HomeViewModelTest: tests=2,failures=0,errors=0
+com.example.pettranslator.PetInterpretationEngineTest: tests=10,failures=0,errors=0
+com.example.pettranslator.PetRecognitionPolicyTest: tests=4,failures=0,errors=0
+com.example.pettranslator.RecordingViewModelTest: tests=7,failures=0,errors=0
+com.example.pettranslator.WaveformLevelsTest: tests=4,failures=0,errors=0

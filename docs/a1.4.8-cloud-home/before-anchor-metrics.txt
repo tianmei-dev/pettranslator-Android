@@ -1,0 +1,9 @@
+device=Pixel 3
+anchorCoordinates=element centers normalized to the rendered cloud bounds
+centralPet.anchor=(0.5004677, 0.5400641)
+Door.anchor=(0.24041158, 0.3600427)
+Meal.anchor=(0.50000006, 0.29006416)
+Play.anchor=(0.76052386, 0.36004278)
+Alone.anchor=(0.25958842, 0.7398504)
+Held.anchor=(0.4995323, 0.8194443)
+Unknown.anchor=(0.73994386, 0.7403846)

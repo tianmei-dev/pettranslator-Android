@@ -1,0 +1,21 @@
+{
+  "Branch": "feature/a1.4-cloud-home",
+  "Head": "351d9ae3c7fc5511c04e823e96e3f725acb3ef32",
+  "Main": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "ProtectedFilesChecked": 116,
+  "ProtectedFilesChanged": [],
+  "OnlyExpectedLineChanged": true,
+  "BuildInvocations": 1,
+  "BuildStatus": "successful",
+  "InstallAttempts": 1,
+  "InstallStatus": "successful",
+  "ValidHomeScreenshots": false,
+  "ScreenshotFailure": "Foreground was file manager; raw captures are invalid for app acceptance",
+  "UserDeclinedSupplementaryCapture": true,
+  "InvalidCaptures": [
+    "invalid-cat-attempt.png",
+    "invalid-dog-attempt.png"
+  ],
+  "Device": "SM-S9010",
+  "FontScale": "1.0"
+}

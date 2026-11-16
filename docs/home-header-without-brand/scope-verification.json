@@ -1,0 +1,15 @@
+{
+  "Branch": "feature/a1.4-cloud-home",
+  "ProductionFile": "app/src/main/java/com/example/pettranslator/ui/home/HomeScreen.kt",
+  "TestFiles": [
+    "app/src/androidTest/java/com/example/pettranslator/HomeVisualEvidenceTest.kt",
+    "app/src/androidTest/java/com/example/pettranslator/FinalFontLayoutTest.kt"
+  ],
+  "ProtectedChecked": 107,
+  "ProtectedChanged": 0,
+  "Main": "55948715fc6ca202c34f955ca9f12b538bd80e5f",
+  "ApkSha256": "2F994D5476C814F0A6A4C7BD443A358A43824A05171A095666973B21C6067402",
+  "Device": "Pixel 3 / 1080x2160 / 440dpi / font1.0",
+  "Validation": "Build and AndroidTest build passed; HomeVisualEvidenceTest passed (1 test,9.507s); cat/dog screenshots reviewed",
+  "TestPackageRemoved": true
+}

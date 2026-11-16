@@ -1,0 +1,8 @@
+anchorCoordinates=element centers normalized to the rendered cloud bounds
+centralPet.anchor=(0.5, 0.5407262)
+Door.anchor=(0.23995408, 0.39941117)
+Meal.anchor=(0.5, 0.27919522)
+Play.anchor=(0.76004595, 0.39941117)
+Alone.anchor=(0.26004595, 0.6982336)
+Held.anchor=(0.5, 0.81992143)
+Unknown.anchor=(0.74052817, 0.6987241)

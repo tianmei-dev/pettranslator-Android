@@ -1,0 +1,201 @@
+{
+  "ActualS22StableMainGeometry": true,
+  "ActualS22CatDogImagesUnchanged": true,
+  "ActualS22DogPillLeftDp": 48,
+  "ActualS22CatPillLeftDp": 198,
+  "ActualS22EachPillOutwardDp": 12,
+  "ControlledComparisons": [
+    {
+      "Viewport": "viewport-360x720",
+      "PetCloudViewportAndActionsUnchanged": true,
+      "Deltas": [
+        {
+          "Scene": "Door",
+          "DeltaX": 5.667,
+          "DeltaY": 8.0,
+          "WidthDelta": 0.0,
+          "HeightDelta": 0.0
+        },
+        {
+          "Scene": "Meal",
+          "DeltaX": 0.0,
+          "DeltaY": 0.0,
+          "WidthDelta": 0.0,
+          "HeightDelta": 0.0
+        },
+        {
+          "Scene": "Play",
+          "DeltaX": -5.667,
+          "DeltaY": 8.0,
+          "WidthDelta": 0.0,
+          "HeightDelta": 0.0
+        },
+        {
+          "Scene": "Alone",
+          "DeltaX": 5.667,
+          "DeltaY": -8.0,
+          "WidthDelta": -0.0,
+          "HeightDelta": 0.0
+        },
+        {
+          "Scene": "Held",
+          "DeltaX": 0.0,
+          "DeltaY": 0.0,
+          "WidthDelta": 0.0,
+          "HeightDelta": 0.0
+        },
+        {
+          "Scene": "Unknown",
+          "DeltaX": -5.667,
+          "DeltaY": -8.0,
+          "WidthDelta": 0.0,
+          "HeightDelta": 0.0
+        }
+      ]
+    },
+    {
+      "Viewport": "viewport-393x800",
+      "PetCloudViewportAndActionsUnchanged": true,
+      "Deltas": [
+        {
+          "Scene": "Door",
+          "DeltaX": 6.186,
+          "DeltaY": 9.825,
+          "WidthDelta": 0.0,
+          "HeightDelta": 0.0
+        },
+        {
+          "Scene": "Meal",
+          "DeltaX": 0.0,
+          "DeltaY": 0.0,
+          "WidthDelta": 0.0,
+          "HeightDelta": 0.0
+        },
+        {
+          "Scene": "Play",
+          "DeltaX": -5.822,
+          "DeltaY": 9.825,
+          "WidthDelta": 0.0,
+          "HeightDelta": 0.0
+        },
+        {
+          "Scene": "Alone",
+          "DeltaX": 6.186,
+          "DeltaY": -9.825,
+          "WidthDelta": -0.0,
+          "HeightDelta": 0.0
+        },
+        {
+          "Scene": "Held",
+          "DeltaX": 0.0,
+          "DeltaY": 0.0,
+          "WidthDelta": 0.0,
+          "HeightDelta": 0.0
+        },
+        {
+          "Scene": "Unknown",
+          "DeltaX": -5.822,
+          "DeltaY": -9.825,
+          "WidthDelta": 0.0,
+          "HeightDelta": 0.0
+        }
+      ]
+    },
+    {
+      "Viewport": "viewport-412x900",
+      "PetCloudViewportAndActionsUnchanged": true,
+      "Deltas": [
+        {
+          "Scene": "Door",
+          "DeltaX": 6.154,
+          "DeltaY": 10.0,
+          "WidthDelta": 0.0,
+          "HeightDelta": 0.0
+        },
+        {
+          "Scene": "Meal",
+          "DeltaX": 0.0,
+          "DeltaY": 0.0,
+          "WidthDelta": 0.0,
+          "HeightDelta": 0.0
+        },
+        {
+          "Scene": "Play",
+          "DeltaX": -6.154,
+          "DeltaY": 10.0,
+          "WidthDelta": 0.0,
+          "HeightDelta": 0.0
+        },
+        {
+          "Scene": "Alone",
+          "DeltaX": 5.769,
+          "DeltaY": -10.0,
+          "WidthDelta": 0.0,
+          "HeightDelta": 0.0
+        },
+        {
+          "Scene": "Held",
+          "DeltaX": 0.0,
+          "DeltaY": 0.0,
+          "WidthDelta": 0.0,
+          "HeightDelta": 0.0
+        },
+        {
+          "Scene": "Unknown",
+          "DeltaX": -6.154,
+          "DeltaY": -10.0,
+          "WidthDelta": 0.0,
+          "HeightDelta": 0.0
+        }
+      ]
+    },
+    {
+      "Viewport": "controlled-reference-cat",
+      "PetCloudViewportAndActionsUnchanged": true,
+      "Deltas": [
+        {
+          "Scene": "Door",
+          "DeltaX": 6.089,
+          "DeltaY": 9.894,
+          "WidthDelta": -0.0,
+          "HeightDelta": -0.0
+        },
+        {
+          "Scene": "Meal",
+          "DeltaX": 0.0,
+          "DeltaY": 0.0,
+          "WidthDelta": 0.0,
+          "HeightDelta": 0.0
+        },
+        {
+          "Scene": "Play",
+          "DeltaX": -6.089,
+          "DeltaY": 9.894,
+          "WidthDelta": 0.0,
+          "HeightDelta": 0.0
+        },
+        {
+          "Scene": "Alone",
+          "DeltaX": 6.089,
+          "DeltaY": -9.894,
+          "WidthDelta": 0.0,
+          "HeightDelta": 0.0
+        },
+        {
+          "Scene": "Held",
+          "DeltaX": 0.0,
+          "DeltaY": 0.0,
+          "WidthDelta": 0.0,
+          "HeightDelta": 0.0
+        },
+        {
+          "Scene": "Unknown",
+          "DeltaX": -6.089,
+          "DeltaY": -9.894,
+          "WidthDelta": 0.0,
+          "HeightDelta": 0.0
+        }
+      ]
+    }
+  ]
+}

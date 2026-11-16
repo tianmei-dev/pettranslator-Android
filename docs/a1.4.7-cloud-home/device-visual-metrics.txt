@@ -1,0 +1,33 @@
+device=SM-S9010, fontScale=1.0, referenceDevice=false
+Cloud metrics use source alpha >= 240, excluding faint transparent glow.
+cloudAlphaSource=HomeSourceAlpha(width=1216, height=1293, left=23, top=88, right=1203, bottom=1204)
+cloudArtwork=DpRect(left=1.6666666.dp, top=254.0.dp, right=358.0.dp, bottom=587.3333.dp)
+cloudOpaqueOutline=DpRect(left=8.406525.dp, top=277.6606.dp, right=354.19052.dp, bottom=577.7201.dp)
+cloudOpaqueWidthRatio=0.9605111
+cloudOpaqueToRecordGap=17.61322.dp
+home_pet_title=DpRect(left=126.333336.dp, top=201.0.dp, right=233.66667.dp, bottom=232.33333.dp)
+pet_Dog=DpRect(left=48.0.dp, top=238.33333.dp, right=162.0.dp, bottom=286.33334.dp)
+pet_Cat=DpRect(left=198.0.dp, top=238.33333.dp, right=312.0.dp, bottom=286.33334.dp)
+home_scene_title=DpRect(left=1.6666666.dp, top=291.0.dp, right=358.0.dp, bottom=317.33334.dp)
+home_center_pet=DpRect(left=92.666664.dp, top=390.33334.dp, right=267.33334.dp, bottom=477.66666.dp)
+scene_Door=DpRect(left=51.333332.dp, top=338.0.dp, right=123.333336.dp, bottom=410.0.dp)
+scene_Meal=DpRect(left=149.0.dp, top=321.0.dp, right=210.66667.dp, bottom=382.66666.dp)
+scene_Play=DpRect(left=238.0.dp, top=339.66666.dp, right=307.0.dp, bottom=408.66666.dp)
+scene_Alone=DpRect(left=60.666668.dp, top=467.0.dp, right=128.0.dp, bottom=534.3333.dp)
+scene_Held=DpRect(left=147.66667.dp, top=495.33334.dp, right=212.0.dp, bottom=559.6667.dp)
+scene_Unknown=DpRect(left=231.0.dp, top=466.33334.dp, right=300.0.dp, bottom=535.3333.dp)
+anchorCoordinates=element centers normalized to the rendered cloud bounds
+centralPet.anchor=(0.5004677, 0.54)
+Door.anchor=(0.24041161, 0.36)
+Meal.anchor=(0.5, 0.29349995)
+Play.anchor=(0.76005614, 0.36049998)
+Alone.anchor=(0.26005614, 0.74)
+Held.anchor=(0.5, 0.8205001)
+Unknown.anchor=(0.7404116, 0.7405)
+Cat: alphaSource=HomeSourceAlpha(width=620, height=426, left=73, top=0, right=573, bottom=408), imageLayout=DpRect(left=92.666664.dp, top=390.33334.dp, right=267.33334.dp, bottom=477.66666.dp), visible=DpRect(left=131.41316.dp, top=390.33334.dp, right=233.91705.dp, bottom=473.9765.dp)
+Cat: visibleWidth=102.50389dp, visibleHeight=83.64316dp, visibleArea=8573.749dp2
+Cat: priorA145Size=102.5x83.6dp, widthDelta=0.0038909912dp,heightDelta=0.043159485dp
+Dog: alphaSource=HomeSourceAlpha(width=697, height=426, left=86, top=0, right=645, bottom=413), imageLayout=DpRect(left=92.666664.dp, top=392.0.dp, right=267.33334.dp, bottom=476.0.dp), visible=DpRect(left=128.23944.dp, top=392.0.dp, right=238.4648.dp, bottom=473.4366.dp)
+Dog: visibleWidth=110.22536dp, visibleHeight=81.436615dp, visibleArea=8976.38dp2
+Dog: priorA145Size=110.2x81.4dp, widthDelta=0.025360107dp,heightDelta=0.036613464dp
+catDogOpaqueAreaRatio=1.0469608

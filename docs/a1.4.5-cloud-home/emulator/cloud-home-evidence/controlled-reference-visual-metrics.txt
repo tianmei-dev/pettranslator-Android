@@ -1,0 +1,10 @@
+CONTROLLED reference viewport, rendered on sdk_gphone64_x86_64; not a physical SM-G973U measurement.
+411x869dp, font1.1, reference status inset42.6667dp, system navigation inset47.2381dp, app navigation placeholder58dp.
+Prior physical SM-G973U alpha-derived pet sizes provide the comparison baseline.
+viewport=DpRect(left=0.0.dp, top=42.64537.dp, right=411.16574.dp, bottom=677.4981.dp), cloud=DpRect(left=2.011574.dp, top=278.80417.dp, right=409.15414.dp, bottom=675.4866.dp), opaqueOutline=DpRect(left=9.712461.dp, top=307.072.dp, right=404.80145.dp, bottom=665.5592.dp)
+opaqueCloudWidthRatio=0.9608996, opaqueCloudToRecordGap=17.973633.dp
+Cat: alphaSource=HomeSourceAlpha(width=620, height=426, left=73, top=0, right=573, bottom=408), visible=DpRect(left=142.6886.dp, top=444.15555.dp, right=275.37692.dp, bottom=552.4292.dp)
+Cat: visibleWidth=132.68832dp, visibleHeight=108.27365dp, visibleArea=14366.649dp2, referenceWidthGrowth=0.31244636, referenceHeightGrowth=0.31240785
+Dog: alphaSource=HomeSourceAlpha(width=697, height=426, left=86, top=0, right=645, bottom=413), visible=DpRect(left=138.89635.dp, top=446.56943.dp, right=280.90686.dp, bottom=551.48956.dp)
+Dog: visibleWidth=142.01051dp, visibleHeight=104.920135dp, visibleArea=14899.763dp2, referenceWidthGrowth=0.2567302, referenceHeightGrowth=0.25652862
+catDogOpaqueAreaRatio=1.0371077

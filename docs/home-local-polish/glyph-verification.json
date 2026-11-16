@@ -1,0 +1,1090 @@
+{
+  "description": "Same-coordinate strong Ink pixel comparison of six matching large-font screenshots after label safety arc correction.",
+  "inkRgb": [
+    23,
+    43,
+    117
+  ],
+  "maskRule": "RGB Euclidean distance to #172B75 <= threshold; lower half of each visible scene square clipped to home viewport; glyph ink only, icon regions excluded.",
+  "thresholds": [
+    15,
+    30,
+    45,
+    60
+  ],
+  "comparisons": [
+    {
+      "screenshot": "door",
+      "scene": "Door",
+      "baseline": "D:\\pettranslator\\docs\\a1.4.8-cloud-home\\device-layout\\narrow-320-font2-door.png",
+      "after": "D:\\pettranslator\\docs\\home-local-polish\\evidence\\layout\\narrow-320-font2-door.png",
+      "imageSizePx": [
+        872,
+        1962
+      ],
+      "sameSceneBounds": true,
+      "roiPx": [
+        31.0,
+        1075,
+        392.0,
+        1256.0
+      ],
+      "mask": [
+        {
+          "threshold": 15,
+          "old": 6921,
+          "new": 6921,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 30,
+          "old": 6991,
+          "new": 6991,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 45,
+          "old": 7172,
+          "new": 7172,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 60,
+          "old": 7216,
+          "new": 7216,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        }
+      ]
+    },
+    {
+      "screenshot": "door",
+      "scene": "Meal",
+      "baseline": "D:\\pettranslator\\docs\\a1.4.8-cloud-home\\device-layout\\narrow-320-font2-door.png",
+      "after": "D:\\pettranslator\\docs\\home-local-polish\\evidence\\layout\\narrow-320-font2-door.png",
+      "imageSizePx": [
+        872,
+        1962
+      ],
+      "sameSceneBounds": true,
+      "roiPx": [
+        288.0,
+        505,
+        583.0,
+        653.0
+      ],
+      "mask": [
+        {
+          "threshold": 15,
+          "old": 6033,
+          "new": 6030,
+          "lost": 3,
+          "added": 0,
+          "lostBoundsPx": [
+            560,
+            570,
+            562,
+            574
+          ]
+        },
+        {
+          "threshold": 30,
+          "old": 6092,
+          "new": 6092,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 45,
+          "old": 6350,
+          "new": 6350,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 60,
+          "old": 6427,
+          "new": 6427,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        }
+      ]
+    },
+    {
+      "screenshot": "door",
+      "scene": "Play",
+      "baseline": "D:\\pettranslator\\docs\\a1.4.8-cloud-home\\device-layout\\narrow-320-font2-door.png",
+      "after": "D:\\pettranslator\\docs\\home-local-polish\\evidence\\layout\\narrow-320-font2-door.png",
+      "imageSizePx": [
+        872,
+        1962
+      ],
+      "sameSceneBounds": true,
+      "roiPx": [
+        533.0,
+        1075,
+        787.0,
+        1202.0
+      ],
+      "mask": [
+        {
+          "threshold": 15,
+          "old": 3205,
+          "new": 3205,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 30,
+          "old": 3320,
+          "new": 3320,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 45,
+          "old": 3389,
+          "new": 3389,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 60,
+          "old": 3408,
+          "new": 3408,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        }
+      ]
+    },
+    {
+      "screenshot": "meal",
+      "scene": "Door",
+      "baseline": "D:\\pettranslator\\docs\\a1.4.8-cloud-home\\device-layout\\narrow-320-font2-meal.png",
+      "after": "D:\\pettranslator\\docs\\home-local-polish\\evidence\\layout\\narrow-320-font2-meal.png",
+      "imageSizePx": [
+        872,
+        1962
+      ],
+      "sameSceneBounds": true,
+      "roiPx": [
+        31.0,
+        1075,
+        392.0,
+        1256.0
+      ],
+      "mask": [
+        {
+          "threshold": 15,
+          "old": 6921,
+          "new": 6921,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 30,
+          "old": 6991,
+          "new": 6991,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 45,
+          "old": 7172,
+          "new": 7172,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 60,
+          "old": 7216,
+          "new": 7216,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        }
+      ]
+    },
+    {
+      "screenshot": "meal",
+      "scene": "Meal",
+      "baseline": "D:\\pettranslator\\docs\\a1.4.8-cloud-home\\device-layout\\narrow-320-font2-meal.png",
+      "after": "D:\\pettranslator\\docs\\home-local-polish\\evidence\\layout\\narrow-320-font2-meal.png",
+      "imageSizePx": [
+        872,
+        1962
+      ],
+      "sameSceneBounds": true,
+      "roiPx": [
+        288.0,
+        505,
+        583.0,
+        653.0
+      ],
+      "mask": [
+        {
+          "threshold": 15,
+          "old": 6033,
+          "new": 6030,
+          "lost": 3,
+          "added": 0,
+          "lostBoundsPx": [
+            560,
+            570,
+            562,
+            574
+          ]
+        },
+        {
+          "threshold": 30,
+          "old": 6092,
+          "new": 6092,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 45,
+          "old": 6350,
+          "new": 6350,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 60,
+          "old": 6427,
+          "new": 6427,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        }
+      ]
+    },
+    {
+      "screenshot": "meal",
+      "scene": "Play",
+      "baseline": "D:\\pettranslator\\docs\\a1.4.8-cloud-home\\device-layout\\narrow-320-font2-meal.png",
+      "after": "D:\\pettranslator\\docs\\home-local-polish\\evidence\\layout\\narrow-320-font2-meal.png",
+      "imageSizePx": [
+        872,
+        1962
+      ],
+      "sameSceneBounds": true,
+      "roiPx": [
+        533.0,
+        1075,
+        787.0,
+        1202.0
+      ],
+      "mask": [
+        {
+          "threshold": 15,
+          "old": 3205,
+          "new": 3205,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 30,
+          "old": 3320,
+          "new": 3320,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 45,
+          "old": 3389,
+          "new": 3389,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 60,
+          "old": 3408,
+          "new": 3408,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        }
+      ]
+    },
+    {
+      "screenshot": "play",
+      "scene": "Door",
+      "baseline": "D:\\pettranslator\\docs\\a1.4.8-cloud-home\\device-layout\\narrow-320-font2-play.png",
+      "after": "D:\\pettranslator\\docs\\home-local-polish\\evidence\\layout\\narrow-320-font2-play.png",
+      "imageSizePx": [
+        872,
+        1962
+      ],
+      "sameSceneBounds": true,
+      "roiPx": [
+        31.0,
+        1075,
+        392.0,
+        1256.0
+      ],
+      "mask": [
+        {
+          "threshold": 15,
+          "old": 6921,
+          "new": 6921,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 30,
+          "old": 6991,
+          "new": 6991,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 45,
+          "old": 7172,
+          "new": 7172,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 60,
+          "old": 7216,
+          "new": 7216,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        }
+      ]
+    },
+    {
+      "screenshot": "play",
+      "scene": "Meal",
+      "baseline": "D:\\pettranslator\\docs\\a1.4.8-cloud-home\\device-layout\\narrow-320-font2-play.png",
+      "after": "D:\\pettranslator\\docs\\home-local-polish\\evidence\\layout\\narrow-320-font2-play.png",
+      "imageSizePx": [
+        872,
+        1962
+      ],
+      "sameSceneBounds": true,
+      "roiPx": [
+        288.0,
+        505,
+        583.0,
+        653.0
+      ],
+      "mask": [
+        {
+          "threshold": 15,
+          "old": 6033,
+          "new": 6030,
+          "lost": 3,
+          "added": 0,
+          "lostBoundsPx": [
+            560,
+            570,
+            562,
+            574
+          ]
+        },
+        {
+          "threshold": 30,
+          "old": 6092,
+          "new": 6092,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 45,
+          "old": 6350,
+          "new": 6350,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 60,
+          "old": 6427,
+          "new": 6427,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        }
+      ]
+    },
+    {
+      "screenshot": "play",
+      "scene": "Play",
+      "baseline": "D:\\pettranslator\\docs\\a1.4.8-cloud-home\\device-layout\\narrow-320-font2-play.png",
+      "after": "D:\\pettranslator\\docs\\home-local-polish\\evidence\\layout\\narrow-320-font2-play.png",
+      "imageSizePx": [
+        872,
+        1962
+      ],
+      "sameSceneBounds": true,
+      "roiPx": [
+        533.0,
+        1075,
+        787.0,
+        1202.0
+      ],
+      "mask": [
+        {
+          "threshold": 15,
+          "old": 3205,
+          "new": 3205,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 30,
+          "old": 3320,
+          "new": 3320,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 45,
+          "old": 3389,
+          "new": 3389,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 60,
+          "old": 3408,
+          "new": 3408,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        }
+      ]
+    },
+    {
+      "screenshot": "alone",
+      "scene": "Alone",
+      "baseline": "D:\\pettranslator\\docs\\a1.4.8-cloud-home\\device-layout\\narrow-320-font2-alone.png",
+      "after": "D:\\pettranslator\\docs\\home-local-polish\\evidence\\layout\\narrow-320-font2-alone.png",
+      "imageSizePx": [
+        872,
+        1962
+      ],
+      "sameSceneBounds": true,
+      "roiPx": [
+        103.0,
+        1129,
+        356.0,
+        1256.0
+      ],
+      "mask": [
+        {
+          "threshold": 15,
+          "old": 3091,
+          "new": 3091,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 30,
+          "old": 3133,
+          "new": 3133,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 45,
+          "old": 3194,
+          "new": 3194,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 60,
+          "old": 3240,
+          "new": 3240,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        }
+      ]
+    },
+    {
+      "screenshot": "alone",
+      "scene": "Unknown",
+      "baseline": "D:\\pettranslator\\docs\\a1.4.8-cloud-home\\device-layout\\narrow-320-font2-alone.png",
+      "after": "D:\\pettranslator\\docs\\home-local-polish\\evidence\\layout\\narrow-320-font2-alone.png",
+      "imageSizePx": [
+        872,
+        1962
+      ],
+      "sameSceneBounds": true,
+      "roiPx": [
+        517.0,
+        1129,
+        770.0,
+        1256.0
+      ],
+      "mask": [
+        {
+          "threshold": 15,
+          "old": 4358,
+          "new": 4353,
+          "lost": 5,
+          "added": 0,
+          "lostBoundsPx": [
+            736,
+            1199,
+            740,
+            1204
+          ]
+        },
+        {
+          "threshold": 30,
+          "old": 4418,
+          "new": 4415,
+          "lost": 3,
+          "added": 0,
+          "lostBoundsPx": [
+            737,
+            1199,
+            740,
+            1203
+          ]
+        },
+        {
+          "threshold": 45,
+          "old": 4626,
+          "new": 4625,
+          "lost": 1,
+          "added": 0,
+          "lostBoundsPx": [
+            738,
+            1202,
+            738,
+            1202
+          ]
+        },
+        {
+          "threshold": 60,
+          "old": 4651,
+          "new": 4649,
+          "lost": 2,
+          "added": 0,
+          "lostBoundsPx": [
+            738,
+            1201,
+            739,
+            1202
+          ]
+        }
+      ]
+    },
+    {
+      "screenshot": "held",
+      "scene": "Alone",
+      "baseline": "D:\\pettranslator\\docs\\a1.4.8-cloud-home\\device-layout\\narrow-320-font2-held.png",
+      "after": "D:\\pettranslator\\docs\\home-local-polish\\evidence\\layout\\narrow-320-font2-held.png",
+      "imageSizePx": [
+        872,
+        1962
+      ],
+      "sameSceneBounds": true,
+      "roiPx": [
+        103.0,
+        856,
+        356.0,
+        982.0
+      ],
+      "mask": [
+        {
+          "threshold": 15,
+          "old": 3091,
+          "new": 3091,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 30,
+          "old": 3133,
+          "new": 3133,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 45,
+          "old": 3194,
+          "new": 3194,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 60,
+          "old": 3240,
+          "new": 3240,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        }
+      ]
+    },
+    {
+      "screenshot": "held",
+      "scene": "Held",
+      "baseline": "D:\\pettranslator\\docs\\a1.4.8-cloud-home\\device-layout\\narrow-320-font2-held.png",
+      "after": "D:\\pettranslator\\docs\\home-local-polish\\evidence\\layout\\narrow-320-font2-held.png",
+      "imageSizePx": [
+        872,
+        1962
+      ],
+      "sameSceneBounds": true,
+      "roiPx": [
+        310.0,
+        1129,
+        563.0,
+        1256.0
+      ],
+      "mask": [
+        {
+          "threshold": 15,
+          "old": 5155,
+          "new": 5154,
+          "lost": 1,
+          "added": 0,
+          "lostBoundsPx": [
+            533,
+            1202,
+            533,
+            1202
+          ]
+        },
+        {
+          "threshold": 30,
+          "old": 5246,
+          "new": 5245,
+          "lost": 1,
+          "added": 0,
+          "lostBoundsPx": [
+            535,
+            1199,
+            535,
+            1199
+          ]
+        },
+        {
+          "threshold": 45,
+          "old": 5435,
+          "new": 5434,
+          "lost": 1,
+          "added": 0,
+          "lostBoundsPx": [
+            534,
+            1201,
+            534,
+            1201
+          ]
+        },
+        {
+          "threshold": 60,
+          "old": 5522,
+          "new": 5521,
+          "lost": 1,
+          "added": 0,
+          "lostBoundsPx": [
+            534,
+            1201,
+            534,
+            1201
+          ]
+        }
+      ]
+    },
+    {
+      "screenshot": "held",
+      "scene": "Unknown",
+      "baseline": "D:\\pettranslator\\docs\\a1.4.8-cloud-home\\device-layout\\narrow-320-font2-held.png",
+      "after": "D:\\pettranslator\\docs\\home-local-polish\\evidence\\layout\\narrow-320-font2-held.png",
+      "imageSizePx": [
+        872,
+        1962
+      ],
+      "sameSceneBounds": true,
+      "roiPx": [
+        517.0,
+        856,
+        770.0,
+        982.0
+      ],
+      "mask": [
+        {
+          "threshold": 15,
+          "old": 4358,
+          "new": 4353,
+          "lost": 5,
+          "added": 0,
+          "lostBoundsPx": [
+            736,
+            926,
+            740,
+            931
+          ]
+        },
+        {
+          "threshold": 30,
+          "old": 4418,
+          "new": 4415,
+          "lost": 3,
+          "added": 0,
+          "lostBoundsPx": [
+            737,
+            926,
+            740,
+            930
+          ]
+        },
+        {
+          "threshold": 45,
+          "old": 4626,
+          "new": 4625,
+          "lost": 1,
+          "added": 0,
+          "lostBoundsPx": [
+            738,
+            929,
+            738,
+            929
+          ]
+        },
+        {
+          "threshold": 60,
+          "old": 4651,
+          "new": 4649,
+          "lost": 2,
+          "added": 0,
+          "lostBoundsPx": [
+            738,
+            928,
+            739,
+            929
+          ]
+        }
+      ]
+    },
+    {
+      "screenshot": "unknown",
+      "scene": "Alone",
+      "baseline": "D:\\pettranslator\\docs\\a1.4.8-cloud-home\\device-layout\\narrow-320-font2-unknown.png",
+      "after": "D:\\pettranslator\\docs\\home-local-polish\\evidence\\layout\\narrow-320-font2-unknown.png",
+      "imageSizePx": [
+        872,
+        1962
+      ],
+      "sameSceneBounds": true,
+      "roiPx": [
+        103.0,
+        856,
+        356.0,
+        982.0
+      ],
+      "mask": [
+        {
+          "threshold": 15,
+          "old": 3091,
+          "new": 3091,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 30,
+          "old": 3133,
+          "new": 3133,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 45,
+          "old": 3194,
+          "new": 3194,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        },
+        {
+          "threshold": 60,
+          "old": 3240,
+          "new": 3240,
+          "lost": 0,
+          "added": 0,
+          "lostBoundsPx": null
+        }
+      ]
+    },
+    {
+      "screenshot": "unknown",
+      "scene": "Held",
+      "baseline": "D:\\pettranslator\\docs\\a1.4.8-cloud-home\\device-layout\\narrow-320-font2-unknown.png",
+      "after": "D:\\pettranslator\\docs\\home-local-polish\\evidence\\layout\\narrow-320-font2-unknown.png",
+      "imageSizePx": [
+        872,
+        1962
+      ],
+      "sameSceneBounds": true,
+      "roiPx": [
+        310.0,
+        1129,
+        563.0,
+        1256.0
+      ],
+      "mask": [
+        {
+          "threshold": 15,
+          "old": 5155,
+          "new": 5154,
+          "lost": 1,
+          "added": 0,
+          "lostBoundsPx": [
+            533,
+            1202,
+            533,
+            1202
+          ]
+        },
+        {
+          "threshold": 30,
+          "old": 5246,
+          "new": 5245,
+          "lost": 1,
+          "added": 0,
+          "lostBoundsPx": [
+            535,
+            1199,
+            535,
+            1199
+          ]
+        },
+        {
+          "threshold": 45,
+          "old": 5435,
+          "new": 5434,
+          "lost": 1,
+          "added": 0,
+          "lostBoundsPx": [
+            534,
+            1201,
+            534,
+            1201
+          ]
+        },
+        {
+          "threshold": 60,
+          "old": 5522,
+          "new": 5521,
+          "lost": 1,
+          "added": 0,
+          "lostBoundsPx": [
+            534,
+            1201,
+            534,
+            1201
+          ]
+        }
+      ]
+    },
+    {
+      "screenshot": "unknown",
+      "scene": "Unknown",
+      "baseline": "D:\\pettranslator\\docs\\a1.4.8-cloud-home\\device-layout\\narrow-320-font2-unknown.png",
+      "after": "D:\\pettranslator\\docs\\home-local-polish\\evidence\\layout\\narrow-320-font2-unknown.png",
+      "imageSizePx": [
+        872,
+        1962
+      ],
+      "sameSceneBounds": true,
+      "roiPx": [
+        517.0,
+        856,
+        770.0,
+        982.0
+      ],
+      "mask": [
+        {
+          "threshold": 15,
+          "old": 4358,
+          "new": 4353,
+          "lost": 5,
+          "added": 0,
+          "lostBoundsPx": [
+            736,
+            926,
+            740,
+            931
+          ]
+        },
+        {
+          "threshold": 30,
+          "old": 4418,
+          "new": 4415,
+          "lost": 3,
+          "added": 0,
+          "lostBoundsPx": [
+            737,
+            926,
+            740,
+            930
+          ]
+        },
+        {
+          "threshold": 45,
+          "old": 4626,
+          "new": 4625,
+          "lost": 1,
+          "added": 0,
+          "lostBoundsPx": [
+            738,
+            929,
+            738,
+            929
+          ]
+        },
+        {
+          "threshold": 60,
+          "old": 4651,
+          "new": 4649,
+          "lost": 2,
+          "added": 0,
+          "lostBoundsPx": [
+            738,
+            928,
+            739,
+            929
+          ]
+        }
+      ]
+    }
+  ],
+  "conclusion": "The previous Door 217-pixel and Meal 25-pixel strong-Ink losses are eliminated at threshold 30. Door, Meal and Play retain identical threshold-30 masks in all three upper-group screenshots. Across the six screenshots, Unknown retains a 3-pixel threshold-30 edge-coverage difference and Held retains a 1-pixel difference; these remain blue antialiased glyph edges rather than background-colored missing strokes. This is not a pixel-identical result.",
+  "primaryRegressionResolved": true,
+  "remainingEdgeExamples": [
+    {
+      "scene": "Unknown",
+      "screenshot": "unknown",
+      "pixel": [
+        740,
+        926
+      ],
+      "baselineRgb": "#172B75",
+      "afterRgb": "#3B3E82"
+    },
+    {
+      "scene": "Unknown",
+      "screenshot": "unknown",
+      "pixel": [
+        738,
+        929
+      ],
+      "baselineRgb": "#192C76",
+      "afterRgb": "#4A4788"
+    },
+    {
+      "scene": "Held",
+      "screenshot": "held",
+      "pixel": [
+        535,
+        1199
+      ],
+      "baselineRgb": "#2A3B80",
+      "afterRgb": "#324284"
+    }
+  ],
+  "sceneSummary": [
+    {
+      "scene": "Door",
+      "threshold": 30,
+      "old": 6991,
+      "new": 6991,
+      "lost": 0,
+      "added": 0
+    },
+    {
+      "scene": "Meal",
+      "threshold": 30,
+      "old": 6092,
+      "new": 6092,
+      "lost": 0,
+      "added": 0
+    },
+    {
+      "scene": "Play",
+      "threshold": 30,
+      "old": 3320,
+      "new": 3320,
+      "lost": 0,
+      "added": 0
+    },
+    {
+      "scene": "Alone",
+      "threshold": 30,
+      "old": 3133,
+      "new": 3133,
+      "lost": 0,
+      "added": 0
+    },
+    {
+      "scene": "Held",
+      "threshold": 30,
+      "old": 5246,
+      "new": 5245,
+      "lost": 1,
+      "added": 0
+    },
+    {
+      "scene": "Unknown",
+      "threshold": 30,
+      "old": 4418,
+      "new": 4415,
+      "lost": 3,
+      "added": 0
+    }
+  ],
+  "normalScreenshotVisualInspection": {
+    "images": [
+      "D:/pettranslator/docs/home-local-polish/device-home-cat.png",
+      "D:/pettranslator/docs/home-local-polish/device-home-dog.png"
+    ],
+    "result": "Both final normal-font cat and dog screenshots show complete scene labels and icons, complete brand/pet selection/recording text, and no visible new clipping. Cloud lobes remain visible. This is visual inspection, separate from the numeric font-2 comparison."
+  }
+}

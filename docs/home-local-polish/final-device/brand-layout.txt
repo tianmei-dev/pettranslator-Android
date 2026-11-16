@@ -1,0 +1,3 @@
+brand=DpRect(left=20.0.dp, top=42.18182.dp, right=135.63637.dp, bottom=65.818184.dp)
+vip=DpRect(left=309.45456.dp, top=34.18182.dp, right=372.72726.dp, bottom=74.181816.dp)
+size=318 x 65, paragraph=318.0x65.0, lines=1, didExceedMaxLines=false, hasVisualOverflow=false, didOverflowWidth=false, didOverflowHeight=false, constraints=Constraints(minWidth = 0, maxWidth = 318, minHeight = 0, maxHeight = 121), fontSize=16.0.sp, lineHeight=20.0.sp, lineEnd=7, textLength=7, lineRight=315.0, maxIntrinsicWidth=315.5, density=androidx.compose.ui.node.LayoutModifierNodeCoordinator@474ec0f, letterSpacing=0.5.sp, fontFamily=FontFamily.SansSerif

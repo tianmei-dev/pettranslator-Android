@@ -1,0 +1,30 @@
+Controlled Compose viewport; 58dp navigation placeholder, not a separate physical device.
+viewport=DpRect(left=0.0.dp, top=0.0.dp, right=320.0.dp, bottom=460.55048.dp)
+actions=DpRect(left=0.0.dp, top=466.42203.dp, right=320.0.dp, bottom=656.1468.dp)
+cloud=DpRect(left=1.4678899.dp, top=-956.69727.dp, right=318.16516.dp, bottom=715.2294.dp)
+centralPet=DpRect(left=82.201836.dp, top=-115.22936.dp, right=237.4312.dp, bottom=7.7064223.dp)
+anchorCoordinates=element centers normalized to the rendered cloud bounds
+centralPet.anchor=(0.49999994, 0.54005706)
+Door.anchor=(0.23986094, 0.34503952)
+Meal.anchor=(0.49942058, 0.21992975)
+Play.anchor=(0.760139, 0.34503952)
+Alone.anchor=(0.26071844, 0.76009655)
+Held.anchor=(0.50057936, 0.82001764)
+Unknown.anchor=(0.7404403, 0.76009655)
+petTitle=DpRect(left=80.0.dp, top=-1086.6056.dp, right=240.36697.dp, bottom=-1037.7982.dp)
+petCat=DpRect(left=166.23854.dp, top=-1031.9266.dp, right=304.22018.dp, bottom=-971.74316.dp)
+petDog=DpRect(left=16.14679.dp, top=-1031.9266.dp, right=154.12845.dp, bottom=-971.74316.dp)
+cloudRendering=expanded-fit
+cloudAlpha240Source=HomeSourceAlpha(width=1216, height=1293, left=23, top=88, right=1203, bottom=1204)
+cloudOpaqueOutline=DpRect(left=7.458052.dp, top=-266.19073.dp, right=314.77942.dp, bottom=24.462341.dp)
+cloudOpaqueWidthRatio=0.9603793
+cloudOpaqueToRecordGap=441.9597.dp
+centralCatImage=DpRect(left=82.201836.dp, top=-115.22936.dp, right=237.4312.dp, bottom=7.7064223.dp)
+centralCatSource=HomeSourceAlpha(width=620, height=426, left=73, top=0, right=573, bottom=408)
+centralCatVisible=DpRect(left=100.478836.dp, top=-107.09027.dp, right=225.66382.dp, bottom=-4.9393234.dp)
+Door: DpRect(left=11.376147.dp, top=-445.87158.dp, right=143.48624.dp, bottom=-313.76147.dp)
+Meal: DpRect(left=105.68808.dp, top=-642.9358.dp, right=213.57799.dp, bottom=-535.0459.dp)
+Play: DpRect(left=195.9633.dp, top=-426.05505.dp, right=288.44037.dp, bottom=-333.578.dp)
+Alone: DpRect(left=37.79817.dp, top=267.88992.dp, right=130.27524.dp, bottom=360.36697.dp)
+Held: DpRect(left=113.761475.dp, top=368.0734.dp, right=206.23854.dp, bottom=460.55048.dp)
+Unknown: DpRect(left=189.72478.dp, top=267.88992.dp, right=282.20184.dp, bottom=360.36697.dp)

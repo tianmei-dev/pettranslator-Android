@@ -1,0 +1,202 @@
+{
+  "Device": "Pixel 3",
+  "Baseline": "A1.4.7 horizontal spread plus previously completed header removal, same Pixel 3",
+  "Coordinates": "centers normalized to cloud container, after pixel rounding",
+  "Status": "passed",
+  "UnexpectedChanges": [],
+  "Bounds": [
+    {
+      "Tag": "home_center_pet",
+      "DeltaX": 0.0,
+      "DeltaY": 0.0,
+      "DeltaWidth": 0.0,
+      "DeltaHeight": 0.0,
+      "AllowedYOnly": false
+    },
+    {
+      "Tag": "home_cloud",
+      "DeltaX": 0.0,
+      "DeltaY": 0.0,
+      "DeltaWidth": 0.0,
+      "DeltaHeight": 0.0,
+      "AllowedYOnly": false
+    },
+    {
+      "Tag": "home_hero",
+      "DeltaX": 0.0,
+      "DeltaY": 0.0,
+      "DeltaWidth": 0.0,
+      "DeltaHeight": 0.0,
+      "AllowedYOnly": false
+    },
+    {
+      "Tag": "home_pet_title",
+      "DeltaX": 0.0,
+      "DeltaY": 0.0,
+      "DeltaWidth": 0.0,
+      "DeltaHeight": 0.0,
+      "AllowedYOnly": false
+    },
+    {
+      "Tag": "home_record",
+      "DeltaX": 0.0,
+      "DeltaY": 0.0,
+      "DeltaWidth": 0.0,
+      "DeltaHeight": 0.0,
+      "AllowedYOnly": false
+    },
+    {
+      "Tag": "home_scene_title",
+      "DeltaX": 0.0,
+      "DeltaY": 0.0,
+      "DeltaWidth": 0.0,
+      "DeltaHeight": 0.0,
+      "AllowedYOnly": false
+    },
+    {
+      "Tag": "home_section_1",
+      "DeltaX": 0.0,
+      "DeltaY": 0.0,
+      "DeltaWidth": 0.0,
+      "DeltaHeight": 0.0,
+      "AllowedYOnly": false
+    },
+    {
+      "Tag": "home_section_2",
+      "DeltaX": 0.0,
+      "DeltaY": 0.0,
+      "DeltaWidth": 0.0,
+      "DeltaHeight": 0.0,
+      "AllowedYOnly": false
+    },
+    {
+      "Tag": "pet_Cat",
+      "DeltaX": 0.0,
+      "DeltaY": 0.0,
+      "DeltaWidth": 0.0,
+      "DeltaHeight": 0.0,
+      "AllowedYOnly": false
+    },
+    {
+      "Tag": "pet_Dog",
+      "DeltaX": 0.0,
+      "DeltaY": 0.0,
+      "DeltaWidth": 0.0,
+      "DeltaHeight": 0.0,
+      "AllowedYOnly": false
+    },
+    {
+      "Tag": "scene_Alone",
+      "DeltaX": 0.0,
+      "DeltaY": -18.90912000000003,
+      "DeltaWidth": 0.0,
+      "DeltaHeight": 2.0000000063191692E-05,
+      "AllowedYOnly": true
+    },
+    {
+      "Tag": "scene_Door",
+      "DeltaX": 0.0,
+      "DeltaY": 17.090910000000008,
+      "DeltaWidth": 0.0,
+      "DeltaHeight": 0.0,
+      "AllowedYOnly": true
+    },
+    {
+      "Tag": "scene_Held",
+      "DeltaX": 0.0,
+      "DeltaY": 0.0,
+      "DeltaWidth": 0.0,
+      "DeltaHeight": 0.0,
+      "AllowedYOnly": false
+    },
+    {
+      "Tag": "scene_Meal",
+      "DeltaX": 0.0,
+      "DeltaY": 0.0,
+      "DeltaWidth": 0.0,
+      "DeltaHeight": 0.0,
+      "AllowedYOnly": false
+    },
+    {
+      "Tag": "scene_Play",
+      "DeltaX": 0.0,
+      "DeltaY": 17.090910000000008,
+      "DeltaWidth": 0.0,
+      "DeltaHeight": 1.0000000031595846E-05,
+      "AllowedYOnly": true
+    },
+    {
+      "Tag": "scene_Unknown",
+      "DeltaX": 0.0,
+      "DeltaY": -19.272699999999986,
+      "DeltaWidth": 0.0,
+      "DeltaHeight": 0.0,
+      "AllowedYOnly": true
+    }
+  ],
+  "Anchors": [
+    {
+      "Element": "centralPet",
+      "BeforeX": 0.5004677,
+      "BeforeY": 0.5400641,
+      "AfterX": 0.5004677,
+      "AfterY": 0.5400641,
+      "DeltaX": 0.0,
+      "DeltaY": 0.0
+    },
+    {
+      "Element": "Door",
+      "BeforeX": 0.24041158,
+      "BeforeY": 0.3600427,
+      "AfterX": 0.24041158,
+      "AfterY": 0.41025636,
+      "DeltaX": 0.0,
+      "DeltaY": 0.05021365999999999
+    },
+    {
+      "Element": "Meal",
+      "BeforeX": 0.50000006,
+      "BeforeY": 0.29006416,
+      "AfterX": 0.50000006,
+      "AfterY": 0.29006416,
+      "DeltaX": 0.0,
+      "DeltaY": 0.0
+    },
+    {
+      "Element": "Play",
+      "BeforeX": 0.76052386,
+      "BeforeY": 0.36004278,
+      "AfterX": 0.76052386,
+      "AfterY": 0.41025636,
+      "DeltaX": 0.0,
+      "DeltaY": 0.05021357999999998
+    },
+    {
+      "Element": "Alone",
+      "BeforeX": 0.25958842,
+      "BeforeY": 0.7398504,
+      "AfterX": 0.25958842,
+      "AfterY": 0.68429476,
+      "DeltaX": 0.0,
+      "DeltaY": -0.05555564000000002
+    },
+    {
+      "Element": "Held",
+      "BeforeX": 0.4995323,
+      "BeforeY": 0.8194443,
+      "AfterX": 0.4995323,
+      "AfterY": 0.8194443,
+      "DeltaX": 0.0,
+      "DeltaY": 0.0
+    },
+    {
+      "Element": "Unknown",
+      "BeforeX": 0.73994386,
+      "BeforeY": 0.7403846,
+      "AfterX": 0.73994386,
+      "AfterY": 0.6837607,
+      "DeltaX": 0.0,
+      "DeltaY": -0.05662389999999995
+    }
+  ]
+}

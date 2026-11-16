@@ -1,0 +1,18 @@
+Controlled Compose viewport; 58dp navigation placeholder, not a separate physical device.
+viewport=DpRect(left=0.0.dp, top=27.0.dp, right=360.0.dp, bottom=577.3333.dp)
+actions=DpRect(left=0.0.dp, top=583.3333.dp, right=360.0.dp, bottom=656.0.dp)
+cloud=DpRect(left=1.6666666.dp, top=253.33333.dp, right=358.0.dp, bottom=575.3333.dp)
+centralPet=DpRect(left=92.666664.dp, top=397.33334.dp, right=267.33334.dp, bottom=478.33334.dp)
+cloudRendering=body-and-tail
+cloudAlpha240Source=HomeSourceAlpha(width=1216, height=1293, left=23, top=88, right=1203, bottom=1204)
+cloudOpaqueOutline=DpRect(left=8.406525.dp, top=276.16968.dp, right=354.19052.dp, bottom=565.7763.dp)
+cloudOpaqueWidthRatio=0.9605111
+cloudOpaqueToRecordGap=17.557007.dp
+centralCatSource=HomeSourceAlpha(width=620, height=426, left=73, top=0, right=573, bottom=408)
+centralCatVisible=DpRect(left=134.93663.dp, top=397.33334.dp, right=230.00705.dp, bottom=474.9108.dp)
+Door: DpRect(left=47.666668.dp, top=321.33334.dp, right=119.666664.dp, bottom=393.33334.dp)
+Meal: DpRect(left=149.0.dp, top=318.66666.dp, right=210.66667.dp, bottom=380.33334.dp)
+Play: DpRect(left=250.0.dp, top=325.0.dp, right=316.66666.dp, bottom=391.66666.dp)
+Alone: DpRect(left=51.0.dp, top=484.66666.dp, right=116.0.dp, bottom=549.6667.dp)
+Held: DpRect(left=148.66667.dp, top=494.33334.dp, right=210.66667.dp, bottom=556.3333.dp)
+Unknown: DpRect(left=250.0.dp, top=482.33334.dp, right=316.66666.dp, bottom=549.0.dp)

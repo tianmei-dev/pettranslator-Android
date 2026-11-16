@@ -1,0 +1,52 @@
+{
+  "Device": "SM-S9010",
+  "FontScale": 1.0,
+  "NonSceneMetricsUnchanged": true,
+  "MainNonSceneLayoutUnchanged": true,
+  "PetImagesUnchanged": true,
+  "SceneSizesUnchanged": true,
+  "Deltas": [
+    {
+      "Scene": "Door",
+      "DeltaX": 8.0,
+      "DeltaY": 18.0,
+      "WidthDelta": -0.0,
+      "HeightDelta": 0.0
+    },
+    {
+      "Scene": "Meal",
+      "DeltaX": 0.0,
+      "DeltaY": 12.0,
+      "WidthDelta": 0.0,
+      "HeightDelta": 0.0
+    },
+    {
+      "Scene": "Play",
+      "DeltaX": -8.0,
+      "DeltaY": 18.0,
+      "WidthDelta": 0.0,
+      "HeightDelta": 0.0
+    },
+    {
+      "Scene": "Alone",
+      "DeltaX": 8.0,
+      "DeltaY": -12.0,
+      "WidthDelta": 0.0,
+      "HeightDelta": 0.0
+    },
+    {
+      "Scene": "Held",
+      "DeltaX": 0.0,
+      "DeltaY": -12.0,
+      "WidthDelta": 0.0,
+      "HeightDelta": 0.0
+    },
+    {
+      "Scene": "Unknown",
+      "DeltaX": -8.0,
+      "DeltaY": -12.0,
+      "WidthDelta": 0.0,
+      "HeightDelta": 0.0
+    }
+  ]
+}

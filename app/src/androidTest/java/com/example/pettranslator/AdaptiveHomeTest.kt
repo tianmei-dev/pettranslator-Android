@@ -44,7 +44,7 @@ class AdaptiveHomeTest {
         }
         rule.onNodeWithText("今天想听懂谁？").assertDoesNotExist()
         capture("adaptive-$width-$scale-top.png")
-        rule.onNodeWithTag("scene_grid_3").assertExists()
+        rule.onNodeWithTag("scene_orbit").assertExists()
         listOf("门口或窗边", "吃饭前后", "玩耍", "独处", "被抱起", "不确定").forEach { title ->
             rule.onNodeWithText(title).performScrollTo().assertIsDisplayed()
             rule.onNodeWithText(title).performSemanticsAction(SemanticsActions.GetTextLayoutResult) { action ->
@@ -65,6 +65,12 @@ class AdaptiveHomeTest {
         val folder = File(instrumentation.targetContext.getExternalFilesDir(null), "a112-evidence").apply { mkdirs() }
         val bitmap = rule.onRoot().captureToImage().asAndroidBitmap()
         File(folder, name).outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }
+        val cloud = rule.onNodeWithTag("home_cloud").getUnclippedBoundsInRoot()
+        val pet = rule.onNodeWithTag("home_center_pet").getUnclippedBoundsInRoot()
+        val scenes = com.example.pettranslator.domain.PetScene.entries.associateWith {
+            rule.onNodeWithTag("scene_${it.name}").getUnclippedBoundsInRoot()
+        }
+        File(folder, name.removeSuffix(".png") + "-anchors.txt").writeText(HomeAnchorAudit.report(cloud, pet, scenes))
     }
     @Test fun smallPhone() = verify(320, 1f)
     @Test fun smallPhoneLargeFont() = verify(320, 2f)

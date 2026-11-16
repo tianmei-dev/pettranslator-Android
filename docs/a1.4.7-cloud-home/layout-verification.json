@@ -1,0 +1,62 @@
+{
+  "Device": "SM-S9010",
+  "AllNonSideMetricsUnchanged": true,
+  "AllSceneYAndSizesUnchanged": true,
+  "AxisControlsUnchanged": true,
+  "ControlledStableCases": [
+    "viewport-360x720",
+    "viewport-393x800",
+    "viewport-412x900",
+    "controlled-reference-cat",
+    "narrow-320-font2-door",
+    "narrow-320-font2-meal",
+    "narrow-320-font2-play",
+    "narrow-320-font2-alone",
+    "narrow-320-font2-held",
+    "narrow-320-font2-unknown"
+  ],
+  "ActualDeltas": [
+    {
+      "Scene": "Door",
+      "DeltaX": -21.333,
+      "DeltaY": 0.0,
+      "WidthDelta": -0.0,
+      "HeightDelta": 0.0
+    },
+    {
+      "Scene": "Meal",
+      "DeltaX": 0.0,
+      "DeltaY": 0.0,
+      "WidthDelta": 0.0,
+      "HeightDelta": 0.0
+    },
+    {
+      "Scene": "Play",
+      "DeltaX": 21.333,
+      "DeltaY": 0.0,
+      "WidthDelta": 0.0,
+      "HeightDelta": 0.0
+    },
+    {
+      "Scene": "Alone",
+      "DeltaX": -14.333,
+      "DeltaY": 0.0,
+      "WidthDelta": 0.0,
+      "HeightDelta": 0.0
+    },
+    {
+      "Scene": "Held",
+      "DeltaX": 0.0,
+      "DeltaY": 0.0,
+      "WidthDelta": 0.0,
+      "HeightDelta": 0.0
+    },
+    {
+      "Scene": "Unknown",
+      "DeltaX": 14.333,
+      "DeltaY": 0.0,
+      "WidthDelta": 0.0,
+      "HeightDelta": 0.0
+    }
+  ]
+}
