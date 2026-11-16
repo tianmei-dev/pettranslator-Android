@@ -65,7 +65,7 @@ private val FunPink = Color(0xFFF66CB8)
 @Composable private fun FunTopGroup(onClick: () -> Unit) {
     Layout(content = {
         Column(Modifier.testTag("fun_header_text"), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-            Text("逗宠乐园", style = PetFontFamilies.TitleStyle, fontSize = 26.sp, lineHeight = 34.sp, color = FunPurple)
+            Text("逗宠乐园", fontSize = 26.sp, lineHeight = 34.sp, fontWeight = FontWeight.SemiBold, color = FunPurple)
             Text("用声音和它玩耍，\n让陪伴更有趣！", fontSize = 13.sp, lineHeight = 20.sp, color = Muted)
         }
         Image(painterResource(R.drawable.pet_fun_header), "依偎在一起的猫咪和狗狗",

@@ -1,0 +1,17 @@
+{
+  "Branch": "feature/my-page-ui",
+  "HeadUnchanged": true,
+  "MainUnchanged": true,
+  "ProtectedFileCount": 121,
+  "ProtectedFilesUnchanged": true,
+  "ChangedProtectedFiles": [],
+  "Build": "BUILD SUCCESSFUL in 29s",
+  "Install": "Success",
+  "Device": "SM-G973U",
+  "Screenshot": "D:\\pettranslator\\docs\\b2.1.1-my-header\\my-top-v2.png",
+  "ScreenshotVerified": true,
+  "OriginalContainerAspectRatio": "1774/600",
+  "NewImageAspectRatio": "2172/724",
+  "ContentScale": "Fit",
+  "OldAssetRetained": true
+}

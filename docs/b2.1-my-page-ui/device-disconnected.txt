@@ -1,0 +1,1 @@
+adb.exe: device 'R5CT52AB0BW' not found

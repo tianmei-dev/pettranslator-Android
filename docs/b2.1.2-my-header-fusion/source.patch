@@ -1,0 +1,15 @@
+diff --git a/artifacts/b2.1.2-my-header-fusion/ProfileScreen.kt.before b/app/src/main/java/com/example/pettranslator/ui/profile/ProfileScreen.kt
+index e05cf70..2095404 100644
+--- a/artifacts/b2.1.2-my-header-fusion/ProfileScreen.kt.before
++++ b/app/src/main/java/com/example/pettranslator/ui/profile/ProfileScreen.kt
+@@ -67,7 +67,9 @@ fun ProfileScreen(onBack: () -> Unit) {
+     Box(Modifier.fillMaxSize().testTag("profile_viewport")
+         .background(Brush.verticalGradient(listOf(Color(0xFFF0E6FC), Color(0xFFFDF0F8), Color(0xFFEDF2FF))))) {
+         Column(Modifier.widthIn(max = 600.dp).fillMaxWidth().align(Alignment.TopCenter)
+-            .verticalScroll(rememberScrollState()).testTag("profile_scroll").padding(bottom = 24.dp)) {
++            .verticalScroll(rememberScrollState()).testTag("profile_scroll").padding(bottom = 24.dp),
++            // Overlap only the header and card group; keep the cards' internal spacing unchanged.
++            verticalArrangement = Arrangement.spacedBy((-16).dp)) {
+             ProfileHeader()
+             Column(Modifier.fillMaxWidth().padding(horizontal = 12.dp),
+                 verticalArrangement = Arrangement.spacedBy(12.dp)) {

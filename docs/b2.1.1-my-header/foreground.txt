@@ -1,0 +1,1 @@
+    mResumedActivity: ActivityRecord{c76cbcc u0 com.example.pettranslator/.MainActivity t7406}

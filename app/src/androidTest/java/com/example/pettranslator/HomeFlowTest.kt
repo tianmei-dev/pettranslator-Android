@@ -37,9 +37,10 @@ class HomeFlowTest {
         rule.onNodeWithText("趣味说话功能即将上线～").assertIsDisplayed()
         rule.onNodeWithText("首页").performClick()
         rule.onNodeWithText("吃饭前后").performScrollTo().assertIsSelected()
-        rule.onNodeWithText("我的").performClick()
+        rule.onNode(hasText("我的") and hasClickAction()).performClick()
         rule.onNodeWithTag("home_actions").assertDoesNotExist()
-        rule.onNodeWithText("返回首页").performClick()
+        rule.onNodeWithText("立即登录").assertIsDisplayed()
+        rule.onNode(hasText("首页") and hasClickAction()).performClick()
         rule.onNodeWithText("狗狗").performScrollTo().assertIsSelected()
         rule.activityRule.scenario.recreate()
         rule.waitUntil(5_000) { rule.onAllNodes(hasText("狗狗") and isSelected()).fetchSemanticsNodes().isNotEmpty() }
