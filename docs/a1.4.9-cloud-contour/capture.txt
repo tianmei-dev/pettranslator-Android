@@ -1,0 +1,4 @@
+/sdcard/Download/a149-cat.png: 1 file pulled, 0 skipped. 20.6 MB/s (252747 bytes in 0.012s)
+/sdcard/Download/a149-cat.xml: 1 file pulled, 0 skipped. 3.0 MB/s (32844 bytes in 0.010s)
+/sdcard/Download/a149-dog.png: 1 file pulled, 0 skipped. 30.6 MB/s (279795 bytes in 0.009s)
+/sdcard/Download/a149-dog.xml: 1 file pulled, 0 skipped. 2.4 MB/s (11468 bytes in 0.005s)
