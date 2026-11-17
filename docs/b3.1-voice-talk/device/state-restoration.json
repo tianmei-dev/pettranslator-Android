@@ -1,0 +1,8 @@
+{
+  "stores": {
+    "files/datastore/privacy_consent.preferences_pb": true,
+    "files/datastore/pet_preferences.preferences_pb": true
+  },
+  "microphone_grant_and_user_flags_restored": true,
+  "app_data_not_cleared": true
+}

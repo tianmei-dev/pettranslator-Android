@@ -1,0 +1,10 @@
+{
+  "branch": "main",
+  "protected_paths": 1497,
+  "changed": [
+    "app/src/main/java/com/example/pettranslator/ui/voice/VoiceTalkScreen.kt"
+  ],
+  "route_and_handlers_unchanged": true,
+  "header_pet_controls_tips_and_state_content_unchanged": true,
+  "new_asset_unchanged": true
+}

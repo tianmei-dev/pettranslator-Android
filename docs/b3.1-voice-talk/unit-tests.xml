@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.pettranslator.VoiceTalkViewModelTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-11-17T09:23:48.575Z" hostname="DESKTOP-7K3SJCV" time="0.398">
+  <properties/>
+  <testcase name="leaveWaitsForCaptureFinallyToReleaseBeforeCompleting" classname="com.example.pettranslator.VoiceTalkViewModelTest" time="0.362"/>
+  <testcase name="petSelectionPersistsCanonicallyButIsIgnoredWhileRecording" classname="com.example.pettranslator.VoiceTalkViewModelTest" time="0.008"/>
+  <testcase name="backgroundInterruptionReleasesCaptureWithoutAutomaticResume" classname="com.example.pettranslator.VoiceTalkViewModelTest" time="0.003"/>
+  <testcase name="manualStopEndsRecordedWithExplicitPlaceholderAndNeverConverts" classname="com.example.pettranslator.VoiceTalkViewModelTest" time="0.004"/>
+  <testcase name="loadedPetAndForegroundAreRequiredAndOnlyFramesStartRecording" classname="com.example.pettranslator.VoiceTalkViewModelTest" time="0.004"/>
+  <testcase name="repeatedStartOwnsOnlyOneCaptureInstance" classname="com.example.pettranslator.VoiceTalkViewModelTest" time="0.003"/>
+  <testcase name="privacyDenialDoesNotOpenCaptureOrResumeWhenConsentChanges" classname="com.example.pettranslator.VoiceTalkViewModelTest" time="0.003"/>
+  <testcase name="captureShorterThanEightHundredMillisIsAnError" classname="com.example.pettranslator.VoiceTalkViewModelTest" time="0.004"/>
+  <testcase name="permissionDenialReportsAnErrorWithoutStartingCapture" classname="com.example.pettranslator.VoiceTalkViewModelTest" time="0.003"/>
+  <testcase name="humanVoiceRestrictionDoesNotCheckRecordingTranslationAccess" classname="com.example.pettranslator.VoiceTalkViewModelTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

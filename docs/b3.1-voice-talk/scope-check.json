@@ -1,0 +1,11 @@
+{
+  "Branch": "main",
+  "HeadUnchanged": true,
+  "ProtectedCount": 145,
+  "UnexpectedChanges": [],
+  "Allowed": [
+    "app/src/main/java/com/example/pettranslator/ui/play/PlayScreen.kt",
+    "app/src/main/java/com/example/pettranslator/ui/navigation/PetTranslatorApp.kt",
+    "app/src/androidTest/java/com/example/pettranslator/PetFunFlowTest.kt"
+  ]
+}

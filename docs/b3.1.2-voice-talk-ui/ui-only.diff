@@ -1,0 +1,143 @@
+--- VoiceTalkScreen.before
++++ VoiceTalkScreen.after
+@@ -32,18 +32,22 @@
+ import androidx.compose.ui.Alignment
+ import androidx.compose.ui.Modifier
+ import androidx.compose.ui.draw.clip
++import androidx.compose.ui.draw.clipToBounds
+ import androidx.compose.ui.draw.drawWithCache
+ import androidx.compose.ui.geometry.Offset
+ import androidx.compose.ui.graphics.BlendMode
+ import androidx.compose.ui.graphics.Brush
+ import androidx.compose.ui.graphics.Color
+ import androidx.compose.ui.graphics.CompositingStrategy
++import androidx.compose.ui.graphics.ImageBitmap
+ import androidx.compose.ui.graphics.graphicsLayer
++import androidx.compose.ui.graphics.toPixelMap
+ import androidx.compose.ui.layout.ContentScale
+ import androidx.compose.ui.platform.LocalContext
+ import androidx.compose.ui.platform.LocalWindowInfo
+ import androidx.compose.ui.platform.testTag
+ import androidx.compose.ui.res.painterResource
++import androidx.compose.ui.res.imageResource
+ import androidx.compose.ui.semantics.Role
+ import androidx.compose.ui.semantics.contentDescription
+ import androidx.compose.ui.semantics.heading
+@@ -235,7 +239,6 @@
+     BoxWithConstraints(Modifier.fillMaxSize().testTag("voice_talk_page").background(
+         Brush.horizontalGradient(listOf(Color(0xFFFFEDFA), Color(0xFFF5EAFF), Color(0xFFDEEAFE))))) {
+         val compact = maxHeight < 660.dp
+-        val illustrationHeight = (maxWidth / (1400f / 486f)).coerceIn(100.dp, 160.dp)
+         VoiceClouds(Modifier.matchParentSize())
+         Column(Modifier.align(Alignment.TopCenter).widthIn(max = 600.dp).fillMaxWidth()
+             .verticalScroll(rememberScrollState()).testTag("voice_talk_scroll")
+@@ -243,36 +246,24 @@
+             // constraining natural content height on short screens or with large text.
+             .heightIn(min = if (ready) maxHeight else 0.dp)
+             .padding(top = 4.dp, bottom = if (ready) 20.dp else 16.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+-            VoiceHeader(onBack)
+-            Text("录下你想对它说的话，\n一键变成猫语或狗语播放给它听～",
+-                modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp).testTag("voice_talk_subtitle"),
+-                color = VoiceMuted, fontSize = 13.sp, lineHeight = 20.sp, textAlign = TextAlign.Center)
+-            Image(painterResource(R.drawable.voice_talk_header_listening), "猫咪和狗狗开心地侧耳倾听",
+-                Modifier.fillMaxWidth().height(illustrationHeight).offset(y = (-4).dp)
+-                    .testTag("voice_talk_header_art")
+-                    .graphicsLayer { compositingStrategy = CompositingStrategy.Offscreen }
+-                    .drawWithCache {
+-                        val verticalFeather = Brush.verticalGradient(
+-                            0f to Color.Transparent, .05f to Color.White,
+-                            .87f to Color.White, 1f to Color.Transparent)
+-                        val horizontalFeather = Brush.horizontalGradient(
+-                            0f to Color.Transparent, .035f to Color.White,
+-                            .965f to Color.White, 1f to Color.Transparent)
+-                        onDrawWithContent {
+-                            drawContent()
+-                            drawRect(verticalFeather, blendMode = BlendMode.DstIn)
+-                            drawRect(horizontalFeather, blendMode = BlendMode.DstIn)
+-                        }
+-                    },
+-                contentScale = ContentScale.Fit)
++            VoiceTalkHero(onBack)
+             VoicePetSelector(pet, canSelect, onPet, Modifier.padding(horizontal = 20.dp))
+             Spacer(Modifier.height(if (compact) 10.dp else 16.dp))
+             when (state.phase) {
+                 VoiceTalkPhase.READY -> {
+-                    VoiceCaptureControl(state, enabled = pet != null && !state.petChanging,
+-                        onAction = onRecord, modifier = Modifier.padding(horizontal = 24.dp))
++                    Spacer(Modifier.weight(1f))
++                    Column(Modifier.fillMaxWidth().testTag("voice_talk_ready_controls"),
++                        horizontalAlignment = Alignment.CenterHorizontally) {
++                        VoiceCaptureControl(state, enabled = pet != null && !state.petChanging,
++                            onAction = onRecord, modifier = Modifier.padding(horizontal = 24.dp))
++                        Text("录下你想对它说的话，\n一键变成猫语或狗语播放给它听～",
++                            modifier = Modifier.fillMaxWidth().padding(start = 20.dp, end = 20.dp, top = 8.dp)
++                                .testTag("voice_talk_subtitle"),
++                            color = VoiceMuted, fontSize = 13.sp, lineHeight = 20.sp,
++                            textAlign = TextAlign.Center)
++                    }
++                    Spacer(Modifier.weight(1f))
+                     Spacer(Modifier.height(if (compact) 10.dp else 16.dp))
+-                    Spacer(Modifier.weight(1f))
+                     VoiceRecordingTips(Modifier.padding(horizontal = 24.dp))
+                 }
+                 VoiceTalkPhase.STARTING, VoiceTalkPhase.RECORDING, VoiceTalkPhase.STOPPING -> {
+@@ -287,6 +278,59 @@
+                 VoiceTalkPhase.ERROR -> VoiceErrorContent(state.message ?: "录音暂时不可用，请重试～",
+                     onReset, onSettings, !state.petChanging, Modifier.padding(horizontal = 24.dp))
+             }
++        }
++    }
++}
++
++/** Match the opaque artwork's own top edge instead of tinting a visible rectangle. */
++@Composable
++private fun VoiceTalkHero(onBack: () -> Unit) {
++    val artwork = ImageBitmap.imageResource(R.drawable.voice_talk_header_listening)
++    val topEdge = remember(artwork) {
++        val pixels = artwork.toPixelMap()
++        List(artwork.width) { x -> pixels[x, 0] }
++    }
++    BoxWithConstraints(Modifier.fillMaxWidth()) {
++        val illustrationHeight = (maxWidth * (artwork.height.toFloat() / artwork.width) * 1.14f)
++            .coerceIn(100.dp, 200.dp)
++        // FillHeight preserves the image ratio. Its small horizontal overflow contains
++        // only the outer background; use the same source range for the Hero colours.
++        val sourceWidth = minOf(artwork.width.toFloat(), artwork.height * maxWidth.value / illustrationHeight.value)
++        val sourceLeft = (artwork.width - sourceWidth) / 2f
++        val edgeColours = remember(topEdge, sourceWidth) {
++            List(33) { index ->
++                topEdge[(sourceLeft + sourceWidth * index / 32f).toInt().coerceIn(topEdge.indices)]
++            }
++        }
++        Canvas(Modifier.matchParentSize().graphicsLayer { compositingStrategy = CompositingStrategy.Offscreen }) {
++            drawRect(Brush.horizontalGradient(edgeColours))
++            drawRect(Brush.verticalGradient(0f to Color.White, .65f to Color.White,
++                .85f to Color.Transparent, 1f to Color.Transparent), blendMode = BlendMode.DstIn)
++            drawRect(Brush.horizontalGradient(0f to Color.Transparent, .025f to Color.White,
++                .975f to Color.White, 1f to Color.Transparent), blendMode = BlendMode.DstIn)
++        }
++        Column {
++            VoiceHeader(onBack)
++            Image(bitmap = artwork, contentDescription = "猫咪和狗狗开心地侧耳倾听",
++                modifier = Modifier.fillMaxWidth().height(illustrationHeight).clipToBounds()
++                    .testTag("voice_talk_header_art")
++                    .graphicsLayer { compositingStrategy = CompositingStrategy.Offscreen }
++                    .drawWithCache {
++                        // These narrow bands cover the background edges, keeping ears
++                        // and paws outside the fade rather than washing out the pets.
++                        val verticalFeather = Brush.verticalGradient(
++                            0f to Color.Transparent, .02f to Color.White,
++                            .96f to Color.White, 1f to Color.Transparent)
++                        val horizontalFeather = Brush.horizontalGradient(
++                            0f to Color.Transparent, .025f to Color.White,
++                            .975f to Color.White, 1f to Color.Transparent)
++                        onDrawWithContent {
++                            drawContent()
++                            drawRect(verticalFeather, blendMode = BlendMode.DstIn)
++                            drawRect(horizontalFeather, blendMode = BlendMode.DstIn)
++                        }
++                    },
++                contentScale = ContentScale.FillHeight)
+         }
+     }
+ }

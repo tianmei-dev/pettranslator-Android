@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "D:\pettranslator\tools\b31_voice_acceptance.py", line 59, in <module>
+    adb('shell', 'pm', 'clear-permission-flags', PKG, MIC, 'user-set', 'user-fixed')
+  File "D:\pettranslator\tools\b31_voice_acceptance.py", line 20, in adb
+    raise RuntimeError(r.stderr.decode(errors='replace')[:300])
+RuntimeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pettranslator\tools\b31_voice_acceptance.py", line 79, in <module>
+    adb('shell', 'pm', 'clear-permission-flags', PKG, MIC, 'user-set', 'user-fixed')
+  File "D:\pettranslator\tools\b31_voice_acceptance.py", line 20, in adb
+    raise RuntimeError(r.stderr.decode(errors='replace')[:300])
+RuntimeError

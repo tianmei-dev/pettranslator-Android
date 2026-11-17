@@ -1,0 +1,1 @@
+/sdcard/b312-ready.png: 1 file pulled, 0 skipped. 23.4 MB/s (1165898 bytes in 0.048s)

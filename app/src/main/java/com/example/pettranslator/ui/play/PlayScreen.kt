@@ -33,7 +33,7 @@ import kotlinx.coroutines.launch
 private val FunPurple = Color(0xFF6650A0)
 private val FunPink = Color(0xFFF66CB8)
 
-@Composable fun PlayScreen() {
+@Composable fun PlayScreen(onVoiceTalk: () -> Unit = {}) {
     var pet by rememberSaveable { mutableStateOf(PetType.Cat) }
     var highlighted by remember { mutableStateOf<String?>(null) }
     val snackbar = remember { SnackbarHostState() }
@@ -43,7 +43,7 @@ private val FunPink = Color(0xFFF66CB8)
     Box(Modifier.fillMaxSize().background(Brush.linearGradient(listOf(Blush, Color(0xFFF0E9FF), Mist, Blush)))) {
         LazyColumn(Modifier.widthIn(max = 600.dp).fillMaxWidth().align(Alignment.TopCenter).testTag("play_list"),
             contentPadding = PaddingValues(horizontal = 16.dp, vertical = 12.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-            item { FunTopGroup { message("趣味说话功能即将上线～") } }
+            item { FunTopGroup(onVoiceTalk) }
             item { Row(Modifier.padding(top = 4.dp), verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 FunWave(Modifier.size(24.dp), FunPurple)

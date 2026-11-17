@@ -1,0 +1,6 @@
+3393395964 device=samsung SM-G973U sdk=31; singlePass=true realMicrophone=true syntheticAudio=false conversionPipeline=false
+3393401625 canonicalPet=Dog persistedFlowMatchesSelection=true
+3393401759 canonicalPet=Cat persistedFlowMatchesSelection=true
+3393401760 captureFilesBefore=[]
+3393406860 FAIL IllegalStateException: Timed out waiting for app foreground before voice-ready.png; foreground=null; no retry executed
+3393406862 completed; host restores original privacy/preference files and microphone grant/flags

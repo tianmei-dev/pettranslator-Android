@@ -17,9 +17,9 @@ class PetFunFlowTest {
         rule.onNodeWithTag("home_actions").assertDoesNotExist()
         capture("play-samsung-top.png")
         rule.onNodeWithTag("fun_voice_start").performClick()
-        rule.onNodeWithText("趣味说话功能即将上线～").assertIsDisplayed()
-        rule.mainClock.advanceTimeBy(5_000)
-        rule.waitForIdle()
+        rule.onNodeWithTag("voice_talk_page").assertIsDisplayed()
+        rule.onNodeWithTag("voice_talk_back").performClick()
+        rule.onNodeWithTag("play_list").assertIsDisplayed()
         rule.onNodeWithText("录音翻译").assertDoesNotExist()
         rule.onNodeWithTag("fun_pet_Dog").performClick()
         rule.onNodeWithTag("fun_pet_Dog").assertIsSelected()
@@ -41,7 +41,7 @@ class PetFunFlowTest {
         rule.activityRule.scenario.recreate()
         rule.onNodeWithText("逗宠").assertIsDisplayed()
         rule.onNodeWithText("我的").performClick()
-        rule.onNodeWithText("返回首页").performClick()
+        rule.onNode(hasText("首页") and hasClickAction()).performClick()
         rule.onNodeWithTag("home_actions").assertIsDisplayed()
     }
     private fun capture(name: String) {

@@ -1,0 +1,6 @@
+Original stores and microphone grant/user flags restored
+Traceback (most recent call last):
+  File "D:\pettranslator\tools\b31_voice_acceptance.py", line 65, in <module>
+    assert 'OK (2 tests)' in result and 'FAILURES!!!' not in result, 'Voice acceptance incomplete; no rerun'
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Voice acceptance incomplete; no rerun

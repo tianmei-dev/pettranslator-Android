@@ -1,5 +1,6 @@
 package com.example.pettranslator.ui.navigation
 
+import android.util.Log
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.selection.selectable
@@ -28,10 +29,13 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.*
 import com.example.pettranslator.core.DefaultFeatureAccessManager
 import com.example.pettranslator.core.FeatureAccessManager
+import com.example.pettranslator.core.Feature
 import com.example.pettranslator.privacy.PrivacyGate
 import com.example.pettranslator.domain.*
 import com.example.pettranslator.ui.home.*
 import com.example.pettranslator.ui.play.PlayScreen
+import com.example.pettranslator.ui.voice.VoiceTalkRoute
+import com.example.pettranslator.ui.voice.VoiceTalkViewModel
 import com.example.pettranslator.ui.profile.ProfileScreen
 import com.example.pettranslator.ui.profile.ProfileRoutes
 import com.example.pettranslator.ui.profile.PermissionDetailsScreen
@@ -42,6 +46,7 @@ import com.example.pettranslator.ui.theme.*
 
 /** Injectable recording entry; the default opens the full-screen recording destination. */
 fun interface RecordingEntry { suspend fun open(pet: PetType, scene: PetScene) }
+private const val VoiceTalkDestination = "voice-talk"
 private enum class Tab(val route: String, val title: String, val icon: ImageVector) {
     Home("home", "首页", Icons.Default.Home), Play("play", "逗宠", Icons.Default.Favorite), Profile("profile", "我的", Icons.Default.Person)
 }
@@ -51,6 +56,7 @@ private enum class Tab(val route: String, val title: String, val icon: ImageVect
     val entry by controller.currentBackStackEntryAsState()
     val snackbar = remember { SnackbarHostState() }
     val recording = entry?.destination?.route?.startsWith("recording/") == true
+    val voiceTalk = entry?.destination?.route == VoiceTalkDestination
     val profileDetail = entry?.destination?.route == ProfileRoutes.Permissions ||
         entry?.destination?.route == ProfileRoutes.Document || entry?.destination?.route == ProfileSettingsRoutes.About
     val appContext = LocalContext.current.applicationContext
@@ -71,8 +77,8 @@ private enum class Tab(val route: String, val title: String, val icon: ImageVect
             }
         } }
     }
-    Scaffold(containerColor = Blush, contentWindowInsets = if (recording || profileDetail) WindowInsets.safeDrawing else WindowInsets.safeDrawing.only(WindowInsetsSides.Top + WindowInsetsSides.Horizontal), snackbarHost = { SnackbarHost(snackbar) }, bottomBar = {
-        if (!recording && !profileDetail) Column {
+    Scaffold(containerColor = Blush, contentWindowInsets = if (recording || voiceTalk || profileDetail) WindowInsets.safeDrawing else WindowInsets.safeDrawing.only(WindowInsetsSides.Top + WindowInsetsSides.Horizontal), snackbarHost = { SnackbarHost(snackbar) }, bottomBar = {
+        if (!recording && !voiceTalk && !profileDetail) Column {
             if (entry?.destination?.route == Tab.Home.route) HomeRecordActionBar(state.ready, model::startRecording)
             Surface(color = Color.White) {
             Row(Modifier.windowInsetsPadding(WindowInsets.navigationBars.only(WindowInsetsSides.Bottom + WindowInsetsSides.Horizontal))
@@ -111,7 +117,21 @@ private enum class Tab(val route: String, val title: String, val icon: ImageVect
                     controller.popBackStack(Tab.Home.route, inclusive = false)
                 })
             }
-            composable(Tab.Play.route) { PlayScreen() }
+            composable(Tab.Play.route) {
+                PlayScreen(onVoiceTalk = {
+                    if (PrivacyGate.isGranted() && DefaultFeatureAccessManager().canAccess(Feature.HumanVoice)) {
+                        controller.navigate(VoiceTalkDestination) { launchSingleTop = true }
+                    }
+                })
+            }
+            composable(VoiceTalkDestination) { voiceEntry ->
+                val voiceModel: VoiceTalkViewModel = viewModel(viewModelStoreOwner = voiceEntry,
+                    factory = viewModelFactory { initializer {
+                        VoiceTalkViewModel(preferences, AndroidPcmRecorder(appContext),
+                            audit = { Log.i("VoiceTalkCapture", it) })
+                    } })
+                VoiceTalkRoute(voiceModel, onBack = { controller.popBackStack() })
+            }
             composable(Tab.Profile.route) {
                 ProfileScreen(onPermissions = { controller.navigate(ProfileRoutes.Permissions) { launchSingleTop = true } },
                     onDocument = { document -> controller.navigate(ProfileRoutes.document(document)) { launchSingleTop = true } },

@@ -1,0 +1,35 @@
+{
+  "Branch": "main",
+  "HeadUnchanged": true,
+  "ProtectedCount": 145,
+  "UnexpectedChanges": [],
+  "Build": "BUILD SUCCESSFUL in 1m23s",
+  "BuildRuns": 1,
+  "UnitTests": 10,
+  "UnitFailures": 0,
+  "DeviceRounds": 1,
+  "DeviceTests": 2,
+  "DeviceTestFailures": 1,
+  "Device": "Samsung SM-G973U API31",
+  "Verified": [
+    "Play main entry opens voice page",
+    "Canonical Cat/Dog switching writes existing flow",
+    "Isolated converting decoration",
+    "Isolated unavailable result with disabled playback"
+  ],
+  "NotVerified": [
+    "Production ready screenshot",
+    "Real OS permission deny/allow",
+    "Real microphone capture and waveform",
+    "Manual/10-second stop",
+    "Background/exit resource release on hardware"
+  ],
+  "DeviceFailure": "UiAutomation rootInActiveWindow was null before first ready screenshot; main flow stopped before record",
+  "PreflightIssues": [
+    "ADB service interrupted before test package installed; recovered without reinstalling App",
+    "API31 pm clear-permission-flags unsupported; removed harness command before instrumentation; original grant/flags verified"
+  ],
+  "Restoration": "Original privacy/pet stores and microphone grant/user flags restored exactly",
+  "ProductionConversion": "Not connected; effective capture would end RECORDED with unavailable message",
+  "ApkSha256": "85FAC5DD118BCDA1FB8298C1A3D1B7F2320C8DF2F36ADEFE9790ED51AFB564C0"
+}

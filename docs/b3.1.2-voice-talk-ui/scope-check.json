@@ -1,0 +1,10 @@
+{
+  "branch": "main",
+  "modified_source": [
+    "app/src/main/java/com/example/pettranslator/ui/voice/VoiceTalkScreen.kt"
+  ],
+  "other_baseline_files_unchanged": 1511,
+  "route_permissions_lifecycle_and_callbacks_unchanged": true,
+  "header_pet_selector_tips_state_content_definitions_unchanged": true,
+  "all_original_assets_unchanged": true
+}

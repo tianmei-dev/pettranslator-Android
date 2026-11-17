@@ -1,0 +1,59 @@
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.VoiceTalkDeviceTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=
+com.example.pettranslator.VoiceTalkDeviceTest:
+INSTRUMENTATION_STATUS: test=realPermissionManualAutomaticInterruptionAndExit
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.VoiceTalkDeviceTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalStateException: Timed out waiting for app foreground before voice-ready.png; foreground=null
+	at com.example.pettranslator.VoiceTalkDeviceTestKt.awaitVoiceRealTime(VoiceTalkDeviceTest.kt:297)
+	at com.example.pettranslator.VoiceTalkDeviceTestKt.access$awaitVoiceRealTime(VoiceTalkDeviceTest.kt:1)
+	at com.example.pettranslator.VoiceTalkDeviceTest.realPermissionManualAutomaticInterruptionAndExit$capture(VoiceTalkDeviceTest.kt:79)
+	at com.example.pettranslator.VoiceTalkDeviceTest.realPermissionManualAutomaticInterruptionAndExit(VoiceTalkDeviceTest.kt:146)
+
+INSTRUMENTATION_STATUS: stream=
+Error in realPermissionManualAutomaticInterruptionAndExit(com.example.pettranslator.VoiceTalkDeviceTest):
+java.lang.IllegalStateException: Timed out waiting for app foreground before voice-ready.png; foreground=null
+	at com.example.pettranslator.VoiceTalkDeviceTestKt.awaitVoiceRealTime(VoiceTalkDeviceTest.kt:297)
+	at com.example.pettranslator.VoiceTalkDeviceTestKt.access$awaitVoiceRealTime(VoiceTalkDeviceTest.kt:1)
+	at com.example.pettranslator.VoiceTalkDeviceTest.realPermissionManualAutomaticInterruptionAndExit$capture(VoiceTalkDeviceTest.kt:79)
+	at com.example.pettranslator.VoiceTalkDeviceTest.realPermissionManualAutomaticInterruptionAndExit(VoiceTalkDeviceTest.kt:146)
+
+INSTRUMENTATION_STATUS: test=realPermissionManualAutomaticInterruptionAndExit
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.VoiceTalkIsolatedUiTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=
+com.example.pettranslator.VoiceTalkIsolatedUiTest:
+INSTRUMENTATION_STATUS: test=conversionDecorationAndUnavailableResultOnly
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.VoiceTalkIsolatedUiTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=conversionDecorationAndUnavailableResultOnly
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 18.701
+There was 1 failure:
+1) realPermissionManualAutomaticInterruptionAndExit(com.example.pettranslator.VoiceTalkDeviceTest)
+java.lang.IllegalStateException: Timed out waiting for app foreground before voice-ready.png; foreground=null
+	at com.example.pettranslator.VoiceTalkDeviceTestKt.awaitVoiceRealTime(VoiceTalkDeviceTest.kt:297)
+	at com.example.pettranslator.VoiceTalkDeviceTestKt.access$awaitVoiceRealTime(VoiceTalkDeviceTest.kt:1)
+	at com.example.pettranslator.VoiceTalkDeviceTest.realPermissionManualAutomaticInterruptionAndExit$capture(VoiceTalkDeviceTest.kt:79)
+	at com.example.pettranslator.VoiceTalkDeviceTest.realPermissionManualAutomaticInterruptionAndExit(VoiceTalkDeviceTest.kt:146)
+
+FAILURES!!!
+Tests run: 2,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1
