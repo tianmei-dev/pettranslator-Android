@@ -1,0 +1,2 @@
+Settings acceptance PASS; no cache files deleted by the feature
+Original privacy state restored exactly

@@ -1,0 +1,11 @@
+{
+  "Branch": "main",
+  "HeadUnchanged": true,
+  "ProtectedFileCount": 133,
+  "UnexpectedChanges": [],
+  "AllowedExistingFiles": [
+    "app/src/main/java/com/example/pettranslator/MainActivity.kt",
+    "app/src/main/java/com/example/pettranslator/privacy/AndroidPrivacyConsent.kt",
+    "app/src/main/java/com/example/pettranslator/privacy/PrivacyConsentUi.kt"
+  ]
+}

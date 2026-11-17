@@ -137,10 +137,11 @@ class ProfileUiEvidenceTest {
         assertFalse("The installed package exposes a real version", installedVersion.isNullOrBlank())
         settingTitles.forEachIndexed { index, title ->
             val row = rule.onNodeWithTag("profile_setting_$index").performScrollTo()
-                .assertIsDisplayed().assert(hasText(title)).assert(hasClickAction())
+                .assertIsDisplayed().assert(hasText(title) or hasAnyDescendant(hasText(title)))
+            row.assert(if (index == 2) !hasClickAction() else hasClickAction())
             assertCompleteText(title)
             if (index == 2) {
-                row.assert(hasText(checkNotNull(installedVersion), substring = true))
+                row.assert(hasAnyDescendant(hasText(checkNotNull(installedVersion), substring = true)))
                 note("displayedVersion=$installedVersion source=PackageManager")
             }
             assertFixedTabs()
@@ -177,11 +178,13 @@ class ProfileUiEvidenceTest {
         assertFixedTabs()
         val cacheSentinel = File.createTempFile("b21-profile-", ".sentinel", context.cacheDir)
         try {
-            cacheSentinel.writeText("B2.1 UI placeholder must leave cache untouched")
-            assertPlaceholder("profile_setting_1")
+            cacheSentinel.writeText("B2.4 unknown cache must remain untouched")
+            rule.onNodeWithTag("profile_setting_1").performScrollTo().performClick()
+            rule.waitUntil(5_000) { rule.onAllNodesWithTag("profile_cache_empty").fetchSemanticsNodes().isNotEmpty() }
+            rule.onNodeWithTag("profile_cache_cancel").performClick()
             assertTrue("Clear-cache UI must not delete real cache files", cacheSentinel.isFile)
-            assertEquals("B2.1 UI placeholder must leave cache untouched", cacheSentinel.readText())
-            note("clearCache=placeholder only; preexisting cache sentinel preserved")
+            assertEquals("B2.4 unknown cache must remain untouched", cacheSentinel.readText())
+            note("cacheInspection=no eligible deletions; unknown sentinel preserved")
         } finally {
             cacheSentinel.delete()
         }
@@ -242,7 +245,8 @@ class ProfileLargeFontEvidenceTest {
                 rule.onNodeWithTag("profile_controlled_footer").assertIsDisplayed().getUnclippedBoundsInRoot())
         }
         fun verifyRow(tag: String, title: String) {
-            rule.onNodeWithTag(tag).performScrollTo().assertIsDisplayed().assert(hasText(title))
+            rule.onNodeWithTag(tag).performScrollTo().assertIsDisplayed()
+                .assert(hasText(title) or hasAnyDescendant(hasText(title)))
             rule.onNodeWithText(title, useUnmergedTree = true)
                 .performSemanticsAction(SemanticsActions.GetTextLayoutResult) { action ->
                     val layouts = mutableListOf<TextLayoutResult>()

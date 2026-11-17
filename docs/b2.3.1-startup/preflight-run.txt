@@ -1,0 +1,6 @@
+STOPPED
+Traceback (most recent call last):
+  File "D:\pettranslator\tools\b231_startup_acceptance.py", line 82, in <module>
+    assert private_file(BACKUP) is None, 'Refusing to replace an existing backup'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Refusing to replace an existing backup

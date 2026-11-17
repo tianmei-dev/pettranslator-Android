@@ -36,6 +36,8 @@ import com.example.pettranslator.ui.profile.ProfileScreen
 import com.example.pettranslator.ui.profile.ProfileRoutes
 import com.example.pettranslator.ui.profile.PermissionDetailsScreen
 import com.example.pettranslator.ui.profile.LegalDocumentScreen
+import com.example.pettranslator.ui.profile.AboutScreen
+import com.example.pettranslator.ui.profile.ProfileSettingsRoutes
 import com.example.pettranslator.ui.theme.*
 
 /** Injectable recording entry; the default opens the full-screen recording destination. */
@@ -50,7 +52,7 @@ private enum class Tab(val route: String, val title: String, val icon: ImageVect
     val snackbar = remember { SnackbarHostState() }
     val recording = entry?.destination?.route?.startsWith("recording/") == true
     val profileDetail = entry?.destination?.route == ProfileRoutes.Permissions ||
-        entry?.destination?.route == ProfileRoutes.Document
+        entry?.destination?.route == ProfileRoutes.Document || entry?.destination?.route == ProfileSettingsRoutes.About
     val appContext = LocalContext.current.applicationContext
     val model: HomeViewModel = viewModel(factory = viewModelFactory { initializer {
         HomeViewModel(preferences, FeatureAccessManager { feature ->
@@ -113,9 +115,12 @@ private enum class Tab(val route: String, val title: String, val icon: ImageVect
             composable(Tab.Profile.route) {
                 ProfileScreen(onPermissions = { controller.navigate(ProfileRoutes.Permissions) { launchSingleTop = true } },
                     onDocument = { document -> controller.navigate(ProfileRoutes.document(document)) { launchSingleTop = true } },
-                    onRevokeConsent = onRevokeConsent, onBack = { controller.popBackStack() })
+                    onRevokeConsent = onRevokeConsent,
+                    onAbout = { controller.navigate(ProfileSettingsRoutes.About) { launchSingleTop = true } },
+                    onBack = { controller.popBackStack() })
             }
             composable(ProfileRoutes.Permissions) { PermissionDetailsScreen { controller.popBackStack() } }
+            composable(ProfileSettingsRoutes.About) { AboutScreen { controller.popBackStack() } }
             composable(ProfileRoutes.Document) { documentEntry ->
                 LegalDocumentScreen(documentEntry.arguments?.getString("documentId")) { controller.popBackStack() }
             }

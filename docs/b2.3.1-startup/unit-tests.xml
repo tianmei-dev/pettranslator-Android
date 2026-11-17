@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.pettranslator.StartupSessionTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-17T03:54:55.080Z" hostname="DESKTOP-7K3SJCV" time="0.028">
+  <properties/>
+  <testcase name="waitingForAuthorizationDoesNotConsumeVisibleStartupTime" classname="com.example.pettranslator.StartupSessionTest" time="0.019"/>
+  <testcase name="recreatedActivityReusesSessionWithoutRestartingDeadline" classname="com.example.pettranslator.StartupSessionTest" time="0.004"/>
+  <testcase name="completesAtTwoSecondBoundaryAndAuditsCompletionOnlyOnce" classname="com.example.pettranslator.StartupSessionTest" time="0.002"/>
+  <testcase name="completedSessionDoesNotWaitAgainOnWarmResume" classname="com.example.pettranslator.StartupSessionTest" time="0.001"/>
+  <testcase name="newProcessSessionRequiresItsOwnTwoVisibleSeconds" classname="com.example.pettranslator.StartupSessionTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

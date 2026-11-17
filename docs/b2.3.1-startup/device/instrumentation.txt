@@ -1,0 +1,47 @@
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.StartupFlowTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.example.pettranslator.StartupFlowTest:
+INSTRUMENTATION_STATUS: test=deniedConsentLinksStartupAndSameProcessRestoration
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.StartupFlowTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 8000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.example.pettranslator.StartupFlowTest.deniedConsentLinksStartupAndSameProcessRestoration$awaitTag(StartupFlowTest.kt:58)
+	at com.example.pettranslator.StartupFlowTest.deniedConsentLinksStartupAndSameProcessRestoration$assertProfileRetained(StartupFlowTest.kt:92)
+	at com.example.pettranslator.StartupFlowTest.deniedConsentLinksStartupAndSameProcessRestoration(StartupFlowTest.kt:181)
+
+INSTRUMENTATION_STATUS: stream=
+Error in deniedConsentLinksStartupAndSameProcessRestoration(com.example.pettranslator.StartupFlowTest):
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 8000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.example.pettranslator.StartupFlowTest.deniedConsentLinksStartupAndSameProcessRestoration$awaitTag(StartupFlowTest.kt:58)
+	at com.example.pettranslator.StartupFlowTest.deniedConsentLinksStartupAndSameProcessRestoration$assertProfileRetained(StartupFlowTest.kt:92)
+	at com.example.pettranslator.StartupFlowTest.deniedConsentLinksStartupAndSameProcessRestoration(StartupFlowTest.kt:181)
+
+INSTRUMENTATION_STATUS: test=deniedConsentLinksStartupAndSameProcessRestoration
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 16.254
+There was 1 failure:
+1) deniedConsentLinksStartupAndSameProcessRestoration(com.example.pettranslator.StartupFlowTest)
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 8000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.example.pettranslator.StartupFlowTest.deniedConsentLinksStartupAndSameProcessRestoration$awaitTag(StartupFlowTest.kt:58)
+	at com.example.pettranslator.StartupFlowTest.deniedConsentLinksStartupAndSameProcessRestoration$assertProfileRetained(StartupFlowTest.kt:92)
+	at com.example.pettranslator.StartupFlowTest.deniedConsentLinksStartupAndSameProcessRestoration(StartupFlowTest.kt:181)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

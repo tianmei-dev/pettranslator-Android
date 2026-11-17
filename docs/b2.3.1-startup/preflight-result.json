@@ -1,0 +1,7 @@
+[
+  {
+    "case": "STOPPED",
+    "passed": false,
+    "error": "Refusing to replace an existing backup"
+  }
+]

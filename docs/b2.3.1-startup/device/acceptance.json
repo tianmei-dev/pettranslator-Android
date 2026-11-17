@@ -1,0 +1,20 @@
+[
+  {
+    "case": "privacy_state_isolated",
+    "original_present": false
+  },
+  {
+    "case": "decline_persisted_and_exited",
+    "passed": true
+  },
+  {
+    "case": "STOPPED",
+    "passed": false,
+    "error": "Concentrated UI flow failed; see instrumentation.txt"
+  },
+  {
+    "case": "original_state_restored",
+    "consent_bytes_exact": true,
+    "pet_preferences_preserved": true
+  }
+]

@@ -1,0 +1,9 @@
+privacy_state_isolated
+decline_persisted_and_exited
+STOPPED
+original_state_restored
+Traceback (most recent call last):
+  File "D:\pettranslator\tools\b231_startup_acceptance.py", line 113, in <module>
+    assert 'OK (1 test)' in result and 'FAILURES!!!' not in result, 'Concentrated UI flow failed; see instrumentation.txt'
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Concentrated UI flow failed; see instrumentation.txt

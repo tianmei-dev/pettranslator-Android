@@ -1,0 +1,2 @@
+warning: in the working copy of 'app/src/main/java/com/example/pettranslator/privacy/AndroidPrivacyConsent.kt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/src/main/java/com/example/pettranslator/privacy/PrivacyConsentUi.kt', LF will be replaced by CRLF the next time Git touches it

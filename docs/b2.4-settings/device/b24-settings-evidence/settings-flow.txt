@@ -1,0 +1,46 @@
+device=samsung SM-G973U sdk=31 fontScale=1.1
+cachePolicy=retain recording/share/unknown; safeFiles=0 clearedBytes=0; 本轮实际删除路径未验证/未启用
+privacyGate=existing consent; no consent action
+installedPackageVersion=1.0.0 versionRow=childTextExact readOnly=true
+screenshot=about.png 1080x2280 foreground=com.example.pettranslator
+about=icon/name/twoParagraphs/versionExact back=Profile selected=我的 scrollBefore=930.0 scrollAfter=930.0 deltaPx=0.0
+fixturesCreated=4; cache=recording/share/unknown; persistent=files; no deletable safe-cache directory fabricated
+cache=first cleanableBytes=0 safeFiles=0 clearedBytes=0 retainedFiles=3 retainedBytes=53 inspectionErrors=0; 本轮实际删除路径未验证/未启用
+preserved=first-inspection file=privacy_consent.preferences_pb exists=true bytes=91 sha256=9cdcb64908de0c4744974a189a12485935f84bff6734696e50f4e924e66cb7b8
+preserved=first-inspection file=pet_preferences.preferences_pb exists=false bytes=0 sha256=absent
+preserved=first-inspection file=b24-protected.pcm exists=true bytes=5 sha256=0150a92bb1212cd00516b65fde0704614760000963874fcbb11eaa734ee87809
+preserved=first-inspection file=b24-protected-share.png exists=true bytes=25 sha256=957869ac097c3bef7ef625c54b58d8a22b9c50923ce9033785e8a102702180ec
+preserved=first-inspection file=b24-unknown.tmp exists=true bytes=23 sha256=2f80a0bfa23ca7a6435a6504d5c70f86f0d8680f60630602d763b51ed554c351
+preserved=first-inspection file=b24-persistent.txt exists=true bytes=25 sha256=91a4f06e240757bb3f87e6992cee61ca1435fa927eb5411eeb4b449d222c5366
+preserved=cancel file=privacy_consent.preferences_pb exists=true bytes=91 sha256=9cdcb64908de0c4744974a189a12485935f84bff6734696e50f4e924e66cb7b8
+preserved=cancel file=pet_preferences.preferences_pb exists=false bytes=0 sha256=absent
+preserved=cancel file=b24-protected.pcm exists=true bytes=5 sha256=0150a92bb1212cd00516b65fde0704614760000963874fcbb11eaa734ee87809
+preserved=cancel file=b24-protected-share.png exists=true bytes=25 sha256=957869ac097c3bef7ef625c54b58d8a22b9c50923ce9033785e8a102702180ec
+preserved=cancel file=b24-unknown.tmp exists=true bytes=23 sha256=2f80a0bfa23ca7a6435a6504d5c70f86f0d8680f60630602d763b51ed554c351
+preserved=cancel file=b24-persistent.txt exists=true bytes=25 sha256=91a4f06e240757bb3f87e6992cee61ca1435fa927eb5411eeb4b449d222c5366
+cache=second cleanableBytes=0 safeFiles=0 clearedBytes=0 retainedFiles=3 retainedBytes=53 inspectionErrors=0; 本轮实际删除路径未验证/未启用
+preserved=second-inspection file=privacy_consent.preferences_pb exists=true bytes=91 sha256=9cdcb64908de0c4744974a189a12485935f84bff6734696e50f4e924e66cb7b8
+preserved=second-inspection file=pet_preferences.preferences_pb exists=false bytes=0 sha256=absent
+preserved=second-inspection file=b24-protected.pcm exists=true bytes=5 sha256=0150a92bb1212cd00516b65fde0704614760000963874fcbb11eaa734ee87809
+preserved=second-inspection file=b24-protected-share.png exists=true bytes=25 sha256=957869ac097c3bef7ef625c54b58d8a22b9c50923ce9033785e8a102702180ec
+preserved=second-inspection file=b24-unknown.tmp exists=true bytes=23 sha256=2f80a0bfa23ca7a6435a6504d5c70f86f0d8680f60630602d763b51ed554c351
+preserved=second-inspection file=b24-persistent.txt exists=true bytes=25 sha256=91a4f06e240757bb3f87e6992cee61ca1435fa927eb5411eeb4b449d222c5366
+screenshot=cache-check.png 1080x2280 foreground=com.example.pettranslator
+preserved=close file=privacy_consent.preferences_pb exists=true bytes=91 sha256=9cdcb64908de0c4744974a189a12485935f84bff6734696e50f4e924e66cb7b8
+preserved=close file=pet_preferences.preferences_pb exists=false bytes=0 sha256=absent
+preserved=close file=b24-protected.pcm exists=true bytes=5 sha256=0150a92bb1212cd00516b65fde0704614760000963874fcbb11eaa734ee87809
+preserved=close file=b24-protected-share.png exists=true bytes=25 sha256=957869ac097c3bef7ef625c54b58d8a22b9c50923ce9033785e8a102702180ec
+preserved=close file=b24-unknown.tmp exists=true bytes=23 sha256=2f80a0bfa23ca7a6435a6504d5c70f86f0d8680f60630602d763b51ed554c351
+preserved=close file=b24-persistent.txt exists=true bytes=25 sha256=91a4f06e240757bb3f87e6992cee61ca1435fa927eb5411eeb4b449d222c5366
+preserved=settings-complete file=privacy_consent.preferences_pb exists=true bytes=91 sha256=9cdcb64908de0c4744974a189a12485935f84bff6734696e50f4e924e66cb7b8
+preserved=settings-complete file=pet_preferences.preferences_pb exists=false bytes=0 sha256=absent
+preserved=settings-complete file=b24-protected.pcm exists=true bytes=5 sha256=0150a92bb1212cd00516b65fde0704614760000963874fcbb11eaa734ee87809
+preserved=settings-complete file=b24-protected-share.png exists=true bytes=25 sha256=957869ac097c3bef7ef625c54b58d8a22b9c50923ce9033785e8a102702180ec
+preserved=settings-complete file=b24-unknown.tmp exists=true bytes=23 sha256=2f80a0bfa23ca7a6435a6504d5c70f86f0d8680f60630602d763b51ed554c351
+preserved=settings-complete file=b24-persistent.txt exists=true bytes=25 sha256=91a4f06e240757bb3f87e6992cee61ca1435fa927eb5411eeb4b449d222c5366
+contact=QQ594841675 time08:00-20:00 closed; threeTabs=positionsUnchanged; version=1.0.0 consistent; PASS B2.4; originals=about.png,cache-check.png
+fixtureCleanup=b24-persistent.txt deleted=true
+fixtureCleanup=b24-unknown.tmp deleted=true
+fixtureCleanup=b24-protected-share.png deleted=true
+fixtureCleanup=b24-protected.pcm deleted=true
+fixtureCleanupComplete; productionCacheDeletion=notEnabled/notVerified; safeFiles=0 clearedBytes=0; privacy/currentPet=no direct file writes; host owns consent restore

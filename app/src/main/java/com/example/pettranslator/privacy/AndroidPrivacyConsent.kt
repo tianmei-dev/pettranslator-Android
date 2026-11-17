@@ -55,6 +55,14 @@ class AndroidPrivacyConsent private constructor(context: Context) {
     fun initialize() { scope.launch { controller.initialize() } }
     fun agree() { scope.launch { controller.agree() } }
     fun decline() { scope.launch { controller.decline() } }
+    fun declineAndExit() {
+        scope.launch {
+            controller.decline()
+            if (state.value.phase == ConsentPhase.Denied && !state.value.busy && state.value.error == null) {
+                exitWithoutConsent()
+            }
+        }
+    }
     fun revoke() { scope.launch { controller.revoke() } }
     fun exitWithoutConsent() {
         if (!state.value.busy && state.value.phase in setOf(ConsentPhase.Required, ConsentPhase.Denied)) {

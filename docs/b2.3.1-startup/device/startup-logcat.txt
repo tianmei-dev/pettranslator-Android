@@ -1,0 +1,28 @@
+--------- beginning of main
+11-19 11:58:22.668 31869 31869 I PrivacyConsent: consent_required
+11-19 11:58:26.191 31869 31869 I PrivacyConsent: consent_denied_persisted
+11-19 11:58:26.191 31869 31869 I PrivacyConsent: privacy_exit_process
+11-19 11:58:28.656 32001 32001 I PrivacyConsent: consent_required
+11-19 11:58:28.912 32001 32020 I B231StartupFlow: device=samsung SM-G973U sdk=31 fontScale=1.1 pid=32001 folder=/storage/emulated/0/Android/data/com.example.pettranslator/files/b231-startup-evidence
+11-19 11:58:30.014 32001 32020 I B231StartupFlow: screenshot=consent-dialog.png 1080x2280
+11-19 11:58:30.062 32001 32020 I B231StartupFlow: link=user_agreement label=《用户协议》 range=52..58 tap=Offset(233.4, 328.5)
+11-19 11:58:30.460 32001 32020 I B231StartupFlow: document=user-agreement title=用户协议 asset=user_agreement.txt utf8Exact=true chars=822 gateGranted=false
+11-19 11:58:30.932 32001 32020 I B231StartupFlow: link=privacy_policy label=《隐私政策》 range=59..65 tap=Offset(530.4, 328.5)
+11-19 11:58:31.484 32001 32020 I B231StartupFlow: screenshot=privacy-policy.png 1080x2280
+11-19 11:58:31.486 32001 32020 I B231StartupFlow: document=privacy-policy title=隐私政策 asset=privacy_policy.txt utf8Exact=true chars=978 gateGranted=false
+11-19 11:58:31.814 32001 32020 I B231StartupFlow: legalLinks=2/2 physical glyph taps, exact assets, Back restored consent; PASS
+11-19 11:58:31.932 32001 32001 I PrivacyConsent: consent_accepted_persisted
+11-19 11:58:32.033 32001 32001 I StartupPresentation: splash_visible uptimeMs=3373346747
+11-19 11:58:32.616 32001 32020 I B231StartupFlow: screenshot=startup-after-agree.png 1080x2280
+11-19 11:58:34.037 32001 32036 I StartupPresentation: splash_finished durationMs=2002
+11-19 11:58:34.738 32001 32020 I B231StartupFlow: agree=persisted Granted; launcher icon and entering text observed; home reached; PASS
+11-19 11:58:35.425 32001 32020 I B231StartupFlow: backgroundCommand=
+11-19 11:58:35.528 32001 32020 I B231StartupFlow: background=actual foreground package com.sec.android.app.launcher
+11-19 11:58:35.913 32001 32020 I B231StartupFlow: resumeCommand=Starting: Intent { cmp=com.example.pettranslator/.MainActivity }
+11-19 11:58:35.913 32001 32020 I B231StartupFlow: Status: ok
+11-19 11:58:35.913 32001 32020 I B231StartupFlow: LaunchState: WARM
+11-19 11:58:35.913 32001 32020 I B231StartupFlow: Activity: com.example.pettranslator/.MainActivity
+11-19 11:58:35.913 32001 32020 I B231StartupFlow: TotalTime: 331
+11-19 11:58:35.913 32001 32020 I B231StartupFlow: WaitTime: 334
+11-19 11:58:35.913 32001 32020 I B231StartupFlow: Complete
+11-19 11:58:43.922 32001 32020 I B231StartupFlow: FAIL: ComposeTimeoutException: Condition still not satisfied after 8000 ms

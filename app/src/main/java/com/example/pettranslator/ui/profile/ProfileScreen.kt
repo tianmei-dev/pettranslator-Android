@@ -1,6 +1,5 @@
 package com.example.pettranslator.ui.profile
 
-import android.content.Context
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -64,12 +63,14 @@ fun ProfileScreen(
     onPermissions: () -> Unit = {},
     onDocument: (LegalDocument) -> Unit = {},
     onRevokeConsent: () -> Unit = {},
+    onAbout: () -> Unit = {},
     onBack: () -> Unit,
 ) {
     val context = LocalContext.current
-    val version = remember(context) { installedVersion(context) }
+    val version = remember(context) { installedAppVersion(context) }
     var dialogEntry by remember { mutableStateOf<String?>(null) }
     var showRevokeConfirmation by remember { mutableStateOf(false) }
+    var showCacheInspection by remember { mutableStateOf(false) }
     Box(Modifier.fillMaxSize().testTag("profile_viewport")
         .background(Brush.verticalGradient(listOf(Color(0xFFF0E6FC), Color(0xFFFDF0F8), Color(0xFFEDF2FF))))) {
         Column(Modifier.widthIn(max = 600.dp).fillMaxWidth().align(Alignment.TopCenter)
@@ -101,7 +102,13 @@ fun ProfileScreen(
                     ProfileSectionTitle("设置", Icons.Default.Settings)
                     SettingsMenus.forEachIndexed { index, (title, icon) ->
                         ProfileMenuRow(title, icon, index, Modifier.testTag("profile_setting_$index"),
-                            value = if (index == 2) version ?: "—" else null) { dialogEntry = title }
+                            value = if (index == 2) version ?: "版本信息暂不可用" else null,
+                            onClick = when (index) {
+                                0 -> onAbout
+                                1 -> ({ showCacheInspection = true })
+                                2 -> null
+                                else -> ({ dialogEntry = title })
+                            })
                         if (index < SettingsMenus.lastIndex) ProfileDivider()
                     }
                     Spacer(Modifier.height(4.dp))
@@ -109,6 +116,7 @@ fun ProfileScreen(
             }
         }
     }
+    if (showCacheInspection) ProfileCacheDialog { showCacheInspection = false }
     if (showRevokeConfirmation) {
         AlertDialog(
             onDismissRequest = { showRevokeConfirmation = false },
@@ -151,8 +159,6 @@ fun ProfileScreen(
                     if (contact) {
                         Text("客服在线时间：08:00-20:00", modifier = Modifier.fillMaxWidth())
                         Text("联系QQ：594841675", modifier = Modifier.fillMaxWidth())
-                    } else if (entry == "当前版本号") {
-                        Text("当前版本：${version ?: "—"}", modifier = Modifier.fillMaxWidth())
                     } else {
                         Text("功能暂未开放", color = ProfileInk, fontWeight = FontWeight.SemiBold)
                         Text("当前仅展示入口，相关功能尚未接入。", modifier = Modifier.fillMaxWidth())
@@ -259,10 +265,11 @@ private fun ProfileSectionTitle(title: String, icon: ImageVector) {
 
 @Composable
 private fun ProfileMenuRow(title: String, icon: ImageVector, index: Int, modifier: Modifier,
-    value: String? = null, onClick: () -> Unit) {
+    value: String? = null, onClick: (() -> Unit)? = null) {
     val accent = if (index % 3 == 0) ProfileBlue else if (index % 3 == 1) ProfilePink else ProfilePurple
     val largeFont = LocalDensity.current.fontScale > 1.3f
-    Row(modifier.fillMaxWidth().heightIn(min = 52.dp).clickable(role = Role.Button, onClick = onClick)
+    Row(modifier.fillMaxWidth().heightIn(min = 52.dp)
+        .then(if (onClick != null) Modifier.clickable(role = Role.Button, onClick = onClick) else Modifier)
         .padding(horizontal = 14.dp, vertical = 10.dp), verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(10.dp)) {
         Box(Modifier.size(30.dp).background(accent.copy(alpha = .10f), RoundedCornerShape(11.dp)),
@@ -276,7 +283,7 @@ private fun ProfileMenuRow(title: String, icon: ImageVector, index: Int, modifie
             }
         }
         if (!largeFont && value != null) Text(value, color = ProfileMuted, fontSize = 12.sp, lineHeight = 18.sp)
-        ProfileArrow()
+        if (onClick != null) ProfileArrow()
     }
 }
 
@@ -291,8 +298,3 @@ private fun ProfileDivider() {
     HorizontalDivider(Modifier.padding(start = 54.dp, end = 14.dp), thickness = .5.dp,
         color = Color(0xFFE9E1F2))
 }
-
-@Suppress("DEPRECATION")
-private fun installedVersion(context: Context): String? = runCatching {
-    context.packageManager.getPackageInfo(context.packageName, 0).versionName?.takeIf { it.isNotBlank() }
-}.getOrNull()

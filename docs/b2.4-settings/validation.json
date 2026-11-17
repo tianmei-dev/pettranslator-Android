@@ -1,0 +1,32 @@
+{
+  "Branch": "main",
+  "HeadUnchanged": true,
+  "ProtectedCount": 136,
+  "UnexpectedChanges": [],
+  "Build": "BUILD SUCCESSFUL in 1m5s",
+  "BuildRuns": 1,
+  "UnitTests": 5,
+  "UnitPassed": 4,
+  "UnitSkipped": 1,
+  "UnitFailures": 0,
+  "DeviceRounds": 1,
+  "Device": "Samsung SM-G973U API31 font1.1",
+  "ImplementedScopeTestPassed": true,
+  "AboutBackScrollBefore": 930,
+  "AboutBackScrollAfter": 930,
+  "ActualInstalledVersion": "1.0.0",
+  "CacheDeletionEnabled": false,
+  "CleanableBytes": 0,
+  "DeletedFiles": 0,
+  "FreedBytes": 0,
+  "RetainedTestCacheFiles": 3,
+  "RetainedTestCacheBytes": 53,
+  "SkippedCaches": [
+    "All pet_recordings PCM",
+    "share/pet-result.png: external URI reader lifetime untracked",
+    "All unknown internal/external cache files"
+  ],
+  "PrivacyStateRestoredExactly": true,
+  "ExistingB231ChangesProtected": true,
+  "ApkSha256": "0738A306313615EF3E39443847B80C98C1E17B2372F0E4E4376D0AD96BE4552E"
+}

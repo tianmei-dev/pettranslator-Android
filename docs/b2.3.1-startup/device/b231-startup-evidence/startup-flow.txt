@@ -1,0 +1,20 @@
+3373343626 device=samsung SM-G973U sdk=31 fontScale=1.1 pid=32001 folder=/storage/emulated/0/Android/data/com.example.pettranslator/files/b231-startup-evidence
+3373344727 screenshot=consent-dialog.png 1080x2280
+3373344775 link=user_agreement label=《用户协议》 range=52..58 tap=Offset(233.4, 328.5)
+3373345174 document=user-agreement title=用户协议 asset=user_agreement.txt utf8Exact=true chars=822 gateGranted=false
+3373345645 link=privacy_policy label=《隐私政策》 range=59..65 tap=Offset(530.4, 328.5)
+3373346198 screenshot=privacy-policy.png 1080x2280
+3373346200 document=privacy-policy title=隐私政策 asset=privacy_policy.txt utf8Exact=true chars=978 gateGranted=false
+3373346527 legalLinks=2/2 physical glyph taps, exact assets, Back restored consent; PASS
+3373347330 screenshot=startup-after-agree.png 1080x2280
+3373349451 agree=persisted Granted; launcher icon and entering text observed; home reached; PASS
+3373350138 backgroundCommand=
+3373350241 background=actual foreground package com.sec.android.app.launcher
+3373350626 resumeCommand=Starting: Intent { cmp=com.example.pettranslator/.MainActivity }
+Status: ok
+LaunchState: WARM
+Activity: com.example.pettranslator/.MainActivity
+TotalTime: 331
+WaitTime: 334
+Complete
+3373358635 FAIL: ComposeTimeoutException: Condition still not satisfied after 8000 ms

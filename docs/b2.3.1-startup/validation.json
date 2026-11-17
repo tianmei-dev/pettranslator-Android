@@ -1,0 +1,28 @@
+{
+  "Build": "BUILD SUCCESSFUL in 1m21s",
+  "BuildRuns": 1,
+  "UnitTests": 5,
+  "UnitFailures": 0,
+  "Device": "Samsung SM-G973U API31 font1.1",
+  "InstallRounds": 1,
+  "ActualUiRounds": 1,
+  "PreflightCorrection": "ADB exec-out returned 0 for missing cat; fixed existence check before state isolation or scenario execution",
+  "RuntimePassed": [
+    "No consent record: privacy dialog appears without loading-text page",
+    "Decline is persisted and app exits",
+    "Both exact glyph links open correct complete TXT and return without granting",
+    "Agreement persists, custom startup/icon shown, home reached"
+  ],
+  "FirstAgreementCustomDurationMs": 2002,
+  "RuntimeFailure": "After HOME/am start: LaunchState WARM; profile_viewport missing for 8s",
+  "RuntimeUnverified": [
+    "True original-Activity hot restoration",
+    "Authorized ordinary cold start",
+    "Actual Activity recreation"
+  ],
+  "PrivacyStateRestoredExactly": true,
+  "BusinessPreferencesPreserved": true,
+  "ApkSha256": "623438F2DA441B58EDC4D9D5744AABD5DEE5B1AD919A71F9EF94CB8E251008D4",
+  "NoVisualIteration": true,
+  "NoCommitOrPush": true
+}

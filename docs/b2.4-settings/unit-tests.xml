@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.pettranslator.SafeCacheInspectorTest" tests="5" skipped="1" failures="0" errors="0" timestamp="2026-11-17T07:08:29.429Z" hostname="DESKTOP-7K3SJCV" time="0.139">
+  <properties/>
+  <testcase name="missingRootReportsZeroWithoutCreatingIt" classname="com.example.pettranslator.SafeCacheInspectorTest" time="0.055"/>
+  <testcase name="symbolicLinkDoesNotFollowOrModifyFilesOutsideTheRoot" classname="com.example.pettranslator.SafeCacheInspectorTest" time="0.047">
+    <skipped/>
+  </testcase>
+  <testcase name="duplicateRootsDoNotCountTheSameFileMoreThanOnce" classname="com.example.pettranslator.SafeCacheInspectorTest" time="0.021"/>
+  <testcase name="emptyRootReportsNoCleanableOrRetainedFiles" classname="com.example.pettranslator.SafeCacheInspectorTest" time="0.002"/>
+  <testcase name="recordingsSharesAndUnknownFilesAreCountedAndPreservedByteForByte" classname="com.example.pettranslator.SafeCacheInspectorTest" time="0.011"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
