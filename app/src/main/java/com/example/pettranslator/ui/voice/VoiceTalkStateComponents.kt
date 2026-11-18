@@ -195,7 +195,7 @@ fun VoiceTalkConvertingContent(pet: PetType?, modifier: Modifier = Modifier) {
     }
 }
 
-/** Presentation contract for a future real converted clip. B3.1 never calls this in its production flow. */
+/** Displays a fixed, validated sequence; replay never chooses a new sequence in the UI. */
 @Composable
 fun VoiceTalkResultContent(
     elapsedMs: Long,
@@ -210,6 +210,8 @@ fun VoiceTalkResultContent(
 ) {
     val hasAudio = durationMs > 0 && audioSources.isNotEmpty()
     val playbackEnabled = canPlay && hasAudio
+    val positionMs = elapsedMs.coerceIn(0L, durationMs.coerceAtLeast(0L))
+    val progress = if (durationMs > 0) (positionMs.toFloat() / durationMs).coerceIn(0f, 1f) else 0f
     Column(modifier.fillMaxWidth().testTag("voice_talk_result"), horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Surface(shape = RoundedCornerShape(30.dp), color = Color.White.copy(alpha = .65f)) {
@@ -239,9 +241,18 @@ fun VoiceTalkResultContent(
                     }
                     VoiceWaveBars(null, Modifier.weight(1f).height(38.dp))
                 }
-                Text("${formatVoiceTime(elapsedMs.coerceAtMost(durationMs.coerceAtLeast(0L)))} / ${formatVoiceTime(durationMs)}",
+                Canvas(Modifier.fillMaxWidth().height(5.dp).testTag("voice_talk_playback_progress").semantics {
+                    contentDescription = "转换音效播放进度"
+                    progressBarRangeInfo = ProgressBarRangeInfo(progress, 0f..1f)
+                }) {
+                    val corner = CornerRadius(size.height / 2)
+                    drawRoundRect(VoicePurple.copy(alpha = .13f), cornerRadius = corner)
+                    if (progress > 0f) drawRoundRect(VoicePink,
+                        size = Size(size.width * progress, size.height), cornerRadius = corner)
+                }
+                Text("${formatVoicePlaybackTime(positionMs)} / ${formatVoicePlaybackTime(durationMs)}",
                     color = VoiceMuted, fontSize = 14.sp, lineHeight = 21.sp, modifier = Modifier.testTag("voice_talk_playback_timer"))
-                if (!playbackEnabled) Text("暂无有效转换音源，播放暂未开放", color = VoiceMuted,
+                if (!hasAudio) Text("暂无有效转换音源，播放暂未开放", color = VoiceMuted,
                     fontSize = 12.sp, lineHeight = 19.sp, textAlign = TextAlign.Center,
                     modifier = Modifier.testTag("voice_talk_playback_unavailable"))
             }
@@ -258,6 +269,11 @@ fun VoiceTalkResultContent(
             VoiceGradientButton("再说一次", onRecordAgain, true, Modifier.weight(1f).testTag("voice_talk_again"))
         }
     }
+}
+
+private fun formatVoicePlaybackTime(milliseconds: Long): String {
+    val safe = milliseconds.coerceAtLeast(0L)
+    return String.format(Locale.ROOT, "%s.%01d", formatVoiceTime(safe), safe % 1_000L / 100L)
 }
 
 @Preview(name = "CONVERTING · isolated UI only", widthDp = 350, heightDp = 300)

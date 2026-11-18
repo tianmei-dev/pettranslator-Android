@@ -151,7 +151,7 @@ class CloudHomeLayoutTest {
     private fun verifyHeaderAndPetSwitch() {
         rule.onNodeWithText("选择宠物").assertDoesNotExist()
         rule.onNodeWithTag("home_pet_title").assertDoesNotExist()
-        val brand = rule.onNodeWithTag("home_brand").assertTextEquals("猫言狗语翻译官")
+        val brand = rule.onNodeWithTag("home_brand").assertTextEquals("猫狗心声翻译官")
         val brandBounds = brand.getUnclippedBoundsInRoot()
         val vipBounds = rule.onNodeWithContentDescription("VIP 入口，暂不可用").getUnclippedBoundsInRoot()
         assertFalse("App name and unchanged VIP must not overlap", overlaps(brandBounds, vipBounds))

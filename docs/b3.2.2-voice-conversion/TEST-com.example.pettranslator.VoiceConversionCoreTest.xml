@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.pettranslator.VoiceConversionCoreTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-11-18T09:16:11.357Z" hostname="DESKTOP-7K3SJCV" time="0.739">
+  <properties/>
+  <testcase name="longOrRhythmicCatUsesCompleteContinuousSoundDespitePreviousResult" classname="com.example.pettranslator.VoiceConversionCoreTest" time="0.235"/>
+  <testcase name="dogTinyAccentIsOneSoundWhileAnOrdinarySentenceUsesACompleteSequence" classname="com.example.pettranslator.VoiceConversionCoreTest" time="0.002"/>
+  <testcase name="excludesEveryUnapprovedSourceAndNeverCrossesPetBoundaries" classname="com.example.pettranslator.VoiceConversionCoreTest" time="0.003"/>
+  <testcase name="cancelledAnalysisCannotReturnAValidResult" classname="com.example.pettranslator.VoiceConversionCoreTest" time="0.358"/>
+  <testcase name="invalidEvidenceMissingSourcesAndWrongAssetPathsDoNotMakeAResult" classname="com.example.pettranslator.VoiceConversionCoreTest" time="0.003"/>
+  <testcase name="shortCatChoiceUsesActivityAndEnergyVariation" classname="com.example.pettranslator.VoiceConversionCoreTest" time="0.002"/>
+  <testcase name="sequenceEnforcesDistinctSamePetSoundsAndReportsFixedDuration" classname="com.example.pettranslator.VoiceConversionCoreTest" time="0.004"/>
+  <testcase name="readsPcmInsteadOfTrustingCaptureEnergyMetadata" classname="com.example.pettranslator.VoiceConversionCoreTest" time="0.024"/>
+  <testcase name="silenceLowSteadyRoomToneAndSingleClickDoNotGenerateEvidence" classname="com.example.pettranslator.VoiceConversionCoreTest" time="0.023"/>
+  <testcase name="findsPausesAtDifferentMicrophoneLevels" classname="com.example.pettranslator.VoiceConversionCoreTest" time="0.029"/>
+  <testcase name="catRotationStaysWithinTheShortClassAndDoesNotChangeExistingResult" classname="com.example.pettranslator.VoiceConversionCoreTest" time="0.001"/>
+  <testcase name="longDogFeatureRuleAndRotationUseOnlyTheTwoContinuousSounds" classname="com.example.pettranslator.VoiceConversionCoreTest" time="0.002"/>
+  <testcase name="rejectsShortTruncatedUnsupportedAndInconsistentRecordings" classname="com.example.pettranslator.VoiceConversionCoreTest" time="0.049"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

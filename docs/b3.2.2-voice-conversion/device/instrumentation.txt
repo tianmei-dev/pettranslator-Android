@@ -1,0 +1,47 @@
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.VoiceConversionDeviceTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.example.pettranslator.VoiceConversionDeviceTest:
+INSTRUMENTATION_STATUS: test=deterministicPipelineNativePlaybackAndMicrophoneCleanupOneRound
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.pettranslator.VoiceConversionDeviceTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 8000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.example.pettranslator.VoiceConversionDeviceTest.deterministicPipelineNativePlaybackAndMicrophoneCleanupOneRound$waitFor(VoiceConversionDeviceTest.kt:48)
+	at com.example.pettranslator.VoiceConversionDeviceTest.deterministicPipelineNativePlaybackAndMicrophoneCleanupOneRound$waitFor$default(VoiceConversionDeviceTest.kt:48)
+	at com.example.pettranslator.VoiceConversionDeviceTest.deterministicPipelineNativePlaybackAndMicrophoneCleanupOneRound(VoiceConversionDeviceTest.kt:137)
+
+INSTRUMENTATION_STATUS: stream=
+Error in deterministicPipelineNativePlaybackAndMicrophoneCleanupOneRound(com.example.pettranslator.VoiceConversionDeviceTest):
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 8000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.example.pettranslator.VoiceConversionDeviceTest.deterministicPipelineNativePlaybackAndMicrophoneCleanupOneRound$waitFor(VoiceConversionDeviceTest.kt:48)
+	at com.example.pettranslator.VoiceConversionDeviceTest.deterministicPipelineNativePlaybackAndMicrophoneCleanupOneRound$waitFor$default(VoiceConversionDeviceTest.kt:48)
+	at com.example.pettranslator.VoiceConversionDeviceTest.deterministicPipelineNativePlaybackAndMicrophoneCleanupOneRound(VoiceConversionDeviceTest.kt:137)
+
+INSTRUMENTATION_STATUS: test=deterministicPipelineNativePlaybackAndMicrophoneCleanupOneRound
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 21.336
+There was 1 failure:
+1) deterministicPipelineNativePlaybackAndMicrophoneCleanupOneRound(com.example.pettranslator.VoiceConversionDeviceTest)
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 8000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at com.example.pettranslator.VoiceConversionDeviceTest.deterministicPipelineNativePlaybackAndMicrophoneCleanupOneRound$waitFor(VoiceConversionDeviceTest.kt:48)
+	at com.example.pettranslator.VoiceConversionDeviceTest.deterministicPipelineNativePlaybackAndMicrophoneCleanupOneRound$waitFor$default(VoiceConversionDeviceTest.kt:48)
+	at com.example.pettranslator.VoiceConversionDeviceTest.deterministicPipelineNativePlaybackAndMicrophoneCleanupOneRound(VoiceConversionDeviceTest.kt:137)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

@@ -1,0 +1,10 @@
+{
+  "microphone": {
+    "granted": false,
+    "flags": [
+      "USER_SENSITIVE_WHEN_DENIED",
+      "USER_SENSITIVE_WHEN_GRANTED"
+    ]
+  },
+  "datastore_sha256": {}
+}

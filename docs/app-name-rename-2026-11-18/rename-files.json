@@ -1,0 +1,34 @@
+[
+  {
+    "file": "app/src/androidTest/java/com/example/pettranslator/CloudHomeLayoutTest.kt",
+    "occurrences": 1
+  },
+  {
+    "file": "app/src/androidTest/java/com/example/pettranslator/FinalFontLayoutTest.kt",
+    "occurrences": 1
+  },
+  {
+    "file": "app/src/androidTest/java/com/example/pettranslator/HomeVisualEvidenceTest.kt",
+    "occurrences": 2
+  },
+  {
+    "file": "app/src/androidTest/java/com/example/pettranslator/ProfileSettingsFlowTest.kt",
+    "occurrences": 2
+  },
+  {
+    "file": "app/src/main/assets/legal/user_agreement.txt",
+    "occurrences": 1
+  },
+  {
+    "file": "app/src/main/java/com/example/pettranslator/privacy/PrivacyConsentUi.kt",
+    "occurrences": 1
+  },
+  {
+    "file": "app/src/main/java/com/example/pettranslator/ui/profile/AboutScreen.kt",
+    "occurrences": 1
+  },
+  {
+    "file": "app/src/main/res/values/strings.xml",
+    "occurrences": 1
+  }
+]

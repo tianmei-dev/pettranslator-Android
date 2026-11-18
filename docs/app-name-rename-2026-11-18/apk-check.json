@@ -1,0 +1,9 @@
+{
+  "remaining_old_name_in_app_src": [],
+  "packaged_legal_documents": 7,
+  "packaged_user_agreement_renamed": true,
+  "all_packaged_legal_old_name_absent": true,
+  "build": "BUILD SUCCESSFUL in 1m 11s",
+  "ui_test_apk_compiled": true,
+  "package_id_unchanged": "com.example.pettranslator"
+}

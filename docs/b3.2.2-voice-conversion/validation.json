@@ -1,0 +1,50 @@
+{
+  "status": "IMPLEMENTED_BUILD_PASSED_DEVICE_ACCEPTANCE_INCOMPLETE",
+  "build_runs": 1,
+  "build_result": "BUILD SUCCESSFUL in 1m 47s",
+  "unit_tests": 30,
+  "unit_failures": 0,
+  "device_rounds": 1,
+  "device": "Pixel 3 / API29",
+  "device_instrumentation_tests": 1,
+  "device_instrumentation_failures": 1,
+  "manual_human_recording_and_listening_tested": false,
+  "actual_microphone_test_reached": false,
+  "confirmed_native_played_asset_ids": [
+    "cat_fs_618900",
+    "cat_fs_728095",
+    "dog_fs_807270",
+    "dog_fs_813120"
+  ],
+  "verified_on_device": [
+    "Synthetic PCM short/long Cat and Dog use actual analyzer and matching",
+    "Cat short automatic playback and fixed replay",
+    "Cat long native pause and resume",
+    "Dog short no loop",
+    "Dog long native playback begins",
+    "Background cancels and releases native playback",
+    "No automatic restart after background return before explicit replay"
+  ],
+  "device_failure": "After background resume, explicit Dog replay did not enter isPlaying within 8000ms; no new player preparation/start logged. Exact cause not proven; window focus/lifecycle timing remains a possible factor. No rerun.",
+  "not_completed_on_device": [
+    "Post-resume Dog replay",
+    "Pet change while replaying",
+    "Silent-input UI step",
+    "Physical microphone capture and cleanup step",
+    "Original Play list pending-behavior regression step",
+    "Crash/ANR/long-duration resource-leak acceptance beyond this single short round"
+  ],
+  "unit_only_cases": [
+    "Silent/invalid input",
+    "Missing resources",
+    "Cancellation during analysis",
+    "Pet change invalidates old result",
+    "Repeated interruption cleanup barrier"
+  ],
+  "permission_restored": true,
+  "datastore_unchanged": true,
+  "release_candidate_audio_in_merged_assets": 0,
+  "release_kotlin_compiled": true,
+  "apk_path": "D:\\pettranslator\\artifacts\\pettranslator-b3.2.2-debug.apk",
+  "apk_sha256": "aac4f1c0556b43e7c69a5be69860639a837a61620d22ecb385ee4a560833994a"
+}

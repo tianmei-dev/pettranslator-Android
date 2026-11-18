@@ -11,6 +11,14 @@ import com.example.pettranslator.domain.recording.RecordedAudio
 import com.example.pettranslator.privacy.PrivacyGate
 import com.example.pettranslator.ui.voice.VoiceTalkPhase
 import com.example.pettranslator.ui.voice.VoiceTalkViewModel
+import com.example.pettranslator.ui.voice.conversion.ApprovedVoiceSounds
+import com.example.pettranslator.ui.voice.conversion.VoiceFeatureAnalyzer
+import com.example.pettranslator.ui.voice.conversion.VoiceFeatures
+import com.example.pettranslator.ui.voice.conversion.VoicePlaybackProgress
+import com.example.pettranslator.ui.voice.conversion.VoicePlaybackSequence
+import com.example.pettranslator.ui.voice.conversion.VoiceSequencePlayer
+import com.example.pettranslator.ui.voice.conversion.VoiceSoundAsset
+import com.example.pettranslator.ui.voice.conversion.VoiceSoundLibrary
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -70,7 +78,7 @@ class VoiceTalkViewModelTest {
         }
     }
 
-    @Test fun manualStopEndsRecordedWithExplicitPlaceholderAndNeverConverts() = runTest {
+    @Test fun manualStopAnalyzesThenPublishesResultAndAutomaticallyPlays() = runTest {
         withVoice { fixture ->
             startRecording(fixture, elapsedMs = 1_000L)
             fixture.model.stop()
@@ -82,12 +90,15 @@ class VoiceTalkViewModelTest {
             advanceUntilIdle()
 
             val state = fixture.model.uiState.value
-            assertEquals(VoiceTalkPhase.RECORDED, state.phase)
+            assertEquals(VoiceTalkPhase.RESULT, state.phase)
             assertEquals(1_000L, state.elapsedMs)
-            assertTrue(state.message.orEmpty().contains("转换"))
-            assertTrue(listOf("准备中", "未开放", "尚未").any { state.message.orEmpty().contains(it) })
-            assertFalse(fixture.phases.contains(VoiceTalkPhase.CONVERTING))
-            assertFalse(fixture.phases.contains(VoiceTalkPhase.RESULT))
+            assertNotNull(state.result)
+            assertTrue(fixture.phases.contains(VoiceTalkPhase.CONVERTING))
+            assertTrue(fixture.phases.contains(VoiceTalkPhase.RESULT))
+            assertEquals(1, fixture.analyzer.calls)
+            assertEquals(listOf(state.result), fixture.player.played)
+            assertEquals(state.playbackDurationMs, state.playbackPositionMs)
+            assertFalse(state.isPlaying)
             assertEquals(0, fixture.capture.active)
             assertEquals(1, fixture.capture.releases)
             assertEquals(1, fixture.capture.discards)
@@ -262,6 +273,174 @@ class VoiceTalkViewModelTest {
         }
     }
 
+    @Test fun invalidSoundEvidenceNeverPublishesOrPlaysAResult() = runTest {
+        val analyzer = FakeAnalyzer().apply {
+            suppliedFeatures = VoiceFeatures(1_000L, 0L, 0f, 0f, 0, emptyList(),
+                valid = false, invalidReason = "没有足够的声音，请重新录制")
+        }
+        withVoice(analyzer = analyzer) { fixture ->
+            completeRecording(fixture)
+
+            assertEquals(VoiceTalkPhase.ERROR, fixture.model.uiState.value.phase)
+            assertTrue(fixture.model.uiState.value.message.orEmpty().contains("没有足够"))
+            assertNull(fixture.model.uiState.value.result)
+            assertTrue(fixture.player.played.isEmpty())
+            assertEquals(1, fixture.capture.discards)
+        }
+    }
+
+    @Test fun missingDeveloperAssetsReportsNotReadyBeforeOpeningMicrophone() = runTest {
+        withVoice(sounds = emptyList()) { fixture ->
+            runCurrent()
+            fixture.model.foreground(true)
+            fixture.model.start()
+            advanceUntilIdle()
+
+            assertEquals(VoiceTalkPhase.ERROR, fixture.model.uiState.value.phase)
+            assertTrue(fixture.model.uiState.value.message.orEmpty().contains("音源尚未就绪"))
+            assertEquals(0, fixture.capture.starts)
+            assertEquals(0, fixture.analyzer.calls)
+            assertTrue(fixture.player.played.isEmpty())
+        }
+    }
+
+    @Test fun leavingDuringAnalysisWaitsUntilConsumerFinallyBeforeDeletingPcm() = runTest {
+        val analysisRelease = CompletableDeferred<Unit>()
+        val consumerFinally = CompletableDeferred<Unit>()
+        val analyzer = FakeAnalyzer().apply {
+            analysisBarrier = analysisRelease
+            cleanupBarrier = consumerFinally
+        }
+        withVoice(analyzer = analyzer) { fixture ->
+            startRecording(fixture)
+            fixture.model.stop()
+            fixture.capture.result.complete(captureMetadata(1_000L))
+            runCurrent()
+            assertTrue(analyzer.started.isCompleted)
+            assertEquals(VoiceTalkPhase.CONVERTING, fixture.model.uiState.value.phase)
+            assertEquals(0, fixture.capture.active) // AudioRecord is already released.
+            assertEquals(0, fixture.capture.discards) // Analysis still owns its PCM.
+
+            val leaving = launch { fixture.model.leaveAndAwait() }
+            runCurrent()
+            assertTrue(analyzer.cleanupStarted.isCompleted)
+            assertFalse(analyzer.finished)
+            assertFalse(leaving.isCompleted)
+            assertEquals(0, fixture.capture.discards)
+            assertNull(fixture.model.uiState.value.result)
+            assertTrue(fixture.player.played.isEmpty())
+
+            consumerFinally.complete(Unit)
+            leaving.join()
+            runCurrent()
+            assertTrue(analyzer.finished)
+            assertEquals(1, fixture.capture.discards)
+            assertEquals(VoiceTalkPhase.READY, fixture.model.uiState.value.phase)
+            assertNull(fixture.model.uiState.value.result)
+        }
+    }
+
+    @Test fun replayReusesTheSameSequenceWithoutAnalyzingOrSelectingAgain() = runTest {
+        withVoice(initialPet = PetType.Cat) { fixture ->
+            completeRecording(fixture)
+            val first = checkNotNull(fixture.model.uiState.value.result)
+            assertEquals(PetType.Cat, first.pet)
+            assertTrue(first.items.all { it.asset.pet == PetType.Cat })
+
+            fixture.model.replay()
+            advanceUntilIdle()
+
+            assertEquals(1, fixture.analyzer.calls)
+            assertEquals(1, fixture.capture.starts)
+            assertEquals(2, fixture.player.played.size)
+            assertSame(first, fixture.player.played[0])
+            assertSame(first, fixture.player.played[1])
+            assertSame(first, fixture.model.uiState.value.result)
+        }
+    }
+
+    @Test fun recordAgainAndLeavingEachStopAndReleaseTheCurrentPlayback() = runTest {
+        for (leave in listOf(false, true)) {
+            withVoice(player = FakePlayer(holdPlayback = true)) { fixture ->
+                completeRecording(fixture)
+                assertEquals(1, fixture.player.active)
+                assertTrue(fixture.model.uiState.value.isPlaying)
+
+                if (leave) fixture.model.leaveAndAwait() else fixture.model.reset()
+                runCurrent()
+
+                assertEquals(0, fixture.player.active)
+                assertEquals(1, fixture.player.stops)
+                assertEquals(1, fixture.player.finishedSessions)
+                assertEquals(VoiceTalkPhase.READY, fixture.model.uiState.value.phase)
+                assertNull(fixture.model.uiState.value.result)
+                assertFalse(fixture.model.uiState.value.isPlaying)
+            }
+        }
+    }
+
+    @Test fun externalPetPreferenceChangeInvalidatesResultAndCannotReplayOtherPetsAudio() = runTest {
+        withVoice(initialPet = PetType.Cat, player = FakePlayer(holdPlayback = true)) { fixture ->
+            completeRecording(fixture)
+            assertEquals(PetType.Cat, fixture.player.played.single().pet)
+
+            fixture.preferences.petType.value = PetType.Dog
+            runCurrent()
+
+            assertEquals(PetType.Dog, fixture.model.selectedPet.value)
+            assertEquals(0, fixture.player.active)
+            assertEquals(VoiceTalkPhase.READY, fixture.model.uiState.value.phase)
+            assertNull(fixture.model.uiState.value.result)
+            fixture.model.replay()
+            fixture.model.togglePlayback()
+            runCurrent()
+            assertEquals(1, fixture.player.played.size)
+            assertTrue(fixture.player.played.single().items.all { it.asset.pet == PetType.Cat })
+        }
+    }
+
+    @Test fun repeatedBackgroundSignalsDuringPlaybackCleanupRetainReplayableResult() = runTest {
+        val release = CompletableDeferred<Unit>()
+        val player = FakePlayer(holdPlayback = true).apply { cleanupBarrier = release }
+        withVoice(player = player) { fixture ->
+            completeRecording(fixture)
+            val sequence = checkNotNull(fixture.model.uiState.value.result)
+            assertTrue(fixture.model.uiState.value.isPlaying)
+
+            fixture.model.foreground(false)
+            fixture.model.interrupt()
+            fixture.model.foreground(false)
+            runCurrent()
+
+            assertTrue(player.cleanupStarted.isCompleted)
+            assertEquals(VoiceTalkPhase.STOPPING, fixture.model.uiState.value.phase)
+            assertFalse(fixture.model.uiState.value.isPlaying)
+            assertEquals(1, player.active)
+
+            release.complete(Unit)
+            runCurrent()
+            assertEquals(0, player.active)
+            assertEquals(VoiceTalkPhase.RESULT, fixture.model.uiState.value.phase)
+            assertFalse(fixture.model.uiState.value.isPlaying)
+            assertSame(sequence, fixture.model.uiState.value.result)
+
+            fixture.model.foreground(true)
+            fixture.model.replay()
+            runCurrent()
+            assertEquals(2, player.played.size)
+            assertSame(sequence, player.played.last())
+            assertEquals(VoiceTalkPhase.RESULT, fixture.model.uiState.value.phase)
+            assertTrue(fixture.model.uiState.value.isPlaying)
+        }
+    }
+
+    private fun TestScope.completeRecording(fixture: Fixture) {
+        startRecording(fixture)
+        fixture.model.stop()
+        fixture.capture.result.complete(captureMetadata(1_000L))
+        advanceUntilIdle()
+    }
+
     private fun TestScope.startRecording(fixture: Fixture, elapsedMs: Long = 1_000L) {
         runCurrent()
         fixture.model.foreground(true)
@@ -275,6 +454,9 @@ class VoiceTalkViewModelTest {
         initialPet: PetType = PetType.Dog,
         privacyGranted: Boolean = true,
         access: FeatureAccessManager = FeatureAccessManager { true },
+        analyzer: FakeAnalyzer = FakeAnalyzer(),
+        player: FakePlayer = FakePlayer(),
+        sounds: List<VoiceSoundAsset> = ApprovedVoiceSounds.assets,
         body: suspend TestScope.(Fixture) -> Unit,
     ) {
         val dispatcher = StandardTestDispatcher(testScheduler)
@@ -283,16 +465,21 @@ class VoiceTalkViewModelTest {
         val store = ViewModelStore()
         val preferences = FakePreferences(initialPet)
         val capture = FakeCapture()
-        val model = VoiceTalkViewModel(preferences, capture, access, dispatcher)
+        val model = VoiceTalkViewModel(preferences, capture, access, dispatcher,
+            analyzer = analyzer, soundLibrary = VoiceSoundLibrary { sounds }, player = player,
+            ioDispatcher = dispatcher)
         store.put("voice-under-test", model)
         val phases = mutableListOf<VoiceTalkPhase>()
         val observer = backgroundScope.launch(UnconfinedTestDispatcher(testScheduler)) {
             model.uiState.collect { phases += it.phase }
         }
         try {
-            body.invoke(this, Fixture(preferences, capture, model, phases))
+            body.invoke(this, Fixture(preferences, capture, model, phases, analyzer, player))
         } finally {
             capture.cleanupBarrier?.complete(Unit)
+            analyzer.analysisBarrier?.complete(Unit)
+            analyzer.cleanupBarrier?.complete(Unit)
+            player.cleanupBarrier?.complete(Unit)
             withContext(NonCancellable) { model.leaveAndAwait() }
             store.clear()
             observer.cancel()
@@ -307,6 +494,8 @@ class VoiceTalkViewModelTest {
         val capture: FakeCapture,
         val model: VoiceTalkViewModel,
         val phases: List<VoiceTalkPhase>,
+        val analyzer: FakeAnalyzer,
+        val player: FakePlayer,
     )
 
     private class FakePreferences(initial: PetType) : PetPreferences {
@@ -318,7 +507,7 @@ class VoiceTalkViewModelTest {
         }
     }
 
-    /** Only capture metadata is synthesized: no audio file, conversion or playback is produced. */
+    /** A metadata-only capture; analysis and playback are deterministic JVM substitutes. */
     private fun captureMetadata(durationMs: Long) = RecordedAudio(
         filePath = "fixture-only.pcm", sampleRate = 16_000,
         sampleCount = durationMs * 16L, durationMs = durationMs, rms = .25f, peak = .7f,
@@ -361,5 +550,72 @@ class VoiceTalkViewModelTest {
 
         override fun stop() { stops++ }
         override fun discard() { discards++ }
+    }
+
+    private class FakeAnalyzer : VoiceFeatureAnalyzer {
+        var suppliedFeatures: VoiceFeatures? = null
+        var analysisBarrier: CompletableDeferred<Unit>? = null
+        var cleanupBarrier: CompletableDeferred<Unit>? = null
+        val started = CompletableDeferred<Unit>()
+        val cleanupStarted = CompletableDeferred<Unit>()
+        var calls = 0
+        var finished = false
+
+        override suspend fun analyze(audio: RecordedAudio): VoiceFeatures {
+            calls++
+            started.complete(Unit)
+            try {
+                analysisBarrier?.await()
+                return suppliedFeatures ?: VoiceFeatures(audio.durationMs,
+                    activeDurationMs = minOf(500L, audio.durationMs), averageEnergy = .2f,
+                    energyVariation = .3f, activitySegmentCount = 1, pauseDurationsMs = emptyList(), valid = true)
+            } finally {
+                cleanupStarted.complete(Unit)
+                withContext(NonCancellable) { cleanupBarrier?.await() }
+                finished = true
+            }
+        }
+    }
+
+    private class FakePlayer(private val holdPlayback: Boolean = false) : VoiceSequencePlayer {
+        val played = mutableListOf<VoicePlaybackSequence>()
+        var active = 0
+        var stops = 0
+        var finishedSessions = 0
+        val cleanupStarted = CompletableDeferred<Unit>()
+        var cleanupBarrier: CompletableDeferred<Unit>? = null
+        private var completion: CompletableDeferred<Unit>? = null
+        private var progress: ((VoicePlaybackProgress) -> Unit)? = null
+        private var current: VoicePlaybackSequence? = null
+
+        override suspend fun play(sequence: VoicePlaybackSequence, onProgress: (VoicePlaybackProgress) -> Unit) {
+            check(active == 0) { "Playback sessions must not overlap" }
+            val done = CompletableDeferred<Unit>()
+            completion = done
+            current = sequence
+            progress = onProgress
+            played += sequence
+            active++
+            try {
+                onProgress(VoicePlaybackProgress(0, sequence.estimatedDurationMs, true))
+                if (holdPlayback) done.await()
+                onProgress(VoicePlaybackProgress(sequence.estimatedDurationMs, sequence.estimatedDurationMs, false))
+            } finally {
+                cleanupStarted.complete(Unit)
+                withContext(NonCancellable) { cleanupBarrier?.await() }
+                active--
+                finishedSessions++
+                if (completion === done) {
+                    completion = null
+                    current = null
+                    progress = null
+                }
+            }
+        }
+
+        override fun pause() { progress?.invoke(VoicePlaybackProgress(0, current?.estimatedDurationMs ?: 0, false)) }
+        override fun resume() { progress?.invoke(VoicePlaybackProgress(0, current?.estimatedDurationMs ?: 0, true)) }
+        override fun stop() { stops++; completion?.cancel() }
+        override fun release() { completion?.cancel() }
     }
 }

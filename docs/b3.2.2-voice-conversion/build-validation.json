@@ -1,0 +1,24 @@
+{
+  "debug_audio_count": 6,
+  "all_six_assets_uncompressed_and_hash_match": true,
+  "release_merged_m4a_count": 0,
+  "release_kotlin_compiled": true,
+  "unit_suites": [
+    {
+      "name": "VoiceConversionCoreTest",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "name": "VoiceTalkViewModelTest",
+      "tests": 17,
+      "failures": 0,
+      "errors": 0
+    }
+  ],
+  "build": "BUILD SUCCESSFUL in 1m 47s",
+  "release_assets_verified_directory": "D:\\pettranslator\\app\\build\\intermediates\\assets\\release\\mergeReleaseAssets",
+  "release_directory_exists": true,
+  "release_voice_conversion_directory_absent": true
+}

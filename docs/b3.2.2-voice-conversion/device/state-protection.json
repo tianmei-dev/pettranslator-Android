@@ -1,0 +1,22 @@
+{
+  "original_microphone": {
+    "granted": false,
+    "flags": [
+      "USER_SENSITIVE_WHEN_DENIED",
+      "USER_SENSITIVE_WHEN_GRANTED"
+    ]
+  },
+  "restored_microphone": {
+    "granted": false,
+    "flags": [
+      "USER_SENSITIVE_WHEN_DENIED",
+      "USER_SENSITIVE_WHEN_GRANTED"
+    ]
+  },
+  "permission_exactly_restored": true,
+  "datastore_before": {},
+  "datastore_after": {},
+  "datastore_unchanged": true,
+  "app_data_not_cleared": true,
+  "manual_speech_and_listening_tested": false
+}

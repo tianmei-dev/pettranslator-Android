@@ -31,7 +31,7 @@ class HomeVisualEvidenceTest {
         rule.onNodeWithText("选择宠物").assertDoesNotExist()
         rule.onNodeWithTag("home_pet_title").assertDoesNotExist()
         rule.onNodeWithTag("home_pet_switch").assertIsDisplayed()
-        val brand = rule.onNodeWithTag("home_brand").assertTextEquals("猫言狗语翻译官").assertIsDisplayed()
+        val brand = rule.onNodeWithTag("home_brand").assertTextEquals("猫狗心声翻译官").assertIsDisplayed()
         val brandBounds = brand.getUnclippedBoundsInRoot()
         val vip = rule.onNodeWithContentDescription("VIP 入口，暂不可用").assertIsNotEnabled()
         val vipBounds = vip.getUnclippedBoundsInRoot()
@@ -112,7 +112,7 @@ class HomeVisualEvidenceTest {
             org.junit.Assert.assertTrue("Reduce the cloud-to-record visual gap on the reference phone: $outlineToRecordGap",
                 outlineToRecordGap >= 0.dp && outlineToRecordGap <= 25.5.dp)
         }
-        rule.onNodeWithText("猫言狗语翻译官").assertIsDisplayed()
+        rule.onNodeWithText("猫狗心声翻译官").assertIsDisplayed()
         rule.onAllNodesWithText("选择它和场景，听听毛孩子的小心思～").assertCountEquals(0)
         rule.onNodeWithText("不确定").performScrollTo()
         org.junit.Assert.assertEquals(actions, rule.onNodeWithTag("home_actions").getUnclippedBoundsInRoot())

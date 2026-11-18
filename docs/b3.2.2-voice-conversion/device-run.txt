@@ -1,0 +1,7 @@
+Instrumentation result: INCOMPLETE_OR_FAILED
+Permission and existing DataStore restoration: True
+Traceback (most recent call last):
+  File "D:\pettranslator\tools\b322_voice_acceptance.py", line 43, in <module>
+    assert 'OK (1 test)' in result and 'FAILURES!!!' not in result,'Acceptance incomplete; no automatic rerun'
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Acceptance incomplete; no automatic rerun

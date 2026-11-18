@@ -32,6 +32,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.LinkAnnotation
 import androidx.compose.ui.text.SpanStyle
@@ -45,6 +46,7 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.DialogProperties
+import com.example.pettranslator.R
 import com.example.pettranslator.ui.profile.LegalDocument
 import com.example.pettranslator.ui.profile.LegalDocumentScreen
 
@@ -136,6 +138,7 @@ private fun ConsentDialog(
     onReadDocument: (String) -> Unit,
     onExit: () -> Unit,
 ) {
+    val appName = stringResource(R.string.app_name)
     AlertDialog(
         // Back exits through the host callback; outside taps cannot remove the gate.
         onDismissRequest = { if (!state.busy) onExit() },
@@ -154,7 +157,7 @@ private fun ConsentDialog(
             Column(Modifier.verticalScroll(rememberScrollState()),
                 verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 val body = buildAnnotatedString {
-                    append("欢迎使用「猫言狗语翻译官」！\n\n我们非常重视你的个人信息和隐私保护。在使用本应用前，请仔细阅读并充分理解")
+                    append("欢迎使用「$appName」！\n\n我们非常重视你的个人信息和隐私保护。在使用本应用前，请仔细阅读并充分理解")
                     appendDocumentLink(LegalDocument.UserAgreement, "user_agreement",
                         enabled = !state.busy, onReadDocument = onReadDocument)
                     append("和")

@@ -1,0 +1,10 @@
+warning: in the working copy of 'app/src/androidTest/java/com/example/pettranslator/ProfileSettingsFlowTest.kt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/src/androidTest/java/com/example/pettranslator/VoiceTalkDeviceTest.kt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/src/main/assets/legal/user_agreement.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/src/main/java/com/example/pettranslator/privacy/PrivacyConsentUi.kt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/src/main/java/com/example/pettranslator/ui/profile/AboutScreen.kt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/src/main/java/com/example/pettranslator/ui/voice/ExclusiveVoiceAudioCapture.kt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/src/main/java/com/example/pettranslator/ui/voice/VoiceTalkScreen.kt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/src/main/java/com/example/pettranslator/ui/voice/VoiceTalkStateComponents.kt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/src/main/java/com/example/pettranslator/ui/voice/VoiceTalkViewModel.kt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/src/test/java/com/example/pettranslator/VoiceTalkViewModelTest.kt', LF will be replaced by CRLF the next time Git touches it

@@ -95,10 +95,28 @@ class VoiceTalkDeviceTest {
             note("canonicalPet=$actual persistedFlowMatchesSelection=true")
         }
         fun reset() {
-            rule.onNodeWithTag("voice_talk_reset").performScrollTo().assertIsEnabled().performClick()
+            val resetTag = if (hasTag("voice_talk_result")) "voice_talk_again" else "voice_talk_reset"
+            rule.onNodeWithTag(resetTag).performScrollTo().assertIsEnabled().performClick()
             waitTag("voice_talk_record")
             rule.onNodeWithTag("voice_talk_record").assertIsEnabled()
             assertNoConversion()
+        }
+        fun waitCaptureTerminal(label: String, timeoutMs: Long = 8_000): String {
+            rule.waitUntil(timeoutMs) { hasTag("voice_talk_result") || hasTag("voice_talk_error") }
+            return if (hasTag("voice_talk_result")) {
+                waitTag("voice_talk_result")
+                rule.onNodeWithText("转换完成！").assertIsDisplayed()
+                rule.onNodeWithTag("voice_talk_replay").assertIsEnabled()
+                note("$label=RESULT; acceptedEnergyEvidence=true; conversionPassed=true")
+                "RESULT"
+            } else {
+                waitTag("voice_talk_error")
+                rule.onNodeWithTag("voice_talk_message").assertIsDisplayed()
+                rule.onNodeWithTag("voice_talk_result").assertDoesNotExist()
+                rule.onNodeWithText("转换完成！").assertDoesNotExist()
+                note("$label=ERROR; conversionPassed=false; ambient input is not assumed valid")
+                "ERROR"
+            }
         }
         fun waitRealFrames(minimumProgress: Float = .12f) {
             rule.waitUntil(6_000) {
@@ -122,7 +140,7 @@ class VoiceTalkDeviceTest {
 
         try {
             note("device=${Build.MANUFACTURER} ${Build.MODEL} sdk=${Build.VERSION.SDK_INT}; " +
-                "singlePass=true realMicrophone=true syntheticAudio=false conversionPipeline=false")
+                "singlePass=true realMicrophone=true syntheticAudio=false conversionPipeline=true")
             assertEquals("Host must start with microphone permission ungranted", PackageManager.PERMISSION_DENIED,
                 context.checkSelfPermission(Manifest.permission.RECORD_AUDIO))
             rule.waitUntil(12_000) { hasTag("privacy_agree") || hasTag("home_record") }
@@ -168,22 +186,19 @@ class VoiceTalkDeviceTest {
             canonicalPet(PetType.Cat)
             capture("voice-recording.png")
             rule.onNodeWithTag("voice_talk_stop").performClick()
-            waitTag("voice_talk_recorded")
-            rule.onNodeWithTag("voice_talk_message").assertTextEquals("录音完成啦！趣味转换功能正在准备中～")
-            assertNoConversion()
+            val manualOutcome = waitCaptureTerminal("manualStop")
             capture("voice-recorded.png")
-            note("manualStop=RECORDED; conversion honestly unavailable; real RMS assessed by host capture logs")
+            note("manualCaptureTerminal=$manualOutcome; real RMS assessed by host capture logs")
 
             reset()
             val automaticStartedAt = SystemClock.elapsedRealtime()
             rule.onNodeWithTag("voice_talk_record").performClick()
             waitRealFrames(.05f)
-            waitTag("voice_talk_recorded", 14_000)
+            val automaticOutcome = waitCaptureTerminal("automaticStop", 14_000)
             val automaticWallMs = SystemClock.elapsedRealtime() - automaticStartedAt
             assertTrue("10-second capture must stop in real wall time (was $automaticWallMs ms)",
                 automaticWallMs in 9_000L..14_000L)
-            assertNoConversion()
-            note("automaticStop=RECORDED realWallMs=$automaticWallMs; host checks VoiceTalkCapture metadata")
+            note("automaticCaptureTerminal=$automaticOutcome realWallMs=$automaticWallMs; host checks VoiceTalkCapture metadata")
 
             reset()
             rule.onNodeWithTag("voice_talk_record").performClick()

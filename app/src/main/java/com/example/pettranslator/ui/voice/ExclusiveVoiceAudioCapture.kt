@@ -16,7 +16,14 @@ internal class ExclusiveVoiceAudioCapture(
     private val commandLock = Any()
     private var owner: Any? = null
 
-    override suspend fun record(onFrame: (CaptureFrame) -> Unit): RecordedAudio {
+    override suspend fun record(onFrame: (CaptureFrame) -> Unit): RecordedAudio =
+        recordAndUse(onFrame) { it }
+
+    /** The delegate has released AudioRecord; retain only this file until its consumer finishes. */
+    suspend fun <T> recordAndUse(
+        onFrame: (CaptureFrame) -> Unit,
+        consume: suspend (RecordedAudio) -> T,
+    ): T {
         val token = Any()
         if (!microphone.tryLock(token)) {
             throw CaptureException("麦克风正被其他录音占用，请稍后重试")
@@ -46,7 +53,10 @@ internal class ExclusiveVoiceAudioCapture(
                     report("first_frame elapsedMs=${frame.elapsedMs} sampleCount=${frame.sampleCount} rms=${frame.rms}")
                 }
                 onFrame(frame)
-            }.also { completed = it }
+            }.let { audio ->
+                completed = audio
+                consume(audio)
+            }
         } finally {
             try {
                 if (invoked) {

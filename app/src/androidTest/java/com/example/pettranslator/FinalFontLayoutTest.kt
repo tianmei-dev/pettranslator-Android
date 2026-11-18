@@ -140,7 +140,7 @@ class FinalFontLayoutTest {
         }
         awaitContent("pet_Cat")
         rule.onNodeWithTag("font_trial_home").assertDoesNotExist()
-        rule.onNodeWithText("猫言狗语翻译官").assertIsDisplayed()
+        rule.onNodeWithText("猫狗心声翻译官").assertIsDisplayed()
         rule.onNodeWithText("选择宠物").assertDoesNotExist()
         capture("final-home")
         rule.mainClock.autoAdvance = false

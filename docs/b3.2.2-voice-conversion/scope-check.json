@@ -1,0 +1,16 @@
+{
+  "changed_baseline_files": [
+    "app/src/androidTest/java/com/example/pettranslator/VoiceTalkDeviceTest.kt",
+    "app/src/main/java/com/example/pettranslator/ui/navigation/PetTranslatorApp.kt",
+    "app/src/main/java/com/example/pettranslator/ui/voice/ExclusiveVoiceAudioCapture.kt",
+    "app/src/main/java/com/example/pettranslator/ui/voice/VoiceTalkScreen.kt",
+    "app/src/main/java/com/example/pettranslator/ui/voice/VoiceTalkStateComponents.kt",
+    "app/src/main/java/com/example/pettranslator/ui/voice/VoiceTalkViewModel.kt",
+    "app/src/test/java/com/example/pettranslator/VoiceTalkViewModelTest.kt"
+  ],
+  "unexpected_changes": [],
+  "other_baseline_files_preserved": 1531,
+  "six_debug_sources_hash_match": true,
+  "head_unchanged": true,
+  "branch": "main"
+}

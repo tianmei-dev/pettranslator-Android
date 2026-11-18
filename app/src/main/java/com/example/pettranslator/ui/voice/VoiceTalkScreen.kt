@@ -211,6 +211,8 @@ fun VoiceTalkRoute(model: VoiceTalkViewModel, onBack: () -> Unit) {
                 Toast.makeText(context, "请在系统设置中管理本应用的麦克风权限", Toast.LENGTH_SHORT).show()
             }
         }),
+        onReplay = model::replay,
+        onPlayPause = model::togglePlayback,
     )
 }
 
@@ -231,6 +233,8 @@ fun VoiceTalkScreen(
     onReset: () -> Unit,
     onBack: () -> Unit,
     onSettings: (() -> Unit)? = null,
+    onReplay: () -> Unit = {},
+    onPlayPause: () -> Unit = {},
 ) {
     val busy = state.phase in setOf(VoiceTalkPhase.STARTING, VoiceTalkPhase.RECORDING,
         VoiceTalkPhase.STOPPING, VoiceTalkPhase.CONVERTING)
@@ -272,9 +276,20 @@ fun VoiceTalkScreen(
                 }
                 VoiceTalkPhase.CONVERTING -> VoiceTalkConvertingContent(
                     pet = pet, modifier = Modifier.padding(horizontal = 24.dp))
-                VoiceTalkPhase.RECORDED, VoiceTalkPhase.RESULT -> VoiceRecordedContent(
+                VoiceTalkPhase.RECORDED -> VoiceRecordedContent(
                     state.message ?: "录音完成啦！趣味转换功能正在准备中～",
                     state.elapsedMs, onReset, !state.petChanging, Modifier.padding(horizontal = 24.dp))
+                VoiceTalkPhase.RESULT -> VoiceTalkResultContent(
+                    elapsedMs = state.playbackPositionMs,
+                    durationMs = state.playbackDurationMs,
+                    isPlaying = state.isPlaying,
+                    canPlay = state.result != null && !state.petChanging,
+                    onPlayPause = onPlayPause,
+                    onRecordAgain = onReset,
+                    modifier = Modifier.padding(horizontal = 24.dp),
+                    onReplay = onReplay,
+                    audioSources = state.result?.items?.map { Uri.parse("asset:///${it.asset.assetPath}") }.orEmpty(),
+                )
                 VoiceTalkPhase.ERROR -> VoiceErrorContent(state.message ?: "录音暂时不可用，请重试～",
                     onReset, onSettings, !state.petChanging, Modifier.padding(horizontal = 24.dp))
             }
@@ -418,7 +433,7 @@ private fun VoiceErrorContent(message: String, onReset: () -> Unit, onSettings: 
         color = Color.White.copy(alpha = .7f)) {
         Column(Modifier.padding(22.dp), horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(14.dp)) {
-            Text("这次没录好，再试一次吧", color = VoiceInk, fontSize = 18.sp, lineHeight = 27.sp,
+            Text("这次没完成，再试一次吧", color = VoiceInk, fontSize = 18.sp, lineHeight = 27.sp,
                 fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
             Text(message, color = VoiceMuted, fontSize = 14.sp, lineHeight = 22.sp, textAlign = TextAlign.Center,
                 modifier = Modifier.testTag("voice_talk_message"))

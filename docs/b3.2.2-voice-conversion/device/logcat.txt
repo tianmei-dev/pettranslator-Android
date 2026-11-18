@@ -1,0 +1,68 @@
+--------- beginning of system
+--------- beginning of main
+11-19 17:19:37.144  9866  9896 I B322Device: AUTOMATED_ONLY manualSpeech=false humanListening=false device=Pixel 3 sdk=29
+11-19 17:19:37.146  9866  9896 I B322Device: system_music_volume=7 volume_not_changed=true
+11-19 17:19:37.150  9866  9896 I B322Device: assets_readable=[cat_fs_362953, cat_fs_618900, cat_fs_728095, dog_fs_813120, dog_fs_9032, dog_fs_807270]
+11-19 17:19:37.343  9866  9866 I B322Device: first_frame elapsedMs=1200 sampleCount=19200 rms=0.054761846
+11-19 17:19:37.490  9866  9866 I B322Device: analysis pet=Cat totalMs=1200 activeMs=500 segments=1 ids=[cat_fs_618900]
+11-19 17:19:37.490  9866  9866 I B322Device: ended completed=true durationMs=1200 sampleCount=19200 frameCount=1 frameElapsedMs=1200 rmsMin=0.054761846 rmsMax=0.054761846
+11-19 17:19:37.491  9866  9866 I B322Device: cleanup ownSession=true delegateDiscardCompleted=true
+11-19 17:19:37.496  9866  9896 I B322Device: fixture pet=Cat durationMs=1200 selected=[cat_fs_618900] raw_deleted=true
+11-19 17:19:37.512  9866  9866 I VoiceConversionPlayback: focus_granted ids=[cat_fs_618900]
+11-19 17:19:37.694  9866  9866 I VoiceConversionPlayback: prepared id=cat_fs_618900 durationMs=1121
+11-19 17:19:37.694  9866  9866 I VoiceConversionPlayback: started ids=[cat_fs_618900] positionMs=0
+11-19 17:19:39.254  9866  9866 I VoiceConversionPlayback: clip_completed id=cat_fs_618900 positionMs=1121
+11-19 17:19:39.290  9866  9866 I VoiceConversionPlayback: sequence_completed ids=[cat_fs_618900] durationMs=1121
+11-19 17:19:39.292  9866  9866 I VoiceConversionPlayback: released ids=[cat_fs_618900] positionMs=1121
+11-19 17:19:39.294  9866  9866 I B322Device: playback_completed pet=Cat ids=[cat_fs_618900]
+11-19 17:19:39.404  9866  9866 I VoiceConversionPlayback: focus_granted ids=[cat_fs_618900]
+11-19 17:19:39.482  9866  9866 I VoiceConversionPlayback: prepared id=cat_fs_618900 durationMs=1121
+11-19 17:19:39.483  9866  9866 I VoiceConversionPlayback: started ids=[cat_fs_618900] positionMs=0
+11-19 17:19:40.730  9866  9866 I VoiceConversionPlayback: clip_completed id=cat_fs_618900 positionMs=1121
+11-19 17:19:40.749  9866  9866 I VoiceConversionPlayback: sequence_completed ids=[cat_fs_618900] durationMs=1121
+11-19 17:19:40.752  9866  9866 I VoiceConversionPlayback: released ids=[cat_fs_618900] positionMs=1121
+11-19 17:19:40.754  9866  9866 I B322Device: playback_completed pet=Cat ids=[cat_fs_618900]
+11-19 17:19:40.786  9866  9896 I B322Device: V01,V06,V07 PASS cat_short auto_play_completed replay_fixed=true
+11-19 17:19:41.114  9866  9866 I B322Device: first_frame elapsedMs=4500 sampleCount=72000 rms=0.07875586
+11-19 17:19:41.259  9866  9866 I B322Device: analysis pet=Cat totalMs=4500 activeMs=2900 segments=3 ids=[cat_fs_728095]
+11-19 17:19:41.259  9866  9866 I B322Device: ended completed=true durationMs=4500 sampleCount=72000 frameCount=1 frameElapsedMs=4500 rmsMin=0.07875586 rmsMax=0.07875586
+11-19 17:19:41.260  9866  9866 I B322Device: cleanup ownSession=true delegateDiscardCompleted=true
+11-19 17:19:41.262  9866  9866 I VoiceConversionPlayback: focus_granted ids=[cat_fs_728095]
+11-19 17:19:41.265  9866  9896 I B322Device: fixture pet=Cat durationMs=4500 selected=[cat_fs_728095] raw_deleted=true
+11-19 17:19:41.313  9866  9866 I VoiceConversionPlayback: prepared id=cat_fs_728095 durationMs=4303
+11-19 17:19:41.314  9866  9866 I VoiceConversionPlayback: started ids=[cat_fs_728095] positionMs=0
+11-19 17:19:42.340  9866  9896 I B322Device: screenshot=01-cat-result-fixture.png input=deterministic_PCM_fixture_not_human_speech
+11-19 17:19:42.512  9866  9866 I VoiceConversionPlayback: paused ids=[cat_fs_728095] positionMs=1111
+11-19 17:19:42.820  9866  9866 I VoiceConversionPlayback: started ids=[cat_fs_728095] positionMs=1111
+11-19 17:19:42.822  9866  9866 I VoiceConversionPlayback: resumed ids=[cat_fs_728095] positionMs=1201
+11-19 17:19:45.991  9866  9866 I VoiceConversionPlayback: clip_completed id=cat_fs_728095 positionMs=4303
+11-19 17:19:46.010  9866  9866 I VoiceConversionPlayback: sequence_completed ids=[cat_fs_728095] durationMs=4303
+11-19 17:19:46.012  9866  9866 I VoiceConversionPlayback: released ids=[cat_fs_728095] positionMs=4303
+11-19 17:19:46.014  9866  9866 I B322Device: playback_completed pet=Cat ids=[cat_fs_728095]
+11-19 17:19:46.043  9866  9896 I B322Device: V02 PASS long_cat complete_source; pause_resume native=true
+11-19 17:19:46.435  9866  9866 I B322Device: first_frame elapsedMs=1000 sampleCount=16000 rms=0.04948868
+11-19 17:19:46.553  9866  9866 I B322Device: analysis pet=Dog totalMs=1000 activeMs=250 segments=1 ids=[dog_fs_813120]
+11-19 17:19:46.553  9866  9866 I B322Device: ended completed=true durationMs=1000 sampleCount=16000 frameCount=1 frameElapsedMs=1000 rmsMin=0.04948868 rmsMax=0.04948868
+11-19 17:19:46.553  9866  9866 I B322Device: cleanup ownSession=true delegateDiscardCompleted=true
+11-19 17:19:46.555  9866  9866 I VoiceConversionPlayback: focus_granted ids=[dog_fs_813120]
+11-19 17:19:46.559  9866  9896 I B322Device: fixture pet=Dog durationMs=1000 selected=[dog_fs_813120] raw_deleted=true
+11-19 17:19:46.627  9866  9866 I VoiceConversionPlayback: prepared id=dog_fs_813120 durationMs=244
+11-19 17:19:46.627  9866  9866 I VoiceConversionPlayback: started ids=[dog_fs_813120] positionMs=0
+11-19 17:19:46.917  9866  9866 I VoiceConversionPlayback: clip_completed id=dog_fs_813120 positionMs=244
+11-19 17:19:46.934  9866  9866 I VoiceConversionPlayback: sequence_completed ids=[dog_fs_813120] durationMs=244
+11-19 17:19:46.937  9866  9866 I VoiceConversionPlayback: released ids=[dog_fs_813120] positionMs=244
+11-19 17:19:46.939  9866  9866 I B322Device: playback_completed pet=Dog ids=[dog_fs_813120]
+11-19 17:19:46.966  9866  9896 I B322Device: V03 PASS tiny_dog_once no_loop=true
+11-19 17:19:47.227  9866  9866 I B322Device: first_frame elapsedMs=5000 sampleCount=80000 rms=0.09501766
+11-19 17:19:47.350  9866  9866 I B322Device: analysis pet=Dog totalMs=5000 activeMs=3450 segments=3 ids=[dog_fs_807270]
+11-19 17:19:47.350  9866  9866 I B322Device: ended completed=true durationMs=5000 sampleCount=80000 frameCount=1 frameElapsedMs=5000 rmsMin=0.09501766 rmsMax=0.09501766
+11-19 17:19:47.350  9866  9866 I B322Device: cleanup ownSession=true delegateDiscardCompleted=true
+11-19 17:19:47.352  9866  9866 I VoiceConversionPlayback: focus_granted ids=[dog_fs_807270]
+11-19 17:19:47.357  9866  9896 I B322Device: fixture pet=Dog durationMs=5000 selected=[dog_fs_807270] raw_deleted=true
+11-19 17:19:47.398  9866  9866 I VoiceConversionPlayback: prepared id=dog_fs_807270 durationMs=3159
+11-19 17:19:47.399  9866  9866 I VoiceConversionPlayback: started ids=[dog_fs_807270] positionMs=0
+11-19 17:19:48.284  9866  9896 I B322Device: screenshot=02-dog-result-fixture.png input=deterministic_PCM_fixture_not_human_speech
+11-19 17:19:48.296  9866  9866 I VoiceConversionPlayback: stop_requested ids=[dog_fs_807270] positionMs=768
+11-19 17:19:48.317  9866  9866 I VoiceConversionPlayback: released ids=[dog_fs_807270] positionMs=768
+11-19 17:19:56.871  9866  9896 I B322Device: DEVICE_ROUND_FAIL ComposeTimeoutException: Condition still not satisfied after 8000 ms
+11-19 17:19:56.884  9866  9896 I B322Device: cleanup complete; canonical user DataStore was not modified

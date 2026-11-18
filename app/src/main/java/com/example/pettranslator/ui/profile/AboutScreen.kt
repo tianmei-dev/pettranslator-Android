@@ -106,7 +106,7 @@ fun AboutScreen(onBack: () -> Unit) {
                     verticalArrangement = Arrangement.spacedBy(18.dp),
                 ) {
                     Text(
-                        "猫言狗语翻译官是一款萌趣宠物互动应用，提供猫狗声音趣味解读、宠物互动音效等功能，让你与宠物的日常生活多一点欢乐。",
+                        "${appName}是一款萌趣宠物互动应用，提供猫狗声音趣味解读、宠物互动音效等功能，让你与宠物的日常生活多一点欢乐。",
                         modifier = Modifier.fillMaxWidth(), color = AboutInk,
                         fontSize = 15.sp, lineHeight = 26.sp,
                     )

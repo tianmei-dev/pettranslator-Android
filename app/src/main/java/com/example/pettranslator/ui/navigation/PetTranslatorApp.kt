@@ -36,6 +36,9 @@ import com.example.pettranslator.ui.home.*
 import com.example.pettranslator.ui.play.PlayScreen
 import com.example.pettranslator.ui.voice.VoiceTalkRoute
 import com.example.pettranslator.ui.voice.VoiceTalkViewModel
+import com.example.pettranslator.ui.voice.conversion.AndroidVoiceSequencePlayer
+import com.example.pettranslator.ui.voice.conversion.AssetVoiceSoundLibrary
+import com.example.pettranslator.ui.voice.conversion.PcmVoiceFeatureAnalyzer
 import com.example.pettranslator.ui.profile.ProfileScreen
 import com.example.pettranslator.ui.profile.ProfileRoutes
 import com.example.pettranslator.ui.profile.PermissionDetailsScreen
@@ -128,7 +131,10 @@ private enum class Tab(val route: String, val title: String, val icon: ImageVect
                 val voiceModel: VoiceTalkViewModel = viewModel(viewModelStoreOwner = voiceEntry,
                     factory = viewModelFactory { initializer {
                         VoiceTalkViewModel(preferences, AndroidPcmRecorder(appContext),
-                            audit = { Log.i("VoiceTalkCapture", it) })
+                            audit = { Log.i("VoiceTalkCapture", it) },
+                            analyzer = PcmVoiceFeatureAnalyzer(),
+                            soundLibrary = AssetVoiceSoundLibrary(appContext),
+                            player = AndroidVoiceSequencePlayer(appContext))
                     } })
                 VoiceTalkRoute(voiceModel, onBack = { controller.popBackStack() })
             }
