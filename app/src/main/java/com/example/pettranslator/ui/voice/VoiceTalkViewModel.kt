@@ -2,6 +2,7 @@ package com.example.pettranslator.ui.voice
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.pettranslator.audio.PetSoundCatalog
 import com.example.pettranslator.core.DefaultFeatureAccessManager
 import com.example.pettranslator.core.Feature
 import com.example.pettranslator.core.FeatureAccessManager
@@ -130,8 +131,8 @@ class VoiceTalkViewModel(
             if (!featureAccessManager.canAccess(Feature.HumanVoice)) throw CaptureException("此功能暂不可用")
             PrivacyGate.trackCurrentJob(currentCoroutineContext().job).use {
                 val available = withContext(ioDispatcher) { soundLibrary.available() }
-                val approved = ApprovedVoiceSounds.assets
-                if (available.size != approved.size || available.map { it.id }.toSet() != approved.map { it.id }.toSet()) {
+                val approved = PetSoundCatalog.assets.filter { it.available }
+                if (approved.isEmpty() || available.size != approved.size || available.toSet() != approved.toSet()) {
                     throw VoiceConversionException("转换音源尚未就绪，请使用包含开发音效的 Debug 版本")
                 }
                 val result = capture.recordAndUse({ frame -> onFrame(current, frame) }) { audio ->

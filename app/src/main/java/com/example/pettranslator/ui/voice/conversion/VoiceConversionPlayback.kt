@@ -9,6 +9,9 @@ import android.os.Handler
 import android.os.Looper
 import android.os.SystemClock
 import android.util.Log
+import com.example.pettranslator.audio.AssetPetSoundLibrary
+import com.example.pettranslator.audio.PetSoundAsset
+import com.example.pettranslator.audio.PetSoundCatalog
 import com.example.pettranslator.privacy.PrivacyGate
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CompletableDeferred
@@ -53,19 +56,13 @@ object UnavailableVoiceSequencePlayer : VoiceSequencePlayer {
 }
 
 fun interface VoiceSoundLibrary {
-    suspend fun available(): List<VoiceSoundAsset>
+    suspend fun available(): List<PetSoundAsset>
 }
 
 /** Main/Release also compiles: approved candidates exist only in the debug asset source set. */
 class AssetVoiceSoundLibrary(context: Context) : VoiceSoundLibrary {
-    private val assets = context.applicationContext.assets
-
-    override suspend fun available(): List<VoiceSoundAsset> = withContext(Dispatchers.IO) {
-        ApprovedVoiceSounds.assets.filter { asset ->
-            currentCoroutineContext().ensureActive()
-            runCatching { assets.openFd(asset.assetPath).use { it.length > 0 } }.getOrDefault(false)
-        }
-    }
+    private val sounds = AssetPetSoundLibrary(context)
+    override suspend fun available(): List<PetSoundAsset> = sounds.available()
 }
 
 /** A page-owned queue. Capture/analysis remains separate; cancellation owns the cleanup barrier. */
@@ -157,9 +154,11 @@ class AndroidVoiceSequencePlayer(context: Context) : VoiceSequencePlayer {
     }
 
     private fun validate(sequence: VoicePlaybackSequence) {
-        val approved = ApprovedVoiceSounds.assets.associateBy { it.id }
-        if (sequence.items.size !in 1..2 || sequence.items.map { it.asset.id }.distinct().size != sequence.items.size ||
-            sequence.items.any { it.asset.pet != sequence.pet || approved[it.asset.id] != it.asset || it.pauseAfterMs !in 0L..1_000L }) {
+        if (sequence.items.size !in 1..2 || sequence.audioIds.distinct().size != sequence.items.size ||
+            sequence.hasOverlappingSounds() || sequence.items.any { item ->
+                val asset = item.asset
+                !asset.available || asset.petType != sequence.pet || PetSoundCatalog.byId[asset.audioId] != asset
+            }) {
             throw VoiceConversionException("音效序列不可用，请重新录音")
         }
     }
@@ -228,13 +227,13 @@ class AndroidVoiceSequencePlayer(context: Context) : VoiceSequencePlayer {
             if (actualDuration <= 0) throw VoiceConversionException("音源时长无效，请重新录音")
             session.totalMs += actualDuration - item.asset.durationMs
             session.readyToStart = true
-            audit("prepared id=${item.asset.id} durationMs=$actualDuration")
+            audit("prepared id=${item.asset.audioId} durationMs=$actualDuration")
             if (!session.paused) startNative(session)
             completed.await()
             ensureUsable(session)
             session.completedMs += actualDuration
             session.lastPositionMs = session.completedMs
-            audit("clip_completed id=${item.asset.id} positionMs=${session.completedMs}")
+            audit("clip_completed id=${item.asset.audioId} positionMs=${session.completedMs}")
         } finally {
             releasePlayer(session)
         }

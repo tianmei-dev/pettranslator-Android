@@ -1,6 +1,8 @@
 package com.example.pettranslator
 
 import androidx.lifecycle.ViewModelStore
+import com.example.pettranslator.audio.PetSoundAsset
+import com.example.pettranslator.audio.PetSoundCatalog
 import com.example.pettranslator.core.Feature
 import com.example.pettranslator.core.FeatureAccessManager
 import com.example.pettranslator.domain.PetPreferences
@@ -11,13 +13,11 @@ import com.example.pettranslator.domain.recording.RecordedAudio
 import com.example.pettranslator.privacy.PrivacyGate
 import com.example.pettranslator.ui.voice.VoiceTalkPhase
 import com.example.pettranslator.ui.voice.VoiceTalkViewModel
-import com.example.pettranslator.ui.voice.conversion.ApprovedVoiceSounds
 import com.example.pettranslator.ui.voice.conversion.VoiceFeatureAnalyzer
 import com.example.pettranslator.ui.voice.conversion.VoiceFeatures
 import com.example.pettranslator.ui.voice.conversion.VoicePlaybackProgress
 import com.example.pettranslator.ui.voice.conversion.VoicePlaybackSequence
 import com.example.pettranslator.ui.voice.conversion.VoiceSequencePlayer
-import com.example.pettranslator.ui.voice.conversion.VoiceSoundAsset
 import com.example.pettranslator.ui.voice.conversion.VoiceSoundLibrary
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.Dispatchers
@@ -345,7 +345,7 @@ class VoiceTalkViewModelTest {
             completeRecording(fixture)
             val first = checkNotNull(fixture.model.uiState.value.result)
             assertEquals(PetType.Cat, first.pet)
-            assertTrue(first.items.all { it.asset.pet == PetType.Cat })
+            assertTrue(first.items.all { it.asset.petType == PetType.Cat })
 
             fixture.model.replay()
             advanceUntilIdle()
@@ -395,7 +395,7 @@ class VoiceTalkViewModelTest {
             fixture.model.togglePlayback()
             runCurrent()
             assertEquals(1, fixture.player.played.size)
-            assertTrue(fixture.player.played.single().items.all { it.asset.pet == PetType.Cat })
+            assertTrue(fixture.player.played.single().items.all { it.asset.petType == PetType.Cat })
         }
     }
 
@@ -456,7 +456,7 @@ class VoiceTalkViewModelTest {
         access: FeatureAccessManager = FeatureAccessManager { true },
         analyzer: FakeAnalyzer = FakeAnalyzer(),
         player: FakePlayer = FakePlayer(),
-        sounds: List<VoiceSoundAsset> = ApprovedVoiceSounds.assets,
+        sounds: List<PetSoundAsset> = PetSoundCatalog.assets,
         body: suspend TestScope.(Fixture) -> Unit,
     ) {
         val dispatcher = StandardTestDispatcher(testScheduler)

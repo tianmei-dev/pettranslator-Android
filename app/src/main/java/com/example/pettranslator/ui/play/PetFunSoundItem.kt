@@ -18,3 +18,19 @@ object PetFunSoundCatalog {
             PetFunSoundItem("${prefix}_meal", pet, "开饭啦", "呼唤它来吃饭", FunSoundIcon.Meal))
     }
 }
+
+/** Fixed preview assignments. These clips are species samples without command semantics. */
+internal object PetFunPreviewCatalog {
+    val audioIdsBySoundId = mapOf(
+        "cat_call" to "cat_continuous_01",
+        "cat_sit" to "cat_continuous_03",
+        "cat_paw" to "cat_continuous_06",
+        "cat_praise" to "cat_continuous_09",
+        "cat_meal" to "cat_continuous_04",
+        "dog_call" to "dog_continuous_03",
+        "dog_sit" to "dog_continuous_04",
+        "dog_paw" to "dog_continuous_05",
+        "dog_praise" to "dog_continuous_06",
+        "dog_meal" to "dog_continuous_07",
+    )
+}

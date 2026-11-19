@@ -27,7 +27,10 @@ class PetFunFlowTest {
         rule.onNodeWithText("夸夸你").assertIsDisplayed()
         rule.onNodeWithTag("fun_preview_dog_praise").performClick()
         rule.waitUntil(5_000) {
-            runCatching { rule.onNodeWithText("音效资源将在下一阶段接入～").assertIsDisplayed() }.isSuccess
+            val playing = SemanticsMatcher.expectValue(
+                androidx.compose.ui.semantics.SemanticsProperties.StateDescription, "正在播放",
+            )
+            rule.onAllNodes(hasTestTag("fun_preview_dog_praise") and playing).fetchSemanticsNodes().isNotEmpty()
         }
         rule.mainClock.advanceTimeBy(5_000)
         rule.waitForIdle()

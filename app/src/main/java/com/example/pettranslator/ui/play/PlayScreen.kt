@@ -19,41 +19,120 @@ import androidx.compose.ui.geometry.*
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.Layout
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.*
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.*
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.example.pettranslator.R
+import com.example.pettranslator.audio.AssetPetSoundLibrary
 import com.example.pettranslator.domain.PetType
 import com.example.pettranslator.ui.theme.*
+import com.example.pettranslator.ui.voice.conversion.AndroidVoiceSequencePlayer
+import com.example.pettranslator.ui.voice.conversion.VoicePlaybackSequence
+import com.example.pettranslator.ui.voice.conversion.VoiceSequenceItem
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 private val FunPurple = Color(0xFF6650A0)
 private val FunPink = Color(0xFFF66CB8)
 
+private class PreviewRequest(val sound: PetFunSoundItem)
+
 @Composable fun PlayScreen(onVoiceTalk: () -> Unit = {}) {
     var pet by rememberSaveable { mutableStateOf(PetType.Cat) }
     var highlighted by remember { mutableStateOf<String?>(null) }
+    var playingPreview by remember { mutableStateOf<String?>(null) }
+    val previewRequests = remember { MutableStateFlow<PreviewRequest?>(null) }
     val snackbar = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
+    val app = LocalContext.current.applicationContext
+    val lifecycle = LocalLifecycleOwner.current.lifecycle
+    val library = remember(app) { AssetPetSoundLibrary(app) }
+    val player = remember(app) { AndroidVoiceSequencePlayer(app) }
+    val availablePreviews by produceState(emptySet<String>(), library) {
+        value = buildSet {
+            for ((soundId, audioId) in PetFunPreviewCatalog.audioIdsBySoundId) {
+                if (library.findAvailable(audioId) != null) add(soundId)
+            }
+        }
+    }
     fun message(text: String) { scope.launch { snackbar.currentSnackbarData?.dismiss(); snackbar.showSnackbar(text) } }
+    fun stopPreview() {
+        previewRequests.value = null
+        player.stop()
+        playingPreview = null
+    }
+    fun preview(sound: PetFunSoundItem) {
+        if (!lifecycle.currentState.isAtLeast(Lifecycle.State.RESUMED)) return
+        // Repeated requests for the same active button keep its current playback.
+        if (previewRequests.value?.sound?.id == sound.id) return
+        highlighted = sound.id
+        snackbar.currentSnackbarData?.dismiss()
+        previewRequests.value = PreviewRequest(sound)
+    }
+    LaunchedEffect(lifecycle, library, player) {
+        // collectLatest awaits the previous playback's cancellation and native
+        // cleanup before processing the newest tap.
+        previewRequests.collectLatest { request ->
+            if (request == null) return@collectLatest
+            val sound = request.sound
+            try {
+                if (!lifecycle.currentState.isAtLeast(Lifecycle.State.RESUMED)) return@collectLatest
+                val audioId = PetFunPreviewCatalog.audioIdsBySoundId[sound.id]
+                val asset = audioId?.let { library.findAvailable(it) }?.takeIf { it.petType == sound.petType }
+                if (asset == null) {
+                    message("音效资源尚未就绪")
+                    return@collectLatest
+                }
+                player.play(VoicePlaybackSequence(sound.petType, listOf(VoiceSequenceItem(asset)))) {
+                    playingPreview = if (it.isPlaying) sound.id else null
+                }
+            } catch (cancelled: CancellationException) {
+                throw cancelled
+            } catch (_: Exception) {
+                message("音效暂时无法播放，请稍后重试")
+            } finally {
+                playingPreview = null
+                previewRequests.compareAndSet(request, null)
+            }
+        }
+    }
+    DisposableEffect(lifecycle, player) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_PAUSE || event == Lifecycle.Event.ON_STOP) stopPreview()
+        }
+        lifecycle.addObserver(observer)
+        onDispose {
+            lifecycle.removeObserver(observer)
+            stopPreview()
+        }
+    }
     LaunchedEffect(highlighted) { if (highlighted != null) { delay(650); highlighted = null } }
     Box(Modifier.fillMaxSize().background(Brush.linearGradient(listOf(Blush, Color(0xFFF0E9FF), Mist, Blush)))) {
         LazyColumn(Modifier.widthIn(max = 600.dp).fillMaxWidth().align(Alignment.TopCenter).testTag("play_list"),
             contentPadding = PaddingValues(horizontal = 16.dp, vertical = 12.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-            item { FunTopGroup(onVoiceTalk) }
+            item { FunTopGroup { stopPreview(); onVoiceTalk() } }
             item { Row(Modifier.padding(top = 4.dp), verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 FunWave(Modifier.size(24.dp), FunPurple)
                 Text("趣味逗宠音效", color = Ink, fontSize = 18.sp, lineHeight = 25.sp, fontWeight = FontWeight.SemiBold)
             } }
-            item { PetSwitch(pet) { pet = it; highlighted = null } }
+            item { PetSwitch(pet) {
+                stopPreview()
+                pet = it
+                highlighted = null
+            } }
             items(PetFunSoundCatalog.items(pet), key = { it.id }) { sound ->
-                SoundRow(sound, highlighted == sound.id) {
-                    highlighted = sound.id
-                    message("音效资源将在下一阶段接入～")
+                SoundRow(sound, highlighted == sound.id, sound.id in availablePreviews, playingPreview == sound.id) {
+                    preview(sound)
                 }
             }
         }
@@ -132,7 +211,9 @@ private val FunPink = Color(0xFFF66CB8)
     }
 }
 
-@Composable private fun SoundRow(sound: PetFunSoundItem, highlighted: Boolean, onClick: () -> Unit) {
+@Composable private fun SoundRow(
+    sound: PetFunSoundItem, highlighted: Boolean, available: Boolean, playing: Boolean, onClick: () -> Unit
+) {
     val tint by animateColorAsState(if (highlighted) Color(0xFFFFE4F4) else Color(0xEEFFFFFF), label = "soundFeedback")
     Surface(onClick, Modifier.fillMaxWidth().testTag("fun_sound_${sound.id}"), shape = RoundedCornerShape(18.dp),
         color = tint, shadowElevation = 1.dp, border = BorderStroke(1.dp, Color.White.copy(alpha = .8f))) {
@@ -149,7 +230,10 @@ private val FunPink = Color(0xFFF66CB8)
             }
             FunWave(Modifier.width(20.dp).height(16.dp), Color(0xFFCAA8EB))
             IconButton(onClick, Modifier.size(48.dp).testTag("fun_preview_${sound.id}")
-                .semantics { contentDescription = "预览${sound.title}音效，资源待接入" }) {
+                .semantics {
+                    contentDescription = "预览${sound.title}音效" + if (available) "" else "，资源待接入"
+                    if (playing) stateDescription = "正在播放"
+                }) {
                 Canvas(Modifier.size(30.dp)) {
                     drawCircle(Brush.linearGradient(listOf(Color(0xFFD3B4FC), Color(0xFF9C70E6))))
                     val path = Path().apply { moveTo(size.width*.4f,size.height*.3f); lineTo(size.width*.7f,size.height*.5f); lineTo(size.width*.4f,size.height*.7f); close() }

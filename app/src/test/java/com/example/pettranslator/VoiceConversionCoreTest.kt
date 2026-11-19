@@ -1,13 +1,13 @@
 package com.example.pettranslator
 
+import com.example.pettranslator.audio.PetClipType
+import com.example.pettranslator.audio.PetSoundCatalog
 import com.example.pettranslator.domain.PetType
 import com.example.pettranslator.domain.recording.RecordedAudio
-import com.example.pettranslator.ui.voice.conversion.ApprovedVoiceSounds
 import com.example.pettranslator.ui.voice.conversion.PcmVoiceFeatureAnalyzer
 import com.example.pettranslator.ui.voice.conversion.VoiceFeatures
 import com.example.pettranslator.ui.voice.conversion.VoicePlaybackSequence
 import com.example.pettranslator.ui.voice.conversion.VoiceSequenceItem
-import com.example.pettranslator.ui.voice.conversion.VoiceSoundAsset
 import com.example.pettranslator.ui.voice.conversion.VoiceSoundSelector
 import java.io.File
 import kotlin.math.PI
@@ -29,7 +29,7 @@ class VoiceConversionCoreTest {
     @get:Rule val files = TemporaryFolder()
     private val analyzer = PcmVoiceFeatureAnalyzer()
     private val selector = VoiceSoundSelector()
-    private val assets = ApprovedVoiceSounds.assets
+    private val assets = PetSoundCatalog.assets
     private var clipNumber = 0
 
     @Test fun readsPcmInsteadOfTrustingCaptureEnergyMetadata() = runTest {
@@ -95,68 +95,69 @@ class VoiceConversionCoreTest {
     @Test fun shortCatChoiceUsesActivityAndEnergyVariation() {
         val ordinary = selector.select(features(), PetType.Cat, assets)
         val varied = selector.select(features(variation = 1.2f), PetType.Cat, assets)
-        assertEquals(listOf("cat_fs_362953"), ordinary.audioIds)
-        assertEquals(listOf("cat_fs_618900"), varied.audioIds)
-        assertEquals(listOf("cat_fs_618900"),
+        assertEquals(listOf("cat_single_01"), ordinary.audioIds)
+        assertEquals(listOf("cat_single_04"), varied.audioIds)
+        assertEquals(listOf("cat_single_04"),
             selector.select(features(active = 1_000), PetType.Cat, assets).audioIds)
     }
 
-    @Test fun longOrRhythmicCatUsesCompleteContinuousSoundDespitePreviousResult() {
+    @Test fun longOrRhythmicCatUsesOneCompleteContinuousSound() {
         val long = features(total = 6_000, active = 3_000)
         val rhythmic = features(total = 2_500, active = 900, segments = 3, pauses = listOf(300, 300))
+        val first = selector.select(long, PetType.Cat, assets)
+        assertEquals(listOf("cat_continuous_02"), first.audioIds)
+        assertEquals(6_008L, first.estimatedDurationMs)
         for (input in listOf(long, rhythmic)) {
-            val result = selector.select(input, PetType.Cat, assets, listOf("cat_fs_728095"))
-            assertEquals(listOf("cat_fs_728095"), result.audioIds)
-            assertEquals(4_282L, result.estimatedDurationMs)
-            assertEquals(1, result.items.size)
+            val result = selector.select(input, PetType.Cat, assets, first.audioIds)
+            assertNotEquals(first.audioIds, result.audioIds)
+            assertEquals(PetClipType.CONTINUOUS, result.items.single().asset.clipType)
         }
     }
 
     @Test fun catRotationStaysWithinTheShortClassAndDoesNotChangeExistingResult() {
         val original = selector.select(features(), PetType.Cat, assets)
         val next = selector.select(features(), PetType.Cat, assets, original.audioIds)
-        assertEquals(listOf("cat_fs_362953"), original.audioIds)
-        assertEquals(listOf("cat_fs_618900"), next.audioIds)
+        assertEquals(listOf("cat_single_01"), original.audioIds)
+        assertEquals(listOf("cat_single_02"), next.audioIds)
         assertNotEquals(original.audioIds, next.audioIds)
         assertEquals(original, selector.select(features(), PetType.Cat, assets.reversed()))
     }
 
-    @Test fun dogTinyAccentIsOneSoundWhileAnOrdinarySentenceUsesACompleteSequence() {
+    @Test fun shortDogFallsBackToOneShortContinuousSoundWhenSinglesAreAbsent() {
         val accent = selector.select(features(total = 1_000, active = 250), PetType.Dog, assets)
-        assertEquals(listOf("dog_fs_813120"), accent.audioIds)
-        assertEquals(223L, accent.estimatedDurationMs)
-        assertEquals(1, accent.items.size)
-        assertEquals(listOf("dog_fs_9032"),
+        assertEquals(listOf("dog_continuous_03"), accent.audioIds)
+        assertEquals(1_210L, accent.estimatedDurationMs)
+        assertEquals(PetClipType.CONTINUOUS, accent.items.single().asset.clipType)
+        assertEquals(listOf("dog_continuous_01"),
             selector.select(features(total = 2_000, active = 900), PetType.Dog, assets).audioIds)
     }
 
-    @Test fun longDogFeatureRuleAndRotationUseOnlyTheTwoContinuousSounds() {
+    @Test fun longDogMatchesDurationAndRotatesWithoutCombiningSounds() {
         val long = features(total = 6_000, active = 3_000, variation = 1.1f)
         val first = selector.select(long, PetType.Dog, assets)
         val next = selector.select(long, PetType.Dog, assets, first.audioIds)
-        assertEquals(listOf("dog_fs_807270"), first.audioIds)
-        assertEquals(listOf("dog_fs_9032"), next.audioIds)
+        assertEquals(listOf("dog_continuous_08"), first.audioIds)
+        assertEquals(listOf("dog_continuous_07"), next.audioIds)
         assertTrue(listOf(first, next).all { result ->
-            result.items.size == 1 && result.items.all { it.asset.pet == PetType.Dog && it.asset.continuous }
+            result.items.single().asset.let { it.petType == PetType.Dog && it.clipType == PetClipType.CONTINUOUS }
         })
     }
 
     @Test fun excludesEveryUnapprovedSourceAndNeverCrossesPetBoundaries() {
         val excluded = listOf(
-            VoiceSoundAsset("cat_fs_412017", PetType.Cat, 1_750, false),
-            VoiceSoundAsset("cat_fs_668817", PetType.Cat, 665, false),
-            VoiceSoundAsset("dog_fs_350593", PetType.Dog, 850, false),
-            VoiceSoundAsset("dog_fs_351876", PetType.Dog, 3_568, true),
+            PetSoundCatalog.byId.getValue("cat_single_01").copy(audioId = "cat_single_99"),
+            PetSoundCatalog.byId.getValue("dog_continuous_03").copy(audioId = "dog_continuous_99"),
+            PetSoundCatalog.byId.getValue("cat_single_02").copy(available = false),
         )
         assertThrows(IllegalStateException::class.java) { selector.select(features(), PetType.Cat, excluded) }
         assertThrows(IllegalStateException::class.java) { selector.select(features(), PetType.Dog, excluded) }
         assertThrows(IllegalStateException::class.java) {
-            selector.select(features(), PetType.Cat, listOf(assets.first().copy(pet = PetType.Dog)))
+            selector.select(features(), PetType.Cat, assets.filter { it.petType == PetType.Dog })
         }
         for (pet in PetType.entries) {
             val result = selector.select(features(), pet, assets + excluded)
-            assertTrue(result.items.all { it.asset.pet == pet })
-            assertTrue(result.audioIds.all { id -> assets.any { it.id == id } })
+            assertTrue(result.items.all { it.asset.petType == pet })
+            assertTrue(result.items.all { PetSoundCatalog.byId[it.asset.audioId] == it.asset })
         }
     }
 
@@ -167,24 +168,38 @@ class VoiceConversionCoreTest {
         assertThrows(IllegalStateException::class.java) { selector.select(features(), PetType.Cat, emptyList()) }
         assertThrows(IllegalStateException::class.java) {
             selector.select(features(), PetType.Cat,
-                assets.filter { it.pet == PetType.Cat }.map { it.copy(assetPath = "unapproved/${it.id}.m4a") })
+                assets.filter { it.petType == PetType.Cat }.map { it.copy(assetPath = "unapproved/${it.audioId}.m4a") })
         }
     }
 
-    @Test fun sequenceEnforcesDistinctSamePetSoundsAndReportsFixedDuration() {
-        val cat = assets.filter { it.pet == PetType.Cat }
+    @Test fun disabledLongCatDoesNotBecomeAShortFallback() {
+        val long = PetSoundCatalog.byId.getValue("cat_continuous_05")
+        assertFalse(long.defaultForShortInput)
+        assertThrows(IllegalStateException::class.java) {
+            selector.select(features(), PetType.Cat, listOf(long))
+        }
+    }
+
+    @Test fun sequenceEnforcesDistinctSamePetNonOverlappingSoundsAndReportsFixedDuration() {
+        val first = PetSoundCatalog.byId.getValue("cat_single_01")
+        val second = PetSoundCatalog.byId.getValue("cat_single_02")
+        val parent = PetSoundCatalog.byId.getValue("cat_continuous_02")
+        val dog = PetSoundCatalog.byId.getValue("dog_continuous_03")
         val sequence = VoicePlaybackSequence(PetType.Cat,
-            listOf(VoiceSequenceItem(cat[0], 150), VoiceSequenceItem(cat[1])))
-        assertEquals(listOf("cat_fs_362953", "cat_fs_618900"), sequence.audioIds)
-        assertEquals(1_984L, sequence.estimatedDurationMs)
+            listOf(VoiceSequenceItem(first, 150), VoiceSequenceItem(second)))
+        assertEquals(listOf("cat_single_01", "cat_single_02"), sequence.audioIds)
+        assertEquals(1_850L, sequence.estimatedDurationMs)
         assertThrows(IllegalArgumentException::class.java) {
-            VoicePlaybackSequence(PetType.Cat, listOf(VoiceSequenceItem(cat[0]), VoiceSequenceItem(cat[0])))
+            VoicePlaybackSequence(PetType.Cat, listOf(VoiceSequenceItem(first), VoiceSequenceItem(first)))
         }
         assertThrows(IllegalArgumentException::class.java) {
-            VoicePlaybackSequence(PetType.Cat, listOf(VoiceSequenceItem(assets.last())))
+            VoicePlaybackSequence(PetType.Cat, listOf(VoiceSequenceItem(dog)))
         }
         assertThrows(IllegalArgumentException::class.java) {
-            VoicePlaybackSequence(PetType.Cat, cat.map { VoiceSequenceItem(it) })
+            VoicePlaybackSequence(PetType.Cat, listOf(first, second, parent).map { VoiceSequenceItem(it) })
+        }
+        assertThrows(IllegalArgumentException::class.java) {
+            VoicePlaybackSequence(PetType.Cat, listOf(VoiceSequenceItem(parent), VoiceSequenceItem(first)))
         }
     }
 
