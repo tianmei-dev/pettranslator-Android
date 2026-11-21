@@ -27,9 +27,9 @@ internal object PetFunPreviewCatalog {
         "cat_paw" to "cat_continuous_06",
         "cat_praise" to "cat_continuous_09",
         "cat_meal" to "cat_continuous_04",
-        "dog_call" to "dog_continuous_03",
-        "dog_sit" to "dog_continuous_04",
-        "dog_paw" to "dog_continuous_05",
+        "dog_call" to "dog_continuous_01",
+        "dog_sit" to "dog_continuous_08",
+        "dog_paw" to "dog_continuous_09",
         "dog_praise" to "dog_continuous_06",
         "dog_meal" to "dog_continuous_07",
     )

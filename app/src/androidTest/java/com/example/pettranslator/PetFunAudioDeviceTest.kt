@@ -51,9 +51,9 @@ class PetFunAudioDeviceTest {
         Preview("cat_meal", "cat_continuous_04"),
     )
     private val dogs = listOf(
-        Preview("dog_call", "dog_continuous_03"),
-        Preview("dog_sit", "dog_continuous_04"),
-        Preview("dog_paw", "dog_continuous_05"),
+        Preview("dog_call", "dog_continuous_01"),
+        Preview("dog_sit", "dog_continuous_08"),
+        Preview("dog_paw", "dog_continuous_09"),
         Preview("dog_praise", "dog_continuous_06"),
         Preview("dog_meal", "dog_continuous_07"),
     )
